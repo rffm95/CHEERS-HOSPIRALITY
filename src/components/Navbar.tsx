@@ -42,7 +42,7 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         <Link to="/" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors text-black`}>
-          Cheers <span className="text-stroke-accent italic">Hospitality</span><span className="text-[#c5a059]">.</span>
+          Cheers <span className="text-stroke-accent italic">Experiences</span><span className="text-[#c5a059]">.</span>
         </Link>
 
         {/* Desktop Nav */}

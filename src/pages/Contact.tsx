@@ -27,7 +27,7 @@ export const Contact = () => {
     console.log(`Quote request received for: sucessomacico@gmail.com`);
     
     // Optional: open mailto for direct client feedback
-    // const mailtoUrl = `mailto:sucessomacico@gmail.com?subject=Pedido de Orçamento - Cheers Hospitality&body=Nome: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AEvento: ${formData.eventType}`;
+    // const mailtoUrl = `mailto:sucessomacico@gmail.com?subject=Pedido de Orçamento - Cheers Experiences&body=Nome: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AEvento: ${formData.eventType}`;
     // window.location.href = mailtoUrl;
 
     setTimeout(() => {

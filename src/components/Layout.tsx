@@ -14,7 +14,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-1 lg:col-span-1">
             <Link to="/" className="text-2xl font-black tracking-tighter text-[#111111] uppercase mb-8 block">
-              Cheers <span className="text-stroke-accent italic">Hospitality</span><span className="text-[#c5a059]">.</span>
+              Cheers <span className="text-stroke-accent italic">Experiences</span><span className="text-[#c5a059]">.</span>
             </Link>
             <p className="text-[#111111]/30 text-sm leading-relaxed mb-10 max-w-xs font-medium italic">
               Elevamos os padrões da hospitalidade através de uma visão 360º que une eventos, consultoria estratégica e inovação tecnológica.
@@ -67,7 +67,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.4em] font-black text-[#111111]/10">
-          <p>© 2024 Cheers Hospitality. Standards de Elite.</p>
+          <p>© 2024 Cheers Experiences. Standards de Elite.</p>
           <div className="flex gap-10">
             <a href="#" className="hover:text-[#c5a059] transition-colors italic">Privacy Policy</a>
             <a href="#" className="hover:text-[#c5a059] transition-colors italic">Terms of Service</a>

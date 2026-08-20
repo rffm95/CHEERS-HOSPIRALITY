@@ -54,6 +54,21 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.2em;
   transition: all 0.3s ease;
   border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .luxury-button {
+    padding: 1.1rem 1.5rem;
+    font-size: 0.7rem;
+    width: 100%;
+    min-height: 52px;
+    letter-spacing: 0.15em;
+    display: flex;
+  }
 }
 
 .luxury-button:hover {

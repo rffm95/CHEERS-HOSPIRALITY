@@ -65,10 +65,10 @@ export const translations: Record<Language, Translation> = {
           features: ['Curadoria Premium de Destilados', 'Cocktails de Autor Ilimitados', 'Gestão Total de Stock e Resíduos'],
         },
         {
-          name: 'Mobile Unit Cheers Hospitality',
+          name: 'Mobile Unit Cheers Experiences',
           price: '950',
           description: 'A nossa unidade icónica: estética industrial-chic com iluminação vintage para eventos com forte identidade visual.',
-          features: ['Estética de Luxo Industrial', 'Totalmente Autónomo e Equipado', 'Ideal para Eventos de Exterior', 'Branding Cheers Hospitality'],
+          features: ['Estética de Luxo Industrial', 'Totalmente Autónomo e Equipado', 'Ideal para Eventos de Exterior', 'Branding Cheers Experiences'],
         },
       ],
     },
@@ -158,7 +158,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Concessão & Gestão de Exploração',
-        description: 'Tem um Hotel, Quinta ou Espaço de Eventos mas a operação de bar é um "pain point"? A Cheers Hospitality assume a gestão total ou parcial (concessão), aplicando os nossos standards, staff e logística, partilhando o sucesso com a sua unidade.',
+        description: 'Tem um Hotel, Quinta ou Espaço de Eventos mas a operação de bar é um "pain point"? A Cheers Experiences assume a gestão total ou parcial (concessão), aplicando os nossos standards, staff e logística, partilhando o sucesso com a sua unidade.',
         cta: 'REUNIÃO DE PARCERIA ESTRATÉGICA',
       },
       painPoints: {
@@ -258,7 +258,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'A Nossa Gênese Operacional',
         title: 'Rigor e Paixão pela',
         titleAccent: 'Hospitalidade.',
-        p1: 'A Cheers Hospitality não nasceu de um plano teórico, mas do chão de granito de bares de alta rotação e da exigência operacional de hotéis de elite. Nascemos em Viseu com a missão ingrata, mas necessária, de elevar os standards onde outros aceitam a mediocridade.',
+        p1: 'Além de todos os clientes, contamos com vasta experiência em projetos próprios acumulados ao longo dos anos, como o Cheers O Bar (Cocktail & Sports Bar, Viseu), Cheers Pool Bar (Bar & Pool, Penedono), Maria Xica Rooftop Bar (Cocktail Bar, Viseu) e muito mais. A Cheers Experiences não nasceu de um plano teórico, mas do chão de granito de bares de alta rotação e da exigência operacional de hotéis de elite. Nascemos em Viseu com a missão ingrata, mas necessária, de elevar os standards onde outros aceitam a mediocridade.',
         p2: 'Somos especialistas em hospitalidade que pensam como engenheiros. Da gestão de stocks complexos à psicologia do serviço de luxo, a nossa história é escrita através da rentabilidade que entregamos aos nossos parceiros e da memória imaculada que deixamos em cada cocktail servido.',
         quote: 'Operação sem standards é apenas caos disfarçado de serviço. Nós trazemos a ordem e o lucro.',
       },
@@ -278,7 +278,7 @@ export const translations: Record<Language, Translation> = {
         description: 'Não somos uma agência. Somos parceiros estratégicos na engenharia de lucro e proteção de standards para hotéis, restaurantes e eventos que não admitem a mediocridade. Um investimento de alto impacto e rápido retorno operacional.',
       },
       whyCheers: {
-        title: 'Porquê a Cheers Hospitality?',
+        title: 'Porquê a Cheers Experiences?',
         subtitle: 'Unimos a vivência real do balcão à precisão da gestão estratégica. Onde outros veem apenas serviço, nós vemos centros de lucro de alta performance.',
         items: [
           { title: 'Obsessão pela Margem', description: 'Cada menu e cada processo é desenhado para maximizar o seu ticket médio e estancar fugas financeiras.' },
@@ -413,7 +413,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Amplia gama de destilados', 'Cócteles ilimitados', 'Gestión total de logística'],
         },
         {
-          name: 'Bar Móvil Cheers Hospitality',
+          name: 'Bar Móvil Cheers Experiences',
           price: '950',
           description: 'Nuestra icónica unidad móvil con diseño industrial e iluminación vintage.',
           features: ['Diseño Industrial Chic', 'Iluminación LED & Vintage', 'Totalmente Equipado', 'Ideal para Bodas'],
@@ -506,7 +506,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Asociación y Concesión',
-        description: '¿Tiene un espacio para eventos o un hotel y busca una gestión de bar profesional? Discutimos modelos de asociación o concesión total donde Cheers Hospitality asume la operación con nuestros estándares de excelencia.',
+        description: '¿Tiene un espacio para eventos o un hotel y busca una gestión de bar profesional? Discutimos modelos de asociación o concesión total donde Cheers Experiences asume la operación con nuestros estándares de excelencia.',
         cta: 'DISCUTIR ASOCIACIÓN',
       },
       painPoints: {
@@ -574,7 +574,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Servicios de Bar',
         title: 'Eventos',
         titleAccent: 'Premium',
-        description: 'Bodas, cumpleaños, bautizos o eventos corporativos. Donde haya fiesta, Cheers Hospitality lleva el bar con elegancia y profesionalismo.',
+        description: 'Bodas, cumpleaños, bautizos o eventos corporativos. Donde haya fiesta, Cheers Experiences lleva el bar con elegancia y profesionalismo.',
         note: 'Podemos trabajar en una barra disponible o traer nuestra propia barra. Todo es posible.',
       },
       categories: {
@@ -585,7 +585,7 @@ export const translations: Record<Language, Translation> = {
       },
       quote: {
         title: '¿Falta el bar?',
-        titleAccent: 'Cheers."',
+        titleAccent: 'Experiences."',
         description: 'No deje el servicio de bar al azar. Confíe en el equipo que eleva cualquier celebración.',
         cta: 'CONTACTAR',
       },
@@ -607,7 +607,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Nuestra Historia',
         title: 'Pasión por la',
         titleAccent: 'Hospitalidad',
-        p1: 'Cheers Hospitality nació en Viseu con un propósito claro: elevar los estándares del servicio de bar y de la hospitalidad en Portugal. No somos solo una empresa de eventos; somos socios estratégicos de nuestros clientes.',
+        p1: 'Además de todos nuestros clientes, contamos con una vasta experiencia en proyectos propios acumulados a lo largo de los años, como Cheers O Bar (Cocktail & Sports Bar, Viseu), Cheers Pool Bar (Bar & Pool, Penedono), Maria Xica Rooftop Bar (Cocktail Bar, Viseu) y mucho más. Cheers Experiences nació en Viseu con un propósito claro: elevar los estándares del servicio de bar y de la hospitalidad en Portugal. No somos solo una empresa de eventos; somos socios estratégicos de nuestros clientes.',
         p2: 'Con años de experiencia real en el terreno, desde la gestión de bares de alta rotación hasta la consultoría estratégica para hoteles de lujo, entendemos que el éxito está en el detalle, en la eficiencia operativa y en la emoción que transmite cada cóctel.',
         quote: 'Donde otros ven solo una bebida, nosotros vemos una oportunidad de crear una memoria inolvidable y un negocio rentable.',
       },
@@ -627,7 +627,7 @@ export const translations: Record<Language, Translation> = {
         description: 'No somos una agencia. Somos socios estratégicos en ingeniería de beneficios y protección de estándares para hoteles, restaurantes y eventos de élite. Una inversión de alto impacto y rápido retorno operacional.',
       },
       whyCheers: {
-        title: '¿Por qué Cheers Hospitality?',
+        title: '¿Por qué Cheers Experiences?',
         subtitle: 'Combinamos la experiencia real de barra con la precisión de la gestión estratégica. Donde otros ven solo servicio, nosotros vemos centros de beneficio de alto rendimiento.',
         items: [
           { title: 'Obsesión por el Margen', description: 'Cada menú y proceso se diseña para maximizar su ticket promedio y detener fugas financieras.' },
@@ -762,7 +762,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Wide range of spirits', 'Unlimited cocktails', 'Total logistics management'],
         },
         {
-          name: 'Cheers Hospitality Mobile Bar',
+          name: 'Cheers Experiences Mobile Bar',
           price: '950',
           description: 'Our iconic mobile unit with industrial design and vintage lighting.',
           features: ['Industrial Chic Design', 'LED & Vintage Lighting', 'Fully Equipped', 'Ideal for Weddings'],
@@ -855,7 +855,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Partnership & Concession',
-        description: 'Do you have an event space or hotel and seek professional bar management? We discuss partnership or full concession models where Cheers Hospitality takes over the operation with our standards of excellence.',
+        description: 'Do you have an event space or hotel and seek professional bar management? We discuss partnership or full concession models where Cheers Experiences takes over the operation with our standards of excellence.',
         cta: 'DISCUSS PARTNERSHIP',
       },
       painPoints: {
@@ -922,7 +922,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Bar Services',
         title: 'Premium',
         titleAccent: 'Events',
-        description: 'Weddings, birthdays, baptisms, or corporate events. Wherever there is a party, Cheers Hospitality brings the bar with elegance and professionalism.',
+        description: 'Weddings, birthdays, baptisms, or corporate events. Wherever there is a party, Cheers Experiences brings the bar with elegance and professionalism.',
         note: 'We can work at a provided counter or bring our own bar. Everything is possible.',
       },
       categories: {
@@ -933,7 +933,7 @@ export const translations: Record<Language, Translation> = {
       },
       quote: {
         title: '"Missing the bar?',
-        titleAccent: 'Cheers."',
+        titleAccent: 'Experiences."',
         description: 'Don’t leave the bar service to chance. Trust the team that elevates any celebration.',
         cta: 'CONTACT US',
       },
@@ -955,7 +955,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Our Story',
         title: 'Passion for',
         titleAccent: 'Hospitality',
-        p1: 'Cheers Hospitality was born in Viseu with a clear purpose: to raise the standards of bar service and hospitality in Portugal. We are not just an event company; we are strategic partners for our clients.',
+        p1: 'In addition to all our clients, we have extensive experience with our own projects accumulated over the years, such as Cheers O Bar (Cocktail & Sports Bar, Viseu), Cheers Pool Bar (Bar & Pool, Penedono), Maria Xica Rooftop Bar (Cocktail Bar, Viseu), and much more. Cheers Experiences was born in Viseu with a clear purpose: to raise the standards of bar service and hospitality in Portugal. We are not just an event company; we are strategic partners for our clients.',
         p2: 'With years of real field experience, from managing high-turnover bars to strategic consulting for luxury hotels, we understand that success lies in the detail, operational efficiency, and the emotion each cocktail conveys.',
         quote: 'Where others see just a drink, we see an opportunity to create an unforgettable memory and a profitable business.',
       },
@@ -975,7 +975,7 @@ export const translations: Record<Language, Translation> = {
         description: 'We are not an agency. We are strategic partners in profit engineering and standards protection for hotels, restaurants, and elite events. A high-impact investment with fast operational return.',
       },
       whyCheers: {
-        title: 'Why Cheers Hospitality?',
+        title: 'Why Cheers Experiences?',
         subtitle: 'We bridge real bar experience with strategic management precision. Where others see mere service, we see high-performance profit centers.',
         items: [
           { title: 'Margin Obsession', description: 'Every menu and process is engineered to maximize your average ticket and stop financial leaks.' },
@@ -1110,7 +1110,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Large gamme de spiritueux', 'Cocktails illimités', 'Gestion logistique totale'],
         },
         {
-          name: 'Bar Mobile Cheers Hospitality',
+          name: 'Bar Mobile Cheers Experiences',
           price: '950',
           description: 'Notre unité mobile iconique au design industriel et éclairage vintage.',
           features: ['Design Industriel Chic', 'Éclairage LED & Vintage', 'Entièrement Équipé', 'Idéal pour Mariages'],
@@ -1203,7 +1203,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Partenariat & Concession',
-        description: 'Vous disposez d\'un espace événementiel ou d\'un hôtel et recherchez une gestion de bar professionnelle ? Nous discutons de modèles de partenariat ou de concession totale où Cheers Hospitality reprend l\'exploitation avec nos standards d\'excellence.',
+        description: 'Vous disposez d\'un espace événementiel ou d\'un hôtel et recherchez une gestion de bar professionnelle ? Nous discutons de modèles de partenariat ou de concession totale où Cheers Experiences reprend l\'exploitation avec nos standards d\'excellence.',
         cta: 'DISCUTER DU PARTENARIAT',
       },
       painPoints: {
@@ -1271,7 +1271,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Services de Bar',
         title: 'Événements',
         titleAccent: 'Premium',
-        description: 'Mariages, anniversaires, baptêmes ou événements d\'entreprise. Partout où il y a une fête, Cheers Hospitality apporte le bar avec élégance et professionnalisme.',
+        description: 'Mariages, anniversaires, baptêmes ou événements d\'entreprise. Partout où il y a une fête, Cheers Experiences apporte le bar avec élégance et professionnalisme.',
         note: 'Nous pouvons travailler à un comptoir fourni ou apporter nosso propre bar. Tout est possible.',
       },
       categories: {
@@ -1282,7 +1282,7 @@ export const translations: Record<Language, Translation> = {
       },
       quote: {
         title: '"Le bar manque ?',
-        titleAccent: 'Cheers."',
+        titleAccent: 'Experiences."',
         description: 'Ne laissez pas le service de bar au hasard. Faites confiance à l\'équipe qui sublime chaque célébration.',
         cta: 'CONTACTER',
       },
@@ -1304,7 +1304,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Notre Histoire',
         title: 'Passion pour',
         titleAccent: 'l\'Hospitalité',
-        p1: 'Cheers Hospitality est née à Viseu com um objectif clair : élever les standards du service de bar et de l\'accueil au Portugal. Nous ne sommes pas qu\'une société d\'événements ; nous sommes des partenaires stratégiques pour nos clients.',
+        p1: 'En plus de tous nos clients, nous avons une vaste expérience avec nos propres projets accumulés au fil des ans, tels que Cheers O Bar (Cocktail & Sports Bar, Viseu), Cheers Pool Bar (Bar & Pool, Penedono), Maria Xica Rooftop Bar (Cocktail Bar, Viseu), et bien plus encore. Cheers Experiences est née à Viseu com um objectif clair : élever les standards du service de bar et de l\'accueil au Portugal. Nous ne sommes pas qu\'une société d\'événements ; nous sommes des partenaires stratégiques pour nos clients.',
         p2: 'Avec des années d\'expérience réelle sur le terrain, de la gestion de bars à forte fréquentation au conseil stratégique pour des hôtels de luxe, nous comprenons que le succès réside dans le détail, l\'efficacité opérationnelle et l\'émotion que chaque cocktail transmet.',
         quote: 'Là où d\'autres ne voient qu\'une boisson, nous voyons une opportunité de créer um souvenir inoubliable e um negócio rentável.',
       },
@@ -1325,7 +1325,7 @@ export const translations: Record<Language, Translation> = {
       },
       whyCheers: {
         title: 'Pourquoi',
-        subtitle: 'Cheers Hospitality?',
+        subtitle: 'Cheers Experiences?',
         items: [
           { title: 'Excellence Opérationnelle', description: 'Des processus optimisés pour maximiser la rentability e le service.' },
           { title: 'Vision 360º', description: 'Nous couvrons tous les points de contact, du bar physique au menu digital.' },

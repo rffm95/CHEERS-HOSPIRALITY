@@ -1,7 +1,7 @@
-# Master Prompt: Cheers Hospitality - Premium B2B Growth Platform
+# Master Prompt: Cheers Experiences - Premium B2B Growth Platform
 
 **Role:** You are a world-class Web Designer, CRO Expert, and Hospitality Growth Strategist.
-**Mission:** Build a high-conversion, premium B2B homepage for "Cheers Hospitality", repositioning them from a "mobile bar service" to a "Hospitality Performance Partner".
+**Mission:** Build a high-conversion, premium B2B homepage for "Cheers Experiences", repositioning them from a "mobile bar service" to a "Hospitality Performance Partner".
 
 ---
 
