@@ -13,7 +13,7 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       headline: 'Hospitality Performance & Operational Excellence.',
-      subheadline: 'Não somos apenas um serviço de bar. Somos parceiros estratégicos na engenharia de lucro e na proteção de standards para hotéis, restaurantes e eventos de elite.',
+      subheadline: 'Não somos apenas um serviço de bar. Somos parceiros estratégicos na engenharia de lucro e na proteção de standards para hotéis, restaurantes e eventos de elite. Um investimento de rápido retorno focado na rentabilidade total.',
       ctaQuote: 'AGENDAR DIAGNÓSTICO OPERACIONAL',
       ctaWhatsapp: 'FALAR COM DIRETOR OPERACIONAL',
     },
@@ -28,7 +28,7 @@ export const translations: Record<Language, Translation> = {
       events: {
         title: 'Eventos & Bar Services',
         description: 'Serviço chave-na-mão para quem não admite falhas. Da logística complexa à mixologia de autor, assumimos a responsabilidade total pela experiência líquida do seu evento.',
-        features: ['Cocktails de Autor & Clássicos', 'Logística Integral (Copos, Gelo, Insumos)', 'Staff Formado em Standards de Luxo', 'Gestão de Fluxo para Grandes Volumes'],
+        features: ['Cocktails de Autor & Clássicos', 'Logística Integral (Material, Gelo, Insumos)', 'Staff Formado em Standards de Luxo', 'Gestão de Fluxo para Grandes Volumes'],
       },
       consulting: {
         title: 'Consultoria B2B & Operações',
@@ -38,7 +38,7 @@ export const translations: Record<Language, Translation> = {
       digital: {
         title: 'Revenue Tech & Inovação',
         description: 'Transformamos ecrãs passivos em vendedores ativos. Soluções digitais desenhadas para aumentar o ticket médio e modernizar a comunicação no ponto de venda.',
-        features: ['Digital Signage (Ecrãs que Vendem)', 'Menus QR Dinâmicos e Elegantes', 'Estratégia de Redes Sociais com IA', 'Identidade Digital para Hospitality'],
+        features: ['Digital Signage (Ecrãs que Vendem)', 'Menus QR Dinâmicos e Elegantes', 'Elaboração de Menus 100% Customizados', 'Identidade Digital para Hospitality'],
       },
     },
     packages: {
@@ -50,7 +50,7 @@ export const translations: Record<Language, Translation> = {
           name: 'Welcome Experience',
           price: '450',
           description: 'A primeira impressão é a mais crítica. Um serviço de receção coreografado com elegância e agilidade.',
-          features: ['Cocktails de Assinatura & Espumante', 'Logística de Cristalería Premium', 'Staff com Standards de Hotelaria de Luxo'],
+          features: ['Cocktails de Assinatura & Espumante', 'Logística e Material de Serviço', 'Staff com Standards de Hotelaria de Luxo'],
         },
         {
           name: 'Signature Mixology',
@@ -65,7 +65,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Curadoria Premium de Destilados', 'Cocktails de Autor Ilimitados', 'Gestão Total de Stock e Resíduos'],
         },
         {
-          name: 'Mobile Unit Cheers',
+          name: 'Mobile Unit Cheers Hospitality',
           price: '950',
           description: 'A nossa unidade icónica: estética industrial-chic com iluminação vintage para eventos com forte identidade visual.',
           features: ['Estética de Luxo Industrial', 'Totalmente Autónomo e Equipado', 'Ideal para Eventos de Exterior', 'Branding Cheers Hospitality'],
@@ -145,7 +145,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'B2B Strategic Consulting',
         title: 'Maximizamos a sua',
         titleAccent: 'Margem.',
-        description: 'Bares e restaurantes perdem, em média, 15% de faturação por ineficiências operacionais e cartas mal desenhadas. Intervimos na engenharia do seu negócio para transformar custos em lucro real através de metodologia rigorosa e standards de elite.',
+        description: 'Bares e restaurantes perdem, em média, 15% de faturação por ineficiências operacionais e cartas mal desenhadas. Intervimos na engenharia do seu negócio para transformar custos em lucro real através de metodologia rigorosa e standards de elite. Um investimento de rápido retorno focado na rentabilidade imediata.',
       },
       transformation: {
         title: 'Da Inconsistência Operacional para a',
@@ -158,7 +158,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Concessão & Gestão de Exploração',
-        description: 'Tem um Hotel, Quinta ou Espaço de Eventos mas a operação de bar é um "pain point"? A Cheers assume a gestão total ou parcial (concessão), aplicando os nossos standards, staff e logística, partilhando o sucesso com a sua unidade.',
+        description: 'Tem um Hotel, Quinta ou Espaço de Eventos mas a operação de bar é um "pain point"? A Cheers Hospitality assume a gestão total ou parcial (concessão), aplicando os nossos standards, staff e logística, partilhando o sucesso com a sua unidade.',
         cta: 'REUNIÃO DE PARCERIA ESTRATÉGICA',
       },
       painPoints: {
@@ -179,7 +179,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Revenue-Driving Technology',
         title: 'Inovação que',
         titleAccent: 'Potencia Vendas.',
-        description: 'No setor Hospitality, o digital deve ser um acelerador de vendas, não apenas um adereço. Criamos ecossistemas que profissionalizam a imagem da sua unidade e automatizam o desejo de consumo.',
+        description: 'No setor Hospitality, o digital deve ser um acelerador de vendas, não apenas um adereço. Criamos ecossistemas que profissionalizam a imagem da sua unidade e automatizam o desejo de consumo, garantindo um investimento de rápido retorno operacional.',
       },
       tvStrategy: {
         badge: 'Revenue Opportunity',
@@ -209,10 +209,10 @@ export const translations: Record<Language, Translation> = {
         items: [
           { title: 'Digital Signage B2B', text: 'Instalação de sistemas de TV inteligentes que gerem vendas silenciosas enquanto os clientes aguardam.' },
           { title: 'Menus QR Premium', text: 'Menus digitais com fotografia de alta qualidade e navegação fluida, otimizados para aumentar o ticket médio.' },
+          { title: 'Engenharia de Menus Custom', text: 'Elaboração de menus escolhidos por si ou feitos por nós a 100% pensados na identidade e lucro do seu negócio.' },
           { title: 'AI Content Engine', text: 'Gestão de redes sociais que utiliza IA para garantir posts diários relevantes e design de alta gama.' },
           { title: 'Visual Storytelling', text: 'Criação de vídeos e fotografia de bar que captam a essência premium do seu serviço.' },
           { title: 'Hospitality WebDesign', text: 'Landing pages focadas em conversão para eventos, reservas de mesa e apresentação de menus.' },
-          { title: 'Consultoria de Imagem', text: 'Alinhamento total entre a experiência física no bar e a percepção digital do cliente.' },
         ],
       },
       cta: {
@@ -275,11 +275,11 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Hospitality Performance Partner',
         title: 'Engenharia de',
         titleAccent: 'Performance.',
-        description: 'Não somos uma agência. Somos parceiros estratégicos na engenharia de lucro e proteção de standards para hotéis, restaurantes e eventos que não admitem a mediocridade.',
+        description: 'Não somos uma agência. Somos parceiros estratégicos na engenharia de lucro e proteção de standards para hotéis, restaurantes e eventos que não admitem a mediocridade. Um investimento de alto impacto e rápido retorno operacional.',
       },
       whyCheers: {
         title: 'Porquê a Cheers Hospitality?',
-        subtitle: 'Unimos a vivência real do balcão à precisão da gestão estratégica. Onde outros veem copos, nós vemos centros de lucro de alta performance.',
+        subtitle: 'Unimos a vivência real do balcão à precisão da gestão estratégica. Onde outros veem apenas serviço, nós vemos centros de lucro de alta performance.',
         items: [
           { title: 'Obsessão pela Margem', description: 'Cada menu e cada processo é desenhado para maximizar o seu ticket médio e estancar fugas financeiras.' },
           { title: 'Rigor Operacional', description: 'Implementamos Standard Operating Procedures (SOPs) que garantiam consistência absoluta em cada serviço.' },
@@ -361,7 +361,7 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       headline: 'Ya tienes el evento. Nosotros traemos el bar.',
-      subheadline: 'Excelencia operacional en servicios de bar, consultoría estratégica y soluciones digitales de alto rendimiento para el sector Hospitality.',
+      subheadline: 'Excelencia operacional en servicios de bar, consultoría estratégica y soluciones digitales de alto rendimiento. Una inversión de rápido retorno centrada en la rentabilidad total.',
       ctaQuote: 'Solicitar Propuesta',
       ctaWhatsapp: 'CONTACTAR',
     },
@@ -386,7 +386,7 @@ export const translations: Record<Language, Translation> = {
       digital: {
         title: 'Soluciones Digitales',
         description: 'Transforme sus televisores y menús en máquinas de venta. Menús QR y sistemas de comunicación visual.',
-        features: ['Menús Digitales QR', 'Sistemas de TV', 'Websites Hospitality', 'Contenido Promocional'],
+        features: ['Menús Digitales QR', 'Sistemas de TV', 'Elaboración de Menús 100% Customizados', 'Contenido Promocional'],
       },
     },
     packages: {
@@ -398,7 +398,7 @@ export const translations: Record<Language, Translation> = {
           name: 'Welcome Drinks',
           price: '450',
           description: 'La primera impresión es la que queda. Un servicio elegante de recepción.',
-          features: ['Espumante & Cócteles de Bienvenida', 'Logística & Cristalería', 'Personal Profesional'],
+          features: ['Espumante & Cócteles de Bienvenida', 'Logística y Material de Servicio', 'Personal Profesional'],
         },
         {
           name: 'Cocktail Bar',
@@ -413,7 +413,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Amplia gama de destilados', 'Cócteles ilimitados', 'Gestión total de logística'],
         },
         {
-          name: 'Bar Móvil Cheers',
+          name: 'Bar Móvil Cheers Hospitality',
           price: '950',
           description: 'Nuestra icónica unidad móvil con diseño industrial e iluminación vintage.',
           features: ['Diseño Industrial Chic', 'Iluminación LED & Vintage', 'Totalmente Equipado', 'Ideal para Bodas'],
@@ -493,7 +493,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Consultoría Estratégica',
         title: 'Negocios',
         titleAccent: 'Inteligentes',
-        description: 'Ayudamos a bares, restaurantes y hoteles a maximizar la rentabilidad a través de procesos optimizados e ingeniería de menús centrada en el beneficio.',
+        description: 'Ayudamos a bares, restaurantes y hoteles a maximizar la rentabilidad a través de procesos optimizados e ingeniería de menús centrada en el beneficio. Una inversión de rápido retorno operacional.',
       },
       transformation: {
         title: 'De un bar común a una',
@@ -506,7 +506,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Asociación y Concesión',
-        description: '¿Tiene un espacio para eventos o un hotel y busca una gestión de bar profesional? Discutimos modelos de asociación o concesión total donde Cheers asume la operación con nuestros estándares de excelencia.',
+        description: '¿Tiene un espacio para eventos o un hotel y busca una gestión de bar profesional? Discutimos modelos de asociación o concesión total donde Cheers Hospitality asume la operación con nuestros estándares de excelencia.',
         cta: 'DISCUTIR ASOCIACIÓN',
       },
       painPoints: {
@@ -527,7 +527,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Innovación Digital',
         title: 'Hospitalidad',
         titleAccent: 'Digital',
-        description: 'Herramientas tecnológicas diseñadas para aumentar el consumo medio y mejorar la comunicación con el cliente en el punto de venta.',
+        description: 'Herramientas tecnológicas diseñadas para aumentar el consumo medio y mejorar la comunicación con el cliente en el punto de venta, garantizando una inversión de rápido retorno operacional.',
       },
       tvStrategy: {
         badge: 'Pérdida de Ingresos Detectada',
@@ -557,11 +557,11 @@ export const translations: Record<Language, Translation> = {
       services: {
         items: [
           { title: 'Menús QR Premium', text: 'Menús digitales elegantes, multilingües y fáciles de actualizar. Olvídese de las hojas de papel desgastadas.' },
+          { title: 'Ingeniería de Menús Custom', text: 'Elaboración de menús elegidos por usted o hechos por nosotros al 100% pensados en la identidad y beneficio de su negocio.' },
           { title: 'Multilingüe Real', text: 'Traducciones profesionales que respetan la terminología de la hostelería para atraer turistas.' },
           { title: 'Websites Enfocados', text: 'Sitios web mobile-first optimizados para reservas y presentación de servicios hoteleros.' },
           { title: 'Soporte y Actualizaciones', text: 'Nos encargamos de todas las actualizaciones mensuales para que su enfoque sea el cliente.' },
           { title: 'Cartelería Digital', text: 'Sistemas de pantallas para lobbies de hoteles, fincas de eventos y bares de alta rotación.' },
-          { title: 'Enfoque en Ingresos', text: 'Estrategias digitales diseñadas para aumentar las ventas de cócteles y ventas adicionales.' },
         ],
       },
       cta: {
@@ -574,7 +574,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Servicios de Bar',
         title: 'Eventos',
         titleAccent: 'Premium',
-        description: 'Bodas, cumpleaños, bautizos o eventos corporativos. Donde haya fiesta, Cheers lleva el bar con elegancia y profesionalismo.',
+        description: 'Bodas, cumpleaños, bautizos o eventos corporativos. Donde haya fiesta, Cheers Hospitality lleva el bar con elegancia y profesionalismo.',
         note: 'Podemos trabajar en una barra disponible o traer nuestra propia barra. Todo es posible.',
       },
       categories: {
@@ -624,11 +624,11 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Hospitality Performance Partner',
         title: 'Ingeniería de',
         titleAccent: 'Performance.',
-        description: 'No somos una agencia. Somos socios estratégicos en ingeniería de beneficios y protección de estándares para hoteles, restaurantes y eventos de élite.',
+        description: 'No somos una agencia. Somos socios estratégicos en ingeniería de beneficios y protección de estándares para hoteles, restaurantes y eventos de élite. Una inversión de alto impacto y rápido retorno operacional.',
       },
       whyCheers: {
         title: '¿Por qué Cheers Hospitality?',
-        subtitle: 'Combinamos la experiencia real de barra con la precisión de la gestión estratégica. Donde otros ven copas, nosotros vemos centros de beneficio de alto rendimiento.',
+        subtitle: 'Combinamos la experiencia real de barra con la precisión de la gestión estratégica. Donde otros ven solo servicio, nosotros vemos centros de beneficio de alto rendimiento.',
         items: [
           { title: 'Obsesión por el Margen', description: 'Cada menú y proceso se diseña para maximizar su ticket promedio y detener fugas financieras.' },
           { title: 'Rigor Operativo', description: 'Implementamos Procedimientos Operativos Estándar (SOPs) que garantizan una consistencia absoluta en cada servicio.' },
@@ -710,7 +710,7 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       headline: 'Have the event. We bring the bar.',
-      subheadline: 'Operational excellence in bar services, strategic consulting, and high-performance digital solutions for the Hospitality sector.',
+      subheadline: 'Operational excellence in bar services, strategic consulting, and high-performance digital solutions. A fast ROI investment focused on total profitability.',
       ctaQuote: 'Request Proposal',
       ctaWhatsapp: 'CONTACTAR',
     },
@@ -735,7 +735,7 @@ export const translations: Record<Language, Translation> = {
       digital: {
         title: 'Digital Solutions',
         description: 'Turn your TVs and menus into sales machines. QR menus and visual communication systems.',
-        features: ['QR Digital Menus', 'TV Systems', 'Hospitality Websites', 'Promotional Content'],
+        features: ['QR Digital Menus', 'TV Systems', '100% Custom Menu Design', 'Promotional Content'],
       },
     },
     packages: {
@@ -747,7 +747,7 @@ export const translations: Record<Language, Translation> = {
           name: 'Welcome Drinks',
           price: '450',
           description: 'The first impression is the one that lasts. An elegant reception service.',
-          features: ['Sparkling Wine & Welcome Cocktails', 'Logistics & Glassware', 'Professional Staff'],
+          features: ['Sparkling Wine & Welcome Cocktails', 'Logistics & Service Materials', 'Professional Staff'],
         },
         {
           name: 'Cocktail Bar',
@@ -762,7 +762,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Wide range of spirits', 'Unlimited cocktails', 'Total logistics management'],
         },
         {
-          name: 'Cheers Mobile Bar',
+          name: 'Cheers Hospitality Mobile Bar',
           price: '950',
           description: 'Our iconic mobile unit with industrial design and vintage lighting.',
           features: ['Industrial Chic Design', 'LED & Vintage Lighting', 'Fully Equipped', 'Ideal for Weddings'],
@@ -842,7 +842,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'B2B Strategic Consulting',
         title: 'Operational',
         titleAccent: 'Transformation.',
-        description: 'We don’t just sell advice. We deliver results. We help hospitality units reach their maximum potential through menu engineering, service standards, and cost optimization.',
+        description: 'We don’t just sell advice. We deliver results. We help hospitality units reach their maximum potential through menu engineering, service standards, and cost optimization. A fast ROI investment for immediate profitability.',
       },
       transformation: {
         title: 'From an ordinary bar to an',
@@ -855,7 +855,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Partnership & Concession',
-        description: 'Do you have an event space or hotel and seek professional bar management? We discuss partnership or full concession models where Cheers takes over the operation with our standards of excellence.',
+        description: 'Do you have an event space or hotel and seek professional bar management? We discuss partnership or full concession models where Cheers Hospitality takes over the operation with our standards of excellence.',
         cta: 'DISCUSS PARTNERSHIP',
       },
       painPoints: {
@@ -875,7 +875,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Digital Innovation',
         title: 'Digital',
         titleAccent: 'Hospitality',
-        description: 'Technological tools designed to increase average consumption and improve customer communication at the point of sale.',
+        description: 'Technological tools designed to increase average consumption and improve customer communication at the point of sale, ensuring a fast operational ROI.',
       },
       tvStrategy: {
         badge: 'Revenue Loss Detected',
@@ -905,11 +905,11 @@ export const translations: Record<Language, Translation> = {
       services: {
         items: [
           { title: 'Premium QR Menus', text: 'Elegant, multilingual, and easy-to-update digital menus. Forget worn-out paper sheets.' },
+          { title: 'Custom Menu Engineering', text: 'Creation of menus chosen by you or 100% made by us, designed for your business identity and profit.' },
           { title: 'Real Multilingual', text: 'Professional translations that respect hospitality terminology to attract tourists.' },
           { title: 'Focused Websites', text: 'Mobile-first sites optimized for bookings and presentation of hospitality services.' },
           { title: 'Support & Updates', text: 'We take care of all monthly updates so your focus is on the customer.' },
           { title: 'Digital Signage', text: 'Screen systems for hotel lobbies, event venues, and high-turnover bars.' },
-          { title: 'Revenue Focus', text: 'Digital strategies designed to increase cocktail sales and upsells.' },
         ],
       },
       cta: {
@@ -922,7 +922,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Bar Services',
         title: 'Premium',
         titleAccent: 'Events',
-        description: 'Weddings, birthdays, baptisms, or corporate events. Wherever there is a party, Cheers brings the bar with elegance and professionalism.',
+        description: 'Weddings, birthdays, baptisms, or corporate events. Wherever there is a party, Cheers Hospitality brings the bar with elegance and professionalism.',
         note: 'We can work at a provided counter or bring our own bar. Everything is possible.',
       },
       categories: {
@@ -972,11 +972,11 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Hospitality Performance Partner',
         title: 'Performance',
         titleAccent: 'Engineering.',
-        description: 'We are not an agency. We are strategic partners in profit engineering and standards protection for hotels, restaurants, and elite events.',
+        description: 'We are not an agency. We are strategic partners in profit engineering and standards protection for hotels, restaurants, and elite events. A high-impact investment with fast operational return.',
       },
       whyCheers: {
         title: 'Why Cheers Hospitality?',
-        subtitle: 'We bridge real bar experience with strategic management precision. Where others see glasses, we see high-performance profit centers.',
+        subtitle: 'We bridge real bar experience with strategic management precision. Where others see mere service, we see high-performance profit centers.',
         items: [
           { title: 'Margin Obsession', description: 'Every menu and process is engineered to maximize your average ticket and stop financial leaks.' },
           { title: 'Operational Rigor', description: 'We implement Standard Operating Procedures (SOPs) that ensure absolute consistency in every service.' },
@@ -1058,7 +1058,7 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       headline: 'Vous avez l\'événement. Nous apportons le bar.',
-      subheadline: 'Service de bar premium, conseil stratégique et solutions digitales pour l\'excellence dans l\'événementiel et l\'hôtellerie.',
+      subheadline: 'Service de bar premium, conseil stratégique et solutions digitales pour l\'excellence opérationnelle. Un investissement à retour rapide axé sur la rentabilité totale.',
       ctaQuote: 'Demander un Devis',
       ctaWhatsapp: 'CONTACTAR',
     },
@@ -1083,7 +1083,7 @@ export const translations: Record<Language, Translation> = {
       digital: {
         title: 'Solutions Digitales',
         description: 'Transformez vos téléviseurs et menus en machines de vente. Menus QR et systèmes de communication visuelle.',
-        features: ['Menus Digitaux QR', 'Systèmes TV', 'Sites Web Hôteliers', 'Contenu Promotionnel'],
+        features: ['Menus Digitaux QR', 'Systèmes TV', 'Conception de Menus 100% Personnalisés', 'Contenu Promotionnel'],
       },
     },
     packages: {
@@ -1095,7 +1095,7 @@ export const translations: Record<Language, Translation> = {
           name: 'Welcome Drinks',
           price: '450',
           description: 'La première impression est celle qui reste. Un service de réception élégant.',
-          features: ['Mousseux & Cocktails de Bienvenue', 'Logistique & Verrerie', 'Personnel Professionnel'],
+          features: ['Mousseux & Cocktails de Bienvenue', 'Logistique & Matériel de Service', 'Personnel Professionnel'],
         },
         {
           name: 'Cocktail Bar',
@@ -1110,7 +1110,7 @@ export const translations: Record<Language, Translation> = {
           features: ['Large gamme de spiritueux', 'Cocktails illimités', 'Gestion logistique totale'],
         },
         {
-          name: 'Bar Mobile Cheers',
+          name: 'Bar Mobile Cheers Hospitality',
           price: '950',
           description: 'Notre unité mobile iconique au design industriel et éclairage vintage.',
           features: ['Design Industriel Chic', 'Éclairage LED & Vintage', 'Entièrement Équipé', 'Idéal pour Mariages'],
@@ -1190,7 +1190,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Conseil Stratégique',
         title: 'Affaires',
         titleAccent: 'Intelligentes',
-        description: 'Nous aidons les bars, restaurants et hôtels à maximizar a rentabilidade através de processos otimizados e engenharia de menus focada no lucro.',
+        description: 'Nous aidons les bars, restaurants et hôtels à maximiser leur rentabilité grâce à des processus optimisés et une ingénierie de menus axée sur le profit. Un investissement à retour rapide opérationnel.',
       },
       transformation: {
         title: 'D\'un bar ordinaire à une',
@@ -1203,7 +1203,7 @@ export const translations: Record<Language, Translation> = {
       },
       partnership: {
         title: 'Partenariat & Concession',
-        description: 'Vous disposez d\'un espace événementiel ou d\'un hôtel et recherchez une gestion de bar professionnelle ? Nous discutons de modèles de partenariat ou de concession totale où Cheers reprend l\'exploitation avec nos standards d\'excellence.',
+        description: 'Vous disposez d\'un espace événementiel ou d\'un hôtel et recherchez une gestion de bar professionnelle ? Nous discutons de modèles de partenariat ou de concession totale où Cheers Hospitality reprend l\'exploitation avec nos standards d\'excellence.',
         cta: 'DISCUTER DU PARTENARIAT',
       },
       painPoints: {
@@ -1224,7 +1224,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Innovation Digitale',
         title: 'Hospitalité',
         titleAccent: 'Digitale',
-        description: 'Des outils technologiques conçus pour augmenter la consommation moyenne et améliorer la communication client au point de vente.',
+        description: 'Des outils technologiques conçus pour augmenter la consommation moyenne et améliorer la communication client au point de vente, garantissant un investissement à retour sur investissement rapide.',
       },
       tvStrategy: {
         badge: 'Perte de Revenus Détectée',
@@ -1254,11 +1254,11 @@ export const translations: Record<Language, Translation> = {
       services: {
         items: [
           { title: 'Menus QR Premium', text: 'Menus digitaux élégants, multilingues et faciles à mettre à jour. Oubliez les feuilles de papier usées.' },
+          { title: 'Ingénierie de Menus Personnalisés', text: 'Élaboration de menus choisis par vous ou créés à 100% par nous, pensés pour l\'identité et le profit de votre entreprise.' },
           { title: 'Vrai Multilingue', text: 'Des traductions professionnelles qui respectent la terminologie hôtelière pour attirer les touristes.' },
           { title: 'Sites Web Ciblés', text: 'Sites mobile-first optimisés pour les réservations et la présentation des services hôteliers.' },
           { title: 'Support & Mises à jour', text: 'Nous nous occupons de toutes les mises à jour mensuelles pour que vous puissiez vous concentrer sur le client.' },
           { title: 'Affichage Dynamique', text: 'Systèmes d\'écrans pour les halls d\'hôtels, les lieux d\'événements et les bars à forte fréquentation.' },
-          { title: 'Focus sur les Revenus', text: 'Stratégies digitales conçues pour augmenter les ventes de cocktails et les ventes incitatives.' },
         ],
       },
       cta: {
@@ -1271,7 +1271,7 @@ export const translations: Record<Language, Translation> = {
         eyebrow: 'Services de Bar',
         title: 'Événements',
         titleAccent: 'Premium',
-        description: 'Mariages, anniversaires, baptêmes ou événements d\'entreprise. Partout où il y a une fête, Cheers apporte le bar avec élégance et professionnalisme.',
+        description: 'Mariages, anniversaires, baptêmes ou événements d\'entreprise. Partout où il y a une fête, Cheers Hospitality apporte le bar avec élégance et professionnalisme.',
         note: 'Nous pouvons travailler à un comptoir fourni ou apporter nosso propre bar. Tout est possible.',
       },
       categories: {

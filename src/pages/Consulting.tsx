@@ -166,7 +166,7 @@ export const Consulting = () => {
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-4 px-12 py-6 bg-[#111111] text-white font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all rounded-full"
+                className="inline-flex items-center justify-center gap-4 px-8 py-5 md:px-12 md:py-6 w-full sm:w-auto bg-[#111111] text-white font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all rounded-full"
               >
                 {t.consultingPage.partnership.cta}
               </Link>
