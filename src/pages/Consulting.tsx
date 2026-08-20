@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Users, Target, ShieldCheck, BarChart3, Lightbulb } from 'lucide-react';
+import cocktailImg from '../assets/images/luxurious_cocktail_premium_1787247308587.jpg';
 
 export const Consulting = () => {
   const { t } = useLanguage();
@@ -173,7 +174,7 @@ export const Consulting = () => {
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4 relative z-10">
               <div className="aspect-[4/5] bg-[#F5F5F3] rounded-2xl overflow-hidden group">
-                <img src="/src/assets/images/luxurious_cocktail_premium_1787247308587.jpg" alt="Luxurious Cocktail" className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                <img src={cocktailImg} alt="Luxurious Cocktail" className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
               <div className="aspect-[4/5] bg-[#F5F5F3] rounded-2xl overflow-hidden group mt-12">
                 <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600" alt="Staff Elite" className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" />
