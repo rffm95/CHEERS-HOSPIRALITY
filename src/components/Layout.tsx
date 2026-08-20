@@ -8,26 +8,69 @@ export const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-black border-t border-white/10 py-12">
+    <footer className="bg-black border-t border-white/5 pt-32 pb-12">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.2em] font-black text-white/40">
-          <div className="flex flex-wrap justify-center md:justify-start gap-8 md:gap-12">
-            <span className="flex items-center gap-2">
-              <span className="text-[#c5a059]">📍</span> Viseu, Coimbra, Porto, Alto Douro
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-[#c5a059]">✓</span> {t.common.premiumService}
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-[#c5a059]">✓</span> {t.common.multiLanguage}
-            </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-32">
+          {/* Brand Column */}
+          <div className="col-span-1 lg:col-span-1">
+            <Link to="/" className="text-2xl font-black tracking-tighter text-white uppercase mb-8 block">
+              Cheers <span className="text-stroke-accent">Hospitality</span><span className="text-[#c5a059]">.</span>
+            </Link>
+            <p className="text-white/30 text-sm leading-relaxed mb-10 max-w-xs">
+              Elevamos os padrões da hospitalidade através de uma visão 360º que une eventos, consultoria e tecnologia.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#c5a059] hover:text-black transition-all">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#c5a059] hover:text-black transition-all">
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
           </div>
-          
+
+          {/* Business Units */}
+          <div>
+            <h4 className="text-white font-black uppercase text-[10px] tracking-[0.4em] mb-10">Business Units</h4>
+            <ul className="space-y-4">
+              <li><Link to="/events" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.events}</Link></li>
+              <li><Link to="/consulting" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.consulting}</Link></li>
+              <li><Link to="/digital" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.digital}</Link></li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-black uppercase text-[10px] tracking-[0.4em] mb-10">Explorar</h4>
+            <ul className="space-y-4">
+              <li><Link to="/portfolio" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.portfolio}</Link></li>
+              <li><Link to="/about" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.about}</Link></li>
+              <li><Link to="/contact" className="text-white/40 hover:text-[#c5a059] transition-colors text-sm font-medium uppercase tracking-widest">{t.nav.contact}</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h4 className="text-white font-black uppercase text-[10px] tracking-[0.4em] mb-10">Contactos</h4>
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-[#c5a059] shrink-0" />
+                <p className="text-white/40 text-sm leading-tight font-medium uppercase tracking-widest">Viseu, Coimbra, Porto, <br />Alto Douro & Algarve</p>
+              </li>
+              <li className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-[#c5a059] shrink-0" />
+                <p className="text-white/40 text-sm font-medium">9xx xxx xxx</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-black text-white/20">
+          <p>© 2024 Cheers Hospitality. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <span className="text-white/10 select-none">|</span>
-            <span className="text-white/20 whitespace-nowrap">© 2024 Cheers Hospitality</span>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

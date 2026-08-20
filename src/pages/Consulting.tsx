@@ -98,22 +98,23 @@ export const Consulting = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">
-                {t.consultingPage.transformation.title} <span className="text-[#c5a059]">{t.consultingPage.transformation.titleAccent}</span>
+              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase leading-[0.9]">
+                {t.consultingPage.transformation.title} <br />
+                <span className="text-[#c5a059]">{t.consultingPage.transformation.titleAccent}</span>
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-12">
                 {[
                   { icon: BarChart3, ...t.consultingPage.transformation.features[0] },
                   { icon: Users, ...t.consultingPage.transformation.features[1] },
-                  { icon: Target, ...t.consultingPage.transformation.features[2] },
+                  { icon: ShieldCheck, ...t.consultingPage.transformation.features[2] },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center shrink-0">
-                      <item.icon className="w-6 h-6 text-[#c5a059]" />
+                  <div key={i} className="flex gap-8 group">
+                    <div className="w-14 h-14 rounded-2xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center shrink-0 group-hover:bg-[#c5a059]/20 transition-all">
+                      <item.icon className="w-7 h-7 text-[#c5a059]" />
                     </div>
                     <div>
-                      <h4 className="text-white font-bold mb-2">{item.title}</h4>
-                      <p className="text-zinc-500 text-sm leading-relaxed">{item.text}</p>
+                      <h4 className="text-white font-black uppercase text-sm tracking-widest mb-3">{item.title}</h4>
+                      <p className="text-zinc-500 text-sm leading-relaxed max-w-md">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -121,13 +122,49 @@ export const Consulting = () => {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-[#c5a059]/5 blur-[100px] rounded-full" />
-              <div className="relative p-1 bg-zinc-800 rounded-[40px] border border-white/5">
+              <div className="relative p-1 bg-zinc-800 rounded-[60px] border border-white/5 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200"
+                  src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200"
                   alt="Consulting Context"
-                  className="rounded-[36px] grayscale hover:grayscale-0 transition-all duration-700"
+                  className="rounded-[58px] grayscale hover:grayscale-0 transition-all duration-1000 scale-105"
                   loading="lazy"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership Section */}
+      <section className="py-32 bg-[#050505] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative p-12 md:p-24 bg-zinc-900/40 border border-white/5 rounded-[60px] flex flex-col lg:flex-row items-center gap-16">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#c5a059]/10 blur-[100px] rounded-full pointer-events-none -mr-48 -mt-48" />
+            
+            <div className="lg:w-1/2 relative z-10">
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black mb-6 block">B2B Partnership</span>
+              <h2 className="text-5xl font-black text-white tracking-tighter uppercase mb-8 leading-tight">
+                {t.consultingPage.partnership.title}
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10 font-medium">
+                {t.consultingPage.partnership.description}
+              </p>
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-[10px] hover:bg-[#c5a059] transition-all shadow-2xl"
+              >
+                {t.consultingPage.partnership.cta}
+              </motion.a>
+            </div>
+            
+            <div className="lg:w-1/2 grid grid-cols-2 gap-4 relative z-10">
+              <div className="aspect-square bg-zinc-800 rounded-3xl overflow-hidden border border-white/10 mt-12">
+                <img src="https://images.unsplash.com/photo-1544145945-f904253d0c7b?q=80&w=600" alt="Bar Detail" className="w-full h-full object-cover grayscale" />
+              </div>
+              <div className="aspect-square bg-zinc-800 rounded-3xl overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600" alt="Bar Service" className="w-full h-full object-cover grayscale" />
               </div>
             </div>
           </div>

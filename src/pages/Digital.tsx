@@ -30,47 +30,67 @@ export const Digital = () => {
       </section>
 
       {/* TV Strategy Section */}
-      <section className="py-32 bg-[#0a0a0a] will-change-transform">
+      <section className="py-32 bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-zinc-900 rounded-[48px] p-8 md:p-20 border border-white/5 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#c5a059]/10 blur-[120px] rounded-full -mr-48 -mt-48" />
+          <div className="bg-zinc-900/50 rounded-[60px] p-12 md:p-24 border border-white/5 overflow-hidden relative group">
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[120px] rounded-full -mr-48 -mt-48 group-hover:bg-[#c5a059]/10 transition-colors duration-1000" />
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
               <div>
-                <span className="inline-block px-3 py-1 rounded-md bg-red-500/10 text-red-500 text-[10px] font-bold uppercase tracking-widest mb-6">
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-black uppercase tracking-[0.2em] mb-10"
+                >
+                  <RefreshCw className="w-3 h-3 animate-spin" />
                   {t.digitalPage.tvStrategy.badge}
-                </span>
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
-                  {t.digitalPage.tvStrategy.title} <span className="text-red-500">{t.digitalPage.tvStrategy.titleAccent}</span>
+                </motion.div>
+                <h2 className="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+                  {t.digitalPage.tvStrategy.title} <br />
+                  <span className="text-red-500">{t.digitalPage.tvStrategy.titleAccent}</span>
                 </h2>
-                <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+                <p className="text-zinc-400 text-xl leading-relaxed mb-12 font-medium">
                   {t.digitalPage.tvStrategy.description}
                 </p>
-                <ul className="space-y-4 mb-10">
-                  {t.digitalPage.tvStrategy.features.map((text, i) => (
-                    <li key={i} className="flex items-center gap-3 text-zinc-300 font-medium">
-                      <Tv className="w-5 h-5 text-[#c5a059]" />
-                      {text}
-                    </li>
+                <div className="space-y-10">
+                  {t.digitalPage.tvStrategy.features.map((feat, i) => (
+                    <div key={i} className="flex gap-6 group/item">
+                      <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-[#c5a059]/10 transition-colors">
+                        <MonitorPlay className="w-6 h-6 text-[#c5a059]" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-black uppercase text-sm tracking-widest mb-2">{feat.title}</h4>
+                        <p className="text-zinc-500 text-sm leading-relaxed">{feat.description}</p>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-              <div className="relative aspect-video rounded-3xl bg-black border border-white/10 overflow-hidden shadow-2xl group">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <p className="text-[#c5a059] text-xs uppercase font-bold tracking-[0.3em] mb-4">
+              
+              <div className="relative">
+                <div className="absolute -inset-4 bg-[#c5a059]/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="relative aspect-video rounded-[40px] bg-black border-[12px] border-zinc-800 overflow-hidden shadow-2xl flex items-center justify-center text-center p-12">
+                  <div className="relative z-10">
+                    <motion.div
+                      animate={{ opacity: [0.4, 1, 0.4] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="w-16 h-1 bg-[#c5a059] mx-auto mb-10"
+                    />
+                    <p className="text-[#c5a059] text-xs uppercase font-black tracking-[0.4em] mb-6">
                       {t.digitalPage.tvStrategy.preview.eyebrow}
                     </p>
-                    <h3 className="text-2xl font-display text-white mb-2 uppercase">
+                    <h3 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter uppercase leading-none">
                       {t.digitalPage.tvStrategy.preview.title}
                     </h3>
-                    <p className="text-zinc-500 text-sm">
+                    <p className="text-white/40 text-lg font-bold uppercase tracking-[0.2em]">
                       {t.digitalPage.tvStrategy.preview.subtitle}
                     </p>
                   </div>
-                </div>
-                <div className="absolute bottom-4 right-4 w-24 h-24 bg-white/5 backdrop-blur-md rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <QrCode className="w-12 h-12 text-[#c5a059]/40" />
+                  <div className="absolute bottom-8 right-8 w-24 h-24 bg-white/5 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/10">
+                    <QrCode className="w-12 h-12 text-[#c5a059]" />
+                  </div>
+                  {/* Digital Grain Overlay */}
+                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
                 </div>
               </div>
             </div>

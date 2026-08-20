@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { Check, Info } from 'lucide-react';
+import { Check, Info, ArrowRight } from 'lucide-react';
 
 export const Events = () => {
   const { t } = useLanguage();
@@ -78,45 +78,66 @@ export const Events = () => {
       </section>
 
       {/* Service Grid */}
-      <section className="py-32 bg-zinc-900/20 will-change-transform">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-40 bg-[#050505] relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-10 relative z-10">
+          <div className="mb-20 text-center">
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black mb-4 block">Tailored Excellence</span>
+            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase mb-6">Ocasiões Únicas</h2>
+            <p className="text-white/40 max-w-2xl mx-auto text-lg leading-relaxed">Cada evento é uma assinatura. Desenhamos a experiência de bar para se fundir com a estética e o propósito da sua celebração.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: t.eventsPage.categories.weddings, img: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800' },
-              { title: t.eventsPage.categories.corporate, img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800' },
-              { title: t.eventsPage.categories.private, img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800' },
-              { title: t.eventsPage.categories.baptisms, img: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800' },
+              { title: t.eventsPage.categories.weddings, img: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800', description: 'O brinde perfeito para o dia mais importante.' },
+              { title: t.eventsPage.categories.corporate, img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800', description: 'Reforce a sua marca com networking de elite.' },
+              { title: t.eventsPage.categories.private, img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800', description: 'Exclusividade e diversão no conforto do seu espaço.' },
+              { title: t.eventsPage.categories.baptisms, img: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800', description: 'Momentos familiares com um toque de sofisticação.' },
             ].map((item, idx) => (
-              <div key={idx} className="relative h-80 rounded-3xl overflow-hidden group">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-8">
-                  <h4 className="text-xl font-display font-bold text-white uppercase tracking-tighter">{item.title}</h4>
+              <motion.div 
+                key={idx} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="relative h-[500px] rounded-[40px] overflow-hidden group border border-white/5"
+              >
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute bottom-0 left-0 p-10 w-full transform group-hover:-translate-y-2 transition-transform duration-500">
+                  <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-3">{item.title}</h4>
+                  <p className="text-white/40 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Quote CTA */}
-      <section className="py-32 bg-[#0a0a0a] will-change-transform">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="p-16 rounded-[40px] bg-gradient-to-br from-zinc-900 to-black border border-white/5 relative overflow-hidden">
-            <div className="absolute inset-0 luxury-glow opacity-20 pointer-events-none" />
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8 relative z-10">
-              {t.eventsPage.quote.title} <span className="text-[#c5a059]">{t.eventsPage.quote.titleAccent}</span>
+      <section className="py-40 bg-[#0a0a0a] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-zinc-900/50 rounded-[60px] p-16 md:p-32 text-center relative border border-white/5 overflow-hidden group"
+          >
+            <div className="absolute inset-0 bg-[#c5a059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9] relative z-10">
+              {t.eventsPage.quote.title} <br />
+              <span className="text-[#c5a059]">{t.eventsPage.quote.titleAccent}</span>
             </h2>
-            <p className="text-zinc-400 text-lg mb-12 relative z-10">
+            <p className="text-white/40 text-xl mb-16 max-w-2xl mx-auto font-medium relative z-10 leading-relaxed">
               {t.eventsPage.quote.description}
             </p>
             <Link 
               to="/contact"
-              className="px-10 py-5 bg-[#c5a059] text-black font-black uppercase tracking-widest text-sm rounded-full inline-block relative z-10 hover:bg-white transition-all transform hover:-translate-y-1"
+              className="group inline-flex items-center gap-6 px-12 py-7 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-[#c5a059] transition-all relative z-10 shadow-2xl"
             >
               {t.eventsPage.quote.cta}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

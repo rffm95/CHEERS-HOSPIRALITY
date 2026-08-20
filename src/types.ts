@@ -121,8 +121,13 @@ export interface Translation {
       titleAccent: string;
       features: {
         title: string;
-        text: string;
+        description: string;
       }[];
+    };
+    partnership: {
+      title: string;
+      description: string;
+      cta: string;
     };
     painPoints: {
       title: string;
@@ -142,7 +147,10 @@ export interface Translation {
       title: string;
       titleAccent: string;
       description: string;
-      features: string[];
+      features: {
+        title: string;
+        description: string;
+      }[];
       preview: {
         eyebrow: string;
         title: string;
@@ -218,6 +226,28 @@ export interface Translation {
     };
   };
   homePage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+    };
+    whyCheers: {
+      title: string;
+      subtitle: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    methodology: {
+      title: string;
+      steps: {
+        number: string;
+        title: string;
+        description: string;
+      }[];
+    };
     ctaSection: {
       title: string;
       titleAccent: string;
