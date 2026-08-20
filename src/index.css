@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #050505;
+  color: #E5E5E5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.05) 0%, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.text-stroke-accent {
+  -webkit-text-stroke: 1px #C5A059;
+  color: transparent;
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.luxury-gradient {
+  background: #C5A059;
+}
+
+.luxury-glow {
+  background: radial-gradient(circle at center, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+}
+
+.premium-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.text-luxury {
+  color: #C5A059;
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 48px;
+    line-height: 0.95;
+  }
+}
