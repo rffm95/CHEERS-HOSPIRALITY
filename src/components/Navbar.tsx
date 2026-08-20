@@ -117,7 +117,7 @@ export const Navbar = () => {
               ))}
               
               <div className="pt-6 border-t border-white/5">
-                <p className="text-xs text-zinc-500 uppercase tracking-widest mb-4">Idioma</p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest mb-4">{t.common.language}</p>
                 <div className="grid grid-cols-1 gap-2">
                   {languages.map((lang) => (
                     <button

@@ -51,13 +51,13 @@ export const Contact = () => {
         <div className="max-w-7xl mx-auto px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Info */}
-            <div>
+            <div className="will-change-transform">
               {/* Ambient Luxury Glow */}
               <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#c5a059]/10 blur-[120px] rounded-full pointer-events-none" />
               
-              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">Contactos</span>
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">{t.contactPage.hero.eyebrow}</span>
               <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-12 tracking-tighter uppercase leading-[0.9]">
-                Vamos <br /><span className="text-stroke-accent">Conversar?</span>
+                {t.contactPage.hero.title} <br /><span className="text-stroke-accent">{t.contactPage.hero.titleAccent}</span>
               </h1>
               <div className="space-y-12">
                 <div className="flex gap-6 group">
@@ -65,8 +65,8 @@ export const Contact = () => {
                     <Phone className="w-6 h-6 text-zinc-400 group-hover:text-[#c5a059]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">Telefone / WhatsApp</h4>
-                    <p className="text-[#c5a059] text-[10px] font-black uppercase tracking-widest bg-[#c5a059]/10 px-3 py-1 rounded-full inline-block mt-1">Indisponível até 15 Set.</p>
+                    <h4 className="text-white font-bold mb-1">{t.contactPage.info.phoneTitle}</h4>
+                    <p className="text-[#c5a059] text-[10px] font-black uppercase tracking-widest bg-[#c5a059]/10 px-3 py-1 rounded-full inline-block mt-1">{t.contactPage.info.phoneStatus}</p>
                   </div>
                 </div>
                 <div className="flex gap-6 group">
@@ -74,7 +74,7 @@ export const Contact = () => {
                     <Mail className="w-6 h-6 text-zinc-400 group-hover:text-[#c5a059]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">Email Direto</h4>
+                    <h4 className="text-white font-bold mb-1">{t.contactPage.info.emailTitle}</h4>
                     <p className="text-zinc-500 text-sm">sucessomacico@gmail.com</p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export const Contact = () => {
                     <Instagram className="w-6 h-6 text-zinc-400 group-hover:text-[#c5a059]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">Instagram</h4>
+                    <h4 className="text-white font-bold mb-1">{t.contactPage.info.instaTitle}</h4>
                     <p className="text-zinc-500 text-sm">@cheers_hospitality_pt</p>
                   </div>
                 </div>
@@ -91,15 +91,15 @@ export const Contact = () => {
 
               <div className="mt-20 p-10 bg-zinc-900/30 rounded-3xl border border-white/5 relative overflow-hidden group hover:bg-zinc-900/50 transition-all">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#c5a059]/5 blur-3xl rounded-full" />
-                <h4 className="text-white font-display font-bold mb-4 text-xl">Área de Atuação</h4>
+                <h4 className="text-white font-display font-bold mb-4 text-xl">{t.contactPage.info.areaTitle}</h4>
                 <p className="text-zinc-500 text-sm leading-relaxed">
-                  Baseados em Viseu, servimos as regiões de Coimbra, Porto, Alto Douro, Aveiro, Guarda e todo o norte e centro de Portugal. Para projetos de consultoria e soluções digitais, atuamos a nível nacional.
+                  {t.contactPage.info.areaText}
                 </p>
               </div>
             </div>
 
             {/* Form */}
-            <div className="relative">
+            <div className="relative will-change-transform">
               <AnimatePresence mode="wait">
                 {!submitted ? (
                   <motion.form
@@ -118,7 +118,7 @@ export const Contact = () => {
                           formData.type === 'event' ? 'bg-[#c5a059] text-black' : 'text-zinc-500'
                         }`}
                       >
-                        Evento
+                        {t.contactPage.form.event}
                       </button>
                       <button
                         type="button"
@@ -127,7 +127,7 @@ export const Contact = () => {
                           formData.type === 'business' ? 'bg-[#c5a059] text-black' : 'text-zinc-500'
                         }`}
                       >
-                        Negócio
+                        {t.contactPage.form.business}
                       </button>
                     </div>
 
@@ -137,7 +137,7 @@ export const Contact = () => {
                         <input
                           required
                           className="w-full bg-black border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#c5a059] outline-none transition-all"
-                          placeholder="Ex: João Silva"
+                          placeholder={t.contactPage.form.placeholderName}
                         />
                       </div>
                       <div className="space-y-2">
@@ -146,7 +146,7 @@ export const Contact = () => {
                           required
                           type="email"
                           className="w-full bg-black border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#c5a059] outline-none transition-all"
-                          placeholder="email@exemplo.com"
+                          placeholder={t.contactPage.form.placeholderEmail}
                         />
                       </div>
                     </div>
@@ -157,28 +157,28 @@ export const Contact = () => {
                         <input
                           required
                           className="w-full bg-black border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#c5a059] outline-none transition-all"
-                          placeholder="+351 900 000 000"
+                          placeholder={t.contactPage.form.placeholderPhone}
                         />
                       </div>
                       <div className="space-y-2">
                         <label className="text-[10px] uppercase font-black tracking-widest text-zinc-500 ml-4">
-                          {formData.type === 'event' ? t.quote.form.eventType : 'Tipo de Negócio'}
+                          {formData.type === 'event' ? t.quote.form.eventType : t.contactPage.form.businessType}
                         </label>
                         <select className="w-full bg-black border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#c5a059] outline-none transition-all appearance-none">
                           {formData.type === 'event' ? (
                             <>
-                              <option>Casamento</option>
-                              <option>Aniversário</option>
-                              <option>Batizado</option>
-                              <option>Corporativo</option>
-                              <option>Outro</option>
+                              <option>{t.contactPage.form.categories.wedding}</option>
+                              <option>{t.contactPage.form.categories.birthday}</option>
+                              <option>{t.contactPage.form.categories.baptism}</option>
+                              <option>{t.contactPage.form.categories.corporate}</option>
+                              <option>{t.contactPage.form.categories.other}</option>
                             </>
                           ) : (
                             <>
-                              <option>Bar</option>
-                              <option>Restaurante</option>
-                              <option>Hotel / Quinta</option>
-                              <option>Catering</option>
+                              <option>{t.contactPage.form.businessCategories.bar}</option>
+                              <option>{t.contactPage.form.businessCategories.restaurant}</option>
+                              <option>{t.contactPage.form.businessCategories.hotel}</option>
+                              <option>{t.contactPage.form.businessCategories.catering}</option>
                             </>
                           )}
                         </select>
@@ -208,7 +208,7 @@ export const Contact = () => {
                       <label className="text-[10px] uppercase font-black tracking-widest text-zinc-500 ml-4">{t.quote.form.message}</label>
                       <textarea
                         className="w-full bg-black border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:border-[#c5a059] outline-none transition-all min-h-[120px]"
-                        placeholder="Como podemos ajudar?"
+                        placeholder={t.contactPage.form.placeholderMessage}
                       />
                     </div>
 
@@ -231,12 +231,12 @@ export const Contact = () => {
                       <CheckCircle className="w-10 h-10 text-[#c5a059]" />
                     </div>
                     <h3 className="text-3xl font-display font-bold text-white">{t.quote.form.success}</h3>
-                    <p className="text-zinc-500">Entraremos em contacto através do meio preferencial em menos de 24 horas.</p>
+                    <p className="text-zinc-500">{t.contactPage.form.successDetail}</p>
                     <button
                       onClick={() => setSubmitted(false)}
                       className="text-[#c5a059] text-xs font-bold uppercase tracking-widest"
                     >
-                      Enviar outro pedido
+                      {t.contactPage.form.sendAnother}
                     </button>
                   </motion.div>
                 )}

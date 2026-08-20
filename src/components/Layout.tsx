@@ -16,10 +16,10 @@ export const Footer = () => {
               <span className="text-[#c5a059]">📍</span> Viseu, Coimbra, Porto, Alto Douro
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-[#c5a059]">✓</span> Premium Service
+              <span className="text-[#c5a059]">✓</span> {t.common.premiumService}
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-[#c5a059]">✓</span> Multi-Language
+              <span className="text-[#c5a059]">✓</span> {t.common.multiLanguage}
             </span>
           </div>
           

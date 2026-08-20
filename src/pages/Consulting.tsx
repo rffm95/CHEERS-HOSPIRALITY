@@ -11,19 +11,21 @@ export const Consulting = () => {
       <section className="py-24 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-10">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="max-w-3xl">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">Consultoria Estratégica</span>
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">
+              {t.consultingPage.hero.eyebrow}
+            </span>
             <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-8 tracking-tighter uppercase">
-              Negócios <span className="text-stroke-accent">Inteligentes</span>
+              {t.consultingPage.hero.title} <span className="text-stroke-accent">{t.consultingPage.hero.titleAccent}</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed max-w-xl">
-              Ajudamos bares, restaurantes e hotéis a maximizar a rentabilidade através de processos otimizados e engenharia de menus focada no lucro.
+              {t.consultingPage.hero.description}
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Appointment Banner */}
-      <section className="bg-[#c5a059] py-6">
+      <section className="bg-[#c5a059] py-6 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-black/10 flex items-center justify-center">
@@ -45,7 +47,7 @@ export const Consulting = () => {
       </section>
 
       {/* Sabia que Section */}
-      <section className="py-32 bg-[#050505] relative overflow-hidden">
+      <section className="py-32 bg-[#050505] relative overflow-hidden will-change-transform">
         <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(197, 160, 89, 0.05) 0%, transparent 70%)' }} />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 text-center">
@@ -92,18 +94,18 @@ export const Consulting = () => {
       </section>
 
       {/* Transformation Section */}
-      <section className="py-32 bg-[#0a0a0a]">
+      <section className="py-32 bg-[#0a0a0a] will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">
-                De um bar comum para uma <span className="text-[#c5a059]">operação de elite.</span>
+                {t.consultingPage.transformation.title} <span className="text-[#c5a059]">{t.consultingPage.transformation.titleAccent}</span>
               </h2>
               <div className="space-y-8">
                 {[
-                  { icon: BarChart3, title: 'Engenharia de Menu', text: 'Analisamos a rentabilidade de cada ingrediente para criar menus que vendem mais os produtos mais lucrativos.' },
-                  { icon: Users, title: 'Formação de Equipa', text: 'Standards de serviço que elevam a experiência do cliente e aumentam o ticket médio por mesa.' },
-                  { icon: Target, title: 'Estratégia de Preços', text: 'Modelos dinâmicos baseados no mercado real e custos operacionais precisos.' },
+                  { icon: BarChart3, ...t.consultingPage.transformation.features[0] },
+                  { icon: Users, ...t.consultingPage.transformation.features[1] },
+                  { icon: Target, ...t.consultingPage.transformation.features[2] },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6">
                     <div className="w-12 h-12 rounded-xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center shrink-0">
@@ -124,6 +126,7 @@ export const Consulting = () => {
                   src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200"
                   alt="Consulting Context"
                   className="rounded-[36px] grayscale hover:grayscale-0 transition-all duration-700"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -132,20 +135,15 @@ export const Consulting = () => {
       </section>
 
       {/* Pain Points */}
-      <section className="py-32 bg-zinc-900/20">
+      <section className="py-32 bg-zinc-900/20 will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white">Sente estes problemas?</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
+              {t.consultingPage.painPoints.title}
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              'Volume operacional elevado com margens de lucro reduzidas',
-              'Inconsistência nos padrões de serviço e hospitalidade',
-              'Menus estáticos com baixa rotatividade de produtos premium',
-              'Desperdício de stock (Waste) impactando o Food & Beverage Cost',
-              'Falta de uma identidade visual e digital integrada na unidade',
-              'Dificuldade na formação contínua e retenção de talentos de bar',
-            ].map((text, i) => (
+            {t.consultingPage.painPoints.items.map((text, i) => (
               <div key={i} className="p-8 rounded-2xl bg-black border border-white/5 flex gap-4">
                 <ShieldCheck className="w-5 h-5 text-red-500/50 shrink-0 mt-1" />
                 <p className="text-zinc-400 text-sm font-medium">{text}</p>
@@ -156,11 +154,11 @@ export const Consulting = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-[#0a0a0a]">
+      <section className="py-32 bg-[#0a0a0a] will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-gradient-to-r from-[#c5a059] to-[#927439] rounded-[40px] p-12 md:p-24 text-center">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-8 max-w-2xl mx-auto">
-              Leve o seu negócio para o próximo patamar.
+              {t.consultingPage.cta}
             </h2>
           </div>
         </div>

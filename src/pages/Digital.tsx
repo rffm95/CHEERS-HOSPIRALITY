@@ -16,19 +16,21 @@ export const Digital = () => {
       <section className="py-24 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-10">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="max-w-3xl">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">Inovação Digital</span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-8 tracking-tighter uppercase">
-              Hospitality <span className="text-stroke-accent">Digital</span>
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">
+              {t.digitalPage.hero.eyebrow}
+            </span>
+            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-8 tracking-tighter uppercase leading-[0.9]">
+              {t.digitalPage.hero.title} <span className="text-stroke-accent">{t.digitalPage.hero.titleAccent}</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed max-w-xl">
-              Ferramentas tecnológicas desenhadas para aumentar o consumo médio e melhorar a comunicação com o cliente no ponto de venda.
+              {t.digitalPage.hero.description}
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* TV Strategy Section */}
-      <section className="py-32 bg-[#0a0a0a]">
+      <section className="py-32 bg-[#0a0a0a] will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-zinc-900 rounded-[48px] p-8 md:p-20 border border-white/5 overflow-hidden relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#c5a059]/10 blur-[120px] rounded-full -mr-48 -mt-48" />
@@ -36,21 +38,16 @@ export const Digital = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
               <div>
                 <span className="inline-block px-3 py-1 rounded-md bg-red-500/10 text-red-500 text-[10px] font-bold uppercase tracking-widest mb-6">
-                  Perda de Receita Detectada
+                  {t.digitalPage.tvStrategy.badge}
                 </span>
                 <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
-                  As suas TVs estão a <span className="text-red-500">perder dinheiro?</span>
+                  {t.digitalPage.tvStrategy.title} <span className="text-red-500">{t.digitalPage.tvStrategy.titleAccent}</span>
                 </h2>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-                  Muitos espaços têm ecrãs ligados em canais aleatórios ou conteúdos estáticos. As nossas soluções transformam esses ecrãs em vendedores silenciosos que promovem cocktails, sobremesas e happy hours nos momentos certos.
+                  {t.digitalPage.tvStrategy.description}
                 </p>
                 <ul className="space-y-4 mb-10">
-                  {[
-                    'Promoção dinâmica de produtos lucrativos',
-                    'Aumento imediato do ticket médio',
-                    'Comunicação visual profissional e elegante',
-                    'Gestão centralizada de conteúdos',
-                  ].map((text, i) => (
+                  {t.digitalPage.tvStrategy.features.map((text, i) => (
                     <li key={i} className="flex items-center gap-3 text-zinc-300 font-medium">
                       <Tv className="w-5 h-5 text-[#c5a059]" />
                       {text}
@@ -58,16 +55,22 @@ export const Digital = () => {
                   ))}
                 </ul>
               </div>
-              <div className="relative aspect-video rounded-3xl bg-black border border-white/10 overflow-hidden shadow-2xl">
+              <div className="relative aspect-video rounded-3xl bg-black border border-white/10 overflow-hidden shadow-2xl group">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <p className="text-[#c5a059] text-xs uppercase font-bold tracking-[0.3em] mb-4">Live Preview</p>
-                    <h3 className="text-2xl font-display text-white mb-2">HAPPY HOUR</h3>
-                    <p className="text-zinc-500 text-sm">Gin & Tonic 2x1 • 17:00 - 19:00</p>
+                    <p className="text-[#c5a059] text-xs uppercase font-bold tracking-[0.3em] mb-4">
+                      {t.digitalPage.tvStrategy.preview.eyebrow}
+                    </p>
+                    <h3 className="text-2xl font-display text-white mb-2 uppercase">
+                      {t.digitalPage.tvStrategy.preview.title}
+                    </h3>
+                    <p className="text-zinc-500 text-sm">
+                      {t.digitalPage.tvStrategy.preview.subtitle}
+                    </p>
                   </div>
                 </div>
-                <div className="absolute bottom-4 right-4 w-24 h-24 bg-white/5 backdrop-blur-md rounded-lg flex items-center justify-center">
-                  <QrCode className="w-12 h-12 text-white/20" />
+                <div className="absolute bottom-4 right-4 w-24 h-24 bg-white/5 backdrop-blur-md rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <QrCode className="w-12 h-12 text-[#c5a059]/40" />
                 </div>
               </div>
             </div>
@@ -131,7 +134,7 @@ export const Digital = () => {
                   to="/contact"
                   className="px-10 py-5 bg-white text-black font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all inline-block"
                 >
-                  {t.socialMediaIA?.cta}
+                  {t.digitalPage.aiSocial.cta}
                 </Link>
               </motion.div>
             </div>
@@ -306,22 +309,15 @@ export const Digital = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-32 bg-[#050505]">
+      <section className="py-32 bg-[#050505] will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: QrCode, title: 'Menus QR Premium', text: 'Menus digitais elegantes, multilingues e fáceis de atualizar. Esqueça as folhas de papel desgastadas.' },
-              { icon: Languages, title: 'Multi-idioma Real', text: 'Traduções profissionais que respeitam a terminologia da hospitalidade para atrair turistas.' },
-              { icon: Smartphone, title: 'Websites Focados', text: 'Sites mobile-first otimizados para reservas e apresentação de serviços de hotelaria.' },
-              { icon: RefreshCw, title: 'Suporte & Updates', text: 'Cuidamos de todas as atualizações mensais para que o seu foco seja o cliente.' },
-              { icon: MonitorPlay, title: 'Digital Signage', text: 'Sistemas de ecrãs para lobbies de hotéis, quintas de eventos e bares de alta rotação.' },
-              { icon: RefreshCw, title: 'Revenue Focus', text: 'Estratégias digitais desenhadas para aumentar as vendas de cocktails e upsells.' },
-            ].map((item, i) => (
+            {t.digitalPage.services.items.map((item, i) => (
               <div key={i} className="p-10 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition-all group">
                 <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-[#c5a059]/10 transition-colors">
-                  <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-[#c5a059]" />
+                  <Monitor className="w-6 h-6 text-zinc-400 group-hover:text-[#c5a059]" />
                 </div>
-                <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tight">{item.title}</h3>
+                <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tight group-hover:text-[#c5a059] transition-colors">{item.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
@@ -330,15 +326,17 @@ export const Digital = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-zinc-900 relative overflow-hidden">
+      <section className="py-32 bg-zinc-900 relative overflow-hidden will-change-transform">
         <div className="absolute inset-0 bg-[#c5a059]/5 blur-[120px] rounded-full" />
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-12 uppercase tracking-tighter">Digitalize o seu sucesso.</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-12 uppercase tracking-tighter">
+            {t.digitalPage.cta.title}
+          </h2>
           <Link 
             to="/contact"
             className="px-12 py-6 bg-[#c5a059] text-black font-black uppercase tracking-[0.2em] text-sm rounded-full hover:scale-105 transition-all shadow-2xl inline-block"
           >
-            Pedir Demonstração Digital
+            {t.digitalPage.cta.button}
           </Link>
         </div>
       </section>

@@ -140,6 +140,185 @@ export const translations: Record<Language, Translation> = {
       text: 'Orçamentos gratuitos • Visitamos o seu negócio',
       cta: 'Agende uma reunião connosco',
     },
+    consultingPage: {
+      hero: {
+        eyebrow: 'Consultoria Estratégica',
+        title: 'Negócios',
+        titleAccent: 'Inteligentes',
+        description: 'Ajudamos bares, restaurantes e hotéis a maximizar a rentabilidade através de processos otimizados e engenharia de menus focada no lucro.',
+      },
+      transformation: {
+        title: 'De um bar comum para uma',
+        titleAccent: 'operação de elite.',
+        features: [
+          { title: 'Engenharia de Menu', text: 'Analisamos a rentabilidade de cada ingrediente para criar menus que vendem mais os produtos mais lucrativos.' },
+          { title: 'Formação de Equipa', text: 'Standards de serviço que elevam a experiência do cliente e aumentam o ticket médio por mesa.' },
+          { title: 'Estratégia de Preços', text: 'Modelos dinâmicos baseados no mercado real e custos operacionais precisos.' },
+        ],
+      },
+      painPoints: {
+        title: 'Sente estes problemas?',
+        items: [
+          'Volume operacional elevado com margens de lucro reduzidas',
+          'Inconsistência nos padrões de serviço e hospitalidade',
+          'Menus estáticos com baixa rotatividade de produtos premium',
+          'Desperdício de stock (Waste) impactando o Food & Beverage Cost',
+          'Falta de uma identidade visual e digital integrada na unidade',
+          'Dificuldade na formação contínua e retenção de talentos de bar',
+        ],
+      },
+      cta: 'Leve o seu negócio para o próximo patamar.',
+    },
+    digitalPage: {
+      hero: {
+        eyebrow: 'Inovação Digital',
+        title: 'Hospitality',
+        titleAccent: 'Digital',
+        description: 'Ferramentas tecnológicas desenhadas para aumentar o consumo médio e melhorar a comunicação com o cliente no ponto de venda.',
+      },
+      tvStrategy: {
+        badge: 'Perda de Receita Detectada',
+        title: 'As suas TVs estão a',
+        titleAccent: 'perder dinheiro?',
+        description: 'Muitos espaços têm ecrãs ligados em canais aleatórios ou conteúdos estáticos. As nossas soluções transformam esses ecrãs em vendedores silenciosos que promovem cocktails, sobremesas e happy horas nos momentos certos.',
+        features: [
+          'Promoção dinâmica de produtos lucrativos',
+          'Aumento imediato do ticket médio',
+          'Comunicação visual profissional e elegante',
+          'Gestão centralizada de conteúdos',
+        ],
+        preview: {
+          eyebrow: 'Live Preview',
+          title: 'HAPPY HOUR',
+          subtitle: 'Gin & Tonic 2x1 • 17:00 - 19:00',
+        },
+      },
+      aiSocial: {
+        eyebrow: 'AI Social Management',
+        popularTag: 'Mais Popular',
+        cta: 'Quero Conteúdo que Vende',
+      },
+      signage: {
+        eyebrow: 'Turnkey Solutions',
+      },
+      services: {
+        items: [
+          { title: 'Menus QR Premium', text: 'Menus digitais elegantes, multilingues e fáceis de atualizar. Esqueça as folhas de papel desgastadas.' },
+          { title: 'Multi-idioma Real', text: 'Traduções profissionais que respeitam a terminologia da hospitalidade para atrair turistas.' },
+          { title: 'Websites Focados', text: 'Sites mobile-first otimizados para reservas e apresentação de serviços de hotelaria.' },
+          { title: 'Suporte & Updates', text: 'Cuidamos de todas as atualizações mensais para que o seu foco seja o cliente.' },
+          { title: 'Digital Signage', text: 'Sistemas de ecrãs para lobbies de hotéis, quintas de eventos e bares de alta rotação.' },
+          { title: 'Revenue Focus', text: 'Estratégias digitais desenhadas para aumentar as vendas de cocktails e upsells.' },
+        ],
+      },
+      cta: {
+        title: 'Digitalize o seu sucesso.',
+        button: 'Pedir Demonstração Digital',
+      },
+    },
+    eventsPage: {
+      hero: {
+        eyebrow: 'Bar Services',
+        title: 'Eventos',
+        titleAccent: 'Premium',
+        description: 'Casamentos, aniversários, batizados ou eventos corporativos. Onde houver festa, a Cheers leva o bar com elegância e profissionalismo.',
+        note: 'Podemos trabalhar num balcão disponibilizado ou levar o nosso próprio bar. Tudo é possível.',
+      },
+      categories: {
+        weddings: 'Casamentos',
+        corporate: 'Corporativos',
+        private: 'Festas Privadas',
+        baptisms: 'Batizados',
+      },
+      quote: {
+        title: '"Falta o bar?',
+        titleAccent: 'Cheers."',
+        description: 'Não deixe o serviço de bar ao acaso. Confie na equipa que eleva qualquer celebração.',
+        cta: 'CONTACTAR',
+      },
+    },
+    portfolioPage: {
+      hero: {
+        eyebrow: 'Nosso Portfólio',
+        title: 'Exemplos de',
+        titleAccent: 'Trabalhos',
+        description: 'Uma seleção de projetos que demonstram o nosso compromisso com a excelência na hospitalidade e inovação digital.',
+      },
+      cta: {
+        title: 'Quer ver o seu projeto aqui?',
+        button: 'Vamos Conversar',
+      },
+    },
+    aboutPage: {
+      hero: {
+        eyebrow: 'A Nossa História',
+        title: 'Paixão pela',
+        titleAccent: 'Hospitalidade',
+        p1: 'A Cheers Hospitality nasceu em Viseu com um propósito claro: elevar os padrões do serviço de bar e da hospitalidade em Portugal. Não somos apenas uma empresa de eventos; somos parceiros estratégicos dos nossos clientes.',
+        p2: 'Com anos de experiência real no terreno, desde a gestão de bares de alta rotação à consultoria estratégica para hotéis de luxo, compreendemos que o sucesso está no detalhe, na eficiência operacional e na emoção que cada cocktail transmite.',
+        quote: 'Onde outros veem apenas uma bebida, nós vemos uma oportunidade de criar uma memória inesquecível e um negócio rentável.',
+      },
+      values: {
+        items: [
+          { title: 'Excelência Operacional', text: 'Não deixamos nada ao acaso. Da logística impecável ao serviço de topo.' },
+          { title: 'Visão Comercial', text: 'Hospitalidade é negócio. Focamos sempre na rentabilidade e no crescimento.' },
+          { title: 'Inovação Constante', text: 'Dos novos cocktails às soluções digitais de ponta, estamos sempre à frente.' },
+        ],
+      },
+    },
+    homePage: {
+      ctaSection: {
+        title: 'Excelência',
+        titleAccent: 'Operacional.',
+        description: 'Elevamos os padrões de hospitalidade através de parcerias estratégicas com hotéis e espaços de eventos premium.',
+        button: 'CONTACTAR',
+      },
+    },
+    common: {
+      language: 'Idioma',
+      viewMore: 'Ver em Grande',
+      premiumService: 'Serviço Premium',
+      multiLanguage: 'Multi-idioma',
+    },
+    contactPage: {
+      hero: {
+        eyebrow: 'Contactos',
+        title: 'Vamos',
+        titleAccent: 'Conversar?',
+      },
+      info: {
+        phoneTitle: 'Telefone / WhatsApp',
+        phoneStatus: 'Indisponível até 15 Set.',
+        emailTitle: 'Email Direto',
+        instaTitle: 'Instagram',
+        areaTitle: 'Área de Atuação',
+        areaText: 'Baseados em Viseu, servimos as regiões de Coimbra, Porto, Alto Douro, Aveiro, Guarda e todo o norte e centro de Portugal. Para projetos de consultoria e soluções digitais, atuamos a nível nacional.',
+      },
+      form: {
+        event: 'Evento',
+        business: 'Negócio',
+        businessType: 'Tipo de Negócio',
+        placeholderName: 'Ex: João Silva',
+        placeholderEmail: 'email@exemplo.com',
+        placeholderPhone: '+351 900 000 000',
+        placeholderMessage: 'Como podemos ajudar?',
+        categories: {
+          wedding: 'Casamento',
+          birthday: 'Aniversário',
+          baptism: 'Batizado',
+          corporate: 'Corporativo',
+          other: 'Outro',
+        },
+        businessCategories: {
+          bar: 'Bar',
+          restaurant: 'Restaurante',
+          hotel: 'Hotel / Quinta',
+          catering: 'Catering',
+        },
+        successDetail: 'Entraremos em contacto através do meio preferencial em menos de 24 horas.',
+        sendAnother: 'Enviar outro pedido',
+      },
+    },
   },
   es: {
     nav: {
@@ -279,6 +458,185 @@ export const translations: Record<Language, Translation> = {
     consultingAppointment: {
       text: 'Presupuestos gratuitos • Visitamos su negocio',
       cta: 'Programe una reunión con nosotros',
+    },
+    consultingPage: {
+      hero: {
+        eyebrow: 'Consultoría Estratégica',
+        title: 'Negocios',
+        titleAccent: 'Inteligentes',
+        description: 'Ayudamos a bares, restaurantes y hoteles a maximizar la rentabilidad a través de procesos optimizados e ingeniería de menús centrada en el beneficio.',
+      },
+      transformation: {
+        title: 'De un bar común a una',
+        titleAccent: 'operación de élite.',
+        features: [
+          { title: 'Ingeniería de Menú', text: 'Analizamos la rentabilidad de cada ingrediente para crear menús que vendan más los productos más rentables.' },
+          { title: 'Formación de Equipo', text: 'Estándares de servicio que elevan la experiencia del cliente y aumentan el ticket medio por mesa.' },
+          { title: 'Estrategia de Precios', text: 'Modelos dinámicos basados en el mercado real y costes operativos precisos.' },
+        ],
+      },
+      painPoints: {
+        title: '¿Siente estos problemas?',
+        items: [
+          'Alto volumen operativo con márgenes de beneficio reducidos',
+          'Inconsistencia en los estándares de servicio y hospitalidad',
+          'Menús estáticos con baja rotación de productos premium',
+          'Desperdicio de stock (Waste) que afecta el Food & Beverage Cost',
+          'Falta de una identidad visual y digital integrada en la unidad',
+          'Dificultad en la formación continua y retención de talentos de bar',
+        ],
+      },
+      cta: 'Lleve su negocio al siguiente nivel.',
+    },
+    digitalPage: {
+      hero: {
+        eyebrow: 'Innovación Digital',
+        title: 'Hospitalidad',
+        titleAccent: 'Digital',
+        description: 'Herramientas tecnológicas diseñadas para aumentar el consumo medio y mejorar la comunicación con el cliente en el punto de venta.',
+      },
+      tvStrategy: {
+        badge: 'Pérdida de Ingresos Detectada',
+        title: '¿Sus TVs están',
+        titleAccent: 'perdiendo dinero?',
+        description: 'Muchos espacios tienen pantallas conectadas en canales aleatorios o contenidos estáticos. Nuestras soluciones transforman esas pantallas en vendedores silenciosos que promueven cócteles, postres y happy hours en los momentos adecuados.',
+        features: [
+          'Promoción dinámica de productos rentables',
+          'Aumento inmediato del ticket medio',
+          'Comunicación visual profesional y elegante',
+          'Gestión centralizada de contenidos',
+        ],
+        preview: {
+          eyebrow: 'Vista Previa en Vivo',
+          title: 'HAPPY HOUR',
+          subtitle: 'Gin & Tonic 2x1 • 17:00 - 19:00',
+        },
+      },
+      aiSocial: {
+        eyebrow: 'Gestión Social con IA',
+        popularTag: 'Más Popular',
+        cta: 'Quiero Contenido que Vende',
+      },
+      signage: {
+        eyebrow: 'Soluciones Llave en Mano',
+      },
+      services: {
+        items: [
+          { title: 'Menús QR Premium', text: 'Menús digitales elegantes, multilingües y fáciles de actualizar. Olvídese de las hojas de papel desgastadas.' },
+          { title: 'Multilingüe Real', text: 'Traducciones profesionales que respetan la terminología de la hostelería para atraer turistas.' },
+          { title: 'Websites Enfocados', text: 'Sitios web mobile-first optimizados para reservas y presentación de servicios hoteleros.' },
+          { title: 'Soporte y Actualizaciones', text: 'Nos encargamos de todas las actualizaciones mensuales para que su enfoque sea el cliente.' },
+          { title: 'Cartelería Digital', text: 'Sistemas de pantallas para lobbies de hoteles, fincas de eventos y bares de alta rotación.' },
+          { title: 'Enfoque en Ingresos', text: 'Estrategias digitales diseñadas para aumentar las ventas de cócteles y ventas adicionales.' },
+        ],
+      },
+      cta: {
+        title: 'Digitalice su éxito.',
+        button: 'Pedir Demostración Digital',
+      },
+    },
+    eventsPage: {
+      hero: {
+        eyebrow: 'Servicios de Bar',
+        title: 'Eventos',
+        titleAccent: 'Premium',
+        description: 'Bodas, cumpleaños, bautizos o eventos corporativos. Donde haya fiesta, Cheers lleva el bar con elegancia y profesionalismo.',
+        note: 'Podemos trabajar en una barra disponible o traer nuestra propia barra. Todo es posible.',
+      },
+      categories: {
+        weddings: 'Bodas',
+        corporate: 'Corporativos',
+        private: 'Fiestas Privadas',
+        baptisms: 'Bautizos',
+      },
+      quote: {
+        title: '¿Falta el bar?',
+        titleAccent: 'Cheers."',
+        description: 'No deje el servicio de bar al azar. Confíe en el equipo que eleva cualquier celebración.',
+        cta: 'CONTACTAR',
+      },
+    },
+    portfolioPage: {
+      hero: {
+        eyebrow: 'Nuestro Portfolio',
+        title: 'Ejemplos de',
+        titleAccent: 'Trabajos',
+        description: 'Una selección de proyectos que demuestran nuestro compromiso con la excelencia en la hospitalidad e innovación digital.',
+      },
+      cta: {
+        title: '¿Quiere ver su proyecto aquí?',
+        button: 'Hablemos',
+      },
+    },
+    aboutPage: {
+      hero: {
+        eyebrow: 'Nuestra Historia',
+        title: 'Pasión por la',
+        titleAccent: 'Hospitalidad',
+        p1: 'Cheers Hospitality nació en Viseu con un propósito claro: elevar los estándares del servicio de bar y de la hospitalidad en Portugal. No somos solo una empresa de eventos; somos socios estratégicos de nuestros clientes.',
+        p2: 'Con años de experiencia real en el terreno, desde la gestión de bares de alta rotación hasta la consultoría estratégica para hoteles de lujo, entendemos que el éxito está en el detalle, en la eficiencia operativa y en la emoción que transmite cada cóctel.',
+        quote: 'Donde otros ven solo una bebida, nosotros vemos una oportunidad de crear una memoria inolvidable y un negocio rentable.',
+      },
+      values: {
+        items: [
+          { title: 'Excelencia Operativa', text: 'No dejamos nada al azar. Desde una logística impecable hasta un servicio de primera.' },
+          { title: 'Visión Comercial', text: 'La hospitalidad é un negocio. Nos enfocamos siempre en la rentabilidad y el crecimiento.' },
+          { title: 'Innovación Constante', text: 'Desde nuevos cócteles hasta soluciones digitales de vanguardia, siempre estamos un paso por delante.' },
+        ],
+      },
+    },
+    homePage: {
+      ctaSection: {
+        title: 'Excelencia',
+        titleAccent: 'Operativa.',
+        description: 'Elevamos los estándares de hospitalidad a través de asociaciones estratégicas con hoteles y espacios de eventos premium.',
+        button: 'CONTACTAR',
+      },
+    },
+    common: {
+      language: 'Idioma',
+      viewMore: 'Ver en Grande',
+      premiumService: 'Servicio Premium',
+      multiLanguage: 'Multi-idioma',
+    },
+    contactPage: {
+      hero: {
+        eyebrow: 'Contactos',
+        title: '¿Vamos a',
+        titleAccent: 'Conversar?',
+      },
+      info: {
+        phoneTitle: 'Teléfono / WhatsApp',
+        phoneStatus: 'No disponible hasta el 15 de septiembre.',
+        emailTitle: 'Email Directo',
+        instaTitle: 'Instagram',
+        areaTitle: 'Área de Actuación',
+        areaText: 'Con sede en Viseu, servimos las regiones de Coimbra, Oporto, Alto Douro, Aveiro, Guarda y todo el norte y centro de Portugal. Para proyectos de consultoría y soluciones digitales, actuamos a nivel nacional.',
+      },
+      form: {
+        event: 'Evento',
+        business: 'Negocio',
+        businessType: 'Tipo de Negocio',
+        placeholderName: 'Ej: Juan Silva',
+        placeholderEmail: 'email@ejemplo.com',
+        placeholderPhone: '+34 600 000 000',
+        placeholderMessage: '¿Cómo podemos ayudar?',
+        categories: {
+          wedding: 'Boda',
+          birthday: 'Cumpleaños',
+          baptism: 'Bautizo',
+          corporate: 'Corporativo',
+          other: 'Otro',
+        },
+        businessCategories: {
+          bar: 'Bar',
+          restaurant: 'Restaurante',
+          hotel: 'Hotel / Quinta',
+          catering: 'Catering',
+        },
+        successDetail: 'Nos pondremos en contacto a través de su medio preferido en menos de 24 horas.',
+        sendAnother: 'Enviar otra solicitud',
+      },
     },
   },
   en: {
@@ -420,6 +778,185 @@ export const translations: Record<Language, Translation> = {
       text: 'Free quotes • We visit your business',
       cta: 'Schedule a meeting with us',
     },
+    consultingPage: {
+      hero: {
+        eyebrow: 'Strategic Consulting',
+        title: 'Smart',
+        titleAccent: 'Business',
+        description: 'We help bars, restaurants, and hotels maximize profitability through optimized processes and profit-focused menu engineering.',
+      },
+      transformation: {
+        title: 'From an ordinary bar to an',
+        titleAccent: 'elite operation.',
+        features: [
+          { title: 'Menu Engineering', text: 'We analyze the profitability of each ingredient to create menus that sell the most profitable products.' },
+          { title: 'Team Training', text: 'Service standards that elevate the customer experience and increase the average ticket per table.' },
+          { title: 'Pricing Strategy', text: 'Dynamic models based on the real market and precise operational costs.' },
+        ],
+      },
+      painPoints: {
+        title: 'Do you feel these problems?',
+        items: [
+          'High operational volume with reduced profit margins',
+          'Inconsistency in service and hospitality standards',
+          'Static menus with low turnover of premium products',
+          'Stock waste impacting Food & Beverage Cost',
+          'Lack of an integrated visual and digital identity in the unit',
+          'Difficulty in continuous training and bar talent retention',
+        ],
+      },
+      cta: 'Take your business to the next level.',
+    },
+    digitalPage: {
+      hero: {
+        eyebrow: 'Digital Innovation',
+        title: 'Digital',
+        titleAccent: 'Hospitality',
+        description: 'Technological tools designed to increase average consumption and improve customer communication at the point of sale.',
+      },
+      tvStrategy: {
+        badge: 'Revenue Loss Detected',
+        title: 'Are your TVs',
+        titleAccent: 'losing money?',
+        description: 'Many spaces have screens connected to random channels or static content. Our solutions transform these screens into silent salespeople promoting cocktails, desserts, and happy hours at the right times.',
+        features: [
+          'Dynamic promotion of profitable products',
+          'Immediate increase in average ticket',
+          'Professional and elegant visual communication',
+          'Centralized content management',
+        ],
+        preview: {
+          eyebrow: 'Live Preview',
+          title: 'HAPPY HOUR',
+          subtitle: 'Gin & Tonic 2x1 • 17:00 - 19:00',
+        },
+      },
+      aiSocial: {
+        eyebrow: 'AI Social Management',
+        popularTag: 'Most Popular',
+        cta: 'I Want Content that Sells',
+      },
+      signage: {
+        eyebrow: 'Turnkey Solutions',
+      },
+      services: {
+        items: [
+          { title: 'Premium QR Menus', text: 'Elegant, multilingual, and easy-to-update digital menus. Forget worn-out paper sheets.' },
+          { title: 'Real Multilingual', text: 'Professional translations that respect hospitality terminology to attract tourists.' },
+          { title: 'Focused Websites', text: 'Mobile-first sites optimized for bookings and presentation of hospitality services.' },
+          { title: 'Support & Updates', text: 'We take care of all monthly updates so your focus is on the customer.' },
+          { title: 'Digital Signage', text: 'Screen systems for hotel lobbies, event venues, and high-turnover bars.' },
+          { title: 'Revenue Focus', text: 'Digital strategies designed to increase cocktail sales and upsells.' },
+        ],
+      },
+      cta: {
+        title: 'Digitize your success.',
+        button: 'Request Digital Demo',
+      },
+    },
+    eventsPage: {
+      hero: {
+        eyebrow: 'Bar Services',
+        title: 'Premium',
+        titleAccent: 'Events',
+        description: 'Weddings, birthdays, baptisms, or corporate events. Wherever there is a party, Cheers brings the bar with elegance and professionalism.',
+        note: 'We can work at a provided counter or bring our own bar. Everything is possible.',
+      },
+      categories: {
+        weddings: 'Weddings',
+        corporate: 'Corporate',
+        private: 'Private Parties',
+        baptisms: 'Baptisms',
+      },
+      quote: {
+        title: '"Missing the bar?',
+        titleAccent: 'Cheers."',
+        description: 'Don’t leave the bar service to chance. Trust the team that elevates any celebration.',
+        cta: 'CONTACT US',
+      },
+    },
+    portfolioPage: {
+      hero: {
+        eyebrow: 'Our Portfolio',
+        title: 'Project',
+        titleAccent: 'Examples',
+        description: 'A selection of projects demonstrating our commitment to hospitality excellence and digital innovation.',
+      },
+      cta: {
+        title: 'Want to see your project here?',
+        button: 'Let’s Talk',
+      },
+    },
+    aboutPage: {
+      hero: {
+        eyebrow: 'Our Story',
+        title: 'Passion for',
+        titleAccent: 'Hospitality',
+        p1: 'Cheers Hospitality was born in Viseu with a clear purpose: to raise the standards of bar service and hospitality in Portugal. We are not just an event company; we are strategic partners for our clients.',
+        p2: 'With years of real field experience, from managing high-turnover bars to strategic consulting for luxury hotels, we understand that success lies in the detail, operational efficiency, and the emotion each cocktail conveys.',
+        quote: 'Where others see just a drink, we see an opportunity to create an unforgettable memory and a profitable business.',
+      },
+      values: {
+        items: [
+          { title: 'Operational Excellence', text: 'We leave nothing to chance. From impeccable logistics to top-tier service.' },
+          { title: 'Commercial Vision', text: 'Hospitality is business. We always focus on profitability and growth.' },
+          { title: 'Constant Innovation', text: 'From new cocktails to cutting-edge digital solutions, we are always ahead.' },
+        ],
+      },
+    },
+    homePage: {
+      ctaSection: {
+        title: 'Operational',
+        titleAccent: 'Excellence.',
+        description: 'We elevate hospitality standards through strategic partnerships with hotels and premium event venues.',
+        button: 'CONTACT US',
+      },
+    },
+    common: {
+      language: 'Language',
+      viewMore: 'View Large',
+      premiumService: 'Premium Service',
+      multiLanguage: 'Multi-language',
+    },
+    contactPage: {
+      hero: {
+        eyebrow: 'Contacts',
+        title: "Let's",
+        titleAccent: 'Talk?',
+      },
+      info: {
+        phoneTitle: 'Phone / WhatsApp',
+        phoneStatus: 'Unavailable until Sept 15th.',
+        emailTitle: 'Direct Email',
+        instaTitle: 'Instagram',
+        areaTitle: 'Coverage Area',
+        areaText: 'Based in Viseu, we serve Coimbra, Porto, Alto Douro, Aveiro, Guarda, and the entire north and center of Portugal. For consulting and digital solutions, we operate nationwide.',
+      },
+      form: {
+        event: 'Event',
+        business: 'Business',
+        businessType: 'Business Type',
+        placeholderName: 'Ex: John Doe',
+        placeholderEmail: 'email@example.com',
+        placeholderPhone: '+44 700 000 000',
+        placeholderMessage: 'How can we help?',
+        categories: {
+          wedding: 'Wedding',
+          birthday: 'Birthday',
+          baptism: 'Baptism',
+          corporate: 'Corporate',
+          other: 'Other',
+        },
+        businessCategories: {
+          bar: 'Bar',
+          restaurant: 'Restaurant',
+          hotel: 'Hotel / Venue',
+          catering: 'Catering',
+        },
+        successDetail: 'We will get in touch through your preferred method in less than 24 hours.',
+        sendAnother: 'Send another request',
+      },
+    },
   },
   fr: {
     nav: {
@@ -559,6 +1096,185 @@ export const translations: Record<Language, Translation> = {
     consultingAppointment: {
       text: 'Devis gratuits • Nous visitons votre entreprise',
       cta: 'Planifiez une réunion avec nous',
+    },
+    consultingPage: {
+      hero: {
+        eyebrow: 'Conseil Stratégique',
+        title: 'Affaires',
+        titleAccent: 'Intelligentes',
+        description: 'Nous aidons les bars, restaurants et hôtels à maximizar a rentabilidade através de processos otimizados e engenharia de menus focada no lucro.',
+      },
+      transformation: {
+        title: 'D\'un bar ordinaire à une',
+        titleAccent: 'opération d\'élite.',
+        features: [
+          { title: 'Ingénierie de Menu', text: 'Nous analysons la rentabilité de chaque ingrediente pour créer des menus qui vendent les produits les plus rentables.' },
+          { title: 'Formation d\'Équipe', text: 'Des standards de service qui rehaussent l\'expérience client et augmentent le ticket moyen par table.' },
+          { title: 'Stratégie de Prix', text: 'Des modèles dynamiques basés sur le marché réel et des coûts opérationnels précis.' },
+        ],
+      },
+      painPoints: {
+        title: 'Ressentez-vous ces problèmes ?',
+        items: [
+          'Volume opérationnel élevé com des marges de profit réduites',
+          'Incohérence dans les standards de service et d\'accueil',
+          'Menus statiques avec une faible rotation des produits premium',
+          'Gaspillage de stock impactant le coût nourriture et boissons',
+          'Manque d\'identité visuelle et digitale intégrée dans l\'établissement',
+          'Difficulté de formation continue et de rétention des talents du bar',
+        ],
+      },
+      cta: 'Passez votre entreprise au niveau supérieur.',
+    },
+    digitalPage: {
+      hero: {
+        eyebrow: 'Innovation Digitale',
+        title: 'Hospitalité',
+        titleAccent: 'Digitale',
+        description: 'Des outils technologiques conçus pour augmenter la consommation moyenne et améliorer la communication client au point de vente.',
+      },
+      tvStrategy: {
+        badge: 'Perte de Revenus Détectée',
+        title: 'Vos téléviseurs',
+        titleAccent: 'perdent-ils de l\'argent ?',
+        description: 'De nombreux établissements ont des écrans connectés à des chaînes aléatoires ou du contenu statique. Nos solutions transforment ces écrans en vendeurs silencieux promouvant cocktails, desserts et happy hours aux bons moments.',
+        features: [
+          'Promotion dynamique de produits rentables',
+          'Augmentation immédiate du ticket moyen',
+          'Communication visuelle professionnelle et élégante',
+          'Gestion centralisée du contenu',
+        ],
+        preview: {
+          eyebrow: 'Aperçu en Direct',
+          title: 'HAPPY HOUR',
+          subtitle: 'Gin & Tonic 2x1 • 17:00 - 19:00',
+        },
+      },
+      aiSocial: {
+        eyebrow: 'Gestion Sociale par IA',
+        popularTag: 'Plus Populaire',
+        cta: 'Je veux du contenu qui vend',
+      },
+      signage: {
+        eyebrow: 'Solutions Clés en Main',
+      },
+      services: {
+        items: [
+          { title: 'Menus QR Premium', text: 'Menus digitaux élégants, multilingues et faciles à mettre à jour. Oubliez les feuilles de papier usées.' },
+          { title: 'Vrai Multilingue', text: 'Des traductions professionnelles qui respectent la terminologie hôtelière pour attirer les touristes.' },
+          { title: 'Sites Web Ciblés', text: 'Sites mobile-first optimisés pour les réservations et la présentation des services hôteliers.' },
+          { title: 'Support & Mises à jour', text: 'Nous nous occupons de toutes les mises à jour mensuelles pour que vous puissiez vous concentrer sur le client.' },
+          { title: 'Affichage Dynamique', text: 'Systèmes d\'écrans pour les halls d\'hôtels, les lieux d\'événements et les bars à forte fréquentation.' },
+          { title: 'Focus sur les Revenus', text: 'Stratégies digitales conçues pour augmenter les ventes de cocktails et les ventes incitatives.' },
+        ],
+      },
+      cta: {
+        title: 'Numérisez votre succès.',
+        button: 'Demander une Démo Digitale',
+      },
+    },
+    eventsPage: {
+      hero: {
+        eyebrow: 'Services de Bar',
+        title: 'Événements',
+        titleAccent: 'Premium',
+        description: 'Mariages, anniversaires, baptêmes ou événements d\'entreprise. Partout où il y a une fête, Cheers apporte le bar avec élégance et professionnalisme.',
+        note: 'Nous pouvons travailler à un comptoir fourni ou apporter nosso propre bar. Tout est possible.',
+      },
+      categories: {
+        weddings: 'Mariages',
+        corporate: 'Entreprise',
+        private: 'Fêtes Privées',
+        baptisms: 'Baptêmes',
+      },
+      quote: {
+        title: '"Le bar manque ?',
+        titleAccent: 'Cheers."',
+        description: 'Ne laissez pas le service de bar au hasard. Faites confiance à l\'équipe qui sublime chaque célébration.',
+        cta: 'CONTACTER',
+      },
+    },
+    portfolioPage: {
+      hero: {
+        eyebrow: 'Notre Portfolio',
+        title: 'Exemples de',
+        titleAccent: 'Projets',
+        description: 'Une sélection de projets démontrant nosso engagement envers l\'excellence hôtelière et l\'innovation digitale.',
+      },
+      cta: {
+        title: 'Vous voulez voir votre projet aqui ?',
+        button: 'Parlons-en',
+      },
+    },
+    aboutPage: {
+      hero: {
+        eyebrow: 'Notre Histoire',
+        title: 'Passion pour',
+        titleAccent: 'l\'Hospitalité',
+        p1: 'Cheers Hospitality est née à Viseu com um objectif clair : élever les standards du service de bar et de l\'accueil au Portugal. Nous ne sommes pas qu\'une société d\'événements ; nous sommes des partenaires stratégiques pour nos clients.',
+        p2: 'Avec des années d\'expérience réelle sur le terrain, de la gestion de bars à forte fréquentation au conseil stratégique pour des hôtels de luxe, nous comprenons que le succès réside dans le détail, l\'efficacité opérationnelle et l\'émotion que chaque cocktail transmet.',
+        quote: 'Là où d\'autres ne voient qu\'une boisson, nous voyons une opportunité de créer um souvenir inoubliable e um negócio rentável.',
+      },
+      values: {
+        items: [
+          { title: 'Excellence Opérationnelle', text: 'Nous ne laissons rien au hasard. D\'une logistique impeccable à um service de premier ordre.' },
+          { title: 'Vision Commerciale', text: 'L\'hospitalité est um business. Nous nous concentrons toujours sur la rentabilité e a croissance.' },
+          { title: 'Innovation Constante', text: 'Des nouveaux cocktails aux solutions digitales de pointe, nous avons toujours une longueur d\'avance.' },
+        ],
+      },
+    },
+    homePage: {
+      ctaSection: {
+        title: 'Excellence',
+        titleAccent: 'Opérationnelle.',
+        description: 'Nous élevons les standards de l\'hospitalité grâce à des partenariats stratégiques avec des hôtels et des lieux d\'événements premium.',
+        button: 'CONTACTER',
+      },
+    },
+    common: {
+      language: 'Langue',
+      viewMore: 'Voir en Grand',
+      premiumService: 'Service Premium',
+      multiLanguage: 'Multi-langue',
+    },
+    contactPage: {
+      hero: {
+        eyebrow: 'Contacts',
+        title: 'Parlons',
+        titleAccent: 'Ensemble?',
+      },
+      info: {
+        phoneTitle: 'Téléphone / WhatsApp',
+        phoneStatus: 'Indisponible jusqu\'au 15 septembre.',
+        emailTitle: 'Email Direct',
+        instaTitle: 'Instagram',
+        areaTitle: 'Zone de Couverture',
+        areaText: 'Basés à Viseu, nous desservons Coimbra, Porto, Alto Douro, Aveiro, Guarda et tout le nord et le centre du Portugal. Pour le conseil et les solutions numériques, nous opérons à l\'échelle nationale.',
+      },
+      form: {
+        event: 'Événement',
+        business: 'Entreprise',
+        businessType: 'Type d\'Entreprise',
+        placeholderName: 'Ex : Jean Dupont',
+        placeholderEmail: 'email@exemple.com',
+        placeholderPhone: '+33 600 000 000',
+        placeholderMessage: 'Comment pouvons-nous vous aider ?',
+        categories: {
+          wedding: 'Mariage',
+          birthday: 'Anniversaire',
+          baptism: 'Baptême',
+          corporate: 'Entreprise',
+          other: 'Autre',
+        },
+        businessCategories: {
+          bar: 'Bar',
+          restaurant: 'Restaurant',
+          hotel: 'Hôtel / Domaine',
+          catering: 'Traiteur',
+        },
+        successDetail: 'Nous vous contacterons via votre moyen préféré en moins de 24 heures.',
+        sendAnother: 'Envoyer une autre demande',
+      },
     },
   },
 };

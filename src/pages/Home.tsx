@@ -166,16 +166,16 @@ export const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-zinc-900 overflow-hidden">
+      <section className="py-24 bg-zinc-900 overflow-hidden will-change-transform">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 bg-black rounded-[40px] p-12 md:p-20 relative border border-white/5">
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
             <div className="relative z-10 lg:max-w-xl">
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                Operational <span className="text-[#c5a059]">Excellence.</span>
+                {t.homePage.ctaSection.title} <span className="text-[#c5a059]">{t.homePage.ctaSection.titleAccent}</span>
               </h2>
               <p className="text-zinc-400 text-lg mb-0 leading-relaxed">
-                Elevamos os padrões de hospitalidade através de parcerias estratégicas com hotéis e espaços de eventos premium.
+                {t.homePage.ctaSection.description}
               </p>
             </div>
             <div className="relative z-10">
@@ -183,7 +183,7 @@ export const Home = () => {
                 to="/contact"
                 className="inline-block px-10 py-5 bg-[#c5a059] text-black font-black uppercase tracking-[0.2em] text-sm rounded-full hover:scale-105 transition-all shadow-2xl"
               >
-                CONTACTAR
+                {t.homePage.ctaSection.button}
               </Link>
             </div>
           </div>

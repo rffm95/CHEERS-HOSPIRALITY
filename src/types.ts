@@ -109,4 +109,165 @@ export interface Translation {
     text: string;
     cta: string;
   };
+  consultingPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+    };
+    transformation: {
+      title: string;
+      titleAccent: string;
+      features: {
+        title: string;
+        text: string;
+      }[];
+    };
+    painPoints: {
+      title: string;
+      items: string[];
+    };
+    cta: string;
+  };
+  digitalPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+    };
+    tvStrategy: {
+      badge: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+      features: string[];
+      preview: {
+        eyebrow: string;
+        title: string;
+        subtitle: string;
+      };
+    };
+    aiSocial: {
+      eyebrow: string;
+      popularTag: string;
+      cta: string;
+    };
+    signage: {
+      eyebrow: string;
+    };
+    services: {
+      items: {
+        title: string;
+        text: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      button: string;
+    };
+  };
+  eventsPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+      note: string;
+    };
+    categories: {
+      weddings: string;
+      corporate: string;
+      private: string;
+      baptisms: string;
+    };
+    quote: {
+      title: string;
+      titleAccent: string;
+      description: string;
+      cta: string;
+    };
+  };
+  portfolioPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      description: string;
+    };
+    cta: {
+      title: string;
+      button: string;
+    };
+  };
+  aboutPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+      p1: string;
+      p2: string;
+      quote: string;
+    };
+    values: {
+      items: {
+        title: string;
+        text: string;
+      }[];
+    };
+  };
+  homePage: {
+    ctaSection: {
+      title: string;
+      titleAccent: string;
+      description: string;
+      button: string;
+    };
+  };
+  common: {
+    language: string;
+    viewMore: string;
+    premiumService: string;
+    multiLanguage: string;
+  };
+  contactPage: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      titleAccent: string;
+    };
+    info: {
+      phoneTitle: string;
+      phoneStatus: string;
+      emailTitle: string;
+      instaTitle: string;
+      areaTitle: string;
+      areaText: string;
+    };
+    form: {
+      event: string;
+      business: string;
+      businessType: string;
+      placeholderName: string;
+      placeholderEmail: string;
+      placeholderPhone: string;
+      placeholderMessage: string;
+      categories: {
+        wedding: string;
+        birthday: string;
+        baptism: string;
+        corporate: string;
+        other: string;
+      };
+      businessCategories: {
+        bar: string;
+        restaurant: string;
+        hotel: string;
+        catering: string;
+      };
+      successDetail: string;
+      sendAnother: string;
+    };
+  };
 }
