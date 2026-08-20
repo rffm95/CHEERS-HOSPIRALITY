@@ -8,17 +8,17 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
-    title: 'Mobile Bar - Wedding Event Viseu',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08759df9a73?q=80&w=1200',
+    title: 'EXEMPLO TRABALHO DIGITAL',
+    image: 'https://i.imgur.com/aUNb0uK.png',
   },
   {
     id: '2',
-    title: 'Digital Signage - Hotel Lobby',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200',
+    title: 'EXEMPLO TRABALHO DIGITAL',
+    image: 'https://i.imgur.com/CnaTvqH.png',
   },
   {
     id: '3',
-    title: 'Custom Cocktail Menu Design',
-    image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200',
+    title: 'EXEMPLO TRABALHO DIGITAL',
+    image: 'https://i.imgur.com/VrbFY65.png',
   },
 ];
