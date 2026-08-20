@@ -12,83 +12,90 @@ export const Digital = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="pt-20 bg-[#FAFAFA]">
-      <section className="py-24 border-b border-black/5 bg-white">
-        <div className="max-w-7xl mx-auto px-10">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="max-w-3xl">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">
+    <div className="pt-20 bg-[#050505] text-white">
+      {/* Hero Section */}
+      <section className="relative py-32 border-b border-white/5 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none -mr-64 -mt-64" />
+        <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
+            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.6em] font-black mb-8 block">
               {t.digitalPage.hero.eyebrow}
             </span>
-            <h1 className="text-5xl md:text-8xl font-black text-[#1A1A1A] mt-6 mb-8 tracking-tighter uppercase leading-[0.9]">
-              {t.digitalPage.hero.title} <span className="text-stroke-accent">{t.digitalPage.hero.titleAccent}</span>
+            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-10 tracking-tighter uppercase leading-[0.9]">
+              {t.digitalPage.hero.title} <br />
+              <span className="text-stroke-accent italic">{t.digitalPage.hero.titleAccent}</span>
             </h1>
-            <p className="text-[#1A1A1A]/60 text-lg leading-relaxed max-w-xl">
+            <p className="text-white/40 text-lg md:text-xl leading-relaxed max-w-2xl">
               {t.digitalPage.hero.description}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* TV Strategy Section */}
-      <section className="py-32 bg-[#FAFAFA] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-white rounded-[60px] p-12 md:p-24 border border-black/5 overflow-hidden relative group shadow-2xl shadow-black/5">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[120px] rounded-full -mr-48 -mt-48 group-hover:bg-[#c5a059]/10 transition-colors duration-1000" />
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
-              <div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-600 text-[10px] font-black uppercase tracking-[0.2em] mb-10"
-                >
-                  <RefreshCw className="w-3 h-3 animate-spin" />
-                  {t.digitalPage.tvStrategy.badge}
-                </motion.div>
-                <h2 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-10 tracking-tighter uppercase leading-[0.9]">
-                  {t.digitalPage.tvStrategy.title} <br />
-                  <span className="text-red-600">{t.digitalPage.tvStrategy.titleAccent}</span>
-                </h2>
-                <p className="text-[#1A1A1A]/60 text-xl leading-relaxed mb-12 font-medium">
-                  {t.digitalPage.tvStrategy.description}
-                </p>
-                <div className="space-y-10">
-                  {t.digitalPage.tvStrategy.features.map((feat, i) => (
-                    <div key={i} className="flex gap-6 group/item">
-                      <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center shrink-0 group-hover/item:bg-[#c5a059]/10 transition-colors">
-                        <MonitorPlay className="w-6 h-6 text-[#c5a059]" />
-                      </div>
-                      <div>
-                        <h4 className="text-[#1A1A1A] font-black uppercase text-sm tracking-widest mb-2">{feat.title}</h4>
-                        <p className="text-[#1A1A1A]/40 text-sm leading-relaxed">{feat.description}</p>
-                      </div>
+      {/* TV Strategy Section - High Impact */}
+      <section className="py-40 px-6 md:px-10 relative overflow-hidden bg-[#0A0A0A]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
+            <div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-black uppercase tracking-[0.3em] mb-12 shadow-[0_0_20px_rgba(239,68,68,0.1)]"
+              >
+                <RefreshCw className="w-3 h-3 animate-spin" />
+                {t.digitalPage.tvStrategy.badge}
+              </motion.div>
+              <h2 className="text-4xl md:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+                {t.digitalPage.tvStrategy.title} <br />
+                <span className="text-red-500 italic">{t.digitalPage.tvStrategy.titleAccent}</span>
+              </h2>
+              <p className="text-white/40 text-lg md:text-xl leading-relaxed mb-16 font-medium">
+                {t.digitalPage.tvStrategy.description}
+              </p>
+              <div className="space-y-10">
+                {t.digitalPage.tvStrategy.features.map((feat, i) => (
+                  <motion.div 
+                    key={i} 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex gap-8 group/item"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-[#c5a059] group-hover/item:border-transparent transition-all duration-500">
+                      <MonitorPlay className="w-7 h-7 text-[#c5a059] group-hover:text-black transition-colors" />
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h4 className="text-white font-black uppercase text-base tracking-widest mb-3 group-hover:text-[#c5a059] transition-colors">{feat.title}</h4>
+                      <p className="text-white/30 text-base leading-relaxed group-hover:text-white/50 transition-colors">{feat.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-              
-              <div className="relative">
-                <div className="absolute -inset-4 bg-[#c5a059]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <div className="relative aspect-video rounded-[40px] bg-[#1A1A1A] border-[12px] border-[#F0F0F0] overflow-hidden shadow-2xl flex items-center justify-center text-center p-12">
-                  <div className="relative z-10">
-                    <motion.div
-                      animate={{ opacity: [0.4, 1, 0.4] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-16 h-1 bg-[#c5a059] mx-auto mb-10"
-                    />
-                    <p className="text-[#c5a059] text-xs uppercase font-black tracking-[0.4em] mb-6">
-                      {t.digitalPage.tvStrategy.preview.eyebrow}
-                    </p>
-                    <h3 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter uppercase leading-none">
-                      {t.digitalPage.tvStrategy.preview.title}
-                    </h3>
-                    <p className="text-white/40 text-lg font-bold uppercase tracking-[0.2em]">
-                      {t.digitalPage.tvStrategy.preview.subtitle}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-8 right-8 w-24 h-24 bg-white/5 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/10">
-                    <QrCode className="w-12 h-12 text-[#c5a059]" />
-                  </div>
+            </div>
+            
+            <div className="relative group">
+              <div className="absolute -inset-20 bg-[#c5a059]/10 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+              <div className="relative aspect-video rounded-[40px] bg-[#050505] border-[1px] border-white/10 overflow-hidden shadow-2xl flex items-center justify-center text-center p-12">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
+                <div className="relative z-10">
+                  <motion.div
+                    animate={{ opacity: [0.3, 1, 0.3] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="w-20 h-1.5 bg-[#c5a059] mx-auto mb-12 rounded-full"
+                  />
+                  <p className="text-[#c5a059] text-[10px] md:text-xs uppercase font-black tracking-[0.5em] mb-8">
+                    {t.digitalPage.tvStrategy.preview.eyebrow}
+                  </p>
+                  <h3 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter uppercase leading-none italic">
+                    {t.digitalPage.tvStrategy.preview.title}
+                  </h3>
+                  <p className="text-white/30 text-lg md:text-2xl font-bold uppercase tracking-[0.3em] group-hover:text-white/60 transition-colors">
+                    {t.digitalPage.tvStrategy.preview.subtitle}
+                  </p>
+                </div>
+                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/[0.03] backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/10 group-hover:border-[#c5a059]/40 transition-colors">
+                  <QrCode className="w-12 h-12 text-[#c5a059]" />
                 </div>
               </div>
             </div>
@@ -96,50 +103,50 @@ export const Digital = () => {
         </div>
       </section>
 
-      {/* AI Social Media Section */}
-      <section className="py-32 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      {/* AI Content Engine - Social Presence */}
+      <section className="py-40 bg-[#050505] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
             <div className="lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">AI Social Management</span>
-                <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] mt-6 mb-8 tracking-tighter uppercase leading-[0.9]">
+                <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black mb-8 block">AI Content Engine</span>
+                <h2 className="text-4xl md:text-7xl font-black text-white mt-6 mb-12 tracking-tighter uppercase leading-[0.9]">
                   {t.socialMediaIA?.headline}
                 </h2>
                 
-                <div className="flex items-center gap-4 mb-12 p-6 rounded-2xl bg-[#FAFAFA] border border-black/5 w-fit">
-                  <div className="w-12 h-12 rounded-full bg-[#c5a059]/10 flex items-center justify-center">
-                    <BarChart2 className="w-6 h-6 text-[#c5a059]" />
+                <div className="flex items-center gap-6 mb-16 p-8 rounded-3xl bg-[#0A0A0A] border border-white/5 w-fit group hover:border-[#c5a059]/20 transition-colors">
+                  <div className="w-14 h-14 rounded-2xl bg-[#c5a059]/10 flex items-center justify-center group-hover:bg-[#c5a059] transition-colors duration-500">
+                    <BarChart2 className="w-7 h-7 text-[#c5a059] group-hover:text-black transition-colors" />
                   </div>
-                  <p className="text-[#1A1A1A] font-bold text-lg">
+                  <p className="text-white font-black text-xl md:text-2xl italic tracking-tighter">
                     {t.socialMediaIA?.engagementStat}
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                   {t.socialMediaIA?.packages.map((pkg, i) => (
                     <div 
                       key={i} 
-                      className={`p-8 rounded-3xl border transition-all duration-500 ${
+                      className={`p-10 rounded-[32px] border transition-all duration-700 ${
                         pkg.popular 
-                        ? 'bg-[#c5a059]/5 border-[#c5a059]/30 relative scale-105' 
-                        : 'bg-white border-black/5 hover:bg-[#FAFAFA]'
+                        ? 'bg-[#c5a059]/10 border-[#c5a059]/30 relative scale-105' 
+                        : 'bg-[#0A0A0A] border-white/5 hover:bg-[#111]'
                       }`}
                     >
                       {pkg.popular && (
-                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#c5a059] text-black text-[9px] font-black uppercase px-3 py-1 rounded-full shadow-lg shadow-[#c5a059]/20">
-                          Mais Popular
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#c5a059] text-black text-[10px] font-black uppercase px-5 py-1.5 rounded-full shadow-2xl">
+                          {t.digitalPage.aiSocial.popularTag}
                         </span>
                       )}
-                      <h3 className="text-xl font-black text-[#1A1A1A] mb-6 uppercase tracking-tight">{pkg.name}</h3>
-                      <ul className="space-y-4">
+                      <h3 className="text-xl font-black text-white mb-8 uppercase tracking-tighter group-hover:text-[#c5a059] transition-colors">{pkg.name}</h3>
+                      <ul className="space-y-5">
                         {pkg.features.map((feat, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-[10px] uppercase tracking-widest font-bold text-[#1A1A1A]/40">
-                            <CheckCircle2 className="w-3 h-3 text-[#c5a059] shrink-0" />
+                          <li key={idx} className="flex items-start gap-3 text-[10px] uppercase tracking-widest font-black text-white/30 group-hover:text-white/60 transition-colors">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059] shrink-0" />
                             {feat}
                           </li>
                         ))}
@@ -150,7 +157,7 @@ export const Digital = () => {
 
                 <Link
                   to="/contact"
-                  className="px-10 py-5 bg-[#1A1A1A] text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all inline-block rounded-full"
+                  className="px-12 py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-[#c5a059] transition-all inline-block rounded-full shadow-2xl"
                 >
                   {t.digitalPage.aiSocial.cta}
                 </Link>
@@ -164,60 +171,60 @@ export const Digital = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="w-[320px] mx-auto aspect-[9/19.5] bg-white rounded-[3rem] border-[8px] border-[#F0F0F0] shadow-2xl relative overflow-hidden">
-                  <div className="p-4 flex items-center justify-between border-b border-black/5">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-[2px]">
-                        <div className="w-full h-full rounded-full bg-white border-2 border-white" />
+                <div className="absolute inset-0 bg-[#c5a059]/10 blur-[100px] rounded-full pointer-events-none" />
+                <div className="w-[320px] mx-auto aspect-[9/19.5] bg-[#0A0A0A] rounded-[3.5rem] border-[10px] border-[#1A1A1A] shadow-2xl relative overflow-hidden group">
+                  <div className="p-5 flex items-center justify-between border-b border-white/5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 p-[2.5px] group-hover:animate-spin-slow transition-all">
+                        <div className="w-full h-full rounded-full bg-[#0A0A0A] border-2 border-[#0A0A0A]" />
                       </div>
-                      <div className="space-y-1">
-                        <div className="w-16 h-2 bg-black/5 rounded-full" />
-                        <div className="w-10 h-1.5 bg-black/10 rounded-full" />
+                      <div className="space-y-1.5">
+                        <div className="w-20 h-2.5 bg-white/10 rounded-full" />
+                        <div className="w-12 h-2 bg-white/5 rounded-full" />
                       </div>
                     </div>
-                    <div className="flex gap-1">
-                      <div className="w-1 h-1 rounded-full bg-black/10" />
-                      <div className="w-1 h-1 rounded-full bg-black/10" />
-                      <div className="w-1 h-1 rounded-full bg-black/10" />
+                    <div className="flex gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
                     </div>
                   </div>
 
-                  <div className="p-4 flex gap-4 overflow-hidden">
+                  <div className="p-5 flex gap-5 overflow-hidden">
                     {[1, 2, 3, 4].map(i => (
-                      <div key={i} className="shrink-0 w-12 h-12 rounded-full border-2 border-[#c5a059]/30 p-[2px]">
-                        <div className="w-full h-full rounded-full bg-black/5" />
+                      <div key={i} className="shrink-0 w-14 h-14 rounded-full border-2 border-[#c5a059]/20 p-[3px] group-hover:border-[#c5a059]/60 transition-colors">
+                        <div className="w-full h-full rounded-full bg-white/5" />
                       </div>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-3 gap-[1px] bg-black/5">
+                  <div className="grid grid-cols-3 gap-[2px] bg-white/5">
                     {[...Array(9)].map((_, i) => (
-                      <div key={i} className="aspect-square bg-white flex items-center justify-center relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-[#c5a059]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {i === 0 && <Instagram className="w-6 h-6 text-black/5" />}
+                      <div key={i} className="aspect-square bg-[#0A0A0A] flex items-center justify-center relative overflow-hidden group/post">
+                        <div className="absolute inset-0 bg-[#c5a059]/10 opacity-0 group-hover/post:opacity-100 transition-opacity" />
+                        {i === 0 && <Instagram className="w-7 h-7 text-white/5 group-hover/post:text-[#c5a059]/30 transition-colors" />}
                       </div>
                     ))}
                   </div>
 
-                  <div className="absolute bottom-0 left-0 w-full h-12 border-t border-black/5 flex items-center justify-around px-4 bg-white">
-                    <div className="w-5 h-5 rounded-md border-2 border-black/5" />
-                    <div className="w-5 h-5 rounded-md border-2 border-black/5" />
-                    <div className="w-5 h-5 rounded-full border-2 border-black/5" />
+                  <div className="absolute bottom-0 left-0 w-full h-16 border-t border-white/5 flex items-center justify-around px-6 bg-[#0A0A0A]/80 backdrop-blur-md">
+                    <div className="w-6 h-6 rounded-lg border-2 border-white/10" />
+                    <div className="w-6 h-6 rounded-lg border-2 border-white/10" />
+                    <div className="w-6 h-6 rounded-full border-2 border-white/10" />
                   </div>
                 </div>
 
                 <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute -top-10 -right-10 p-6 rounded-2xl bg-white border border-black/10 shadow-2xl z-20"
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-12 -right-12 p-8 rounded-[32px] bg-[#111] border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.5)] z-20 backdrop-blur-xl"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-green-500/10">
-                      <ChevronRight className="w-4 h-4 text-green-500 rotate-[-90deg]" />
+                  <div className="flex items-center gap-5">
+                    <div className="p-3 rounded-2xl bg-green-500/10 border border-green-500/20">
+                      <ChevronRight className="w-5 h-5 text-green-500 rotate-[-90deg]" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#1A1A1A]/40 uppercase font-black tracking-widest">Reach</p>
-                      <p className="text-[#1A1A1A] font-black">+12.4k</p>
+                      <p className="text-[11px] text-white/30 uppercase font-black tracking-[0.4em] mb-1">Growth Reach</p>
+                      <p className="text-white font-black text-2xl tracking-tighter">+12.4k</p>
                     </div>
                   </div>
                 </motion.div>
@@ -227,19 +234,20 @@ export const Digital = () => {
         </div>
       </section>
 
-      {/* Digital Signage Section */}
-      <section className="py-32 bg-[#FAFAFA]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black">Turnkey Solutions</span>
-            <h2 className="text-4xl md:text-7xl font-black text-[#1A1A1A] mt-6 mb-8 tracking-tighter uppercase leading-[0.9]">
+      {/* Infrastructure Section - Digital Signage */}
+      <section className="py-40 bg-[#0A0A0A] relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c5a059]/5 blur-[150px] rounded-full pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="mb-24">
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black mb-6 block">Strategic Infrastructure</span>
+            <h2 className="text-4xl md:text-7xl font-black text-white mt-6 mb-10 tracking-tighter uppercase leading-[0.9]">
               {t.digitalSignage?.headline}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+            <div className="space-y-20">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 {t.digitalSignage?.timeline.map((item, i) => (
                   <motion.div
                     key={i}
@@ -247,12 +255,12 @@ export const Digital = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex gap-4"
+                    className="flex gap-6 group"
                   >
-                    <span className="text-[#c5a059] text-xl font-black opacity-30">{item.step}</span>
+                    <span className="text-[#c5a059] text-3xl font-black opacity-10 group-hover:opacity-50 transition-opacity">0{i + 1}</span>
                     <div>
-                      <h4 className="text-[#1A1A1A] font-black uppercase tracking-tight text-sm mb-2">{item.title}</h4>
-                      <div className="w-8 h-[2px] bg-[#c5a059]/20" />
+                      <h4 className="text-white font-black uppercase tracking-widest text-base mb-3 group-hover:text-[#c5a059] transition-colors">{item.title}</h4>
+                      <div className="w-10 h-[2px] bg-[#c5a059]/30 group-hover:w-full transition-all duration-500" />
                     </div>
                   </motion.div>
                 ))}
@@ -260,96 +268,120 @@ export const Digital = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {t.digitalSignage?.packages.map((pkg, i) => (
-                  <div key={i} className="p-10 rounded-[32px] bg-white border border-black/5 hover:border-[#c5a059]/30 transition-all group shadow-xl shadow-black/5">
-                    <Package className="w-8 h-8 text-[#c5a059] mb-6 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-xl font-black text-[#1A1A1A] mb-6 uppercase tracking-tighter">{pkg.name}</h3>
-                    <ul className="space-y-3">
+                  <motion.div 
+                    key={i} 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="p-12 rounded-[40px] bg-[#050505] border border-white/5 hover:border-[#c5a059]/40 transition-all group shadow-2xl"
+                  >
+                    <div className="w-16 h-16 rounded-2xl bg-white/[0.03] flex items-center justify-center mb-10 group-hover:bg-[#c5a059] transition-colors duration-500">
+                      <Package className="w-8 h-8 text-[#c5a059] group-hover:text-black transition-colors" />
+                    </div>
+                    <h3 className="text-2xl font-black text-white mb-8 uppercase tracking-tighter group-hover:text-[#c5a059] transition-colors">{pkg.name}</h3>
+                    <ul className="space-y-4">
                       {pkg.features.map((feat, idx) => (
-                        <li key={idx} className="text-[9px] uppercase tracking-[0.2em] font-bold text-[#1A1A1A]/40 flex items-center gap-2">
-                          <div className="w-1 h-1 rounded-full bg-[#c5a059]" />
+                        <li key={idx} className="text-[10px] uppercase tracking-[0.3em] font-black text-white/30 flex items-center gap-3 group-hover:text-white/60 transition-colors">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]/40" />
                           {feat}
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
               <Link
                 to="/contact"
-                className="px-10 py-5 bg-[#c5a059] text-black font-black uppercase tracking-[0.2em] text-[10px] hover:scale-105 transition-all inline-block rounded-full shadow-lg shadow-[#c5a059]/20"
+                className="px-12 py-6 bg-[#c5a059] text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-white transition-all inline-block rounded-full shadow-[0_20px_50px_rgba(197,160,89,0.2)]"
               >
                 {t.digitalSignage?.cta}
               </Link>
             </div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative group"
             >
-              <div className="aspect-video bg-[#1A1A1A] rounded-3xl p-1 border-[12px] border-[#F0F0F0] shadow-2xl relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A] to-black" />
+              <div className="absolute -inset-10 bg-[#c5a059]/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-[#c5a059]/20 transition-colors duration-1000" />
+              <div className="aspect-video bg-[#050505] rounded-[40px] p-1.5 border-[1px] border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none" />
                 
-                <div className="relative h-full flex flex-col items-center justify-center p-12 text-center">
+                <div className="relative h-full flex flex-col items-center justify-center p-16 text-center">
                   <motion.div
-                    animate={{ opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-20 h-1 bg-[#c5a059] mb-8"
+                    animate={{ scaleX: [0.5, 1, 0.5] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-32 h-1 bg-[#c5a059]/50 mb-12 rounded-full"
                   />
-                  <h3 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter uppercase leading-none">
-                    HAPPY HOUR
+                  <h3 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase leading-none italic">
+                    {t.digitalPage.tvStrategy.preview.title}
                   </h3>
-                  <p className="text-[#c5a059] text-xl font-black uppercase tracking-[0.3em] animate-pulse">
-                    Gin & Tonic 2x1
+                  <p className="text-[#c5a059] text-2xl md:text-3xl font-black uppercase tracking-[0.4em] mb-10 shadow-glow">
+                    {t.digitalPage.tvStrategy.preview.subtitle}
                   </p>
-                  <p className="text-white/40 text-sm mt-6 font-bold uppercase tracking-widest">
-                    17h — 19h
-                  </p>
+                  <div className="flex gap-4">
+                    <span className="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.3em] text-white/40">17:00</span>
+                    <span className="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.3em] text-white/40">19:00</span>
+                  </div>
 
-                  <div className="absolute bottom-8 right-8 w-24 h-24 bg-white/5 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
+                  <div className="absolute bottom-12 right-12 w-24 h-24 bg-white/[0.03] backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/10 group-hover:border-[#c5a059]/40 transition-colors group-hover:scale-105 transition-transform">
                     <QrCode className="w-12 h-12 text-[#c5a059]" />
                   </div>
                 </div>
               </div>
               
-              <div className="w-1/3 h-2 bg-[#F0F0F0] mx-auto rounded-b-xl" />
-              <div className="w-1/2 h-1 bg-[#E0E0E0] mx-auto rounded-b-2xl blur-sm" />
+              <div className="w-1/3 h-2.5 bg-white/5 mx-auto rounded-b-2xl border-x border-b border-white/10" />
+              <div className="w-1/4 h-1.5 bg-[#c5a059]/5 mx-auto rounded-b-3xl blur-md" />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Services Grid - Detailed Capabilities */}
+      <section className="py-40 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
             {t.digitalPage.services.items.map((item, i) => (
-              <div key={i} className="p-10 rounded-3xl bg-[#FAFAFA] border border-black/5 hover:bg-white hover:shadow-2xl hover:shadow-black/5 transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center mb-8 group-hover:bg-[#c5a059]/10 transition-colors">
-                  <Monitor className="w-6 h-6 text-[#1A1A1A]/40 group-hover:text-[#c5a059]" />
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true }}
+                className="p-12 md:p-16 bg-[#050505] hover:bg-[#0A0A0A] transition-all duration-500 group"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white/[0.03] flex items-center justify-center mb-10 group-hover:bg-[#c5a059] transition-all duration-500">
+                  <Monitor className="w-7 h-7 text-[#c5a059] group-hover:text-black transition-colors" />
                 </div>
-                <h3 className="text-xl font-black text-[#1A1A1A] mb-4 uppercase tracking-tight group-hover:text-[#c5a059] transition-colors">{item.title}</h3>
-                <p className="text-[#1A1A1A]/40 text-sm leading-relaxed">{item.text}</p>
-              </div>
+                <h3 className="text-2xl font-black text-white mb-6 uppercase tracking-tighter group-hover:text-[#c5a059] transition-colors">{item.title}</h3>
+                <p className="text-white/30 text-base leading-relaxed group-hover:text-white/50 transition-colors">{item.text}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 bg-[#FAFAFA] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-[#1A1A1A] mb-12 uppercase tracking-tighter">
-            {t.digitalPage.cta.title}
-          </h2>
-          <Link 
-            to="/contact"
-            className="px-12 py-6 bg-[#1A1A1A] text-white font-black uppercase tracking-[0.2em] text-sm rounded-full hover:scale-105 transition-all shadow-2xl inline-block"
+      {/* Conversion Focused CTA */}
+      <section className="py-40 bg-[#0A0A0A] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.05)_0%,transparent_70%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
           >
-            {t.digitalPage.cta.button}
-          </Link>
+            <h2 className="text-4xl md:text-8xl font-black text-white mb-16 uppercase tracking-tighter max-w-5xl mx-auto leading-[0.85] italic">
+              {t.digitalPage.cta.title}
+            </h2>
+            <Link 
+              to="/contact"
+              className="px-16 py-8 bg-[#c5a059] text-black font-black uppercase tracking-[0.3em] text-sm rounded-full hover:bg-white transition-all shadow-[0_30px_100px_rgba(197,160,89,0.3)] inline-block"
+            >
+              {t.digitalPage.cta.button}
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
