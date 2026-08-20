@@ -7,6 +7,7 @@ export const translations: Record<Language, Translation> = {
       events: 'Eventos',
       consulting: 'Consultoria',
       digital: 'Soluções Digitais',
+      portfolio: 'Trabalhos',
       about: 'Sobre',
       contact: 'Orçamento',
     },
@@ -93,6 +94,52 @@ export const translations: Record<Language, Translation> = {
       follow: 'Siga-nos',
       rights: 'Todos os direitos reservados.',
     },
+    socialMediaIA: {
+      headline: 'O seu Instagram está abandonado. Os clientes notam.',
+      engagementStat: '+340% engagement médio nos primeiros 90 dias',
+      cta: 'Quero Conteúdo que Vende',
+      packages: [
+        { name: 'Starter', features: ['8 posts/mês', 'Copywriting IA', 'Design Personalizado'] },
+        { name: 'Growth', features: ['16 posts/mês', 'Stories semanais', 'Agendamento Automático', 'Relatório de Performance'], popular: true },
+        { name: 'Premium', features: ['Posts Diários', 'Reels Estratégicos', 'Gestão de Comunidade', 'Call Mensal de Estratégia'] },
+      ],
+    },
+    digitalSignage: {
+      headline: 'Do zero ao ecrã a vender — em 48h',
+      timeline: [
+        { step: '01', title: 'Diagnóstico do espaço' },
+        { step: '02', title: 'Instalação do hardware' },
+        { step: '03', title: 'Criação de conteúdos' },
+      ],
+      packages: [
+        { name: 'Bar Pack', features: ['1 ecrã', 'Software', '4 conteúdos/mês', 'Suporte remoto'] },
+        { name: 'Hotel/Quinta Pack', features: ['Quantos ecrãs necessários', 'Software', 'Menus personalizados por evento', 'Cocktails personalizados por evento', 'Suporte prioritário', 'E muito mais'] },
+      ],
+      cta: 'Pedir Instalação',
+      locationNote: 'Instalação disponível em Viseu e região Centro',
+    },
+    curiosityHook: {
+      label: 'SABIA QUE...?',
+      cards: [
+        {
+          title: 'O cliente decide em 8 segundos',
+          text: 'A primeira impressão — cheiro, luz, som, limpeza — forma-se antes de o cliente sentar. Se o espaço não convida, não há cocktail bom o suficiente para compensar. O ambiente é o produto.',
+        },
+        {
+          title: 'Staff sem treino é o teu maior custo escondido',
+          text: 'Um bartender lento, sem técnica de upsell ou com má atitude custa mais do que o salário que recebe. Treino contínuo, standards claros e accountability diária são a diferença entre um bar rentável e um que sobrevive.',
+        },
+        {
+          title: 'Menu grande ≠ mais vendas',
+          text: 'Menus enormes criam desperdício, confusão no staff e clientes indecisos. Menos opções, bem executadas, com margens calculadas — especialmente nos cocktails da casa — geram mais dinheiro e melhor experiência.',
+        },
+      ],
+      footer: 'Estas não são opiniões. São padrões observados em centenas de operações de hospitalidade.',
+    },
+    consultingAppointment: {
+      text: 'Orçamentos gratuitos • Visitamos o seu negócio',
+      cta: 'Agende uma reunião connosco',
+    },
   },
   es: {
     nav: {
@@ -100,6 +147,7 @@ export const translations: Record<Language, Translation> = {
       events: 'Eventos',
       consulting: 'Consultoría',
       digital: 'Soluciones Digitales',
+      portfolio: 'Portfolio',
       about: 'Nosotros',
       contact: 'Presupuesto',
     },
@@ -186,6 +234,52 @@ export const translations: Record<Language, Translation> = {
       follow: 'Síguenos',
       rights: 'Todos los derechos reservados.',
     },
+    socialMediaIA: {
+      headline: 'Tu Instagram está abandonado. Los clientes lo notan.',
+      engagementStat: '+340% engagement promedio en los primeros 90 días',
+      cta: 'Quiero Contenido que Vende',
+      packages: [
+        { name: 'Starter', features: ['8 posts/mes', 'Copywriting IA', 'Diseño Personalizado'] },
+        { name: 'Growth', features: ['16 posts/mes', 'Stories semanales', 'Programación Automática', 'Informe de Rendimiento'], popular: true },
+        { name: 'Premium', features: ['Posts Diarios', 'Reels Estratégicos', 'Gestión de Comunidad', 'Call Mensual de Estrategia'] },
+      ],
+    },
+    digitalSignage: {
+      headline: 'De cero a la pantalla vendiendo — en 48h',
+      timeline: [
+        { step: '01', title: 'Diagnóstico del espacio' },
+        { step: '02', title: 'Instalación del hardware' },
+        { step: '03', title: 'Creación de contenidos' },
+      ],
+      packages: [
+        { name: 'Bar Pack', features: ['1 pantalla', 'Software', '4 contenidos/mes', 'Soporte remoto'] },
+        { name: 'Hotel/Quinta Pack', features: ['Tantas pantallas como sea necesario', 'Software', 'Menús personalizados por evento', 'Cócteles personalizados por evento', 'Soporte prioritario', 'Y mucho más'] },
+      ],
+      cta: 'Solicitar Instalación',
+      locationNote: 'Instalación disponible en Viseu y región Centro',
+    },
+    curiosityHook: {
+      label: '¿SABÍA QUE...?',
+      cards: [
+        {
+          title: 'El cliente decide en 8 segundos',
+          text: 'La primera impresión — olor, luz, sonido, limpieza — se forma antes de que el cliente se siente. Si el espacio no invita, no hay cóctel lo suficientemente bueno para compensar. El ambiente es el producto.',
+        },
+        {
+          title: 'Staff sin entrenamiento es tu mayor costo oculto',
+          text: 'Un bartender lento, sin técnica de upsell o con mala actitud cuesta más que el salario que recibe. Entrenamiento continuo, estándares claros y accountability diaria son la diferencia entre un bar rentable y uno que sobrevive.',
+        },
+        {
+          title: 'Menú grande ≠ más ventas',
+          text: 'Menús enormes crean desperdicio, confusión en el staff y clientes indecisos. Menos opciones, bien ejecutadas, con márgenes calculados — especialmente en los cócteles de la casa — generan más dinero y mejor experiencia.',
+        },
+      ],
+      footer: 'Estas no son opiniones. Son patrones observados en cientos de operaciones de hostelería.',
+    },
+    consultingAppointment: {
+      text: 'Presupuestos gratuitos • Visitamos su negocio',
+      cta: 'Programe una reunión con nosotros',
+    },
   },
   en: {
     nav: {
@@ -193,6 +287,7 @@ export const translations: Record<Language, Translation> = {
       events: 'Events',
       consulting: 'Consulting',
       digital: 'Digital Solutions',
+      portfolio: 'Portfolio',
       about: 'About',
       contact: 'Get a Quote',
     },
@@ -279,6 +374,52 @@ export const translations: Record<Language, Translation> = {
       follow: 'Follow Us',
       rights: 'All rights reserved.',
     },
+    socialMediaIA: {
+      headline: 'Your Instagram is abandoned. Customers notice.',
+      engagementStat: '+340% average engagement in the first 90 days',
+      cta: 'I Want Content that Sells',
+      packages: [
+        { name: 'Starter', features: ['8 posts/month', 'AI Copywriting', 'Custom Design'] },
+        { name: 'Growth', features: ['16 posts/month', 'Weekly Stories', 'Auto Scheduling', 'Performance Report'], popular: true },
+        { name: 'Premium', features: ['Daily Posts', 'Strategic Reels', 'Community Management', 'Monthly Strategy Call'] },
+      ],
+    },
+    digitalSignage: {
+      headline: 'From zero to selling screen — in 48h',
+      timeline: [
+        { step: '01', title: 'Space Diagnosis' },
+        { step: '02', title: 'Hardware Installation' },
+        { step: '03', title: 'Content Creation' },
+      ],
+      packages: [
+        { name: 'Bar Pack', features: ['1 screen', 'Software', '4 contents/month', 'Remote support'] },
+        { name: 'Hotel/Quinta Pack', features: ['As many screens as needed', 'Software', 'Custom menus per event', 'Custom cocktails per event', 'Priority support', 'And much more'] },
+      ],
+      cta: 'Request Installation',
+      locationNote: 'Installation available in Viseu and Centro region',
+    },
+    curiosityHook: {
+      label: 'DID YOU KNOW...?',
+      cards: [
+        {
+          title: 'The customer decides in 8 seconds',
+          text: 'The first impression — smell, light, sound, cleanliness — is formed before the customer sits down. If the space is not inviting, no cocktail is good enough to compensate. The environment is the product.',
+        },
+        {
+          title: 'Untrained staff is your biggest hidden cost',
+          text: 'A slow bartender, without upsell techniques or with a bad attitude, costs more than the salary they receive. Continuous training, clear standards, and daily accountability are the difference between a profitable bar and one that just survives.',
+        },
+        {
+          title: 'Big menu ≠ more sales',
+          text: 'Huge menus create waste, staff confusion, and indecisive customers. Fewer options, well-executed, with calculated margins — especially in house cocktails — generate more money and a better experience.',
+        },
+      ],
+      footer: 'These are not opinions. They are patterns observed in hundreds of hospitality operations.',
+    },
+    consultingAppointment: {
+      text: 'Free quotes • We visit your business',
+      cta: 'Schedule a meeting with us',
+    },
   },
   fr: {
     nav: {
@@ -286,6 +427,7 @@ export const translations: Record<Language, Translation> = {
       events: 'Événements',
       consulting: 'Conseil',
       digital: 'Solutions Digitales',
+      portfolio: 'Portfolio',
       about: 'À Propos',
       contact: 'Devis',
     },
@@ -371,6 +513,52 @@ export const translations: Record<Language, Translation> = {
       contact: 'Contacts',
       follow: 'Suivez-nous',
       rights: 'Tous droits réservés.',
+    },
+    socialMediaIA: {
+      headline: 'Votre Instagram est abandonné. Les clients le remarquent.',
+      engagementStat: '+340% d\'engagement moyen dans les 90 premiers jours',
+      cta: 'Je veux du contenu qui vend',
+      packages: [
+        { name: 'Starter', features: ['8 posts/mois', 'Copywriting IA', 'Design Personnalisé'] },
+        { name: 'Growth', features: ['16 posts/mois', 'Stories hebdomadaires', 'Planification Automatique', 'Rapport de Performance'], popular: true },
+        { name: 'Premium', features: ['Posts Quotidiens', 'Reels Stratégiques', 'Gestion de Communauté', 'Call Mensuel de Stratégie'] },
+      ],
+    },
+    digitalSignage: {
+      headline: 'De zéro à l\'écran qui vend — en 48h',
+      timeline: [
+        { step: '01', title: 'Diagnostic de l\'espace' },
+        { step: '02', title: 'Installation du matériel' },
+        { step: '03', title: 'Création de contenus' },
+      ],
+      packages: [
+        { name: 'Bar Pack', features: ['1 écran', 'Logiciel', '4 contenus/mois', 'Support à distance'] },
+        { name: 'Hotel/Quinta Pack', features: ['Autant d\'écrans que nécessaire', 'Logiciel', 'Menus personnalisés par événement', 'Cocktails personnalisés par événement', 'Support prioritaire', 'Et bien plus encore'] },
+      ],
+      cta: 'Demander l\'Installation',
+      locationNote: 'Installation disponible à Viseu et région Centre',
+    },
+    curiosityHook: {
+      label: 'SAVIEZ-VOUS QUE...?',
+      cards: [
+        {
+          title: 'Le client décide en 8 secondes',
+          text: "La première impression — odeur, lumière, son, propreté — se forme avant que le client ne s'assoie. Si l'espace n'est pas invitant, aucun cocktail n'est assez bon pour compenser. L'environnement est le produit.",
+        },
+        {
+          title: 'Un personnel non formé est votre plus grand coût caché',
+          text: "Un bartender lent, sans techniques de vente incitative ou avec une mauvaise attitude, coûte plus cher que le salaire qu'il reçoit. Une formation continue, des standards clairs et une responsabilité quotidienne font la différence entre un bar rentable et un qui survit.",
+        },
+        {
+          title: 'Grand menu ≠ plus de ventes',
+          text: "Les menus énormes créent du gaspillage, de la confusion chez le personnel et des clients indécis. Moins d'options, bien exécutées, avec des marges calculées — surtout pour les cocktails maison — génèrent plus d'argent et une meilleure expérience.",
+        },
+      ],
+      footer: "Ce ne sont pas des opinions. Ce sont des schémas observés dans des centaines d'opérations hôtelières.",
+    },
+    consultingAppointment: {
+      text: 'Devis gratuits • Nous visitons votre entreprise',
+      cta: 'Planifiez une réunion avec nous',
     },
   },
 };

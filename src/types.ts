@@ -7,6 +7,7 @@ export interface Translation {
     consulting: string;
     digital: string;
     about: string;
+    portfolio: string;
     contact: string;
   };
   hero: {
@@ -71,5 +72,41 @@ export interface Translation {
     contact: string;
     follow: string;
     rights: string;
+  };
+  socialMediaIA?: {
+    headline: string;
+    engagementStat: string;
+    cta: string;
+    packages: {
+      name: string;
+      features: string[];
+      price?: string;
+      popular?: boolean;
+    }[];
+  };
+  digitalSignage?: {
+    headline: string;
+    timeline: {
+      step: string;
+      title: string;
+    }[];
+    packages: {
+      name: string;
+      features: string[];
+    }[];
+    cta: string;
+    locationNote: string;
+  };
+  curiosityHook?: {
+    label: string;
+    cards: {
+      title: string;
+      text: string;
+    }[];
+    footer: string;
+  };
+  consultingAppointment?: {
+    text: string;
+    cta: string;
   };
 }

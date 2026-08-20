@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
-import { TrendingUp, Users, Target, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
+import { Users, Target, ShieldCheck, BarChart3, Lightbulb } from 'lucide-react';
 
 export const Consulting = () => {
   const { t } = useLanguage();
@@ -19,6 +19,75 @@ export const Consulting = () => {
               Ajudamos bares, restaurantes e hotéis a maximizar a rentabilidade através de processos otimizados e engenharia de menus focada no lucro.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Appointment Banner */}
+      <section className="bg-[#c5a059] py-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-black/10 flex items-center justify-center">
+              <ShieldCheck className="w-6 h-6 text-black" />
+            </div>
+            <p className="text-black font-black uppercase tracking-tight text-sm md:text-base">
+              {t.consultingAppointment?.text}
+            </p>
+          </div>
+          <motion.a
+            href="/contact"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3 bg-black text-white font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-zinc-900 transition-colors"
+          >
+            {t.consultingAppointment?.cta}
+          </motion.a>
+        </div>
+      </section>
+
+      {/* Sabia que Section */}
+      <section className="py-32 bg-[#050505] relative overflow-hidden">
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(197, 160, 89, 0.05) 0%, transparent 70%)' }} />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="flex flex-col items-center mb-16 text-center">
+            <div className="flex items-center gap-3 mb-6">
+              <Lightbulb className="w-5 h-5 text-[#c5a059]" />
+              <span className="text-[#c5a059] text-xs font-black uppercase tracking-[0.4em]">
+                {t.curiosityHook?.label}
+              </span>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-20">
+            {t.curiosityHook?.cards.map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="relative pt-12 group"
+              >
+                <div className="absolute top-0 left-0 w-full h-[1px] bg-[#c5a059]/30" />
+                <span className="absolute top-8 left-0 text-8xl font-black text-[#c5a059]/10 pointer-events-none select-none">
+                  0{i + 1}
+                </span>
+                <div className="relative z-10">
+                  <h3 className="text-xl md:text-2xl font-black text-white mb-6 uppercase tracking-tight leading-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
+                    {card.text}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-24 text-center">
+            <p className="text-zinc-600 text-xs font-bold uppercase tracking-widest max-w-2xl mx-auto leading-relaxed border-t border-white/5 pt-12">
+              {t.curiosityHook?.footer}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -93,7 +162,6 @@ export const Consulting = () => {
             <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-8 max-w-2xl mx-auto">
               Leve o seu negócio para o próximo patamar.
             </h2>
-            {/* Button removed per user request */}
           </div>
         </div>
       </section>
