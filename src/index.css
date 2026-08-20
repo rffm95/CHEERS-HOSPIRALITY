@@ -1,83 +1,73 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
-  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
+  --color-bg: #FCFCFA;
+  --color-text: #111111;
+  --color-accent: #C5A059;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #050505;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   position: relative;
   min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.05) 0%, transparent 80%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: -1;
+  letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .text-stroke-accent {
-  -webkit-text-stroke: 1.5px #C5A059;
+  -webkit-text-stroke: 1px var(--color-accent);
   color: transparent;
 }
 
-.border-subtle {
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
-.luxury-gradient {
-  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 100%);
-}
-
-.luxury-glow {
-  background: radial-gradient(circle at center, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
-}
-
 .premium-card {
-  background: rgba(15, 15, 15, 0.5);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.text-luxury {
-  color: #C5A059;
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent);
+}
+
+.luxury-button {
+  background: var(--color-text);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.luxury-button:hover {
+  background: var(--color-accent);
+  color: white;
+  transform: scale(1.02);
+}
+
+.section-padding {
+  padding: 120px 0;
 }
 
 @media (max-width: 768px) {
-  .hero-headline {
-    font-size: 48px;
-    line-height: 0.95;
+  .section-padding {
+    padding: 80px 0;
   }
 }

@@ -24,7 +24,7 @@ export default function App() {
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <div className="min-h-screen bg-[#0a0a0a] flex flex-col">
+        <div className="min-h-screen bg-[#FCFCFA] flex flex-col">
           <Navbar />
           <main className="flex-grow">
             <Routes>

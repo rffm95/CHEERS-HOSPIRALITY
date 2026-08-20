@@ -10,24 +10,24 @@ export const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="pt-20 bg-[#050505] min-h-screen text-white">
+    <div className="pt-20 bg-[#FCFCFA] min-h-screen text-[#111111] font-sans">
       {/* Header */}
-      <section className="relative py-40 border-b border-white/5 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(197,160,89,0.05)_0%,transparent_70%)] pointer-events-none" />
+      <section className="relative py-24 md:py-40 border-b border-[#111111]/5 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(197,160,89,0.03)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             className="max-w-4xl text-center mx-auto"
           >
-            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.6em] font-black mb-10 block italic">
+            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-8 block font-sans">
               {t.portfolioPage.hero.eyebrow}
             </span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-12 tracking-tighter uppercase leading-[0.85]">
+            <h1 className="text-5xl md:text-8xl font-serif text-[#111111] mt-6 mb-12 tracking-tight leading-[0.95]">
               {t.portfolioPage.hero.title} <br />
-              <span className="text-stroke-accent italic">{t.portfolioPage.hero.titleAccent}</span>
+              <span className="italic text-[#c5a059]">{t.portfolioPage.hero.titleAccent}</span>
             </h1>
-            <p className="text-white/30 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
+            <p className="text-[#111111]/50 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light">
               {t.portfolioPage.hero.description}
             </p>
           </motion.div>
@@ -35,38 +35,38 @@ export const Portfolio = () => {
       </section>
 
       {/* Grid */}
-      <section className="py-40 bg-[#050505]">
+      <section className="py-24 md:py-40 bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             {portfolioItems.map((item, i) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
                 onClick={() => setSelectedImage(item.image)}
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-[50px] bg-[#0A0A0A] border border-white/5 mb-10 shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] bg-[#F5F5F3] border border-[#111111]/5 mb-10 shadow-[0_30px_60px_rgba(0,0,0,0.02)]">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-60 group-hover:opacity-100"
+                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 group-hover:opacity-100"
                     referrerPolicy="no-referrer"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[4px]">
-                    <span className="bg-white text-black text-[10px] font-black uppercase tracking-[0.4em] px-10 py-5 rounded-full shadow-2xl">
+                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                    <span className="bg-[#111111] text-white text-[9px] font-bold uppercase tracking-[0.3em] px-8 py-4 rounded-full shadow-2xl">
                       {t.common.viewMore}
                     </span>
                   </div>
                 </div>
-                <div className="px-6">
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter group-hover:text-[#c5a059] transition-colors leading-none italic">
+                <div className="px-4">
+                  <h3 className="text-2xl md:text-3xl font-serif text-[#111111] tracking-tight group-hover:text-[#c5a059] transition-colors leading-none">
                     {item.title}
                   </h3>
-                  <div className="w-16 h-1 bg-[#c5a059]/10 mt-6 group-hover:w-32 group-hover:bg-[#c5a059] transition-all duration-700" />
+                  <div className="w-12 h-0.5 bg-[#c5a059]/20 mt-6 group-hover:w-24 group-hover:bg-[#c5a059] transition-all duration-700" />
                 </div>
               </motion.div>
             ))}
@@ -75,15 +75,16 @@ export const Portfolio = () => {
       </section>
 
       {/* Strategic CTA */}
-      <section className="py-40 bg-[#0A0A0A] border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-          <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.5em] font-black mb-8 block italic">Project Partnership</span>
-          <h2 className="text-4xl md:text-7xl font-black text-white mb-16 uppercase tracking-tighter leading-[0.85] italic">
+      <section className="py-24 md:py-40 bg-[#111111] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#c5a059]/[0.02] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center relative z-10">
+          <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-bold mb-8 block font-sans">Project Partnership</span>
+          <h2 className="text-4xl md:text-7xl font-serif text-white mb-16 tracking-tight leading-[1.2]">
             {t.portfolioPage.cta.title}
           </h2>
           <Link 
             to="/contact" 
-            className="px-16 py-8 bg-white text-black font-black uppercase tracking-[0.3em] text-xs hover:bg-[#c5a059] transition-all inline-block rounded-full shadow-2xl"
+            className="px-12 py-6 bg-[#c5a059] text-black font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-white transition-all inline-block rounded-full shadow-2xl font-sans"
           >
             {t.portfolioPage.cta.button}
           </Link>
@@ -97,13 +98,13 @@ export const Portfolio = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-black/98 backdrop-blur-md cursor-zoom-out"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-white/98 backdrop-blur-md cursor-zoom-out"
             onClick={() => setSelectedImage(null)}
           >
             <motion.button
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="absolute top-10 right-10 p-6 text-white hover:text-[#c5a059] transition-colors z-[110]"
+              className="absolute top-10 right-10 p-6 text-[#111111] hover:text-[#c5a059] transition-colors z-[110]"
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedImage(null);
@@ -122,7 +123,7 @@ export const Portfolio = () => {
               <img
                 src={selectedImage}
                 alt="Portfolio Large"
-                className="max-w-full max-h-full object-contain rounded-[40px] shadow-[0_50px_100px_rgba(0,0,0,0.8)]"
+                className="max-w-full max-h-full object-contain rounded-[2rem] shadow-[0_50px_100px_rgba(0,0,0,0.1)]"
                 referrerPolicy="no-referrer"
               />
             </motion.div>

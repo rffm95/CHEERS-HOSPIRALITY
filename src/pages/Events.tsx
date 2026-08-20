@@ -8,9 +8,9 @@ export const Events = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="pt-20 bg-[#050505] text-white">
+    <div className="pt-20 bg-[#FCFCFA] text-[#111111] font-sans">
       {/* Hero Section */}
-      <section className="relative py-32 border-b border-white/5 overflow-hidden">
+      <section className="relative py-24 md:py-32 border-b border-[#111111]/5 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none -mr-64 -mt-64" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <motion.div
@@ -19,16 +19,18 @@ export const Events = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.6em] font-black mb-8 block">{t.eventsPage.hero.eyebrow}</span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-10 tracking-tighter uppercase leading-[0.9]">
+            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-6 block font-sans">
+              {t.eventsPage.hero.eyebrow}
+            </span>
+            <h1 className="text-5xl md:text-8xl font-serif text-[#111111] mt-6 mb-10 tracking-tight leading-[0.95]">
               {t.eventsPage.hero.title} <br />
-              <span className="text-stroke-accent italic">{t.eventsPage.hero.titleAccent}</span>
+              <span className="italic text-[#c5a059]">{t.eventsPage.hero.titleAccent}</span>
             </h1>
-            <p className="text-white/40 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="text-[#111111]/60 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
               {t.eventsPage.hero.description}
             </p>
-            <div className="mt-12 flex items-center gap-6 text-[10px] uppercase tracking-[0.4em] font-black text-[#c5a059] italic">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#c5a059] animate-pulse" />
+            <div className="mt-12 flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-[#c5a059]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
               {t.eventsPage.hero.note}
             </div>
           </motion.div>
@@ -36,40 +38,46 @@ export const Events = () => {
       </section>
 
       {/* Experience Packages */}
-      <section className="py-40 bg-[#050505]">
+      <section className="py-24 md:py-40 bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-5xl font-serif text-[#111111] tracking-tight mb-6">
+              {t.packages.title}
+            </h2>
+            <p className="text-[#111111]/50 text-lg max-w-2xl font-light">
+              {t.packages.subtitle}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.packages.items.map((pkg, i) => (
-                <motion.div
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative p-12 md:p-16 bg-[#0A0A0A] border border-white/5 rounded-[40px] overflow-hidden transition-all duration-700 hover:border-[#c5a059]/40 hover:scale-[1.02] shadow-2xl"
+                className="group relative p-10 bg-white border border-[#111111]/5 rounded-2xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:-translate-y-1"
               >
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(197,160,89,0.05)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                
                 <div className="relative z-10 flex flex-col h-full">
-                  <h3 className="text-3xl font-black text-white mb-3 uppercase tracking-tighter group-hover:text-[#c5a059] transition-colors leading-none italic">{pkg.name}</h3>
-                  <div className="flex items-baseline gap-3 mb-10">
-                    <span className="text-white/20 text-[10px] uppercase font-black tracking-widest">{t.packages.from}</span>
-                    <span className="text-5xl font-black text-[#c5a059] tracking-tighter">{pkg.price}€</span>
+                  <h3 className="text-xl font-bold text-[#111111] mb-2 font-sans">{pkg.name}</h3>
+                  <div className="flex items-baseline gap-2 mb-8">
+                    <span className="text-[#111111]/30 text-[10px] uppercase font-bold tracking-wider">{t.packages.from}</span>
+                    <span className="text-3xl font-bold text-[#c5a059] tracking-tight">{pkg.price}€</span>
                   </div>
-                  <p className="text-white/30 text-base mb-12 leading-relaxed group-hover:text-white/50 transition-colors">
+                  <p className="text-[#111111]/50 text-sm mb-8 leading-relaxed font-light">
                     {pkg.description}
                   </p>
-                  <ul className="space-y-5 mb-16 flex-grow">
+                  <ul className="space-y-4 mb-10 flex-grow">
                     {pkg.features.map((f, idx) => (
-                      <li key={idx} className="flex items-start gap-4 text-[10px] uppercase tracking-[0.2em] font-black text-white/20 group-hover:text-white/40 transition-colors">
-                        <Check className="w-3.5 h-3.5 text-[#c5a059] shrink-0" />
+                      <li key={idx} className="flex items-start gap-3 text-[11px] text-[#111111]/70 font-medium">
+                        <Check className="w-3.5 h-3.5 text-[#c5a059] shrink-0 mt-0.5" />
                         {f}
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className="w-full py-6 bg-white text-black text-xs font-black uppercase tracking-[0.3em] text-center hover:bg-[#c5a059] transition-all rounded-full shadow-2xl"
+                    className="w-full py-4 border border-[#111111] text-[#111111] text-[10px] font-bold uppercase tracking-[0.2em] text-center hover:bg-[#111111] hover:text-white transition-all rounded-full"
                   >
                     {t.eventsPage.quote.cta}
                   </Link>
@@ -81,15 +89,21 @@ export const Events = () => {
       </section>
 
       {/* Signature Occasions */}
-      <section className="py-40 bg-[#0A0A0A] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#c5a059]/[0.02] blur-[150px] rounded-full pointer-events-none" />
+      <section className="py-24 md:py-40 bg-[#111111] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[#c5a059]/[0.03] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-          <div className="mb-24 text-center">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.5em] font-black mb-6 block italic">Tailored Excellence</span>
-            <h2 className="text-5xl md:text-8xl font-black text-white tracking-tighter uppercase mb-10 leading-[0.85]">Ocasiões Únicas</h2>
-            <p className="text-white/30 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed italic">Cada evento é uma assinatura. Desenhamos a experiência de bar para se fundir com a estética e o propósito da sua celebração.</p>
+          <div className="mb-24">
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block font-sans">
+              Tailored Excellence
+            </span>
+            <h2 className="text-4xl md:text-7xl font-serif text-white tracking-tight mb-10 leading-[1.1]">
+              Ocasiões <span className="italic">Únicas.</span>
+            </h2>
+            <p className="text-white/40 max-w-2xl text-lg md:text-xl font-light leading-relaxed">
+              Cada evento é uma assinatura. Desenhamos a experiência de bar para se fundir com a estética e o propósito estratégico da sua celebração.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: t.eventsPage.categories.weddings, img: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800', description: 'O brinde perfeito para o dia mais importante.' },
               { title: t.eventsPage.categories.corporate, img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800', description: 'Reforce a sua marca com networking de elite.' },
@@ -102,13 +116,22 @@ export const Events = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="relative h-[600px] rounded-[50px] overflow-hidden group border border-white/5 shadow-2xl"
+                className="relative h-[500px] rounded-3xl overflow-hidden group shadow-2xl"
               >
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-75" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                <div className="absolute bottom-0 left-0 p-12 w-full transform group-hover:-translate-y-4 transition-transform duration-700">
-                  <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-4 leading-none group-hover:text-[#c5a059] transition-colors italic">{item.title}</h4>
-                  <p className="text-white/40 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 font-medium">{item.description}</p>
+                <img 
+                  src={item.img} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                  loading="lazy" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/20 to-transparent opacity-80" />
+                <div className="absolute bottom-0 left-0 p-8 w-full">
+                  <h4 className="text-xl font-bold text-white uppercase tracking-tight mb-2 font-sans group-hover:text-[#c5a059] transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-white/40 text-[11px] leading-relaxed font-medium uppercase tracking-wider">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -117,28 +140,28 @@ export const Events = () => {
       </section>
 
       {/* Quote Request Section */}
-      <section className="py-40 bg-[#050505] overflow-hidden">
+      <section className="py-24 md:py-40 bg-[#FCFCFA] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#0A0A0A] rounded-[60px] p-20 md:p-32 text-center relative border border-white/5 overflow-hidden group shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
+            className="bg-white rounded-[40px] p-12 md:p-24 text-center relative border border-[#111111]/5 overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.03)]"
           >
-            <div className="absolute inset-0 bg-[#c5a059]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-            <h2 className="text-5xl md:text-8xl font-black text-white mb-12 tracking-tighter uppercase leading-[0.85] relative z-10 italic">
+            <div className="absolute inset-0 bg-[#c5a059]/[0.02] pointer-events-none" />
+            <h2 className="text-4xl md:text-7xl font-serif text-[#111111] mb-8 tracking-tight leading-tight relative z-10">
               {t.eventsPage.quote.title} <br />
-              <span className="text-stroke-accent">{t.eventsPage.quote.titleAccent}</span>
+              <span className="italic text-[#c5a059]">{t.eventsPage.quote.titleAccent}</span>
             </h2>
-            <p className="text-white/30 text-xl md:text-2xl mb-20 max-w-3xl mx-auto font-medium relative z-10 leading-relaxed italic">
+            <p className="text-[#111111]/50 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed relative z-10">
               {t.eventsPage.quote.description}
             </p>
             <Link 
               to="/contact"
-              className="group inline-flex items-center gap-8 px-16 py-8 bg-white text-black font-black uppercase tracking-[0.3em] text-xs hover:bg-[#c5a059] transition-all relative z-10 shadow-2xl rounded-full"
+              className="group inline-flex items-center gap-6 px-12 py-6 bg-[#111111] text-white font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all relative z-10 rounded-full"
             >
               {t.eventsPage.quote.cta}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>

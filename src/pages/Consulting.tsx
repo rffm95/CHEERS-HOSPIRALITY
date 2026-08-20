@@ -8,42 +8,42 @@ export const Consulting = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="pt-20 bg-[#050505] text-white">
+    <div className="pt-20 bg-[#FCFCFA] text-[#111111] font-sans">
       {/* Hero Section */}
-      <section className="relative py-32 border-b border-white/5 overflow-hidden">
+      <section className="relative py-24 md:py-32 border-b border-[#111111]/5 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none -mr-64 -mt-64" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl">
-            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.6em] font-black mb-8 block">
+            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-6 block font-sans">
               {t.consultingPage.hero.eyebrow}
             </span>
-            <h1 className="text-5xl md:text-8xl font-black text-white mt-6 mb-10 tracking-tighter uppercase leading-[0.9]">
+            <h1 className="text-5xl md:text-8xl font-serif text-[#111111] mt-6 mb-10 tracking-tight leading-[0.95]">
               {t.consultingPage.hero.title} <br />
-              <span className="text-stroke-accent italic">{t.homePage.hero.titleAccent}</span>
+              <span className="italic text-[#c5a059]">{t.consultingPage.hero.titleAccent}</span>
             </h1>
-            <p className="text-white/40 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="text-[#111111]/60 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
               {t.consultingPage.hero.description}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Appointment Banner - Elevated */}
-      <section className="bg-[#c5a059] py-8 relative z-10">
+      {/* Appointment Banner - Editorial Style */}
+      <section className="bg-[#111111] py-12 relative z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-6">
-            <div className="w-14 h-14 rounded-2xl bg-black/10 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-8 h-8 text-black" />
+            <div className="w-12 h-12 rounded-full bg-[#c5a059]/20 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-6 h-6 text-[#c5a059]" />
             </div>
-            <p className="text-black font-black uppercase tracking-tight text-base md:text-xl leading-tight">
+            <p className="text-white font-serif text-lg md:text-xl tracking-tight">
               {t.consultingAppointment?.text}
             </p>
           </div>
           <motion.a
             href="/contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-black text-white font-black uppercase tracking-widest text-[11px] rounded-full hover:bg-white hover:text-black transition-all shadow-xl"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-10 py-5 bg-[#c5a059] text-black font-bold uppercase tracking-[0.2em] text-[10px] rounded-full hover:bg-white transition-all shadow-xl"
           >
             {t.consultingAppointment?.cta}
           </motion.a>
@@ -51,36 +51,36 @@ export const Consulting = () => {
       </section>
 
       {/* Strategic Insights Section */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-24 md:py-40 relative overflow-hidden bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex flex-col items-start mb-24">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-px h-8 bg-[#c5a059]" />
-              <span className="text-[#c5a059] text-[10px] font-black uppercase tracking-[0.4em]">
+              <span className="text-[#c5a059] text-[10px] font-bold uppercase tracking-[0.4em] font-sans">
                 {t.curiosityHook?.label}
               </span>
             </div>
+            <h2 className="text-3xl md:text-5xl font-serif text-[#111111] tracking-tight">Realidades da <span className="italic">Operação.</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 md:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {t.curiosityHook?.cards.map((card, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15 }}
+                transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="relative group pt-16"
+                className="relative group pt-16 border-t border-[#111111]/10"
               >
-                <div className="absolute top-0 left-0 w-16 h-px bg-[#c5a059]/40 group-hover:w-full transition-all duration-700" />
-                <span className="absolute top-8 left-0 text-8xl font-black text-white/[0.03] pointer-events-none select-none group-hover:text-[#c5a059]/5 transition-colors">
+                <span className="absolute top-8 left-0 text-6xl font-serif text-[#111111]/5 pointer-events-none select-none group-hover:text-[#c5a059]/10 transition-colors">
                   0{i + 1}
                 </span>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-black text-white mb-8 uppercase tracking-tight leading-tight group-hover:text-[#c5a059] transition-colors">
+                  <h3 className="text-xl font-bold text-[#111111] mb-6 uppercase tracking-tight leading-tight group-hover:text-[#c5a059] transition-colors font-sans">
                     {card.title}
                   </h3>
-                  <p className="text-white/30 leading-relaxed text-base group-hover:text-white/50 transition-colors">
+                  <p className="text-[#111111]/50 leading-relaxed text-sm group-hover:text-[#111111]/70 transition-colors font-light">
                     {card.text}
                   </p>
                 </div>
@@ -88,8 +88,8 @@ export const Consulting = () => {
             ))}
           </div>
 
-          <div className="mt-32 pt-16 border-t border-white/5">
-            <p className="text-white/20 text-xs font-black uppercase tracking-[0.3em] max-w-3xl leading-loose italic">
+          <div className="mt-32 pt-16 border-t border-[#111111]/5">
+            <p className="text-[#111111]/30 text-[10px] font-bold uppercase tracking-[0.3em] max-w-3xl leading-loose italic font-sans">
               {t.curiosityHook?.footer}
             </p>
           </div>
@@ -97,16 +97,16 @@ export const Consulting = () => {
       </section>
 
       {/* Transformation Framework */}
-      <section className="py-40 bg-[#0A0A0A] relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none" />
+      <section className="py-24 md:py-40 bg-[#111111] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/[0.02] blur-[120px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div>
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-16 tracking-tighter uppercase leading-[0.9]">
+              <h2 className="text-4xl md:text-7xl font-serif text-white mb-16 tracking-tight leading-[1.1]">
                 {t.consultingPage.transformation.title} <br />
-                <span className="text-stroke-accent">{t.consultingPage.transformation.titleAccent}</span>
+                <span className="italic text-[#c5a059]">{t.consultingPage.transformation.titleAccent}</span>
               </h2>
-              <div className="space-y-10">
+              <div className="space-y-12">
                 {[
                   { icon: BarChart3, ...t.consultingPage.transformation.features[0] },
                   { icon: Users, ...t.consultingPage.transformation.features[1] },
@@ -120,28 +120,28 @@ export const Consulting = () => {
                     viewport={{ once: true }}
                     className="flex gap-8 group"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c5a059] group-hover:border-transparent transition-all duration-500">
-                      <item.icon className="w-8 h-8 text-[#c5a059] group-hover:text-black transition-colors" />
+                    <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c5a059] transition-all duration-500">
+                      <item.icon className="w-6 h-6 text-[#c5a059] group-hover:text-black transition-colors" />
                     </div>
                     <div>
-                      <h4 className="text-white font-black uppercase text-base tracking-widest mb-3 group-hover:text-[#c5a059] transition-colors">{item.title}</h4>
-                      <p className="text-white/30 text-base leading-relaxed max-w-md group-hover:text-white/50 transition-colors">{item.description}</p>
+                      <h4 className="text-white font-bold uppercase text-[11px] tracking-[0.2em] mb-3 group-hover:text-[#c5a059] transition-colors font-sans">{item.title}</h4>
+                      <p className="text-white/40 text-sm leading-relaxed max-w-md group-hover:text-white/60 transition-colors font-light">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute inset-0 bg-[#c5a059]/10 blur-[120px] rounded-full group-hover:bg-[#c5a059]/20 transition-colors" />
-              <div className="relative p-1 bg-white/5 rounded-[40px] border border-white/10 overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200"
                   alt="B2B Strategy"
-                  className="rounded-[38px] grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 scale-105 group-hover:scale-100"
+                  className="w-full grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 scale-105 group-hover:scale-100"
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-[#c5a059] text-black p-10 rounded-3xl font-black uppercase tracking-tighter text-3xl italic shadow-2xl hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-[#c5a059] text-black px-8 py-10 rounded-2xl font-bold uppercase tracking-tight text-xl italic shadow-2xl hidden md:block font-serif">
                 ROI Focused
               </div>
             </div>
@@ -150,33 +150,33 @@ export const Consulting = () => {
       </section>
 
       {/* Concessão Section - Strategic Partnership */}
-      <section className="py-40 px-6 md:px-10 overflow-hidden">
+      <section className="py-24 md:py-40 px-6 md:px-10 bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto">
-          <div className="relative p-12 md:p-24 bg-[#0A0A0A] border border-white/5 rounded-[60px] flex flex-col lg:flex-row items-center gap-20 overflow-hidden">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c5a059]/10 blur-[150px] rounded-full pointer-events-none -mr-64 -mt-64" />
+          <div className="relative p-12 md:p-24 bg-white border border-[#111111]/5 rounded-[40px] flex flex-col lg:flex-row items-center gap-20 overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.02)]">
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c5a059]/[0.03] blur-[150px] rounded-full pointer-events-none -mr-64 -mt-64" />
             
             <div className="lg:w-1/2 relative z-10">
-              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-black mb-8 block">Revenue Partnership</span>
-              <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-10 leading-[0.9]">
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.4em] font-bold mb-8 block font-sans">Revenue Partnership</span>
+              <h2 className="text-4xl md:text-6xl font-serif text-[#111111] tracking-tight mb-10 leading-[1.1]">
                 {t.consultingPage.partnership.title}
               </h2>
-              <p className="text-white/40 text-lg md:text-xl leading-relaxed mb-12 font-medium">
+              <p className="text-[#111111]/50 text-lg md:text-xl leading-relaxed mb-12 font-light">
                 {t.consultingPage.partnership.description}
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-[#c5a059] transition-all rounded-full shadow-2xl"
+                className="inline-flex items-center gap-4 px-12 py-6 bg-[#111111] text-white font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#c5a059] transition-all rounded-full"
               >
                 {t.consultingPage.partnership.cta}
               </Link>
             </div>
             
-            <div className="lg:w-1/2 grid grid-cols-2 gap-6 relative z-10">
-              <div className="aspect-[4/5] bg-[#111] rounded-3xl overflow-hidden border border-white/5 mt-16 group">
-                <img src="https://images.unsplash.com/photo-1544145945-f904253d0c7b?q=80&w=600" alt="Bar Excellence" className="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" />
+            <div className="lg:w-1/2 grid grid-cols-2 gap-4 relative z-10">
+              <div className="aspect-[4/5] bg-[#F5F5F3] rounded-2xl overflow-hidden group">
+                <img src="/src/assets/images/luxurious_cocktail_premium_1787247308587.jpg" alt="Luxurious Cocktail" className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
               </div>
-              <div className="aspect-[4/5] bg-[#111] rounded-3xl overflow-hidden border border-white/5 group">
-                <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600" alt="Staff Elite" className="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" />
+              <div className="aspect-[4/5] bg-[#F5F5F3] rounded-2xl overflow-hidden group mt-12">
+                <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600" alt="Staff Elite" className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" />
               </div>
             </div>
           </div>
@@ -184,11 +184,11 @@ export const Consulting = () => {
       </section>
 
       {/* Pain Points Audit */}
-      <section className="py-40 bg-[#0A0A0A]">
+      <section className="py-24 md:py-40 bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-24">
-            <span className="text-red-500/80 text-[10px] font-black uppercase tracking-[0.4em] mb-6 block">Profit Leaks Audit</span>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter max-w-4xl mx-auto leading-[0.9]">
+            <span className="text-[#c5a059] text-[10px] font-bold uppercase tracking-[0.4em] mb-6 block font-sans">Profit Leaks Audit</span>
+            <h2 className="text-4xl md:text-6xl font-serif text-[#111111] tracking-tight max-w-4xl mx-auto leading-[1.1]">
               {t.consultingPage.painPoints.title}
             </h2>
           </div>
@@ -196,14 +196,14 @@ export const Consulting = () => {
             {t.consultingPage.painPoints.items.map((text, i) => (
               <motion.div 
                 key={i} 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
                 viewport={{ once: true }}
-                className="p-10 rounded-3xl bg-[#050505] border border-white/5 flex gap-6 group hover:border-red-500/20 transition-all duration-500"
+                className="p-10 rounded-2xl bg-white border border-[#111111]/5 flex gap-6 group hover:border-[#c5a059]/20 transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.02)]"
               >
-                <div className="w-2 h-2 rounded-full bg-red-500/30 group-hover:bg-red-500 transition-colors mt-2 shrink-0" />
-                <p className="text-white/40 text-base font-medium group-hover:text-white/70 transition-colors">{text}</p>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]/30 group-hover:bg-[#c5a059] transition-colors mt-2 shrink-0" />
+                <p className="text-[#111111]/40 text-sm font-medium group-hover:text-[#111111]/70 transition-colors leading-relaxed font-sans">{text}</p>
               </motion.div>
             ))}
           </div>
@@ -211,15 +211,15 @@ export const Consulting = () => {
       </section>
 
       {/* Strategic CTA */}
-      <section className="py-40 bg-[#050505]">
+      <section className="py-24 md:py-40 bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="bg-[#c5a059] rounded-[60px] p-16 md:p-32 text-center shadow-2xl relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-full h-full bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            <h2 className="text-4xl md:text-7xl font-black text-black mb-12 max-w-4xl mx-auto uppercase tracking-tighter leading-[0.85] italic">
+          <div className="bg-[#111111] rounded-[40px] p-16 md:p-32 text-center shadow-2xl relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[#c5a059]/[0.03] pointer-events-none" />
+            <h2 className="text-3xl md:text-6xl font-serif text-white mb-12 max-w-4xl mx-auto tracking-tight leading-[1.2]">
               {t.consultingPage.cta}
             </h2>
-            <Link to="/contact" className="inline-block px-16 py-7 bg-black text-white font-black uppercase tracking-[0.3em] text-xs rounded-full hover:scale-110 transition-all shadow-2xl">
-              Book Your Diagnostic Visit
+            <Link to="/contact" className="inline-block px-12 py-6 bg-[#c5a059] text-black font-bold uppercase tracking-[0.2em] text-[10px] rounded-full hover:bg-white transition-all shadow-xl font-sans">
+              AGENDAR DIAGNÓSTICO ESTRATÉGICO
             </Link>
           </div>
         </div>
