@@ -4,6 +4,8 @@ import { ArrowRight, ChevronRight, BarChart3, Users2, Cpu, Award, Target, Zap } 
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
+const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
+
 export const Home = () => {
   const { t } = useLanguage();
 
@@ -36,7 +38,7 @@ export const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="col-span-12 lg:col-span-8"
+              className="col-span-12 lg:col-span-7"
             >
               <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.8em] font-black mb-10 block italic">
                 {t.homePage.hero.eyebrow}
@@ -63,6 +65,44 @@ export const Home = () => {
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
+            </motion.div>
+
+            {/* Hero Logo Visual */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, rotate: -6 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+              className="hidden lg:flex col-span-5 items-center justify-center"
+            >
+              <div className="relative">
+                {/* Outer glow ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#c5a059]/20 via-[#c5a059]/5 to-transparent blur-[60px] scale-125 pointer-events-none" />
+                {/* Decorative orbit ring */}
+                <div
+                  className="absolute inset-[-24px] rounded-full border border-dashed border-[#c5a059]/20"
+                  style={{ animation: 'spin 30s linear infinite' }}
+                />
+                {/* Second orbit ring */}
+                <div
+                  className="absolute inset-[-48px] rounded-full border border-[#c5a059]/8"
+                  style={{ animation: 'spin 50s linear infinite reverse' }}
+                />
+                {/* Logo image */}
+                <img
+                  src={LOGO_URL}
+                  alt="Cheers Experiences"
+                  width={320}
+                  height={320}
+                  loading="eager"
+                  className="relative z-10 rounded-full object-cover shadow-2xl shadow-[#c5a059]/20 ring-4 ring-[#c5a059]/30 hover:ring-[#c5a059]/60 transition-all duration-700 hover:scale-[1.03] hover:shadow-[#c5a059]/40"
+                />
+                {/* Floating accent dot */}
+                <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#c5a059] shadow-lg shadow-[#c5a059]/50 z-20" style={{ animation: 'pulse 2.5s ease-in-out infinite' }} />
+              </div>
+              <style>{`
+                @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+                @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
+              `}</style>
             </motion.div>
           </div>
         </div>
@@ -165,8 +205,17 @@ export const Home = () => {
               <div className="absolute inset-0 bg-[#c5a059]/5 blur-[120px] rounded-full pointer-events-none" />
               <div className="relative aspect-[4/5] bg-[#F9F9F7] border border-black/5 overflow-hidden flex items-center justify-center p-12">
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-[#111111] rounded-full flex items-center justify-center mx-auto mb-10 shadow-2xl">
-                    <Zap className="w-10 h-10 text-[#c5a059] fill-[#c5a059]" />
+                  {/* Methodology logo badge */}
+                  <div className="relative inline-block mb-10">
+                    <div className="absolute inset-0 rounded-full bg-[#c5a059]/20 blur-[30px] scale-150 pointer-events-none" />
+                    <img
+                      src={LOGO_URL}
+                      alt="Cheers Experiences"
+                      width={96}
+                      height={96}
+                      loading="lazy"
+                      className="relative rounded-full object-cover ring-4 ring-[#c5a059]/40 shadow-2xl shadow-[#c5a059]/20"
+                    />
                   </div>
                   <h3 className="text-3xl font-bold text-[#111111] mb-4 italic">Performance.</h3>
                   <p className="text-[#c5a059] text-[10px] tracking-[0.6em] uppercase font-black">Elite Methodology</p>

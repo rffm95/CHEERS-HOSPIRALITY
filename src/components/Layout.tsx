@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
+const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
+
 export const Footer = () => {
   const { t } = useLanguage();
 
@@ -13,8 +15,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-32">
           {/* Brand Column */}
           <div className="col-span-1 lg:col-span-1">
-            <Link to="/" className="text-2xl font-black tracking-tighter text-[#111111] uppercase mb-8 block">
-              Cheers <span className="text-stroke-accent italic">Experiences</span><span className="text-[#c5a059]">.</span>
+            <Link to="/" className="inline-block mb-8 group">
+              <img
+                src={LOGO_URL}
+                alt="Cheers Experiences logo"
+                width={80}
+                height={80}
+                loading="lazy"
+                className="rounded-full object-cover ring-2 ring-[#c5a059]/30 shadow-xl shadow-[#c5a059]/10 transition-all duration-500 group-hover:ring-[#c5a059] group-hover:scale-105 group-hover:shadow-[#c5a059]/25"
+              />
             </Link>
             <p className="text-[#111111]/30 text-sm leading-relaxed mb-10 max-w-xs font-medium italic">
               Elevamos os padrões da hospitalidade através de uma visão 360º que une eventos, consultoria estratégica e inovação tecnológica.

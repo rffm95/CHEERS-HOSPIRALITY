@@ -5,6 +5,8 @@ import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../types';
 
+const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
+
 const languages: { code: Language; name: string; flag: string }[] = [
   { code: 'pt', name: 'Português (PT)', flag: '🇵🇹' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
@@ -37,12 +39,24 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md py-4 border-b border-black/5 shadow-sm' : 'bg-transparent py-8'
+        scrolled ? 'bg-white/95 backdrop-blur-md py-2 border-b border-black/5 shadow-sm' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
-        <Link to="/" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors text-black`}>
-          Cheers <span className="text-stroke-accent italic">Experiences</span><span className="text-[#c5a059]">.</span>
+        {/* Logo */}
+        <Link to="/" className="flex items-center shrink-0">
+          <img
+            src={LOGO_URL}
+            alt="Cheers Experiences logo"
+            width={scrolled ? 52 : 68}
+            height={scrolled ? 52 : 68}
+            loading="eager"
+            className={`rounded-full object-cover transition-all duration-500 shadow-lg ring-2 ${
+              scrolled
+                ? 'ring-[#c5a059]/40 shadow-[#c5a059]/10'
+                : 'ring-white/20 shadow-black/20'
+            } hover:scale-105 hover:ring-[#c5a059] hover:shadow-[#c5a059]/30`}
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -101,6 +115,18 @@ export const Navbar = () => {
             <div className="px-10 pt-32 pb-16 flex flex-col gap-8 relative h-full">
               {/* Ambient Glow for Mobile */}
               <div className="absolute top-0 right-0 w-[80%] h-[40%] bg-[#c5a059]/5 blur-[100px] rounded-full pointer-events-none" />
+
+              {/* Mobile logo */}
+              <div className="absolute top-8 left-10">
+                <img
+                  src={LOGO_URL}
+                  alt="Cheers Experiences logo"
+                  width={48}
+                  height={48}
+                  loading="eager"
+                  className="rounded-full object-cover ring-2 ring-[#c5a059]/40 shadow-lg"
+                />
+              </div>
               
               {navLinks.map((link) => (
                 <Link
