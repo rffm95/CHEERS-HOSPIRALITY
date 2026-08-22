@@ -4,7 +4,7 @@ import {
   ArrowRight, ArrowDown, TrendingUp, Users, Zap, Globe,
   Star, Quote, ChevronRight, MessageCircle, Phone,
   Hotel, UtensilsCrossed, CalendarCheck, GraduationCap,
-  BarChart3, Sparkles, CheckCircle2, Coffee
+  BarChart3, Sparkles, CheckCircle2, Coffee, ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -149,6 +149,73 @@ const SERVICES = [
   },
 ];
 
+/* ── Portfolio grid items ────────────────────────────────────────── */
+const GRID_ITEMS = [
+  {
+    id: '1',
+    img: 'https://i.imgur.com/aUNb0uK.png',
+    tag: 'COCKTAILS',
+    label: 'Beverage Program',
+    size: 'tall',   // col-span-1 row-span-2
+  },
+  {
+    id: '2',
+    img: 'https://i.imgur.com/CnaTvqH.png',
+    tag: 'BRAND',
+    label: 'Brand Identity',
+    size: 'normal',
+  },
+  {
+    id: '3',
+    img: 'https://i.imgur.com/JzfPypn.png',
+    tag: 'DIGITAL',
+    label: 'Digital Experience',
+    size: 'normal',
+  },
+  {
+    id: '4',
+    img: 'https://i.imgur.com/VrbFY65.png',
+    tag: 'EVENTS',
+    label: 'Event Production',
+    size: 'wide',   // col-span-2 row-span-1
+  },
+  {
+    id: '5',
+    img: 'https://i.imgur.com/VEnpjnY.png',
+    tag: 'HOSPITALITY',
+    label: 'Hospitality Design',
+    size: 'normal',
+  },
+  {
+    id: '6',
+    img: 'https://i.imgur.com/n993YwC.png',
+    tag: 'BAR',
+    label: 'Bar Concept',
+    size: 'normal',
+  },
+  {
+    id: '7',
+    img: 'https://i.imgur.com/gLkKjHL.png',
+    tag: 'BRAND',
+    label: 'Visual Identity',
+    size: 'tall',
+  },
+  {
+    id: '8',
+    img: 'https://i.imgur.com/BFUQH2t.png',
+    tag: 'DIGITAL',
+    label: 'Menu Design',
+    size: 'normal',
+  },
+  {
+    id: '9',
+    img: 'https://i.imgur.com/sC49CxI.png',
+    tag: 'EVENTS',
+    label: 'Event Experience',
+    size: 'normal',
+  },
+];
+
 /* ── Who we work with ──────────────────────────────────────────── */
 const WHO = [
   { Icon: Hotel, title: 'Hotels', desc: 'Boutique a luxo. Estratégia F&B, conceitos de bar e formação de equipas.' },
@@ -217,13 +284,10 @@ export const Home = () => {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A08] via-[#0D0C0A] to-[#060504]" />
-          {/* Glow orbs */}
           <div className="absolute top-1/3 right-1/4 w-[700px] h-[700px] bg-[#C9A84C]/5 blur-[140px] rounded-full pointer-events-none" />
           <div className="absolute bottom-1/4 left-1/5 w-[400px] h-[400px] bg-[#C9A84C]/3 blur-[90px] rounded-full pointer-events-none" />
-          {/* Subtle grid */}
           <div
             className="absolute inset-0 opacity-[0.022]"
             style={{
@@ -232,18 +296,14 @@ export const Home = () => {
             }}
           />
         </div>
-
         <div className="container-wide relative z-10 pt-36 pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-            {/* Left — copy */}
             <motion.div
               initial={{ opacity: 0, y: 36 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-7"
             >
-              {/* Eyebrow badge */}
               <motion.div
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -255,8 +315,6 @@ export const Home = () => {
                 <span className="text-white/20">·</span>
                 <span className="text-[0.58rem] text-white/35 uppercase tracking-widest">Est. Viseu, PT</span>
               </motion.div>
-
-              {/* ── NOVA HEADLINE PRINCIPAL ── */}
               <h1 className="display-xl text-white mb-0 leading-[0.96]">
                 We craft{' '}
                 <em className="text-[#C9A84C] not-italic">hospitality</em>
@@ -265,30 +323,19 @@ export const Home = () => {
                 <br className="hidden sm:block" />
                 <em className="text-[#C9A84C] not-italic">perform.</em>
               </h1>
-
-              {/* ── Linha divisória fina ── */}
               <div className="flex items-center gap-4 my-8">
                 <span className="flex-1 max-w-[56px] h-px bg-[#C9A84C]/40" />
                 <span className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-white/25">
                   Hotels · Restaurants · Brands · Events
                 </span>
               </div>
-
-              {/* ── Sub-headline clara e direta ── */}
               <p className="body-lg text-white/50 max-w-[480px] mb-10 leading-relaxed">
                 From beverage strategy and bar consulting to premium event services and team training —
                 we help hospitality businesses deliver more memorable experiences
                 and stronger results.
               </p>
-
-              {/* ── CTAs ── */}
               <div className="flex flex-col sm:flex-row gap-3 mb-12">
-                <a
-                  href={WA_HREF}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary shadow-lg shadow-[#C9A84C]/20"
-                >
+                <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/20">
                   <Phone className="w-3.5 h-3.5" />
                   Let&apos;s Talk
                   <ArrowRight className="w-4 h-4" />
@@ -298,8 +345,6 @@ export const Home = () => {
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
-
-              {/* ── Trust bar ── */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -315,17 +360,11 @@ export const Home = () => {
                   <span className="text-white/35 text-[0.72rem]">5-star rated</span>
                 </div>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-[0.72rem]">
-                  <strong className="text-white/70 font-semibold">200+</strong> events delivered
-                </span>
+                <span className="text-white/35 text-[0.72rem]"><strong className="text-white/70 font-semibold">200+</strong> events delivered</span>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-[0.72rem]">
-                  <strong className="text-white/70 font-semibold">+23%</strong> avg. F&amp;B margin increase
-                </span>
+                <span className="text-white/35 text-[0.72rem]"><strong className="text-white/70 font-semibold">+23%</strong> avg. F&amp;B margin increase</span>
               </motion.div>
             </motion.div>
-
-            {/* Right — logo visual */}
             <motion.div
               initial={{ opacity: 0, scale: 0.88 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -333,38 +372,18 @@ export const Home = () => {
               className="hidden lg:flex lg:col-span-5 items-center justify-center"
             >
               <div className="relative">
-                {/* Outer ring */}
-                <div
-                  className="absolute inset-[-40px] rounded-full border border-dashed border-[#C9A84C]/12"
-                  style={{ animation: 'spin-slow 50s linear infinite' }}
-                />
-                {/* Mid ring */}
-                <div
-                  className="absolute inset-[-20px] rounded-full border border-[#C9A84C]/8"
-                  style={{ animation: 'spin-slow 30s linear infinite reverse' }}
-                />
-                {/* Glow */}
+                <div className="absolute inset-[-40px] rounded-full border border-dashed border-[#C9A84C]/12" style={{ animation: 'spin-slow 50s linear infinite' }} />
+                <div className="absolute inset-[-20px] rounded-full border border-[#C9A84C]/8" style={{ animation: 'spin-slow 30s linear infinite reverse' }} />
                 <div className="absolute inset-0 rounded-full bg-[#C9A84C]/15 blur-[70px] scale-150" />
-                {/* Logo */}
-                <img
-                  src={LOGO_URL}
-                  alt="Cheers Experiences"
-                  width={300}
-                  height={300}
-                  className="relative z-10 rounded-full object-cover shadow-2xl ring-1 ring-[#C9A84C]/25 hover:ring-[#C9A84C]/60 transition-all duration-700"
-                />
-                {/* Available badge */}
+                <img src={LOGO_URL} alt="Cheers Experiences" width={300} height={300} className="relative z-10 rounded-full object-cover shadow-2xl ring-1 ring-[#C9A84C]/25 hover:ring-[#C9A84C]/60 transition-all duration-700" />
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#111110] border border-white/10 shadow-2xl px-5 py-3 flex items-center gap-2.5 whitespace-nowrap z-20 rounded-sm">
                   <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0" />
                   <span className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-white/65">Available for new projects</span>
                 </div>
               </div>
             </motion.div>
-
           </div>
         </div>
-
-        {/* Scroll hint */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -391,12 +410,7 @@ export const Home = () => {
       {/* ── WHAT WE DO ───────────────────────────────────────────── */}
       <section className="section-pad" id="services">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
             <span className="eyebrow block mb-4">O Que Fazemos</span>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <h2 className="display-lg text-white">
@@ -408,7 +422,6 @@ export const Home = () => {
               </p>
             </div>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.04] border border-white/[0.04]">
             {SERVICES.map((s, i) => {
               const Icon = s.icon;
@@ -421,7 +434,6 @@ export const Home = () => {
                   viewport={{ once: true }}
                   className="bg-[#0A0A08] p-10 group hover:bg-[#111110] transition-colors duration-500 flex flex-col"
                 >
-                  {/* Header row */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
@@ -429,25 +441,11 @@ export const Home = () => {
                       </div>
                       <span className="eyebrow">{s.tag}</span>
                     </div>
-                    <span className="font-display text-5xl font-light italic text-white/[0.05] group-hover:text-[#C9A84C]/15 transition-colors">
-                      {s.num}
-                    </span>
+                    <span className="font-display text-5xl font-light italic text-white/[0.05] group-hover:text-[#C9A84C]/15 transition-colors">{s.num}</span>
                   </div>
-
-                  {/* Headline */}
-                  <h3 className="font-display text-2xl md:text-3xl font-semibold italic text-white mb-4 leading-tight">
-                    {s.headline}
-                  </h3>
-
-                  {/* Intro — hook sentence */}
-                  <p className="text-white/55 text-sm leading-relaxed mb-4 italic border-l-2 border-[#C9A84C]/30 pl-4">
-                    {s.intro}
-                  </p>
-
-                  {/* Full description */}
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold italic text-white mb-4 leading-tight">{s.headline}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed mb-4 italic border-l-2 border-[#C9A84C]/30 pl-4">{s.intro}</p>
                   <p className="text-white/38 body-md mb-8">{s.description}</p>
-
-                  {/* Benefit list */}
                   <ul className="space-y-2.5 mb-6">
                     {s.benefits.map(b => (
                       <li key={b} className="flex items-center gap-2.5 text-xs text-white/55">
@@ -456,21 +454,12 @@ export const Home = () => {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Outcome tag */}
                   <div className="flex items-center gap-2 mb-8 px-3 py-2 bg-[#C9A84C]/5 border border-[#C9A84C]/12 rounded-sm w-fit">
                     <TrendingUp className="w-3 h-3 text-[#C9A84C] shrink-0" />
-                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]/80">
-                      {s.outcome}
-                    </span>
+                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]/80">{s.outcome}</span>
                   </div>
-
-                  {/* CTA — pushed to bottom */}
                   <div className="mt-auto">
-                    <Link
-                      to={s.to}
-                      className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3"
-                    >
+                    <Link to={s.to} className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3">
                       {s.cta} <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
@@ -478,8 +467,6 @@ export const Home = () => {
               );
             })}
           </div>
-
-          {/* Bottom CTA row */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -490,12 +477,7 @@ export const Home = () => {
               Não tens a certeza de qual serviço precisas?{' '}
               <span className="text-white/55">Conta-nos o teu desafio — encontramos a solução juntos.</span>
             </p>
-            <a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15"
-            >
+            <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15">
               <MessageCircle className="w-3.5 h-3.5" />
               Start a Project
               <ArrowRight className="w-3.5 h-3.5" />
@@ -504,15 +486,185 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── WHO WE WORK WITH ─────────────────────────────────────── */}
-      <section className="section-pad bg-[#0D0C0A]">
+      {/* ── EXPERIENCES WE'VE CREATED ─────────────────────────────── */}
+      <section className="section-pad bg-[#0D0C0A]" id="experiences">
         <div className="container">
+          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-14"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
           >
+            <div>
+              <span className="eyebrow block mb-4">Portfolio</span>
+              <h2 className="display-lg text-white">
+                Experiences<br />
+                <em className="text-[#C9A84C]">we&apos;ve created.</em>
+              </h2>
+            </div>
+            <div className="flex flex-col items-start md:items-end gap-3">
+              <p className="text-white/38 text-sm max-w-[280px] text-left md:text-right leading-relaxed">
+                A amostra do que construímos — de cocktails a experiências completas de marca e hospitality.
+              </p>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors"
+              >
+                Ver portfolio completo <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* —— Bento editorial grid —— */}
+          {/* Row 1: featured wide + tall */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-2">
+
+            {/* Featured — wide left */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="md:col-span-8 relative overflow-hidden group cursor-pointer"
+              style={{ minHeight: '420px' }}
+            >
+              <img
+                src={GRID_ITEMS[3].img}
+                alt={GRID_ITEMS[3].label}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              {/* gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/20 to-transparent" />
+              {/* content */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
+                <div>
+                  <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
+                    {GRID_ITEMS[3].tag}
+                  </span>
+                  <p className="text-white font-semibold text-lg">{GRID_ITEMS[3].label}</p>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ExternalLink className="w-4 h-4 text-white" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Tall right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="md:col-span-4 relative overflow-hidden group cursor-pointer"
+              style={{ minHeight: '420px' }}
+            >
+              <img
+                src={GRID_ITEMS[0].img}
+                alt={GRID_ITEMS[0].label}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
+                  {GRID_ITEMS[0].tag}
+                </span>
+                <p className="text-white font-semibold">{GRID_ITEMS[0].label}</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Row 2: four equal squares */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
+            {[GRID_ITEMS[1], GRID_ITEMS[2], GRID_ITEMS[4], GRID_ITEMS[5]].map((item, i) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden group cursor-pointer"
+                style={{ minHeight: '220px' }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
+                    {item.tag}
+                  </span>
+                  <p className="text-white text-xs font-semibold">{item.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Row 3: three equal */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            {[GRID_ITEMS[6], GRID_ITEMS[7], GRID_ITEMS[8]].map((item, i) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden group cursor-pointer"
+                style={{ minHeight: '260px' }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
+                    {item.tag}
+                  </span>
+                  <p className="text-white text-xs font-semibold">{item.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom CTA strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 border border-white/[0.06]"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-2">
+                {[GRID_ITEMS[0], GRID_ITEMS[1], GRID_ITEMS[2]].map(item => (
+                  <div key={item.id} className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#0D0C0A]">
+                    <img src={item.img} alt="" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              <p className="text-white/45 text-sm">
+                <span className="text-white/70 font-semibold">200+ projetos</span> entregues em hospitality, eventos e branding
+              </p>
+            </div>
+            <Link to="/portfolio" className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15">
+              Ver Portfolio Completo
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── WHO WE WORK WITH ─────────────────────────────────────── */}
+      <section className="section-pad">
+        <div className="container">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <span className="eyebrow block mb-4">Com Quem Trabalhamos</span>
             <h2 className="display-md text-white">
               Parceiros de confiança<br />
@@ -544,7 +696,7 @@ export const Home = () => {
       </section>
 
       {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
-      <section className="section-pad">
+      <section className="section-pad bg-[#0D0C0A]">
         <div className="container">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-14">
             <div>
@@ -581,9 +733,7 @@ export const Home = () => {
               >
                 <div className="md:col-span-2">
                   <Quote className="w-10 h-10 text-[#C9A84C]/20 mb-6" />
-                  <p className="font-display text-xl md:text-2xl italic text-white leading-relaxed mb-8">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
+                  <p className="font-display text-xl md:text-2xl italic text-white leading-relaxed mb-8">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-[#C9A84C]/15 flex items-center justify-center font-bold text-[#C9A84C] text-sm shrink-0">
                       {t.name[0]}
@@ -606,10 +756,7 @@ export const Home = () => {
                       <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]">{t.result}</span>
                     </div>
                   </div>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors"
-                  >
+                  <Link to="/contact" className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors">
                     Obter resultados semelhantes <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
@@ -620,14 +767,9 @@ export const Home = () => {
       </section>
 
       {/* ── WHY CHEERS EXPERIENCES ───────────────────────────────── */}
-      <section className="section-pad bg-[#0D0C0A]">
+      <section className="section-pad">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-14"
-          >
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <span className="eyebrow block mb-4">Porquê a Cheers Experiences</span>
             <h2 className="display-md text-white">
               Não somos uma agência.<br />
@@ -659,14 +801,9 @@ export const Home = () => {
       </section>
 
       {/* ── HOW WE WORK ──────────────────────────────────────────── */}
-      <section className="section-pad">
+      <section className="section-pad bg-[#0D0C0A]">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-14"
-          >
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
             <span className="eyebrow block mb-4">Como Trabalhamos</span>
             <h2 className="display-md text-white">
               Processo simples.<br />
@@ -681,11 +818,9 @@ export const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#0A0A08] p-10 group hover:bg-[#111110] transition-colors"
+                className="bg-[#0D0C0A] p-10 group hover:bg-[#111110] transition-colors"
               >
-                <span className="font-display text-7xl font-light italic text-white/[0.04] group-hover:text-[#C9A84C]/15 transition-colors block mb-6">
-                  {p.n}
-                </span>
+                <span className="font-display text-7xl font-light italic text-white/[0.04] group-hover:text-[#C9A84C]/15 transition-colors block mb-6">{p.n}</span>
                 <h4 className="font-display text-2xl italic text-white mb-3">{p.title}</h4>
                 <p className="text-white/42 text-sm leading-relaxed">{p.desc}</p>
               </motion.div>
@@ -695,7 +830,7 @@ export const Home = () => {
       </section>
 
       {/* ── INLINE CTA MID-PAGE ──────────────────────────────────── */}
-      <section className="section-pad bg-[#0D0C0A]">
+      <section className="section-pad">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -714,19 +849,12 @@ export const Home = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
-              <a
-                href={WA_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary shadow-lg shadow-[#C9A84C]/15"
-              >
+              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
                 <MessageCircle className="w-3.5 h-3.5" />
                 Start a Project
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
-              <Link to="/contact" className="btn-ghost">
-                Book a Consultation
-              </Link>
+              <Link to="/contact" className="btn-ghost">Book a Consultation</Link>
             </div>
           </motion.div>
         </div>
@@ -737,7 +865,6 @@ export const Home = () => {
         className="section-pad relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #C9A84C 0%, #b8923e 50%, #a07830 100%)' }}
       >
-        {/* Texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
@@ -746,11 +873,7 @@ export const Home = () => {
           }}
         />
         <div className="container text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-[#0A0A08]/50 text-[0.65rem] uppercase tracking-[0.35em] font-bold mb-5">
               Cheers Experiences · Hospitality Performance Partner
             </p>
