@@ -271,22 +271,33 @@ export const Home = () => {
               </p>
 
               {/* ── HERO CTAs ── */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-12">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <a
                   href={WA_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary shadow-lg shadow-[#C9A84C]/20"
                 >
-                  <Phone className="w-3.5 h-3.5" />
+                  <MessageCircle className="w-3.5 h-3.5" />
                   Let&apos;s Talk
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link to="/portfolio" className="btn-ghost">
-                  See Our Work
+                <Link to="/contact" className="btn-ghost">
+                  Start a Project
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
+
+              {/* Micro-urgency */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.1 }}
+                className="flex items-center gap-2 text-[0.62rem] text-white/25 mb-10"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse shrink-0" />
+                Disponíveis para novos projetos · Resposta em &lt; 2 horas
+              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0 }}
@@ -419,22 +430,31 @@ export const Home = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-px flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 bg-[#C9A84C]/[0.04] border border-[#C9A84C]/15"
+            className="mt-px flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-7 bg-[#C9A84C]/[0.04] border border-[#C9A84C]/15"
           >
             <div>
-              <p className="text-white/70 text-sm font-semibold mb-0.5">Não tens a certeza de qual serviço precisas?</p>
-              <p className="text-white/35 text-xs">Conta-nos o teu desafio — encontramos a solução em conjunto.</p>
+              <p className="text-white font-semibold text-sm mb-1">Não tens a certeza de qual serviço precisas?</p>
+              <p className="text-white/35 text-xs">Conta-nos o teu desafio — encontramos a solução em conjunto. Sem compromisso.</p>
             </div>
-            <a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              Start a Project
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href={WA_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary shadow-lg shadow-[#C9A84C]/15"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                Start a Project
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="btn-ghost"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                Enviar Email
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -537,7 +557,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 border border-white/[0.06] bg-[#0A0A08]"
+            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-7 border border-white/[0.06] bg-[#0A0A08]"
           >
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
@@ -547,19 +567,21 @@ export const Home = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-white/45 text-sm">
-                <span className="text-white/70 font-semibold">200+ projetos</span> entregues em hospitality, eventos e branding
-              </p>
+              <div>
+                <p className="text-white/70 text-sm font-semibold">Gostaste do que viste?</p>
+                <p className="text-white/35 text-xs">O teu projeto pode ser o próximo.</p>
+              </div>
             </div>
-            <div className="flex gap-3 shrink-0">
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
+                <MessageCircle className="w-3.5 h-3.5" />
+                Let&apos;s Talk
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
               <Link to="/portfolio" className="btn-ghost">
                 Ver Portfolio
                 <ChevronRight className="w-4 h-4" />
               </Link>
-              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
-                Contact Us
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
             </div>
           </motion.div>
         </div>
@@ -652,9 +674,14 @@ export const Home = () => {
                       <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]">{t.result}</span>
                     </div>
                   </div>
-                  <Link to="/contact" className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors">
+                  <a
+                    href={WA_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors"
+                  >
                     Obter resultados semelhantes <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -726,137 +753,167 @@ export const Home = () => {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          ── FINAL CONTACT SECTION ─────────────────────────────────
+          FINAL CTA — "THE STATEMENT" — elegante, impactante, único
           ══════════════════════════════════════════════════════════ */}
-      <section className="section-pad relative overflow-hidden" id="contact">
-        {/* Background */}
-        <div className="absolute inset-0 bg-[#0A0A08]" />
-        <div className="absolute inset-0 opacity-[0.025]" style={{
-          backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#C9A84C]/4 blur-[120px] rounded-full pointer-events-none" />
+      <section className="relative overflow-hidden" id="contact">
 
-        <div className="container relative z-10">
-          {/* Top label */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="eyebrow block mb-6">Vamos Começar</span>
-            <h2 className="display-lg text-white mb-6 leading-tight">
-              Pronto para criar algo<br />
-              <em className="text-[#C9A84C]">verdadeiramente excepcional?</em>
-            </h2>
-            <p className="text-white/40 max-w-lg mx-auto body-md leading-relaxed">
-              Fala connosco hoje. Em menos de 2 horas tens uma resposta com os próximos passos — sem compromisso, sem pressão.
-            </p>
-          </motion.div>
+        {/* ── Top divider marquee ── */}
+        <div className="bg-[#C9A84C] py-3 overflow-hidden">
+          <div className="flex gap-0 whitespace-nowrap" style={{ animation: 'marquee 18s linear infinite' }}>
+            {[...Array(8)].map((_, i) => (
+              <span key={i} className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#0A0A08]/60 px-8">
+                Let&apos;s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp; Contact Us &nbsp;·&nbsp; Let&apos;s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
 
-          {/* 3 contact channels */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            {/* WhatsApp — PRIMARY */}
-            <motion.a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0, duration: 0.7 }}
-              viewport={{ once: true }}
-              className="group relative flex flex-col items-start gap-4 p-8 bg-[#C9A84C] hover:bg-[#b8923e] transition-colors duration-300 cursor-pointer"
-            >
-              <div className="w-11 h-11 rounded-sm bg-[#0A0A08]/15 flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-[#0A0A08]" />
-              </div>
-              <div>
-                <p className="text-[#0A0A08] font-bold text-base mb-1">WhatsApp</p>
-                <p className="text-[#0A0A08]/60 text-xs leading-relaxed">A forma mais rápida de falar connosco. Resposta em menos de 2 horas.</p>
-              </div>
-              <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#0A0A08] mt-auto">
-                Let&apos;s Talk <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-              </div>
-              {/* Recommended badge */}
-              <div className="absolute top-4 right-4 px-2 py-1 bg-[#0A0A08]/15 rounded-sm">
-                <span className="text-[0.5rem] font-bold uppercase tracking-widest text-[#0A0A08]">Recomendado</span>
-              </div>
-            </motion.a>
+        {/* ── Main dark block ── */}
+        <div className="bg-[#0A0A08] relative">
+          {/* Grid texture */}
+          <div
+            className="absolute inset-0 opacity-[0.025] pointer-events-none"
+            style={{
+              backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
+          {/* Warm glow top-center */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#C9A84C]/6 blur-[160px] rounded-full pointer-events-none" />
 
-            {/* Email */}
-            <motion.a
-              href={`mailto:${EMAIL}`}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.7 }}
-              viewport={{ once: true }}
-              className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300 cursor-pointer"
-            >
-              <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
-                <Mail className="w-5 h-5 text-[#C9A84C]" />
-              </div>
-              <div>
-                <p className="text-white font-bold text-base mb-1">Email</p>
-                <p className="text-white/40 text-xs leading-relaxed">Para projetos mais detalhados ou propostas formais.</p>
-              </div>
-              <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all">
-                {EMAIL} <ArrowRight className="w-3 h-3" />
-              </div>
-            </motion.a>
+          <div className="container relative z-10 py-24 md:py-36">
 
-            {/* Book a call */}
+            {/* ── Giant display headline ── */}
             <motion.div
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.7 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300"
+              className="text-center mb-14"
             >
-              <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
-                <Phone className="w-5 h-5 text-[#C9A84C]" />
-              </div>
-              <div>
-                <p className="text-white font-bold text-base mb-1">Agendar Consulta</p>
-                <p className="text-white/40 text-xs leading-relaxed">Preferes uma conversa estruturada? Marca uma sessão de 30 minutos.</p>
-              </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all"
+              <span className="text-[0.6rem] font-bold uppercase tracking-[0.35em] text-[#C9A84C] block mb-8">
+                Vamos Começar
+              </span>
+              <h2 className="display-lg text-white leading-tight mb-7">
+                Pronto para criar algo<br />
+                <em className="text-[#C9A84C]">verdadeiramente excepcional?</em>
+              </h2>
+              <p className="text-white/40 max-w-md mx-auto body-md leading-relaxed">
+                Fala connosco hoje. Em menos de 2 horas tens uma resposta
+                com os próximos passos — sem compromisso, sem pressão.
+              </p>
+            </motion.div>
+
+            {/* ── 3 contact channels ── */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+
+              {/* WhatsApp — PRIMARY (gold) */}
+              <motion.a
+                href={WA_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0, duration: 0.7 }}
+                viewport={{ once: true }}
+                className="group relative flex flex-col items-start gap-4 p-8 bg-[#C9A84C] hover:bg-[#b8932e] transition-colors duration-300 cursor-pointer"
               >
-                Book a Consultation <ArrowRight className="w-3 h-3" />
-              </Link>
+                <div className="w-11 h-11 rounded-sm bg-[#0A0A08]/12 flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-[#0A0A08]" />
+                </div>
+                <div>
+                  <p className="text-[#0A0A08] font-bold text-base mb-1">WhatsApp</p>
+                  <p className="text-[#0A0A08]/60 text-xs leading-relaxed">A forma mais rápida de falar connosco. Resposta em menos de 2 horas.</p>
+                </div>
+                <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#0A0A08] mt-auto">
+                  Let&apos;s Talk <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <div className="absolute top-4 right-4 px-2 py-1 bg-[#0A0A08]/12 rounded-sm">
+                  <span className="text-[0.48rem] font-bold uppercase tracking-widest text-[#0A0A08]/70">Mais Rápido</span>
+                </div>
+              </motion.a>
+
+              {/* Email */}
+              <motion.a
+                href={`mailto:${EMAIL}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.7 }}
+                viewport={{ once: true }}
+                className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300 cursor-pointer"
+              >
+                <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
+                  <Mail className="w-5 h-5 text-[#C9A84C]" />
+                </div>
+                <div>
+                  <p className="text-white font-bold text-base mb-1">Email</p>
+                  <p className="text-white/40 text-xs leading-relaxed">Para projetos mais detalhados ou propostas formais.</p>
+                </div>
+                <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all">
+                  {EMAIL} <ArrowRight className="w-3 h-3" />
+                </div>
+              </motion.a>
+
+              {/* Book a call */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.7 }}
+                viewport={{ once: true }}
+                className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300"
+              >
+                <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
+                  <Phone className="w-5 h-5 text-[#C9A84C]" />
+                </div>
+                <div>
+                  <p className="text-white font-bold text-base mb-1">Agendar Consulta</p>
+                  <p className="text-white/40 text-xs leading-relaxed">Preferes uma conversa estruturada? Marca uma sessão de 30 minutos.</p>
+                </div>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all"
+                >
+                  Book a Consultation <ArrowRight className="w-3 h-3" />
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* ── Trust signals ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap items-center justify-center gap-8 pt-10 border-t border-white/[0.06]"
+            >
+              <div className="flex items-center gap-2.5 text-white/30 text-xs">
+                <Clock className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
+                Resposta em menos de 2 horas
+              </div>
+              <div className="flex items-center gap-2.5 text-white/30 text-xs">
+                <Shield className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
+                Sem compromisso inicial
+              </div>
+              <div className="flex items-center gap-2.5 text-white/30 text-xs">
+                <Send className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
+                Proposta personalizada
+              </div>
+              <div className="flex items-center gap-2.5 text-white/30 text-xs">
+                <div className="flex -space-x-0.5">
+                  {[...Array(5)].map((_, n) => <Star key={n} className="w-3 h-3 text-[#C9A84C] fill-[#C9A84C]" />)}
+                </div>
+                <span>200+ clientes satisfeitos</span>
+              </div>
             </motion.div>
           </div>
-
-          {/* Trust signals row */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap items-center justify-center gap-8 pt-10 border-t border-white/[0.06]"
-          >
-            <div className="flex items-center gap-2.5 text-white/35 text-xs">
-              <Clock className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
-              Resposta em menos de 2 horas
-            </div>
-            <div className="flex items-center gap-2.5 text-white/35 text-xs">
-              <Shield className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
-              Sem compromisso inicial
-            </div>
-            <div className="flex items-center gap-2.5 text-white/35 text-xs">
-              <Send className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
-              Proposta personalizada
-            </div>
-            <div className="flex items-center gap-2.5 text-white/35 text-xs">
-              <div className="flex -space-x-0.5">
-                {[...Array(5)].map((_, n) => <Star key={n} className="w-3 h-3 text-[#C9A84C] fill-[#C9A84C]" />)}
-              </div>
-              <span>200+ clientes satisfeitos</span>
-            </div>
-          </motion.div>
         </div>
+
+        {/* ── Marquee keyframes (inline style tag) ── */}
+        <style>{`
+          @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+          }
+        `}</style>
       </section>
 
     </div>
