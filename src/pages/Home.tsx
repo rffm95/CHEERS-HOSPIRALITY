@@ -84,9 +84,16 @@ const SERVICES = [
     tag: 'BAR & BEVERAGE',
     icon: Coffee,
     headline: 'Transforma o teu bar num motor de receita.',
-    description: 'Desenvolvemos programas de cocktails, estratégias de bebidas e operações de bar desenhadas para aumentar o ticket médio, reduzir desperdício e criar experiências que os clientes não esquecem.',
-    benefits: ['Desenvolvimento de Menus de Cocktails', 'Otimização de Custos de Bebidas', 'Conceito & Estratégia de Bar'],
-    cta: 'Ver Consultoria',
+    intro: 'A maioria dos bares deixa dinheiro em cima do balcão. Menus desatualizados, custos mal controlados e experiências que não surpreendem — corriges isso com a estratégia certa.',
+    description: 'Desenvolvemos programas completos de cocktails e bebidas — do conceito ao copo — com foco em aumentar o ticket médio, reduzir desperdício e criar momentos que os clientes realmente recordam e partilham.',
+    benefits: [
+      'Desenvolvimento de Menus de Cocktails & Bebidas',
+      'Análise e Otimização de Custos (Cost of Goods)',
+      'Conceito, Posicionamento e Estratégia de Bar',
+      'Seleção de Fornecedores e Carta de Vinhos',
+    ],
+    outcome: '+23% margem média nos projetos de beverage',
+    cta: 'Falar sobre o meu bar',
     to: '/consulting',
   },
   {
@@ -94,9 +101,16 @@ const SERVICES = [
     tag: 'HOSPITALITY CONSULTING',
     icon: BarChart3,
     headline: 'Corrige o que não funciona. Amplifica o que funciona.',
-    description: 'Auditamos a tua operação, identificamos fugas de revenue e construímos sistemas que melhoram a consistência do serviço, satisfação dos clientes e rentabilidade — sem reconstruir tudo.',
-    benefits: ['Auditoria Operacional', 'SOPs & Standards de Serviço', 'Estratégia de Revenue & Margem'],
-    cta: 'Ver Consultoria',
+    intro: 'Antes de investir em mais staff ou reformulações, é preciso perceber exatamente onde a operação está a falhar — e onde está a deixar revenue por aproveitar.',
+    description: 'Auditamos a tua operação de forma cirúrgica, identificamos as fugas de receita e construímos sistemas que melhoram a consistência do serviço, a satisfação dos hóspedes e a rentabilidade — sem reconstruir o que já funciona.',
+    benefits: [
+      'Auditoria Operacional e Diagnóstico F&B',
+      'Standard Operating Procedures (SOPs)',
+      'Estratégia de Revenue e Melhoria de Margens',
+      'Reestruturação de Oferta e Pricing',
+    ],
+    outcome: 'Resultado médio: +18% a +30% margem operacional',
+    cta: 'Agendar diagnóstico gratuito',
     to: '/consulting',
   },
   {
@@ -104,9 +118,16 @@ const SERVICES = [
     tag: 'EVENTS & EXPERIENCES',
     icon: CalendarCheck,
     headline: 'Experiências que as pessoas realmente recordam.',
-    description: 'De eventos privados íntimos a grandes ativações corporativas — desenhamos e entregamos experiências de bar com logística precisa e execução premium.',
-    benefits: ['Bar Móvel Premium', 'Gestão de Bar em Eventos', 'Ativações de Marca'],
-    cta: 'Ver Eventos',
+    intro: 'Num mercado onde todos oferecem "serviço premium", o que diferencia um evento inesquecível é a execução de cada detalhe — da logística ao copo que chega à mão dos convidados.',
+    description: 'De eventos privados íntimos a grandes ativações corporativas e de marca — desenhamos, coordenamos e executamos experiências de bar e hospitality com precisão logística e apresentação de nível internacional.',
+    benefits: [
+      'Mobile Bar Premium para Eventos e Marcas',
+      'Gestão Completa de Bar em Eventos Privados',
+      'Ativações de Marca e Experiências Imersivas',
+      'Cocktails Personalizados e Temáticos',
+    ],
+    outcome: '200+ eventos entregues · 98% satisfação',
+    cta: 'Planear o meu evento',
     to: '/events',
   },
   {
@@ -114,9 +135,16 @@ const SERVICES = [
     tag: 'TRAINING & TEAM DEV',
     icon: GraduationCap,
     headline: 'Um serviço excecional começa por pessoas excecionais.',
-    description: 'Treinamos equipas de bar e hospitality para entregar um serviço consistente e elevado. Da técnica à mentalidade — porque a tua equipa é a tua marca.',
-    benefits: ['Formação de Bartenders & Staff', 'Cultura de Serviço & Standards', 'Coaching de Performance de Equipa'],
-    cta: 'Ver Consultoria',
+    intro: 'Podes ter o melhor menu e o espaço mais bonito — mas se a equipa não entrega com consistência e atitude, o cliente não volta. A formação certa muda isso.',
+    description: 'Treinamos equipas de bar e hospitality para entregar um serviço consistente, elevado e comercialmente inteligente. Da técnica de cocktails à mentalidade de serviço — porque a tua equipa é a experiência que o cliente leva para casa.',
+    benefits: [
+      'Formação de Bartenders e Front-of-House',
+      'Cultura de Serviço, Atitude e Standards',
+      'Técnicas de Upselling e Revenue por Mesa',
+      'Coaching de Performance e Liderança de Equipa',
+    ],
+    outcome: 'Equipas formadas em 40+ estabelecimentos',
+    cta: 'Falar sobre formação',
     to: '/consulting',
   },
 ];
@@ -372,8 +400,8 @@ export const Home = () => {
             <span className="eyebrow block mb-4">O Que Fazemos</span>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <h2 className="display-lg text-white">
-                Ajudamos negócios de hospitality<br />
-                <em className="text-[#C9A84C]">a fazer mais e melhor.</em>
+                Soluções personalizadas para<br />
+                <em className="text-[#C9A84C]">cada negócio de hospitality.</em>
               </h2>
               <p className="text-white/40 max-w-xs body-md">
                 Quatro áreas de especialização. Um objetivo: melhoria mensurável na tua operação, experiência e receita.
@@ -391,8 +419,9 @@ export const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#0A0A08] p-10 group hover:bg-[#111110] transition-colors duration-500"
+                  className="bg-[#0A0A08] p-10 group hover:bg-[#111110] transition-colors duration-500 flex flex-col"
                 >
+                  {/* Header row */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
@@ -404,11 +433,22 @@ export const Home = () => {
                       {s.num}
                     </span>
                   </div>
+
+                  {/* Headline */}
                   <h3 className="font-display text-2xl md:text-3xl font-semibold italic text-white mb-4 leading-tight">
                     {s.headline}
                   </h3>
-                  <p className="text-white/42 body-md mb-8">{s.description}</p>
-                  <ul className="space-y-2.5 mb-8">
+
+                  {/* Intro — hook sentence */}
+                  <p className="text-white/55 text-sm leading-relaxed mb-4 italic border-l-2 border-[#C9A84C]/30 pl-4">
+                    {s.intro}
+                  </p>
+
+                  {/* Full description */}
+                  <p className="text-white/38 body-md mb-8">{s.description}</p>
+
+                  {/* Benefit list */}
+                  <ul className="space-y-2.5 mb-6">
                     {s.benefits.map(b => (
                       <li key={b} className="flex items-center gap-2.5 text-xs text-white/55">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A84C] shrink-0" />
@@ -416,16 +456,51 @@ export const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to={s.to}
-                    className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3"
-                  >
-                    {s.cta} <ArrowRight className="w-3 h-3" />
-                  </Link>
+
+                  {/* Outcome tag */}
+                  <div className="flex items-center gap-2 mb-8 px-3 py-2 bg-[#C9A84C]/5 border border-[#C9A84C]/12 rounded-sm w-fit">
+                    <TrendingUp className="w-3 h-3 text-[#C9A84C] shrink-0" />
+                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]/80">
+                      {s.outcome}
+                    </span>
+                  </div>
+
+                  {/* CTA — pushed to bottom */}
+                  <div className="mt-auto">
+                    <Link
+                      to={s.to}
+                      className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3"
+                    >
+                      {s.cta} <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
+
+          {/* Bottom CTA row */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-6 py-5 border border-white/[0.06] bg-[#0D0C0A]"
+          >
+            <p className="text-white/35 text-sm text-center sm:text-left">
+              Não tens a certeza de qual serviço precisas?{' '}
+              <span className="text-white/55">Conta-nos o teu desafio — encontramos a solução juntos.</span>
+            </p>
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              Start a Project
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
