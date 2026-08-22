@@ -7,11 +7,11 @@ const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
 const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Gostaria de saber mais sobre a Cheers Guru.');
 
 const VALUES = [
-  { icon: TrendingUp, title: 'Commercial First', desc: 'Beautiful ideas that don't generate revenue are just decoration. Every recommendation we make must improve the bottom line.' },
-  { icon: CheckCircle2, title: 'Operational Rigour', desc: 'We don't just create concepts. We build systems that work when the team changes, when it's busy, and when you're not watching.' },
-  { icon: Zap, title: 'Creative Excellence', desc: 'We push for concepts that surprise, menus that are remembered and experiences that people talk about long after they end.' },
-  { icon: Globe, title: 'International Standards', desc: 'Shaped by exposure to global hospitality markets — applied locally, with a deep understanding of the Portuguese context.' },
-  { icon: Heart, title: 'Genuine Partnership', desc: 'We don't disappear after delivery. We're invested in the success of every project because our reputation depends on yours.' },
+  { icon: TrendingUp, title: 'Commercial First', desc: "Beautiful ideas that don't generate revenue are just decoration. Every recommendation we make must improve the bottom line." },
+  { icon: CheckCircle2, title: 'Operational Rigour', desc: "We don't just create concepts. We build systems that work when the team changes, when it's busy, and when you're not watching." },
+  { icon: Zap, title: 'Creative Excellence', desc: "We push for concepts that surprise, menus that are remembered and experiences that people talk about long after they end." },
+  { icon: Globe, title: 'International Standards', desc: "Shaped by exposure to global hospitality markets — applied locally, with a deep understanding of the Portuguese context." },
+  { icon: Heart, title: 'Genuine Partnership', desc: "We don't disappear after delivery. We're invested in the success of every project because our reputation depends on yours." },
 ];
 
 export const About = () => (
@@ -44,7 +44,7 @@ export const About = () => (
             <span className="eyebrow block mb-6">Our Story</span>
             <h2 className="display-md text-white mb-8">Born from<br /><em className="text-[#C9A84C]">real hospitality.</em></h2>
             <div className="space-y-5 text-white/55 body-md">
-              <p>Cheers didn't start in a boardroom. It started behind a bar. With years of hands-on experience running high-volume venues — Cheers O Bar, Cheers Pool Bar, Maria Xica Rooftop Bar — we learned what actually works, and what costs money, time and reputation.</p>
+              <p>Cheers didn&apos;t start in a boardroom. It started behind a bar. With years of hands-on experience running high-volume venues — Cheers O Bar, Cheers Pool Bar, Maria Xica Rooftop Bar — we learned what actually works, and what costs money, time and reputation.</p>
               <p>We built our consultancy from that lived experience. Every framework we use, every menu we develop, every training programme we deliver comes from having done it ourselves — under pressure, with real guests, real stakes and real consequences.</p>
               <p>Today we work with hotels, restaurants, event spaces and brands across Portugal. Our mission stays the same: make hospitality better — more profitable, more consistent, more human.</p>
             </div>
@@ -111,7 +111,7 @@ export const About = () => (
     <section className="section-pad">
       <div className="container text-center">
         <h2 className="display-md text-white mb-6">Ready to work<br /><em className="text-[#C9A84C]">together?</em></h2>
-        <p className="text-white/45 max-w-md mx-auto mb-10 body-md">Let's have an honest conversation about your business and how we can help it grow.</p>
+        <p className="text-white/45 max-w-md mx-auto mb-10 body-md">Let&apos;s have an honest conversation about your business and how we can help it grow.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">Let&apos;s Talk <ArrowRight className="w-3.5 h-3.5" /></a>
           <Link to="/contact" className="btn-ghost">Book a Consultation</Link>
