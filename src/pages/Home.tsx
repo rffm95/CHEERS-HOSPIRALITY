@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
 import {
   ArrowRight, ArrowDown, TrendingUp, Users, Zap, Globe,
-  Star, Quote, ChevronRight, MessageCircle, Phone,
+  Star, Quote, ChevronRight, MessageCircle, Phone, Mail,
   Hotel, UtensilsCrossed, CalendarCheck, GraduationCap,
-  BarChart3, Sparkles, CheckCircle2, Coffee, ExternalLink
+  BarChart3, Sparkles, CheckCircle2, Coffee, ExternalLink,
+  Clock, Shield, Send
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
+const EMAIL = 'hello@cheersexperiences.com';
 const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
 
 /* ── Animated counter ──────────────────────────────────────────── */
@@ -149,71 +151,17 @@ const SERVICES = [
   },
 ];
 
-/* ── Portfolio grid items ────────────────────────────────────────── */
+/* ── Portfolio grid items ───────────────────────────────────────── */
 const GRID_ITEMS = [
-  {
-    id: '1',
-    img: 'https://i.imgur.com/aUNb0uK.png',
-    tag: 'COCKTAILS',
-    label: 'Beverage Program',
-    size: 'tall',   // col-span-1 row-span-2
-  },
-  {
-    id: '2',
-    img: 'https://i.imgur.com/CnaTvqH.png',
-    tag: 'BRAND',
-    label: 'Brand Identity',
-    size: 'normal',
-  },
-  {
-    id: '3',
-    img: 'https://i.imgur.com/JzfPypn.png',
-    tag: 'DIGITAL',
-    label: 'Digital Experience',
-    size: 'normal',
-  },
-  {
-    id: '4',
-    img: 'https://i.imgur.com/VrbFY65.png',
-    tag: 'EVENTS',
-    label: 'Event Production',
-    size: 'wide',   // col-span-2 row-span-1
-  },
-  {
-    id: '5',
-    img: 'https://i.imgur.com/VEnpjnY.png',
-    tag: 'HOSPITALITY',
-    label: 'Hospitality Design',
-    size: 'normal',
-  },
-  {
-    id: '6',
-    img: 'https://i.imgur.com/n993YwC.png',
-    tag: 'BAR',
-    label: 'Bar Concept',
-    size: 'normal',
-  },
-  {
-    id: '7',
-    img: 'https://i.imgur.com/gLkKjHL.png',
-    tag: 'BRAND',
-    label: 'Visual Identity',
-    size: 'tall',
-  },
-  {
-    id: '8',
-    img: 'https://i.imgur.com/BFUQH2t.png',
-    tag: 'DIGITAL',
-    label: 'Menu Design',
-    size: 'normal',
-  },
-  {
-    id: '9',
-    img: 'https://i.imgur.com/sC49CxI.png',
-    tag: 'EVENTS',
-    label: 'Event Experience',
-    size: 'normal',
-  },
+  { id: '1', img: 'https://i.imgur.com/aUNb0uK.png', tag: 'COCKTAILS', label: 'Beverage Program', size: 'tall' },
+  { id: '2', img: 'https://i.imgur.com/CnaTvqH.png', tag: 'BRAND', label: 'Brand Identity', size: 'normal' },
+  { id: '3', img: 'https://i.imgur.com/JzfPypn.png', tag: 'DIGITAL', label: 'Digital Experience', size: 'normal' },
+  { id: '4', img: 'https://i.imgur.com/VrbFY65.png', tag: 'EVENTS', label: 'Event Production', size: 'wide' },
+  { id: '5', img: 'https://i.imgur.com/VEnpjnY.png', tag: 'HOSPITALITY', label: 'Hospitality Design', size: 'normal' },
+  { id: '6', img: 'https://i.imgur.com/n993YwC.png', tag: 'BAR', label: 'Bar Concept', size: 'normal' },
+  { id: '7', img: 'https://i.imgur.com/gLkKjHL.png', tag: 'BRAND', label: 'Visual Identity', size: 'tall' },
+  { id: '8', img: 'https://i.imgur.com/BFUQH2t.png', tag: 'DIGITAL', label: 'Menu Design', size: 'normal' },
+  { id: '9', img: 'https://i.imgur.com/sC49CxI.png', tag: 'EVENTS', label: 'Event Experience', size: 'normal' },
 ];
 
 /* ── Who we work with ──────────────────────────────────────────── */
@@ -228,26 +176,10 @@ const WHO = [
 
 /* ── Why Cheers ────────────────────────────────────────────────── */
 const WHY = [
-  {
-    icon: TrendingUp,
-    title: 'Pensamento Comercial',
-    desc: 'Cada ideia tem de funcionar comercialmente. Conceitos bonitos que não geram receita são apenas decoração.',
-  },
-  {
-    icon: Users,
-    title: 'Experiência Real',
-    desc: 'Não é teoria. Gerimos bares, treinamos equipas e entregámos centenas de eventos. Sabemos o que funciona.',
-  },
-  {
-    icon: Zap,
-    title: 'End-to-End',
-    desc: 'Do conceito à execução. Podemos ser o teu parceiro estratégico, a tua equipa operacional — ou ambos.',
-  },
-  {
-    icon: CheckCircle2,
-    title: 'Standards Internacionais',
-    desc: 'Trazemos padrões globais de hospitality a cada projeto — independentemente do tamanho, localização ou budget.',
-  },
+  { icon: TrendingUp, title: 'Pensamento Comercial', desc: 'Cada ideia tem de funcionar comercialmente. Conceitos bonitos que não geram receita são apenas decoração.' },
+  { icon: Users, title: 'Experiência Real', desc: 'Não é teoria. Gerimos bares, treinamos equipas e entregámos centenas de eventos. Sabemos o que funciona.' },
+  { icon: Zap, title: 'End-to-End', desc: 'Do conceito à execução. Podemos ser o teu parceiro estratégico, a tua equipa operacional — ou ambos.' },
+  { icon: CheckCircle2, title: 'Standards Internacionais', desc: 'Trazemos padrões globais de hospitality a cada projeto — independentemente do tamanho, localização ou budget.' },
 ];
 
 /* ── Process ───────────────────────────────────────────────────── */
@@ -296,6 +228,7 @@ export const Home = () => {
             }}
           />
         </div>
+
         <div className="container-wide relative z-10 pt-36 pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <motion.div
@@ -315,6 +248,7 @@ export const Home = () => {
                 <span className="text-white/20">·</span>
                 <span className="text-[0.58rem] text-white/35 uppercase tracking-widest">Est. Viseu, PT</span>
               </motion.div>
+
               <h1 className="display-xl text-white mb-0 leading-[0.96]">
                 We craft{' '}
                 <em className="text-[#C9A84C] not-italic">hospitality</em>
@@ -323,19 +257,27 @@ export const Home = () => {
                 <br className="hidden sm:block" />
                 <em className="text-[#C9A84C] not-italic">perform.</em>
               </h1>
+
               <div className="flex items-center gap-4 my-8">
                 <span className="flex-1 max-w-[56px] h-px bg-[#C9A84C]/40" />
                 <span className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-white/25">
                   Hotels · Restaurants · Brands · Events
                 </span>
               </div>
+
               <p className="body-lg text-white/50 max-w-[480px] mb-10 leading-relaxed">
                 From beverage strategy and bar consulting to premium event services and team training —
-                we help hospitality businesses deliver more memorable experiences
-                and stronger results.
+                we help hospitality businesses deliver more memorable experiences and stronger results.
               </p>
+
+              {/* ── HERO CTAs ── */}
               <div className="flex flex-col sm:flex-row gap-3 mb-12">
-                <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/20">
+                <a
+                  href={WA_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary shadow-lg shadow-[#C9A84C]/20"
+                >
                   <Phone className="w-3.5 h-3.5" />
                   Let&apos;s Talk
                   <ArrowRight className="w-4 h-4" />
@@ -345,6 +287,7 @@ export const Home = () => {
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -365,6 +308,7 @@ export const Home = () => {
                 <span className="text-white/35 text-[0.72rem]"><strong className="text-white/70 font-semibold">+23%</strong> avg. F&amp;B margin increase</span>
               </motion.div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.88 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -384,6 +328,7 @@ export const Home = () => {
             </motion.div>
           </div>
         </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -422,6 +367,7 @@ export const Home = () => {
               </p>
             </div>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.04] border border-white/[0.04]">
             {SERVICES.map((s, i) => {
               const Icon = s.icon;
@@ -467,17 +413,24 @@ export const Home = () => {
               );
             })}
           </div>
+
+          {/* ── POST-SERVICES CTA BAR ── */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-6 py-5 border border-white/[0.06] bg-[#0D0C0A]"
+            className="mt-px flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 bg-[#C9A84C]/[0.04] border border-[#C9A84C]/15"
           >
-            <p className="text-white/35 text-sm text-center sm:text-left">
-              Não tens a certeza de qual serviço precisas?{' '}
-              <span className="text-white/55">Conta-nos o teu desafio — encontramos a solução juntos.</span>
-            </p>
-            <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15">
+            <div>
+              <p className="text-white/70 text-sm font-semibold mb-0.5">Não tens a certeza de qual serviço precisas?</p>
+              <p className="text-white/35 text-xs">Conta-nos o teu desafio — encontramos a solução em conjunto.</p>
+            </div>
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15"
+            >
               <MessageCircle className="w-3.5 h-3.5" />
               Start a Project
               <ArrowRight className="w-3.5 h-3.5" />
@@ -486,10 +439,9 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── EXPERIENCES WE'VE CREATED ─────────────────────────────── */}
+      {/* ── EXPERIENCES WE'VE CREATED ────────────────────────────── */}
       <section className="section-pad bg-[#0D0C0A]" id="experiences">
         <div className="container">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -507,42 +459,23 @@ export const Home = () => {
               <p className="text-white/38 text-sm max-w-[280px] text-left md:text-right leading-relaxed">
                 A amostra do que construímos — de cocktails a experiências completas de marca e hospitality.
               </p>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors"
-              >
+              <Link to="/portfolio" className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors">
                 Ver portfolio completo <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
           </motion.div>
 
-          {/* —— Bento editorial grid —— */}
-          {/* Row 1: featured wide + tall */}
+          {/* Bento grid Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-2">
-
-            {/* Featured — wide left */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="md:col-span-8 relative overflow-hidden group cursor-pointer"
-              style={{ minHeight: '420px' }}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}
+              className="md:col-span-8 relative overflow-hidden group cursor-pointer" style={{ minHeight: '420px' }}
             >
-              <img
-                src={GRID_ITEMS[3].img}
-                alt={GRID_ITEMS[3].label}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              {/* gradient overlay */}
+              <img src={GRID_ITEMS[3].img} alt={GRID_ITEMS[3].label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/20 to-transparent" />
-              {/* content */}
               <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                 <div>
-                  <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
-                    {GRID_ITEMS[3].tag}
-                  </span>
+                  <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{GRID_ITEMS[3].tag}</span>
                   <p className="text-white font-semibold text-lg">{GRID_ITEMS[3].label}</p>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -550,101 +483,66 @@ export const Home = () => {
                 </div>
               </div>
             </motion.div>
-
-            {/* Tall right */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="md:col-span-4 relative overflow-hidden group cursor-pointer"
-              style={{ minHeight: '420px' }}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} viewport={{ once: true }}
+              className="md:col-span-4 relative overflow-hidden group cursor-pointer" style={{ minHeight: '420px' }}
             >
-              <img
-                src={GRID_ITEMS[0].img}
-                alt={GRID_ITEMS[0].label}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
+              <img src={GRID_ITEMS[0].img} alt={GRID_ITEMS[0].label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
-                  {GRID_ITEMS[0].tag}
-                </span>
+                <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{GRID_ITEMS[0].tag}</span>
                 <p className="text-white font-semibold">{GRID_ITEMS[0].label}</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Row 2: four equal squares */}
+          {/* Row 2 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
             {[GRID_ITEMS[1], GRID_ITEMS[2], GRID_ITEMS[4], GRID_ITEMS[5]].map((item, i) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
-                viewport={{ once: true }}
-                className="relative overflow-hidden group cursor-pointer"
-                style={{ minHeight: '220px' }}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.08 }} viewport={{ once: true }}
+                className="relative overflow-hidden group cursor-pointer" style={{ minHeight: '220px' }}
               >
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                  loading="lazy"
-                />
+                <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
-                    {item.tag}
-                  </span>
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{item.tag}</span>
                   <p className="text-white text-xs font-semibold">{item.label}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Row 3: three equal */}
+          {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {[GRID_ITEMS[6], GRID_ITEMS[7], GRID_ITEMS[8]].map((item, i) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="relative overflow-hidden group cursor-pointer"
-                style={{ minHeight: '260px' }}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.1 }} viewport={{ once: true }}
+                className="relative overflow-hidden group cursor-pointer" style={{ minHeight: '260px' }}
               >
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
+                <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">
-                    {item.tag}
-                  </span>
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{item.tag}</span>
                   <p className="text-white text-xs font-semibold">{item.label}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Bottom CTA strip */}
+          {/* ── POST-PORTFOLIO CTA STRIP ── */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 border border-white/[0.06]"
+            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-6 border border-white/[0.06] bg-[#0A0A08]"
           >
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
                 {[GRID_ITEMS[0], GRID_ITEMS[1], GRID_ITEMS[2]].map(item => (
-                  <div key={item.id} className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#0D0C0A]">
+                  <div key={item.id} className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#0A0A08]">
                     <img src={item.img} alt="" className="w-full h-full object-cover" />
                   </div>
                 ))}
@@ -653,10 +551,16 @@ export const Home = () => {
                 <span className="text-white/70 font-semibold">200+ projetos</span> entregues em hospitality, eventos e branding
               </p>
             </div>
-            <Link to="/portfolio" className="btn-primary shrink-0 shadow-lg shadow-[#C9A84C]/15">
-              Ver Portfolio Completo
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            <div className="flex gap-3 shrink-0">
+              <Link to="/portfolio" className="btn-ghost">
+                Ver Portfolio
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
+                Contact Us
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -711,9 +615,7 @@ export const Home = () => {
                 <button
                   key={i}
                   onClick={() => setActiveTestimonial(i)}
-                  className={`h-1 rounded-full transition-all duration-500 ${
-                    i === activeTestimonial ? 'w-10 bg-[#C9A84C]' : 'w-4 bg-white/20 hover:bg-white/40'
-                  }`}
+                  className={`h-1 rounded-full transition-all duration-500 ${i === activeTestimonial ? 'w-10 bg-[#C9A84C]' : 'w-4 bg-white/20 hover:bg-white/40'}`}
                   aria-label={`Testemunho ${i + 1}`}
                 />
               ))}
@@ -723,11 +625,7 @@ export const Home = () => {
             {TESTIMONIALS.map((t, i) => (
               <motion.div
                 key={i}
-                animate={{
-                  opacity: i === activeTestimonial ? 1 : 0,
-                  x: i === activeTestimonial ? 0 : 40,
-                  position: i === activeTestimonial ? 'relative' : 'absolute'
-                }}
+                animate={{ opacity: i === activeTestimonial ? 1 : 0, x: i === activeTestimonial ? 0 : 40, position: i === activeTestimonial ? 'relative' : 'absolute' }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="w-full top-0 left-0 grid grid-cols-1 md:grid-cols-3 gap-8 card-dark p-10 md:p-14"
               >
@@ -735,9 +633,7 @@ export const Home = () => {
                   <Quote className="w-10 h-10 text-[#C9A84C]/20 mb-6" />
                   <p className="font-display text-xl md:text-2xl italic text-white leading-relaxed mb-8">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#C9A84C]/15 flex items-center justify-center font-bold text-[#C9A84C] text-sm shrink-0">
-                      {t.name[0]}
-                    </div>
+                    <div className="w-10 h-10 rounded-full bg-[#C9A84C]/15 flex items-center justify-center font-bold text-[#C9A84C] text-sm shrink-0">{t.name[0]}</div>
                     <div>
                       <p className="text-white font-semibold text-sm">{t.name}</p>
                       <p className="text-white/38 text-xs">{t.role} · {t.company}</p>
@@ -829,82 +725,135 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── INLINE CTA MID-PAGE ──────────────────────────────────── */}
-      <section className="section-pad">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center card-dark p-12 md:p-16 border-[#C9A84C]/15"
-          >
-            <div>
-              <span className="eyebrow block mb-4">Pronto para começar?</span>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold italic text-white mb-4 leading-tight">
-                Temos disponibilidade<br />
-                <em className="text-[#C9A84C]">para novos projetos.</em>
-              </h2>
-              <p className="text-white/40 text-sm leading-relaxed">
-                Conta-nos o teu desafio. Em menos de 2 horas tens uma resposta com os próximos passos.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
-              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
-                <MessageCircle className="w-3.5 h-3.5" />
-                Start a Project
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-              <Link to="/contact" className="btn-ghost">Book a Consultation</Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* ══════════════════════════════════════════════════════════
+          ── FINAL CONTACT SECTION ─────────────────────────────────
+          ══════════════════════════════════════════════════════════ */}
+      <section className="section-pad relative overflow-hidden" id="contact">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[#0A0A08]" />
+        <div className="absolute inset-0 opacity-[0.025]" style={{
+          backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }} />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#C9A84C]/4 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* ── FINAL CTA ────────────────────────────────────────────── */}
-      <section
-        className="section-pad relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #C9A84C 0%, #b8923e 50%, #a07830 100%)' }}
-      >
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: 'linear-gradient(#0A0A08 1px, transparent 1px), linear-gradient(90deg, #0A0A08 1px, transparent 1px)',
-            backgroundSize: '40px 40px'
-          }}
-        />
-        <div className="container text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="text-[#0A0A08]/50 text-[0.65rem] uppercase tracking-[0.35em] font-bold mb-5">
-              Cheers Experiences · Hospitality Performance Partner
-            </p>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold italic text-[#0A0A08] mb-6 leading-[1.02]">
-              Vamos criar algo<br />verdadeiramente excepcional.
+        <div className="container relative z-10">
+          {/* Top label */}
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="eyebrow block mb-6">Vamos Começar</span>
+            <h2 className="display-lg text-white mb-6 leading-tight">
+              Pronto para criar algo<br />
+              <em className="text-[#C9A84C]">verdadeiramente excepcional?</em>
             </h2>
-            <p className="text-[#0A0A08]/55 max-w-md mx-auto mb-10 body-md">
-              Diz-nos o que estás a construir. Dizemos-te exatamente como podemos melhorá-lo.
+            <p className="text-white/40 max-w-lg mx-auto body-md leading-relaxed">
+              Fala connosco hoje. Em menos de 2 horas tens uma resposta com os próximos passos — sem compromisso, sem pressão.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={WA_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-[#0A0A08] text-[#C9A84C] px-8 py-4 font-bold uppercase tracking-[0.18em] text-[0.7rem] rounded-sm hover:bg-[#1a1a18] transition-all duration-300 shadow-lg"
-              >
-                <Phone className="w-3.5 h-3.5" />
-                Let&apos;s Talk
-              </a>
+          </motion.div>
+
+          {/* 3 contact channels */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+            {/* WhatsApp — PRIMARY */}
+            <motion.a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0, duration: 0.7 }}
+              viewport={{ once: true }}
+              className="group relative flex flex-col items-start gap-4 p-8 bg-[#C9A84C] hover:bg-[#b8923e] transition-colors duration-300 cursor-pointer"
+            >
+              <div className="w-11 h-11 rounded-sm bg-[#0A0A08]/15 flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-[#0A0A08]" />
+              </div>
+              <div>
+                <p className="text-[#0A0A08] font-bold text-base mb-1">WhatsApp</p>
+                <p className="text-[#0A0A08]/60 text-xs leading-relaxed">A forma mais rápida de falar connosco. Resposta em menos de 2 horas.</p>
+              </div>
+              <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#0A0A08] mt-auto">
+                Let&apos;s Talk <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+              </div>
+              {/* Recommended badge */}
+              <div className="absolute top-4 right-4 px-2 py-1 bg-[#0A0A08]/15 rounded-sm">
+                <span className="text-[0.5rem] font-bold uppercase tracking-widest text-[#0A0A08]">Recomendado</span>
+              </div>
+            </motion.a>
+
+            {/* Email */}
+            <motion.a
+              href={`mailto:${EMAIL}`}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.7 }}
+              viewport={{ once: true }}
+              className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300 cursor-pointer"
+            >
+              <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
+                <Mail className="w-5 h-5 text-[#C9A84C]" />
+              </div>
+              <div>
+                <p className="text-white font-bold text-base mb-1">Email</p>
+                <p className="text-white/40 text-xs leading-relaxed">Para projetos mais detalhados ou propostas formais.</p>
+              </div>
+              <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all">
+                {EMAIL} <ArrowRight className="w-3 h-3" />
+              </div>
+            </motion.a>
+
+            {/* Book a call */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              viewport={{ once: true }}
+              className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300"
+            >
+              <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
+                <Phone className="w-5 h-5 text-[#C9A84C]" />
+              </div>
+              <div>
+                <p className="text-white font-bold text-base mb-1">Agendar Consulta</p>
+                <p className="text-white/40 text-xs leading-relaxed">Preferes uma conversa estruturada? Marca uma sessão de 30 minutos.</p>
+              </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2.5 border-2 border-[#0A0A08]/30 text-[#0A0A08] px-8 py-4 font-bold uppercase tracking-[0.18em] text-[0.7rem] rounded-sm hover:border-[#0A0A08] hover:bg-[#0A0A08]/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all"
               >
-                Book a Consultation
+                Book a Consultation <ArrowRight className="w-3 h-3" />
               </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center justify-center gap-2.5 border-2 border-[#0A0A08]/20 text-[#0A0A08]/70 px-8 py-4 font-bold uppercase tracking-[0.18em] text-[0.7rem] rounded-sm hover:border-[#0A0A08]/40 hover:text-[#0A0A08] transition-all duration-300"
-              >
-                Discover Our Work
-              </Link>
+            </motion.div>
+          </div>
+
+          {/* Trust signals row */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center justify-center gap-8 pt-10 border-t border-white/[0.06]"
+          >
+            <div className="flex items-center gap-2.5 text-white/35 text-xs">
+              <Clock className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
+              Resposta em menos de 2 horas
+            </div>
+            <div className="flex items-center gap-2.5 text-white/35 text-xs">
+              <Shield className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
+              Sem compromisso inicial
+            </div>
+            <div className="flex items-center gap-2.5 text-white/35 text-xs">
+              <Send className="w-4 h-4 text-[#C9A84C]/60 shrink-0" />
+              Proposta personalizada
+            </div>
+            <div className="flex items-center gap-2.5 text-white/35 text-xs">
+              <div className="flex -space-x-0.5">
+                {[...Array(5)].map((_, n) => <Star key={n} className="w-3 h-3 text-[#C9A84C] fill-[#C9A84C]" />)}
+              </div>
+              <span>200+ clientes satisfeitos</span>
             </div>
           </motion.div>
         </div>
