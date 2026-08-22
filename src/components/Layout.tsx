@@ -1,92 +1,87 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { Navbar } from './Navbar';
 import { Link } from 'react-router-dom';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { ArrowRight, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
-const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
+const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site cheers.guru.');
 
-export const Footer = () => {
-  const { t } = useLanguage();
-
-  return (
-    <footer className="bg-[#F9F9F7] border-t border-black/5 pt-32 pb-12">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-32">
-          {/* Brand Column */}
-          <div className="col-span-1 lg:col-span-1">
-            <Link to="/" className="inline-block mb-8 group">
-              <img
-                src={LOGO_URL}
-                alt="Cheers Experiences logo"
-                width={80}
-                height={80}
-                loading="lazy"
-                className="rounded-full object-cover ring-2 ring-[#c5a059]/30 shadow-xl shadow-[#c5a059]/10 transition-all duration-500 group-hover:ring-[#c5a059] group-hover:scale-105 group-hover:shadow-[#c5a059]/25"
-              />
-            </Link>
-            <p className="text-[#111111]/30 text-sm leading-relaxed mb-10 max-w-xs font-medium italic">
-              Elevamos os padrões da hospitalidade através de uma visão 360º que une eventos, consultoria estratégica e inovação tecnológica.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center hover:bg-[#c5a059] hover:text-white transition-all">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center hover:bg-[#c5a059] hover:text-white transition-all">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Business Units */}
+export const Layout = ({ children }: { children: React.ReactNode }) => (
+  <div className="min-h-screen flex flex-col" style={{ background: 'var(--color-bg)', color: 'var(--color-text)' }}>
+    <Navbar />
+    <main className="flex-1 pt-0">{children}</main>
+    <footer className="bg-[#060605] border-t border-white/[0.05]">
+      {/* CTA strip */}
+      <div className="border-b border-white/[0.05]">
+        <div className="container-wide py-16 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
-            <h4 className="text-[#111111] font-black uppercase text-[10px] tracking-[0.5em] mb-10 italic">Business Units</h4>
-            <ul className="space-y-4">
-              <li><Link to="/events" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.events}</Link></li>
-              <li><Link to="/consulting" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.consulting}</Link></li>
-              <li><Link to="/digital" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.digital}</Link></li>
-            </ul>
+            <p className="eyebrow mb-3">Ready to start?</p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold italic text-white">
+              Let&apos;s create something<br />
+              <span className="text-[#C9A84C]">exceptional.</span>
+            </h2>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-[#111111] font-black uppercase text-[10px] tracking-[0.5em] mb-10 italic">Explorar</h4>
-            <ul className="space-y-4">
-              <li><Link to="/portfolio" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.portfolio}</Link></li>
-              <li><Link to="/about" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.about}</Link></li>
-              <li><Link to="/contact" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.contact}</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact Details */}
-          <div>
-            <h4 className="text-[#111111] font-black uppercase text-[10px] tracking-[0.5em] mb-10 italic">Contactos</h4>
-            <ul className="space-y-8">
-              <li className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-[#c5a059] shrink-0" />
-                <p className="text-[#111111]/40 text-xs leading-relaxed font-black uppercase tracking-[0.2em] italic">Centro & Norte de Portugal <br />(Viseu, Porto, Douro)</p>
-              </li>
-              <li className="flex items-center gap-4">
-                <Mail className="w-5 h-5 text-[#c5a059] shrink-0" />
-                <p className="text-[#111111]/40 text-sm font-medium italic">sucessomacico@gmail.com</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.4em] font-black text-[#111111]/10">
-          <p>© 2024 Cheers Experiences. Standards de Elite.</p>
-          <div className="flex gap-10">
-            <a href="#" className="hover:text-[#c5a059] transition-colors italic">Privacy Policy</a>
-            <a href="#" className="hover:text-[#c5a059] transition-colors italic">Terms of Service</a>
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Let&apos;s Talk <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+            <Link to="/contact" className="btn-ghost">Book a Consultation</Link>
           </div>
         </div>
       </div>
-    </footer>
-  );
-};
 
-export const WhatsAppButton = () => {
-  return null;
-};
+      {/* Footer grid */}
+      <div className="container-wide py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="md:col-span-2">
+            <p className="font-display text-2xl font-semibold italic text-white mb-3">Cheers Hospitality</p>
+            <p className="text-white/40 text-sm leading-relaxed max-w-xs">
+              Premium hospitality consulting, beverage experiences, events and training. Based in Viseu. Operating nationwide.
+            </p>
+          </div>
+          <div>
+            <p className="eyebrow mb-5">Navigate</p>
+            <ul className="space-y-2">
+              {[['/', 'Home'], ['/events', 'Events'], ['/consulting', 'Consulting'], ['/digital', 'Digital'], ['/portfolio', 'Our Work'], ['/about', 'About'], ['/contact', 'Contact']].map(([to, label]) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/40 hover:text-[#C9A84C] transition-colors text-xs font-medium uppercase tracking-wider">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow mb-5">Contact</p>
+            <ul className="space-y-3">
+              <li>
+                <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
+                  <Phone className="w-3.5 h-3.5 shrink-0" />
+                  +351 938 543 783
+                </a>
+              </li>
+              <li>
+                <a href="mailto:cheersexperiences@gmail.com" className="flex items-center gap-2 text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
+                  <Mail className="w-3.5 h-3.5 shrink-0" />
+                  cheersexperiences@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/cheers.guru" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
+                  <Instagram className="w-3.5 h-3.5 shrink-0" />
+                  @cheers.guru
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-white/40 text-xs">
+                <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                Viseu · Porto · Coimbra · Nacional
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="divider mt-10 mb-6" />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/25 text-[0.65rem] uppercase tracking-widest">© {new Date().getFullYear()} Cheers Hospitality. All rights reserved.</p>
+          <p className="text-white/25 text-[0.65rem]">cheers.guru</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+);

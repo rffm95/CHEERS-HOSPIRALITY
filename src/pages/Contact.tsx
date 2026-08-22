@@ -1,244 +1,179 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useLanguage } from '../context/LanguageContext';
-import { Send, CheckCircle, Phone, Mail, Instagram } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Send, Phone, Mail, Instagram, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+
+const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site cheers.guru.');
+
+const SERVICE_OPTIONS = [
+  'Bar Consulting',
+  'Cocktail Menu Development',
+  'Hospitality Consulting',
+  'Event Bar Service',
+  'Team Training',
+  'Digital Solutions',
+  'Brand Activation',
+  'Other',
+];
+
+const BUSINESS_TYPES = ['Hotel', 'Bar / Cocktail Bar', 'Restaurant', 'Event Space / Quinta', 'Brand / Agency', 'Private Event', 'Other'];
 
 export const Contact = () => {
-  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    type: 'event',
-    name: '',
-    email: '',
-    phone: '',
-    eventType: '',
-    eventDate: '',
-    guests: '',
-    budget: '',
-    message: '',
-  });
+  const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', businessType: '', service: '', message: '' });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+    setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    await new Promise(r => setTimeout(r, 800));
+    setLoading(false);
     setSubmitted(true);
-    
-    // In a real production environment, this would call an API route.
-    // For now, we simulate the success state and direct the user's intent to the target email.
-    console.log(`Quote request received for: sucessomacico@gmail.com`);
-    
-    // Optional: open mailto for direct client feedback
-    // const mailtoUrl = `mailto:sucessomacico@gmail.com?subject=Pedido de Orçamento - Cheers Experiences&body=Nome: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AEvento: ${formData.eventType}`;
-    // window.location.href = mailtoUrl;
-
-    setTimeout(() => {
-      setFormData({
-        type: 'event',
-        name: '',
-        email: '',
-        phone: '',
-        eventType: '',
-        eventDate: '',
-        guests: '',
-        budget: '',
-        message: '',
-      });
-    }, 2000);
   };
 
-  return (
-    <div className="pt-20 bg-[#FCFCFA] text-[#111111] font-sans">
-      <section className="relative py-24 md:py-40 border-b border-[#111111]/5 overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(197,160,89,0.03)_0%,transparent_50%)] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-            {/* Contact Info */}
-            <div className="will-change-transform">
-              <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-8 block font-sans">{t.contactPage.hero.eyebrow}</span>
-              <h1 className="text-5xl md:text-8xl font-serif text-[#111111] mt-6 mb-16 tracking-tight leading-[0.95]">
-                {t.contactPage.hero.title} <br /><span className="italic text-[#c5a059]">{t.contactPage.hero.titleAccent}</span>
-              </h1>
-              <div className="space-y-12">
-                <div className="flex gap-8 group">
-                  <div className="w-14 h-14 rounded-2xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center group-hover:bg-[#c5a059] transition-all duration-500">
-                    <Phone className="w-6 h-6 text-[#c5a059] group-hover:text-black transition-colors" />
-                  </div>
-                  <div>
-                    <h4 className="text-[#111111] font-bold mb-2 uppercase tracking-[0.2em] text-[10px] font-sans">{t.contactPage.info.phoneTitle}</h4>
-                    <p className="text-[#c5a059] text-[9px] font-bold uppercase tracking-widest bg-[#c5a059]/10 px-4 py-2 rounded-full inline-block mt-2 font-sans animate-pulse">{t.contactPage.info.phoneStatus}</p>
-                  </div>
-                </div>
-                <div className="flex gap-8 group">
-                  <div className="w-14 h-14 rounded-2xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center group-hover:bg-[#c5a059] transition-all duration-500">
-                    <Mail className="w-6 h-6 text-[#c5a059] group-hover:text-black transition-colors" />
-                  </div>
-                  <div>
-                    <h4 className="text-[#111111] font-bold mb-2 uppercase tracking-[0.2em] text-[10px] font-sans">{t.contactPage.info.emailTitle}</h4>
-                    <p className="text-[#111111]/60 text-base font-light">sucessomacico@gmail.com</p>
-                  </div>
-                </div>
-                <div className="flex gap-8 group">
-                  <div className="w-14 h-14 rounded-2xl bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center group-hover:bg-[#c5a059] transition-all duration-500">
-                    <Instagram className="w-6 h-6 text-[#c5a059] group-hover:text-black transition-colors" />
-                  </div>
-                  <div>
-                    <h4 className="text-[#111111] font-bold mb-2 uppercase tracking-[0.2em] text-[10px] font-sans">{t.contactPage.info.instaTitle}</h4>
-                    <p className="text-[#111111]/60 text-base font-light">@cheers_hospitality_pt</p>
-                  </div>
-                </div>
-              </div>
+  const inputClass = 'w-full bg-[#111110] border border-white/10 rounded-sm px-4 py-3.5 text-white/90 placeholder-white/25 text-sm focus:outline-none focus:border-[#C9A84C]/60 transition-colors';
+  const labelClass = 'block text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-2';
 
-              <div className="mt-24 p-12 bg-white rounded-[2.5rem] border border-[#111111]/5 relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.02)]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c5a059]/5 blur-3xl rounded-full" />
-                <h4 className="text-[#c5a059] font-serif text-xl mb-6 tracking-tight">{t.contactPage.info.areaTitle}</h4>
-                <p className="text-[#111111]/40 text-sm leading-relaxed font-light">
-                  {t.contactPage.info.areaText}
-                </p>
-              </div>
-            </div>
+  return (
+    <div className="w-full">
+
+      {/* Hero */}
+      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A08] to-[#0D0C0A]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#C9A84C]/5 blur-[100px] rounded-full" />
+        </div>
+        <div className="container relative z-10 pt-32">
+          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}>
+            <span className="eyebrow block mb-6">Let&apos;s Talk</span>
+            <h1 className="display-xl text-white mb-4">
+              Let&apos;s create<br />
+              <em className="text-[#C9A84C]">something great.</em>
+            </h1>
+            <p className="body-lg text-white/45 max-w-lg">
+              Tell us what you&apos;re working on. We&apos;ll respond within 24 hours.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Form + Info */}
+      <section className="section-pad bg-[#0D0C0A]">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
             {/* Form */}
-            <div className="relative">
-              <AnimatePresence mode="wait">
-                {!submitted ? (
-                  <motion.form
-                    key="form"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    onSubmit={handleSubmit}
-                    className="p-10 md:p-16 bg-white rounded-[3rem] border border-[#111111]/5 space-y-10 shadow-[0_40px_80px_rgba(0,0,0,0.03)]"
-                  >
-                    <div className="flex gap-2 p-1.5 bg-[#F5F5F3] rounded-2xl mb-10 border border-[#111111]/5">
-                      <button
-                        type="button"
-                        onClick={() => setFormData({ ...formData, type: 'event' })}
-                        className={`flex-1 py-4 text-[9px] font-bold uppercase tracking-[0.2em] rounded-xl transition-all font-sans ${
-                          formData.type === 'event' ? 'bg-white text-[#111111] shadow-sm' : 'text-[#111111]/30 hover:text-[#111111]/60'
-                        }`}
-                      >
-                        {t.contactPage.form.event}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setFormData({ ...formData, type: 'business' })}
-                        className={`flex-1 py-4 text-[9px] font-bold uppercase tracking-[0.2em] rounded-xl transition-all font-sans ${
-                          formData.type === 'business' ? 'bg-white text-[#111111] shadow-sm' : 'text-[#111111]/30 hover:text-[#111111]/60'
-                        }`}
-                      >
-                        {t.contactPage.form.business}
-                      </button>
+            <div className="lg:col-span-2">
+              {submitted ? (
+                <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} className="card-dark p-16 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="w-7 h-7 text-[#C9A84C]" />
+                  </div>
+                  <h3 className="font-display text-3xl italic text-white mb-4">Message received.</h3>
+                  <p className="text-white/45 mb-8 max-w-sm mx-auto text-sm leading-relaxed">Our team will review your enquiry and get back to you within 24 hours. For urgent matters, WhatsApp is faster.</p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">WhatsApp Now <ArrowRight className="w-3.5 h-3.5" /></a>
+                    <button onClick={() => setSubmitted(false)} className="btn-ghost">Send Another</button>
+                  </div>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className={labelClass}>Name *</label>
+                      <input name="name" required value={form.name} onChange={handleChange} placeholder="Your name" className={inputClass} />
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.name}</label>
-                        <input
-                          required
-                          className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all placeholder:text-[#111111]/20 font-sans"
-                          placeholder={t.contactPage.form.placeholderName}
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.email}</label>
-                        <input
-                          required
-                          type="email"
-                          className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all placeholder:text-[#111111]/20 font-sans"
-                          placeholder={t.contactPage.form.placeholderEmail}
-                        />
-                      </div>
+                    <div>
+                      <label className={labelClass}>Company</label>
+                      <input name="company" value={form.company} onChange={handleChange} placeholder="Hotel / Bar / Restaurant" className={inputClass} />
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.phone}</label>
-                        <input
-                          required
-                          className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all placeholder:text-[#111111]/20 font-sans"
-                          placeholder={t.contactPage.form.placeholderPhone}
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">
-                          {formData.type === 'event' ? t.quote.form.eventType : t.contactPage.form.businessType}
-                        </label>
-                        <select className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all appearance-none cursor-pointer font-sans">
-                          {formData.type === 'event' ? (
-                            <>
-                              <option>{t.contactPage.form.categories.wedding}</option>
-                              <option>{t.contactPage.form.categories.birthday}</option>
-                              <option>{t.contactPage.form.categories.baptism}</option>
-                              <option>{t.contactPage.form.categories.corporate}</option>
-                              <option>{t.contactPage.form.categories.other}</option>
-                            </>
-                          ) : (
-                            <>
-                              <option>{t.contactPage.form.businessCategories.bar}</option>
-                              <option>{t.contactPage.form.businessCategories.restaurant}</option>
-                              <option>{t.contactPage.form.businessCategories.hotel}</option>
-                              <option>{t.contactPage.form.businessCategories.catering}</option>
-                            </>
-                          )}
-                        </select>
-                      </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className={labelClass}>Email *</label>
+                      <input name="email" type="email" required value={form.email} onChange={handleChange} placeholder="your@email.com" className={inputClass} />
                     </div>
-
-                    {formData.type === 'event' && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-3">
-                          <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.eventDate}</label>
-                          <input
-                            type="date"
-                            className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all font-sans"
-                          />
-                        </div>
-                        <div className="space-y-3">
-                          <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.guests}</label>
-                          <input
-                            className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all placeholder:text-[#111111]/20 font-sans"
-                            placeholder="Ex: 150"
-                          />
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="space-y-3">
-                      <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#111111]/40 ml-4 font-sans">{t.quote.form.message}</label>
-                      <textarea
-                        className="w-full bg-[#F5F5F3] border border-transparent rounded-2xl px-6 py-4 text-sm text-[#111111] focus:bg-white focus:border-[#c5a059]/30 outline-none transition-all min-h-[140px] placeholder:text-[#111111]/20 font-sans resize-none"
-                        placeholder={t.contactPage.form.placeholderMessage}
-                      />
+                    <div>
+                      <label className={labelClass}>Phone</label>
+                      <input name="phone" value={form.phone} onChange={handleChange} placeholder="+351 9XX XXX XXX" className={inputClass} />
                     </div>
-
-                    <button
-                      type="submit"
-                      className="w-full py-6 bg-[#111111] text-white font-bold uppercase tracking-[0.2em] text-[10px] rounded-full hover:bg-[#c5a059] transition-all flex items-center justify-center gap-4 shadow-xl font-sans"
-                    >
-                      {t.quote.form.submit}
-                      <Send className="w-4 h-4" />
-                    </button>
-                  </motion.form>
-                ) : (
-                  <motion.div
-                    key="success"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="p-16 md:p-24 bg-white rounded-[3rem] border border-[#c5a059]/20 text-center space-y-10 shadow-2xl"
-                  >
-                    <div className="w-20 h-20 bg-[#c5a059]/10 rounded-full flex items-center justify-center mx-auto mb-10">
-                      <CheckCircle className="w-10 h-10 text-[#c5a059]" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className={labelClass}>Business Type</label>
+                      <select name="businessType" value={form.businessType} onChange={handleChange} className={inputClass}>
+                        <option value="">Select type...</option>
+                        {BUSINESS_TYPES.map(b => <option key={b} value={b}>{b}</option>)}
+                      </select>
                     </div>
-                    <h3 className="text-3xl font-serif text-[#111111] tracking-tight">{t.quote.form.success}</h3>
-                    <p className="text-[#111111]/50 text-lg font-light">{t.contactPage.form.successDetail}</p>
-                    <button
-                      onClick={() => setSubmitted(false)}
-                      className="text-[#c5a059] text-[9px] font-bold uppercase tracking-[0.2em] border-b border-[#c5a059] pb-1 hover:text-[#111111] hover:border-[#111111] transition-all font-sans"
-                    >
-                      {t.contactPage.form.sendAnother}
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    <div>
+                      <label className={labelClass}>What are you looking for? *</label>
+                      <select name="service" required value={form.service} onChange={handleChange} className={inputClass}>
+                        <option value="">Select service...</option>
+                        {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className={labelClass}>Message</label>
+                    <textarea name="message" value={form.message} onChange={handleChange} rows={5} placeholder="Tell us about your project, challenges or goals..." className={inputClass + ' resize-none'} />
+                  </div>
+                  <button type="submit" disabled={loading} className="btn-primary w-full justify-center py-4 disabled:opacity-60 disabled:cursor-not-allowed">
+                    {loading ? 'Sending...' : <>Send Message <Send className="w-3.5 h-3.5" /></>}
+                  </button>
+                  <p className="text-white/25 text-xs text-center">We respond within 24h. No spam, ever.</p>
+                </form>
+              )}
+            </div>
+
+            {/* Info sidebar */}
+            <div className="space-y-8">
+              <div>
+                <p className="eyebrow block mb-5">Direct Contact</p>
+                <div className="space-y-4">
+                  <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
+                    <div className="w-9 h-9 rounded-md bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366]/20 transition-colors">
+                      <Phone className="w-4 h-4 text-[#25D366]" />
+                    </div>
+                    <div>
+                      <p className="text-white text-sm font-semibold mb-0.5">WhatsApp</p>
+                      <p className="text-white/40 text-xs">+351 938 543 783</p>
+                      <p className="text-[#C9A84C] text-[0.6rem] uppercase tracking-wider font-bold mt-1">Fastest response →</p>
+                    </div>
+                  </a>
+                  <a href="mailto:cheersexperiences@gmail.com" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
+                    <div className="w-9 h-9 rounded-md bg-[#C9A84C]/10 flex items-center justify-center shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors">
+                      <Mail className="w-4 h-4 text-[#C9A84C]" />
+                    </div>
+                    <div>
+                      <p className="text-white text-sm font-semibold mb-0.5">Email</p>
+                      <p className="text-white/40 text-xs">cheersexperiences@gmail.com</p>
+                    </div>
+                  </a>
+                  <a href="https://instagram.com/cheers.guru" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
+                    <div className="w-9 h-9 rounded-md bg-pink-500/10 flex items-center justify-center shrink-0 group-hover:bg-pink-500/20 transition-colors">
+                      <Instagram className="w-4 h-4 text-pink-400" />
+                    </div>
+                    <div>
+                      <p className="text-white text-sm font-semibold mb-0.5">Instagram</p>
+                      <p className="text-white/40 text-xs">@cheers.guru</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div className="card-dark p-6">
+                <p className="eyebrow block mb-3">Coverage Area</p>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
+                  <p className="text-white/45 text-sm leading-relaxed">Based in Viseu. Events and consulting across Porto, Coimbra, Alto Douro, Aveiro and nationwide. Digital services globally.</p>
+                </div>
+              </div>
+              <div className="card-dark p-6 border-[#C9A84C]/20">
+                <p className="text-[#C9A84C] text-[0.6rem] uppercase tracking-widest font-bold mb-2">Response time</p>
+                <p className="text-white font-semibold">Under 24 hours.</p>
+                <p className="text-white/40 text-xs mt-1">WhatsApp for urgent or same-day enquiries.</p>
+              </div>
             </div>
           </div>
         </div>

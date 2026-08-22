@@ -1,85 +1,123 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { useLanguage } from '../context/LanguageContext';
+import { ArrowRight, CheckCircle2, Heart, Zap, Globe, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export const About = () => {
-  const { t } = useLanguage();
+const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
+const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Gostaria de saber mais sobre a Cheers Guru.');
 
-  return (
-    <div className="pt-20 bg-[#FCFCFA] text-[#111111] font-sans">
-      <section className="relative py-24 md:py-40 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(197,160,89,0.03)_0%,transparent_50%)] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-8 block font-sans">{t.aboutPage.hero.eyebrow}</span>
-              <h1 className="text-5xl md:text-8xl font-serif text-[#111111] mt-6 mb-16 tracking-tight leading-[0.95]">
-                {t.aboutPage.hero.title} <br /><span className="italic text-[#c5a059]">{t.aboutPage.hero.titleAccent}</span>
-              </h1>
-              <div className="space-y-10 text-[#111111]/60 text-lg md:text-xl leading-relaxed font-light">
-                <p>
-                  {t.aboutPage.hero.p1}
-                </p>
-                <p>
-                  {t.aboutPage.hero.p2}
-                </p>
-                <div className="relative pt-12">
-                  <div className="absolute top-0 left-0 w-16 h-0.5 bg-[#c5a059]" />
-                  <p className="text-[#c5a059] font-serif text-2xl md:text-4xl tracking-tight italic leading-tight">
-                    "{t.aboutPage.hero.quote}"
-                  </p>
+const VALUES = [
+  { icon: TrendingUp, title: 'Commercial First', desc: 'Beautiful ideas that don't generate revenue are just decoration. Every recommendation we make must improve the bottom line.' },
+  { icon: CheckCircle2, title: 'Operational Rigour', desc: 'We don't just create concepts. We build systems that work when the team changes, when it's busy, and when you're not watching.' },
+  { icon: Zap, title: 'Creative Excellence', desc: 'We push for concepts that surprise, menus that are remembered and experiences that people talk about long after they end.' },
+  { icon: Globe, title: 'International Standards', desc: 'Shaped by exposure to global hospitality markets — applied locally, with a deep understanding of the Portuguese context.' },
+  { icon: Heart, title: 'Genuine Partnership', desc: 'We don't disappear after delivery. We're invested in the success of every project because our reputation depends on yours.' },
+];
+
+export const About = () => (
+  <div className="w-full">
+
+    {/* Hero */}
+    <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A08] via-[#0D0C0A] to-[#0A0A08]">
+        <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-[#C9A84C]/6 blur-[100px] rounded-full" />
+      </div>
+      <div className="container relative z-10 pt-32">
+        <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}>
+          <span className="eyebrow block mb-6">About Cheers</span>
+          <h1 className="display-xl text-white mb-6">
+            Hospitality isn&apos;t a service.<br />
+            <em className="text-[#C9A84C]">It&apos;s a craft.</em>
+          </h1>
+          <p className="body-lg text-white/50 max-w-2xl">
+            We exist to help hospitality businesses reach their full potential — through better operations, stronger teams, more memorable experiences and greater profitability.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* Story */}
+    <section className="section-pad bg-[#0D0C0A]">
+      <div className="container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <span className="eyebrow block mb-6">Our Story</span>
+            <h2 className="display-md text-white mb-8">Born from<br /><em className="text-[#C9A84C]">real hospitality.</em></h2>
+            <div className="space-y-5 text-white/55 body-md">
+              <p>Cheers didn't start in a boardroom. It started behind a bar. With years of hands-on experience running high-volume venues — Cheers O Bar, Cheers Pool Bar, Maria Xica Rooftop Bar — we learned what actually works, and what costs money, time and reputation.</p>
+              <p>We built our consultancy from that lived experience. Every framework we use, every menu we develop, every training programme we deliver comes from having done it ourselves — under pressure, with real guests, real stakes and real consequences.</p>
+              <p>Today we work with hotels, restaurants, event spaces and brands across Portugal. Our mission stays the same: make hospitality better — more profitable, more consistent, more human.</p>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-[#C9A84C]/10 blur-[60px] scale-150" />
+              <img src={LOGO_URL} alt="Cheers Guru" width={320} height={320} className="relative z-10 rounded-full object-cover ring-1 ring-[#C9A84C]/20 shadow-2xl" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* Values */}
+    <section className="section-pad">
+      <div className="container">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
+          <span className="eyebrow block mb-4">What We Stand For</span>
+          <h2 className="display-md text-white">Five principles.<br /><em className="text-[#C9A84C]">Every project.</em></h2>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {VALUES.map((v, i) => {
+            const Icon = v.icon;
+            return (
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="card-dark p-8">
+                <div className="w-10 h-10 rounded-md bg-[#C9A84C]/10 flex items-center justify-center mb-5">
+                  <Icon className="w-5 h-5 text-[#C9A84C]" />
                 </div>
-              </div>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#111111]/5 shadow-2xl group">
-                <img
-                  src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=1200"
-                  alt="Founder / Story"
-                  className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000"
-                  loading="lazy"
-                />
-              </div>
-              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#111111] text-[#c5a059] rounded-full flex items-center justify-center p-8 text-center shadow-2xl hidden md:flex border-4 border-[#FCFCFA]">
-                <span className="font-bold text-[9px] uppercase tracking-widest leading-tight font-sans">Standards de Elite Desde o Primeiro Dia</span>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values / Pillars */}
-      <section className="py-24 md:py-40 bg-[#FCFCFA]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.aboutPage.values.items.map((v, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="group p-12 rounded-3xl bg-white border border-[#111111]/5 hover:border-[#c5a059]/20 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.02)]"
-              >
-                <div className="text-[#c5a059] text-5xl font-serif mb-10 tracking-tight italic opacity-20">0{i + 1}</div>
-                <h3 className="text-xl font-bold text-[#111111] uppercase tracking-tight mb-6 group-hover:text-[#c5a059] transition-colors font-sans">{v.title}</h3>
-                <p className="text-[#111111]/50 text-sm leading-relaxed font-light">{v.text}</p>
+                <h4 className="text-white font-semibold mb-3">{v.title}</h4>
+                <p className="text-white/45 text-sm leading-relaxed">{v.desc}</p>
               </motion.div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
-    </div>
-  );
-};
+      </div>
+    </section>
+
+    {/* Own venues */}
+    <section className="section-pad bg-[#0D0C0A]">
+      <div className="container">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
+          <span className="eyebrow block mb-4">Our Own Venues</span>
+          <h2 className="display-md text-white">We practice<br /><em className="text-[#C9A84C]">what we preach.</em></h2>
+          <p className="text-white/45 body-md mt-6 max-w-xl">Beyond client work, we operate and have operated our own venues — giving us a perspective few consultancies have.</p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { name: 'Cheers O Bar', type: 'Cocktail & Sports Bar', location: 'Viseu' },
+            { name: 'Cheers Pool Bar', type: 'Bar & Pool Experience', location: 'Penedono' },
+            { name: 'Maria Xica Rooftop', type: 'Rooftop Cocktail Bar', location: 'Viseu' },
+          ].map((venue, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="card-dark p-8">
+              <span className="eyebrow block mb-4">{venue.location}</span>
+              <h4 className="font-display text-2xl italic text-white mb-2">{venue.name}</h4>
+              <p className="text-white/40 text-sm">{venue.type}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section className="section-pad">
+      <div className="container text-center">
+        <h2 className="display-md text-white mb-6">Ready to work<br /><em className="text-[#C9A84C]">together?</em></h2>
+        <p className="text-white/45 max-w-md mx-auto mb-10 body-md">Let's have an honest conversation about your business and how we can help it grow.</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">Let&apos;s Talk <ArrowRight className="w-3.5 h-3.5" /></a>
+          <Link to="/contact" className="btn-ghost">Book a Consultation</Link>
+        </div>
+      </div>
+    </section>
+
+  </div>
+);
