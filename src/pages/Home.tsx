@@ -220,7 +220,7 @@ export const Home = () => {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="inline-flex items-center gap-3 mb-8 px-4 py-2 bg-[#C9A84C]/8 border border-[#C9A84C]/20 rounded-sm"
+                className="inline-flex items-center gap-3 mb-10 px-4 py-2 bg-[#C9A84C]/8 border border-[#C9A84C]/20 rounded-sm"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
                 <span className="text-[0.62rem] font-bold uppercase tracking-[0.22em] text-[#C9A84C]">Hospitality Performance Partner</span>
@@ -228,20 +228,33 @@ export const Home = () => {
                 <span className="text-[0.58rem] text-white/35 uppercase tracking-widest">Est. Viseu, PT</span>
               </motion.div>
 
-              {/* Main headline */}
-              <h1 className="display-xl text-white mb-6 leading-[1.02]">
-                Tornamos a tua<br />
-                <em className="text-[#C9A84C] not-italic">hospitalidade</em><br />
-                em experiência.
+              {/* ── NOVA HEADLINE PRINCIPAL ── */}
+              <h1 className="display-xl text-white mb-0 leading-[0.96]">
+                We craft{' '}
+                <em className="text-[#C9A84C] not-italic">hospitality</em>
+                <br />
+                experiences that{' '}
+                <br className="hidden sm:block" />
+                <em className="text-[#C9A84C] not-italic">perform.</em>
               </h1>
 
-              {/* Sub */}
-              <p className="body-lg text-white/45 max-w-lg mb-10">
-                Consultoria, programas de bebidas, eventos e formação de equipas — desenhados para tornar os negócios de hospitality mais rentáveis, consistentes e memoráveis.
+              {/* ── Linha divisória fina ── */}
+              <div className="flex items-center gap-4 my-8">
+                <span className="flex-1 max-w-[56px] h-px bg-[#C9A84C]/40" />
+                <span className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-white/25">
+                  Hotels · Restaurants · Brands · Events
+                </span>
+              </div>
+
+              {/* ── Sub-headline clara e direta ── */}
+              <p className="body-lg text-white/50 max-w-[480px] mb-10 leading-relaxed">
+                From beverage strategy and bar consulting to premium event services and team training —
+                we help hospitality businesses deliver more memorable experiences
+                and stronger results.
               </p>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              {/* ── CTAs ── */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-12">
                 <a
                   href={WA_HREF}
                   target="_blank"
@@ -253,30 +266,34 @@ export const Home = () => {
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link to="/portfolio" className="btn-ghost">
-                  Discover Our Work
+                  See Our Work
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* Trust bar */}
+              {/* ── Trust bar ── */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
-                className="flex flex-wrap items-center gap-6 pt-8 border-t border-white/[0.06]"
+                className="flex flex-wrap items-center gap-5 pt-8 border-t border-white/[0.06]"
               >
-                <div className="flex items-center gap-2.5">
-                  <div className="flex -space-x-1.5">
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-1">
                     {[...Array(5)].map((_, n) => (
                       <Star key={n} className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C]" />
                     ))}
                   </div>
-                  <span className="text-white/35 text-xs">Avaliação 5 estrelas</span>
+                  <span className="text-white/35 text-[0.72rem]">5-star rated</span>
                 </div>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-xs"><strong className="text-white font-semibold">200+ eventos</strong> entregues</span>
+                <span className="text-white/35 text-[0.72rem]">
+                  <strong className="text-white/70 font-semibold">200+</strong> events delivered
+                </span>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-xs">Hotéis · Restaurantes · Marcas</span>
+                <span className="text-white/35 text-[0.72rem]">
+                  <strong className="text-white/70 font-semibold">+23%</strong> avg. F&amp;B margin increase
+                </span>
               </motion.div>
             </motion.div>
 
@@ -311,7 +328,7 @@ export const Home = () => {
                 {/* Available badge */}
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#111110] border border-white/10 shadow-2xl px-5 py-3 flex items-center gap-2.5 whitespace-nowrap z-20 rounded-sm">
                   <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0" />
-                  <span className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-white/65">Disponível para projetos</span>
+                  <span className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-white/65">Available for new projects</span>
                 </div>
               </div>
             </motion.div>
