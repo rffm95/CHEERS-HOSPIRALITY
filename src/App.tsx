@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
-import { Navbar } from './components/Navbar';
-import { Footer, WhatsAppButton } from './components/Layout';
+import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Events } from './pages/Events';
 import { Consulting } from './pages/Consulting';
@@ -24,22 +23,17 @@ export default function App() {
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <div className="min-h-screen bg-[#FCFCFA] flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/consulting" element={<Consulting />} />
-              <Route path="/digital" element={<Digital />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-          <WhatsAppButton />
-        </div>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/consulting" element={<Consulting />} />
+            <Route path="/digital" element={<Digital />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </LanguageProvider>
   );
