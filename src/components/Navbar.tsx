@@ -5,7 +5,9 @@ import { Menu, X, ArrowRight, Globe, Phone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
-const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de saber mais.');
+const PHONE = '+351927653087';
+const PHONE_DISPLAY = '+351 927 653 087';
+const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de saber mais.');
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -143,11 +145,12 @@ export const Navbar = () => {
 
             {/* Phone quick-link (desktop only) */}
             <a
-              href="tel:+351938543783"
+              href={`tel:${PHONE}`}
               className="hidden xl:flex items-center gap-1.5 px-3 py-2 text-white/40 hover:text-[#C9A84C] transition-colors text-[0.62rem] font-bold uppercase tracking-widest"
               aria-label="Ligar agora"
             >
               <Phone className="w-3.5 h-3.5" />
+              <span>{PHONE_DISPLAY}</span>
             </a>
 
             {/* Primary CTA */}
@@ -227,11 +230,11 @@ export const Navbar = () => {
               </div>
 
               {/* Contact info */}
-              <div className="flex items-center gap-4 pt-2">
-                <a href="tel:+351938543783" className="text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
-                  +351 938 543 783
+              <div className="flex flex-col gap-2 pt-2">
+                <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white/60 hover:text-[#C9A84C] transition-colors text-sm font-medium">
+                  <Phone className="w-4 h-4" />
+                  {PHONE_DISPLAY}
                 </a>
-                <span className="text-white/20">·</span>
                 <a href="mailto:cheersexperiences@gmail.com" className="text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
                   cheersexperiences@gmail.com
                 </a>

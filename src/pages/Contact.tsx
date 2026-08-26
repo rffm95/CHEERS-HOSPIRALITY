@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, Phone, Mail, Instagram, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 
-const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site cheers.guru.');
+const PHONE = '+351927653087';
+const PHONE_DISPLAY = '+351 927 653 087';
+const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site cheers.guru.');
 
 const SERVICE_OPTIONS = [
   'Bar Consulting',
@@ -138,7 +140,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="text-white text-sm font-semibold mb-0.5">WhatsApp</p>
-                      <p className="text-white/40 text-xs">+351 938 543 783</p>
+                      <p className="text-white/40 text-xs">{PHONE_DISPLAY}</p>
                       <p className="text-[#C9A84C] text-[0.6rem] uppercase tracking-wider font-bold mt-1">Fastest response →</p>
                     </div>
                   </a>

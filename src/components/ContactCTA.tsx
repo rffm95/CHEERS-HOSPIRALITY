@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, MessageCircle, Mail, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
+const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
 const EMAIL = 'hello@cheersexperiences.com';
 
 interface ContactCTAProps {
