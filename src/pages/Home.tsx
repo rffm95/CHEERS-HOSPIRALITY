@@ -9,11 +9,10 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
+const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
 const EMAIL = 'hello@cheersexperiences.com';
 const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
 
-/* ── Animated counter ──────────────────────────────────────────── */
 function useCounter(target: number, duration = 1800, trigger: boolean) {
   const [v, setV] = useState(0);
   useEffect(() => {
@@ -41,17 +40,16 @@ const Stat = ({ value, suffix, label, delay }: { value: number; suffix: string; 
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.6 }}
       viewport={{ once: true }}
-      className="text-center group"
+      className="text-center"
     >
-      <div className="font-display text-5xl md:text-6xl font-semibold italic text-[#C9A84C] tabular-nums">
+      <div className="font-display text-5xl md:text-7xl font-semibold italic text-[#C9A84C] tabular-nums">
         {c}{suffix}
       </div>
-      <div className="eyebrow mt-2" style={{ color: 'rgba(237,235,228,0.35)' }}>{label}</div>
+      <div className="mt-3 text-[0.6rem] font-bold uppercase tracking-[0.25em] text-white/35">{label}</div>
     </motion.div>
   );
 };
 
-/* ── Testimonials ──────────────────────────────────────────────── */
 const TESTIMONIALS = [
   {
     name: 'Sofia Rodrigues',
@@ -79,7 +77,6 @@ const TESTIMONIALS = [
   },
 ];
 
-/* ── Services ──────────────────────────────────────────────────── */
 const SERVICES = [
   {
     num: '01',
@@ -151,7 +148,6 @@ const SERVICES = [
   },
 ];
 
-/* ── Portfolio grid items ───────────────────────────────────────── */
 const GRID_ITEMS = [
   { id: '1', img: 'https://i.imgur.com/aUNb0uK.png', tag: 'COCKTAILS', label: 'Beverage Program', size: 'tall' },
   { id: '2', img: 'https://i.imgur.com/CnaTvqH.png', tag: 'BRAND', label: 'Brand Identity', size: 'normal' },
@@ -164,7 +160,6 @@ const GRID_ITEMS = [
   { id: '9', img: 'https://i.imgur.com/sC49CxI.png', tag: 'EVENTS', label: 'Event Experience', size: 'normal' },
 ];
 
-/* ── Who we work with ──────────────────────────────────────────── */
 const WHO = [
   { Icon: Hotel, title: 'Hotels', desc: 'Boutique a luxo. Estratégia F&B, conceitos de bar e formação de equipas.' },
   { Icon: UtensilsCrossed, title: 'Restaurants', desc: 'Programas de bebidas que complementam a comida e aumentam a receita.' },
@@ -174,15 +169,13 @@ const WHO = [
   { Icon: Globe, title: 'Private', desc: 'Experiências privadas exclusivas. Tasting sessions, masterclasses, bespoke.' },
 ];
 
-/* ── Why Cheers ────────────────────────────────────────────────── */
 const WHY = [
   { icon: TrendingUp, title: 'Pensamento Comercial', desc: 'Cada ideia tem de funcionar comercialmente. Conceitos bonitos que não geram receita são apenas decoração.' },
-  { icon: Users, title: 'Experiência Real', desc: 'Não é teoria. Gerimos bares, treinamos equipas e entregámos centenas de eventos. Sabemos o que funciona.' },
+  { icon: Users, title: 'Experiência Real', desc: 'Não é teoria. Gerimos bares, trainámos equipas e entregámos centenas de eventos. Sabemos o que funciona.' },
   { icon: Zap, title: 'End-to-End', desc: 'Do conceito à execução. Podemos ser o teu parceiro estratégico, a tua equipa operacional — ou ambos.' },
   { icon: CheckCircle2, title: 'Standards Internacionais', desc: 'Trazemos padrões globais de hospitality a cada projeto — independentemente do tamanho, localização ou budget.' },
 ];
 
-/* ── Process ───────────────────────────────────────────────────── */
 const PROCESS = [
   { n: '01', title: 'Discover', desc: 'Aprendemos o teu negócio, objetivos e desafios — em profundidade, não superficialmente.' },
   { n: '02', title: 'Design', desc: 'Construímos a estratégia, conceito ou solução adaptada ao teu contexto específico.' },
@@ -201,160 +194,174 @@ export const Home = () => {
   return (
     <div className="w-full">
 
-      {/* ── FLOATING WHATSAPP ────────────────────────────────────── */}
+      {/* FLOATING WHATSAPP */}
       <a
         href={WA_HREF}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar via WhatsApp"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] text-white pl-4 pr-5 py-3.5 rounded-full shadow-2xl hover:scale-105 hover:shadow-[0_8px_40px_rgba(37,211,102,0.5)] transition-all duration-300 group"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] text-white pl-4 pr-5 py-3.5 rounded-full shadow-2xl hover:scale-105 hover:shadow-[0_8px_40px_rgba(37,211,102,0.5)] transition-all duration-300"
       >
         <MessageCircle className="w-5 h-5 shrink-0" />
         <span className="text-[0.65rem] font-bold uppercase tracking-widest hidden sm:block">WhatsApp</span>
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
       </a>
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      {/* ══ HERO — BOLDER, BIGGER, MORE DRAMA ══ */}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#060504]">
+        {/* BG layers */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A08] via-[#0D0C0A] to-[#060504]" />
-          <div className="absolute top-1/3 right-1/4 w-[700px] h-[700px] bg-[#C9A84C]/5 blur-[140px] rounded-full pointer-events-none" />
-          <div className="absolute bottom-1/4 left-1/5 w-[400px] h-[400px] bg-[#C9A84C]/3 blur-[90px] rounded-full pointer-events-none" />
-          <div
-            className="absolute inset-0 opacity-[0.022]"
-            style={{
-              backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
-              backgroundSize: '80px 80px'
-            }}
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(201,168,76,0.08)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_10%_80%,rgba(201,168,76,0.04)_0%,transparent_70%)]" />
+          {/* Grid */}
+          <div className="absolute inset-0 opacity-[0.018]" style={{ backgroundImage: 'linear-gradient(#C9A84C 1px,transparent 1px),linear-gradient(90deg,#C9A84C 1px,transparent 1px)', backgroundSize: '80px 80px' }} />
+          {/* Noise texture overlay for depth */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")', backgroundRepeat: 'repeat', backgroundSize: '128px' }} />
         </div>
 
-        <div className="container-wide relative z-10 pt-36 pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="container-wide relative z-10 pt-32 pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[75vh]">
+
+            {/* LEFT COLUMN */}
             <motion.div
-              initial={{ opacity: 0, y: 36 }}
+              initial={{ opacity: 0, y: 48 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-7"
+              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-7 flex flex-col"
             >
+              {/* Badge */}
               <motion.div
-                initial={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="inline-flex items-center gap-3 mb-10 px-4 py-2 bg-[#C9A84C]/8 border border-[#C9A84C]/20 rounded-sm"
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="inline-flex items-center gap-3 mb-8 self-start px-4 py-2 border border-[#C9A84C]/25 bg-[#C9A84C]/6 rounded-sm backdrop-blur-sm"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
                 <span className="text-[0.62rem] font-bold uppercase tracking-[0.22em] text-[#C9A84C]">Hospitality Performance Partner</span>
-                <span className="text-white/20">·</span>
-                <span className="text-[0.58rem] text-white/35 uppercase tracking-widest">Est. Viseu, PT</span>
+                <span className="text-white/15 hidden sm:inline">·</span>
+                <span className="text-[0.58rem] text-white/30 uppercase tracking-widest hidden sm:inline">Est. Viseu, PT</span>
               </motion.div>
 
-              <h1 className="display-xl text-white mb-0 leading-[0.96]">
+              {/* HERO HEADLINE — HUGE */}
+              <h1 className="hero-headline text-white mb-6">
                 We craft{' '}
-                <em className="text-[#C9A84C] not-italic">hospitality</em>
-                <br />
-                experiences that{' '}
-                <br className="hidden sm:block" />
-                <em className="text-[#C9A84C] not-italic">perform.</em>
+                <span className="text-[#C9A84C] italic">hospitality</span>
+                {' '}experiences<br className="hidden sm:block" />
+                {' '}that{' '}
+                <span className="text-[#C9A84C] italic">perform.</span>
               </h1>
 
-              <div className="flex items-center gap-4 my-8">
-                <span className="flex-1 max-w-[56px] h-px bg-[#C9A84C]/40" />
-                <span className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-white/25">
-                  Hotels · Restaurants · Brands · Events
-                </span>
+              {/* Category tags */}
+              <div className="flex items-center gap-3 mb-8">
+                <span className="h-px w-12 bg-[#C9A84C]/40" />
+                {['Hotels', 'Restaurants', 'Brands', 'Events'].map(t => (
+                  <span key={t} className="text-[0.52rem] font-bold uppercase tracking-[0.25em] text-white/25">{t}</span>
+                ))}
               </div>
 
-              <p className="body-lg text-white/50 max-w-[480px] mb-10 leading-relaxed">
+              {/* Body copy — more readable */}
+              <p className="text-white/65 text-lg leading-[1.8] max-w-[520px] mb-10">
                 From beverage strategy and bar consulting to premium event services and team training —
                 we help hospitality businesses deliver more memorable experiences and stronger results.
               </p>
 
-              {/* ── HERO CTAs ── */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <a
                   href={WA_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary shadow-lg shadow-[#C9A84C]/20"
+                  className="hero-cta-primary"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" />
-                  Let&apos;s Talk
+                  <MessageCircle className="w-4 h-4" />
+                  Let’s Talk
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link to="/contact" className="btn-ghost">
+                <Link to="/contact" className="hero-cta-ghost">
                   Start a Project
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* Micro-urgency */}
+              {/* Availability */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.1 }}
-                className="flex items-center gap-2 text-[0.62rem] text-white/25 mb-10"
+                transition={{ delay: 1.2 }}
+                className="flex items-center gap-2 text-[0.62rem] text-white/30 mb-10"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse shrink-0" />
                 Disponíveis para novos projetos · Resposta em &lt; 2 horas
               </motion.p>
 
+              {/* Social proof bar */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.9 }}
-                className="flex flex-wrap items-center gap-5 pt-8 border-t border-white/[0.06]"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="flex flex-wrap items-center gap-5 pt-7 border-t border-white/[0.07]"
               >
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-1">
-                    {[...Array(5)].map((_, n) => (
-                      <Star key={n} className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C]" />
-                    ))}
+                <div className="flex items-center gap-2.5">
+                  <div className="flex">
+                    {[...Array(5)].map((_, n) => <Star key={n} className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C]" />)}
                   </div>
-                  <span className="text-white/35 text-[0.72rem]">5-star rated</span>
+                  <span className="text-white/45 text-xs">5-star rated</span>
                 </div>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-[0.72rem]"><strong className="text-white/70 font-semibold">200+</strong> events delivered</span>
+                <span className="text-white/45 text-xs"><strong className="text-white/80 font-semibold">200+</strong> events delivered</span>
                 <span className="w-px h-4 bg-white/10" />
-                <span className="text-white/35 text-[0.72rem]"><strong className="text-white/70 font-semibold">+23%</strong> avg. F&amp;B margin increase</span>
+                <span className="text-white/45 text-xs"><strong className="text-white/80 font-semibold">+23%</strong> avg. F&amp;B margin</span>
               </motion.div>
             </motion.div>
 
+            {/* RIGHT COLUMN — logo orb, elevated */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.88 }}
+              initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
               className="hidden lg:flex lg:col-span-5 items-center justify-center"
             >
-              <div className="relative">
-                <div className="absolute inset-[-40px] rounded-full border border-dashed border-[#C9A84C]/12" style={{ animation: 'spin-slow 50s linear infinite' }} />
-                <div className="absolute inset-[-20px] rounded-full border border-[#C9A84C]/8" style={{ animation: 'spin-slow 30s linear infinite reverse' }} />
-                <div className="absolute inset-0 rounded-full bg-[#C9A84C]/15 blur-[70px] scale-150" />
-                <img src={LOGO_URL} alt="Cheers Experiences" width={300} height={300} className="relative z-10 rounded-full object-cover shadow-2xl ring-1 ring-[#C9A84C]/25 hover:ring-[#C9A84C]/60 transition-all duration-700" />
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#111110] border border-white/10 shadow-2xl px-5 py-3 flex items-center gap-2.5 whitespace-nowrap z-20 rounded-sm">
-                  <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0" />
-                  <span className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-white/65">Available for new projects</span>
+              <div className="relative flex items-center justify-center">
+                {/* Rings */}
+                <div className="absolute w-[380px] h-[380px] rounded-full border border-dashed border-[#C9A84C]/15" style={{ animation: 'spin-slow 60s linear infinite' }} />
+                <div className="absolute w-[320px] h-[320px] rounded-full border border-[#C9A84C]/8" style={{ animation: 'spin-slow 40s linear infinite reverse' }} />
+                {/* Gold halo */}
+                <div className="absolute w-[280px] h-[280px] rounded-full bg-[#C9A84C]/12 blur-[80px]" />
+                {/* Logo */}
+                <img
+                  src={LOGO_URL}
+                  alt="Cheers Experiences"
+                  width={280}
+                  height={280}
+                  className="relative z-10 rounded-full object-cover shadow-[0_0_80px_rgba(201,168,76,0.2)] ring-2 ring-[#C9A84C]/20 hover:ring-[#C9A84C]/50 transition-all duration-700"
+                />
+                {/* Available pill */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-[#0F0F0D] border border-white/10 shadow-xl px-5 py-2.5 rounded-full whitespace-nowrap">
+                  <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+                  <span className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-white/60">Available for new projects</span>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
 
+        {/* Scroll hint */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
+          transition={{ delay: 2.0 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20"
         >
-          <span className="text-[0.52rem] uppercase tracking-[0.35em]">Scroll</span>
+          <span className="text-[0.5rem] uppercase tracking-[0.4em]">Scroll</span>
           <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
         </motion.div>
       </section>
 
-      {/* ── STATS BAR ────────────────────────────────────────────── */}
-      <section className="bg-[#0D0C0A] border-y border-white/[0.05] py-16">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* ══ STATS BAR — gold-on-dark, high contrast ══ */}
+      <section className="relative bg-[#0D0C0A] border-y border-white/[0.06] py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_50%_0%,rgba(201,168,76,0.04)_0%,transparent_70%)]" />
+        <div className="container relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-4">
             <Stat value={200} suffix="+" label="Eventos Entregues" delay={0} />
             <Stat value={23} suffix="%" label="Aumento Médio de Margem" delay={0.1} />
             <Stat value={8} suffix="+" label="Anos de Experiência" delay={0.2} />
@@ -363,23 +370,23 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── WHAT WE DO ───────────────────────────────────────────── */}
-      <section className="section-pad" id="services">
+      {/* ══ SERVICES ══ */}
+      <section className="section-pad bg-[#080807]" id="services">
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-            <span className="eyebrow block mb-4">O Que Fazemos</span>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <h2 className="display-lg text-white">
-                Soluções personalizadas para<br />
-                <em className="text-[#C9A84C]">cada negócio de hospitality.</em>
+            <span className="eyebrow block mb-5">O Que Fazemos</span>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+              <h2 className="display-lg text-white max-w-xl">
+                Soluções personalizadas<br />
+                <em className="text-[#C9A84C]">para cada negócio.</em>
               </h2>
-              <p className="text-white/40 max-w-xs body-md">
+              <p className="text-white/50 max-w-xs text-base leading-relaxed">
                 Quatro áreas de especialização. Um objetivo: melhoria mensurável na tua operação, experiência e receita.
               </p>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.04] border border-white/[0.04]">
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-white/[0.06]">
             {SERVICES.map((s, i) => {
               const Icon = s.icon;
               return (
@@ -389,35 +396,35 @@ export const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#0A0A08] p-10 group hover:bg-[#111110] transition-colors duration-500 flex flex-col"
+                  className="service-card group p-10 flex flex-col border-b border-r-0 md:odd:border-r border-white/[0.06] bg-[#080807] hover:bg-[#0F0E0C] transition-colors duration-500"
                 >
-                  <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start justify-between mb-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
-                        <Icon className="w-4.5 h-4.5 text-[#C9A84C]" />
+                      <div className="w-10 h-10 rounded-md bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/22 transition-colors">
+                        <Icon className="w-5 h-5 text-[#C9A84C]" />
                       </div>
                       <span className="eyebrow">{s.tag}</span>
                     </div>
-                    <span className="font-display text-5xl font-light italic text-white/[0.05] group-hover:text-[#C9A84C]/15 transition-colors">{s.num}</span>
+                    <span className="font-display text-6xl font-light italic text-white/[0.04] group-hover:text-[#C9A84C]/12 transition-colors select-none">{s.num}</span>
                   </div>
-                  <h3 className="font-display text-2xl md:text-3xl font-semibold italic text-white mb-4 leading-tight">{s.headline}</h3>
-                  <p className="text-white/55 text-sm leading-relaxed mb-4 italic border-l-2 border-[#C9A84C]/30 pl-4">{s.intro}</p>
-                  <p className="text-white/38 body-md mb-8">{s.description}</p>
+                  <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold italic text-white mb-4 leading-snug">{s.headline}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed mb-4 italic border-l-2 border-[#C9A84C]/35 pl-4">{s.intro}</p>
+                  <p className="text-white/40 text-sm leading-relaxed mb-8">{s.description}</p>
                   <ul className="space-y-2.5 mb-6">
                     {s.benefits.map(b => (
-                      <li key={b} className="flex items-center gap-2.5 text-xs text-white/55">
+                      <li key={b} className="flex items-center gap-2.5 text-sm text-white/60">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A84C] shrink-0" />
                         {b}
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center gap-2 mb-8 px-3 py-2 bg-[#C9A84C]/5 border border-[#C9A84C]/12 rounded-sm w-fit">
-                    <TrendingUp className="w-3 h-3 text-[#C9A84C] shrink-0" />
-                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]/80">{s.outcome}</span>
+                  <div className="inline-flex items-center gap-2 mb-8 px-3.5 py-2 bg-[#C9A84C]/8 border border-[#C9A84C]/15 rounded-sm">
+                    <TrendingUp className="w-3.5 h-3.5 text-[#C9A84C] shrink-0" />
+                    <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#C9A84C]/90">{s.outcome}</span>
                   </div>
                   <div className="mt-auto">
-                    <Link to={s.to} className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3">
-                      {s.cta} <ArrowRight className="w-3 h-3" />
+                    <Link to={s.to} className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#C9A84C] hover:text-white transition-colors group-hover:gap-3">
+                      {s.cta} <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </motion.div>
@@ -425,32 +432,24 @@ export const Home = () => {
             })}
           </div>
 
-          {/* ── POST-SERVICES CTA BAR ── */}
+          {/* CTA strip below services */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-px flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-7 bg-[#C9A84C]/[0.04] border border-[#C9A84C]/15"
+            className="mt-0 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-8 bg-[#C9A84C]/[0.05] border border-[#C9A84C]/15 border-t-0"
           >
             <div>
-              <p className="text-white font-semibold text-sm mb-1">Não tens a certeza de qual serviço precisas?</p>
-              <p className="text-white/35 text-xs">Conta-nos o teu desafio — encontramos a solução em conjunto. Sem compromisso.</p>
+              <p className="text-white font-semibold mb-1">Não tens a certeza de qual serviço precisas?</p>
+              <p className="text-white/40 text-sm">Conta-nos o teu desafio — encontramos a solução em conjunto. Sem compromisso.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <a
-                href={WA_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary shadow-lg shadow-[#C9A84C]/15"
-              >
+              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <MessageCircle className="w-3.5 h-3.5" />
                 Start a Project
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="btn-ghost"
-              >
+              <a href={`mailto:${EMAIL}`} className="btn-ghost">
                 <Mail className="w-3.5 h-3.5" />
                 Enviar Email
               </a>
@@ -459,7 +458,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── EXPERIENCES WE'VE CREATED ────────────────────────────── */}
+      {/* ══ PORTFOLIO ══ */}
       <section className="section-pad bg-[#0D0C0A]" id="experiences">
         <div className="container">
           <motion.div
@@ -469,34 +468,33 @@ export const Home = () => {
             className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
           >
             <div>
-              <span className="eyebrow block mb-4">Portfolio</span>
+              <span className="eyebrow block mb-5">Portfolio</span>
               <h2 className="display-lg text-white">
                 Experiences<br />
                 <em className="text-[#C9A84C]">we&apos;ve created.</em>
               </h2>
             </div>
             <div className="flex flex-col items-start md:items-end gap-3">
-              <p className="text-white/38 text-sm max-w-[280px] text-left md:text-right leading-relaxed">
-                A amostra do que construímos — de cocktails a experiências completas de marca e hospitality.
+              <p className="text-white/45 text-base max-w-[280px] text-left md:text-right leading-relaxed">
+                Uma amostra do que construímos — de cocktails a experiências completas de marca.
               </p>
-              <Link to="/portfolio" className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors">
-                Ver portfolio completo <ArrowRight className="w-3 h-3" />
+              <Link to="/portfolio" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#C9A84C] hover:text-white transition-colors">
+                Ver portfolio completo <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </motion.div>
 
-          {/* Bento grid Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}
-              className="md:col-span-8 relative overflow-hidden group cursor-pointer" style={{ minHeight: '420px' }}
+              className="md:col-span-8 relative overflow-hidden group cursor-pointer rounded-sm" style={{ minHeight: '440px' }}
             >
               <img src={GRID_ITEMS[3].img} alt={GRID_ITEMS[3].label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                 <div>
-                  <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{GRID_ITEMS[3].tag}</span>
-                  <p className="text-white font-semibold text-lg">{GRID_ITEMS[3].label}</p>
+                  <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/15 border border-[#C9A84C]/30">{GRID_ITEMS[3].tag}</span>
+                  <p className="text-white font-semibold text-xl">{GRID_ITEMS[3].label}</p>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ExternalLink className="w-4 h-4 text-white" />
@@ -505,93 +503,89 @@ export const Home = () => {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} viewport={{ once: true }}
-              className="md:col-span-4 relative overflow-hidden group cursor-pointer" style={{ minHeight: '420px' }}
+              className="md:col-span-4 relative overflow-hidden group cursor-pointer rounded-sm" style={{ minHeight: '440px' }}
             >
               <img src={GRID_ITEMS[0].img} alt={GRID_ITEMS[0].label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/90 via-[#0A0A08]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{GRID_ITEMS[0].tag}</span>
-                <p className="text-white font-semibold">{GRID_ITEMS[0].label}</p>
+                <span className="inline-block text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] mb-2 px-2 py-1 bg-[#C9A84C]/15 border border-[#C9A84C]/30">{GRID_ITEMS[0].tag}</span>
+                <p className="text-white font-semibold text-lg">{GRID_ITEMS[0].label}</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Row 2 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
             {[GRID_ITEMS[1], GRID_ITEMS[2], GRID_ITEMS[4], GRID_ITEMS[5]].map((item, i) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.08 }} viewport={{ once: true }}
-                className="relative overflow-hidden group cursor-pointer" style={{ minHeight: '220px' }}
+                className="relative overflow-hidden group cursor-pointer rounded-sm" style={{ minHeight: '230px' }}
               >
                 <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{item.tag}</span>
-                  <p className="text-white text-xs font-semibold">{item.label}</p>
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/15 border border-[#C9A84C]/25">{item.tag}</span>
+                  <p className="text-white text-sm font-semibold">{item.label}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Row 3 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {[GRID_ITEMS[6], GRID_ITEMS[7], GRID_ITEMS[8]].map((item, i) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.1 }} viewport={{ once: true }}
-                className="relative overflow-hidden group cursor-pointer" style={{ minHeight: '260px' }}
+                className="relative overflow-hidden group cursor-pointer rounded-sm" style={{ minHeight: '270px' }}
               >
                 <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A08]/85 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/10 border border-[#C9A84C]/20">{item.tag}</span>
-                  <p className="text-white text-xs font-semibold">{item.label}</p>
+                  <span className="inline-block text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[#C9A84C] mb-1.5 px-1.5 py-0.5 bg-[#C9A84C]/15 border border-[#C9A84C]/25">{item.tag}</span>
+                  <p className="text-white text-sm font-semibold">{item.label}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* ── POST-PORTFOLIO CTA STRIP ── */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-7 border border-white/[0.06] bg-[#0A0A08]"
+            className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-8 border border-white/[0.07] bg-[#0A0A08] rounded-sm"
           >
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
                 {[GRID_ITEMS[0], GRID_ITEMS[1], GRID_ITEMS[2]].map(item => (
-                  <div key={item.id} className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#0A0A08]">
+                  <div key={item.id} className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#0A0A08]">
                     <img src={item.img} alt="" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
               <div>
-                <p className="text-white/70 text-sm font-semibold">Gostaste do que viste?</p>
-                <p className="text-white/35 text-xs">O teu projeto pode ser o próximo.</p>
+                <p className="text-white/80 font-semibold">Gostaste do que viste?</p>
+                <p className="text-white/40 text-sm">O teu projeto pode ser o próximo.</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary shadow-lg shadow-[#C9A84C]/15">
+              <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <MessageCircle className="w-3.5 h-3.5" />
                 Let&apos;s Talk
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <Link to="/portfolio" className="btn-ghost">
-                Ver Portfolio
-                <ChevronRight className="w-4 h-4" />
+                Ver Portfolio <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── WHO WE WORK WITH ─────────────────────────────────────── */}
-      <section className="section-pad">
+      {/* ══ WHO WE WORK WITH ══ */}
+      <section className="section-pad bg-[#080807]">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
-            <span className="eyebrow block mb-4">Com Quem Trabalhamos</span>
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+            <span className="eyebrow block mb-5">Com Quem Trabalhamos</span>
             <h2 className="display-md text-white">
               Parceiros de confiança<br />
               <em className="text-[#C9A84C]">em todo o setor hospitality.</em>
@@ -607,13 +601,13 @@ export const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.07 }}
                   viewport={{ once: true }}
-                  className="card-dark p-6 text-center hover:border-[#C9A84C]/30 group transition-all duration-300"
+                  className="card-dark p-7 text-center group hover:border-[#C9A84C]/35 transition-all duration-300"
                 >
-                  <div className="w-10 h-10 mx-auto mb-3 rounded-sm bg-[#C9A84C]/8 flex items-center justify-center group-hover:bg-[#C9A84C]/18 transition-colors">
-                    <Icon className="w-5 h-5 text-[#C9A84C]" />
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-md bg-[#C9A84C]/8 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
+                    <Icon className="w-6 h-6 text-[#C9A84C]" />
                   </div>
-                  <p className="text-white font-semibold text-sm mb-1">{w.title}</p>
-                  <p className="text-white/38 text-xs leading-relaxed">{w.desc}</p>
+                  <p className="text-white font-semibold mb-2">{w.title}</p>
+                  <p className="text-white/45 text-xs leading-relaxed">{w.desc}</p>
                 </motion.div>
               );
             })}
@@ -621,12 +615,12 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+      {/* ══ TESTIMONIALS ══ */}
       <section className="section-pad bg-[#0D0C0A]">
         <div className="container">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-14">
             <div>
-              <span className="eyebrow block mb-4">O Que Dizem os Nossos Clientes</span>
+              <span className="eyebrow block mb-5">O Que Dizem os Nossos Clientes</span>
               <h2 className="display-md text-white">
                 Resultados reais.<br />
                 <em className="text-[#C9A84C]">Parceiros satisfeitos.</em>
@@ -637,8 +631,7 @@ export const Home = () => {
                 <button
                   key={i}
                   onClick={() => setActiveTestimonial(i)}
-                  className={`h-1 rounded-full transition-all duration-500 ${i === activeTestimonial ? 'w-10 bg-[#C9A84C]' : 'w-4 bg-white/20 hover:bg-white/40'}`}
-                  aria-label={`Testemunho ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-500 ${i === activeTestimonial ? 'w-12 bg-[#C9A84C]' : 'w-5 bg-white/15 hover:bg-white/35'}`}
                 />
               ))}
             </div>
@@ -652,35 +645,35 @@ export const Home = () => {
                 className="w-full top-0 left-0 grid grid-cols-1 md:grid-cols-3 gap-8 card-dark p-10 md:p-14"
               >
                 <div className="md:col-span-2">
-                  <Quote className="w-10 h-10 text-[#C9A84C]/20 mb-6" />
+                  <Quote className="w-10 h-10 text-[#C9A84C]/25 mb-6" />
                   <p className="font-display text-xl md:text-2xl italic text-white leading-relaxed mb-8">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#C9A84C]/15 flex items-center justify-center font-bold text-[#C9A84C] text-sm shrink-0">{t.name[0]}</div>
+                    <div className="w-11 h-11 rounded-full bg-[#C9A84C]/15 flex items-center justify-center font-bold text-[#C9A84C] shrink-0">{t.name[0]}</div>
                     <div>
-                      <p className="text-white font-semibold text-sm">{t.name}</p>
-                      <p className="text-white/38 text-xs">{t.role} · {t.company}</p>
+                      <p className="text-white font-semibold">{t.name}</p>
+                      <p className="text-white/40 text-sm">{t.role} · {t.company}</p>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between md:border-l border-white/[0.06] md:pl-10 gap-6">
+                <div className="flex flex-col justify-between md:border-l border-white/[0.07] md:pl-10 gap-6">
                   <div>
-                    <div className="flex gap-1 mb-4">
+                    <div className="flex gap-1 mb-5">
                       {Array.from({ length: t.rating }).map((_, j) => (
                         <Star key={j} className="w-4 h-4 text-[#C9A84C] fill-[#C9A84C]" />
                       ))}
                     </div>
-                    <div className="inline-flex items-center gap-2 px-3 py-2 bg-[#C9A84C]/8 border border-[#C9A84C]/20 rounded-sm">
-                      <TrendingUp className="w-3 h-3 text-[#C9A84C]" />
-                      <span className="text-[0.6rem] font-bold uppercase tracking-widest text-[#C9A84C]">{t.result}</span>
+                    <div className="inline-flex items-center gap-2 px-3.5 py-2 bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-sm">
+                      <TrendingUp className="w-3.5 h-3.5 text-[#C9A84C]" />
+                      <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#C9A84C]">{t.result}</span>
                     </div>
                   </div>
                   <a
                     href={WA_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#C9A84C] hover:text-white transition-colors"
                   >
-                    Obter resultados semelhantes <ArrowRight className="w-3 h-3" />
+                    Obter resultados semelhantes <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </motion.div>
@@ -689,17 +682,17 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── WHY CHEERS EXPERIENCES ───────────────────────────────── */}
-      <section className="section-pad">
+      {/* ══ WHY CHEERS ══ */}
+      <section className="section-pad bg-[#080807]">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
-            <span className="eyebrow block mb-4">Porquê a Cheers Experiences</span>
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+            <span className="eyebrow block mb-5">Porquê a Cheers Experiences</span>
             <h2 className="display-md text-white">
               Não somos uma agência.<br />
               <em className="text-[#C9A84C]">Somos o teu parceiro.</em>
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {WHY.map((w, i) => {
               const Icon = w.icon;
               return (
@@ -709,13 +702,13 @@ export const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="card-dark p-8 group hover:border-[#C9A84C]/25 transition-all duration-300"
+                  className="card-dark p-8 group hover:border-[#C9A84C]/30"
                 >
-                  <div className="w-10 h-10 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center mb-6 group-hover:bg-[#C9A84C]/20 transition-colors">
+                  <div className="w-12 h-12 rounded-md bg-[#C9A84C]/10 flex items-center justify-center mb-7 group-hover:bg-[#C9A84C]/22 transition-colors">
                     <Icon className="w-5 h-5 text-[#C9A84C]" />
                   </div>
-                  <h4 className="text-white font-semibold text-sm mb-3">{w.title}</h4>
-                  <p className="text-white/42 text-sm leading-relaxed">{w.desc}</p>
+                  <h4 className="text-white font-semibold mb-3">{w.title}</h4>
+                  <p className="text-white/45 text-sm leading-relaxed">{w.desc}</p>
                 </motion.div>
               );
             })}
@@ -723,17 +716,17 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* ── HOW WE WORK ──────────────────────────────────────────── */}
+      {/* ══ PROCESS ══ */}
       <section className="section-pad bg-[#0D0C0A]">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
-            <span className="eyebrow block mb-4">Como Trabalhamos</span>
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+            <span className="eyebrow block mb-5">Como Trabalhamos</span>
             <h2 className="display-md text-white">
               Processo simples.<br />
               <em className="text-[#C9A84C]">Resultados reais.</em>
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.04]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.05] border border-white/[0.05]">
             {PROCESS.map((p, i) => (
               <motion.div
                 key={i}
@@ -743,71 +736,54 @@ export const Home = () => {
                 viewport={{ once: true }}
                 className="bg-[#0D0C0A] p-10 group hover:bg-[#111110] transition-colors"
               >
-                <span className="font-display text-7xl font-light italic text-white/[0.04] group-hover:text-[#C9A84C]/15 transition-colors block mb-6">{p.n}</span>
-                <h4 className="font-display text-2xl italic text-white mb-3">{p.title}</h4>
-                <p className="text-white/42 text-sm leading-relaxed">{p.desc}</p>
+                <span className="font-display text-8xl font-light italic text-white/[0.04] group-hover:text-[#C9A84C]/12 transition-colors block mb-5 leading-none">{p.n}</span>
+                <h4 className="font-display text-2xl italic text-white mb-4">{p.title}</h4>
+                <p className="text-white/45 text-sm leading-relaxed">{p.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          FINAL CTA — "THE STATEMENT" — elegante, impactante, único
-          ══════════════════════════════════════════════════════════ */}
+      {/* ══ FINAL CTA — STATEMENT ══ */}
       <section className="relative overflow-hidden" id="contact">
-
-        {/* ── Top divider marquee ── */}
+        {/* Gold marquee strip */}
         <div className="bg-[#C9A84C] py-3 overflow-hidden">
           <div className="flex gap-0 whitespace-nowrap" style={{ animation: 'marquee 18s linear infinite' }}>
             {[...Array(8)].map((_, i) => (
-              <span key={i} className="text-[0.55rem] font-bold uppercase tracking-[0.3em] text-[#0A0A08]/60 px-8">
-                Let&apos;s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp; Contact Us &nbsp;·&nbsp; Let&apos;s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp;
+              <span key={i} className="text-[0.52rem] font-bold uppercase tracking-[0.32em] text-[#0A0A08]/55 px-8">
+                Let’s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp; Contact Us &nbsp;·&nbsp; Let’s Talk &nbsp;·&nbsp; Start a Project &nbsp;·&nbsp;
               </span>
             ))}
           </div>
         </div>
 
-        {/* ── Main dark block ── */}
-        <div className="bg-[#0A0A08] relative">
-          {/* Grid texture */}
-          <div
-            className="absolute inset-0 opacity-[0.025] pointer-events-none"
-            style={{
-              backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
-              backgroundSize: '60px 60px',
-            }}
-          />
-          {/* Warm glow top-center */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#C9A84C]/6 blur-[160px] rounded-full pointer-events-none" />
+        <div className="bg-[#060504] relative">
+          <div className="absolute inset-0 opacity-[0.022]" style={{ backgroundImage: 'linear-gradient(#C9A84C 1px,transparent 1px),linear-gradient(90deg,#C9A84C 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-[#C9A84C]/5 blur-[180px] rounded-full pointer-events-none" />
 
-          <div className="container relative z-10 py-24 md:py-36">
-
-            {/* ── Giant display headline ── */}
+          <div className="container relative z-10 py-28 md:py-40">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className="text-center mb-14"
+              className="text-center mb-16"
             >
               <span className="text-[0.6rem] font-bold uppercase tracking-[0.35em] text-[#C9A84C] block mb-8">
                 Vamos Começar
               </span>
-              <h2 className="display-lg text-white leading-tight mb-7">
+              <h2 className="display-lg text-white leading-tight mb-8">
                 Pronto para criar algo<br />
-                <em className="text-[#C9A84C]">verdadeiramente excepcional?</em>
+                <em className="text-[#C9A84C]">verdadeiramente excecional?</em>
               </h2>
-              <p className="text-white/40 max-w-md mx-auto body-md leading-relaxed">
+              <p className="text-white/45 max-w-lg mx-auto text-lg leading-relaxed">
                 Fala connosco hoje. Em menos de 2 horas tens uma resposta
                 com os próximos passos — sem compromisso, sem pressão.
               </p>
             </motion.div>
 
-            {/* ── 3 contact channels ── */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-
-              {/* WhatsApp — PRIMARY (gold) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
               <motion.a
                 href={WA_HREF}
                 target="_blank"
@@ -816,98 +792,90 @@ export const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0, duration: 0.7 }}
                 viewport={{ once: true }}
-                className="group relative flex flex-col items-start gap-4 p-8 bg-[#C9A84C] hover:bg-[#b8932e] transition-colors duration-300 cursor-pointer"
+                className="group relative flex flex-col items-start gap-5 p-9 bg-[#C9A84C] hover:bg-[#d4b254] transition-colors duration-300 cursor-pointer rounded-sm"
               >
-                <div className="w-11 h-11 rounded-sm bg-[#0A0A08]/12 flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-[#0A0A08]" />
+                <div className="w-12 h-12 rounded-md bg-[#0A0A08]/12 flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-[#0A0A08]" />
                 </div>
                 <div>
-                  <p className="text-[#0A0A08] font-bold text-base mb-1">WhatsApp</p>
-                  <p className="text-[#0A0A08]/60 text-xs leading-relaxed">A forma mais rápida de falar connosco. Resposta em menos de 2 horas.</p>
+                  <p className="text-[#0A0A08] font-bold text-lg mb-2">WhatsApp</p>
+                  <p className="text-[#0A0A08]/60 text-sm leading-relaxed">A forma mais rápida de falar connosco. Resposta em menos de 2 horas.</p>
                 </div>
-                <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#0A0A08] mt-auto">
-                  Let&apos;s Talk <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0A0A08] mt-auto">
+                  Let’s Talk <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>
                 <div className="absolute top-4 right-4 px-2 py-1 bg-[#0A0A08]/12 rounded-sm">
-                  <span className="text-[0.48rem] font-bold uppercase tracking-widest text-[#0A0A08]/70">Mais Rápido</span>
+                  <span className="text-[0.48rem] font-bold uppercase tracking-widest text-[#0A0A08]/65">Mais Rápido</span>
                 </div>
               </motion.a>
 
-              {/* Email */}
               <motion.a
                 href={`mailto:${EMAIL}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.7 }}
                 viewport={{ once: true }}
-                className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300 cursor-pointer"
+                className="group flex flex-col items-start gap-5 p-9 bg-[#0F0E0C] border border-white/[0.08] hover:border-[#C9A84C]/35 transition-colors duration-300 cursor-pointer rounded-sm"
               >
-                <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
-                  <Mail className="w-5 h-5 text-[#C9A84C]" />
+                <div className="w-12 h-12 rounded-md bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/22 transition-colors">
+                  <Mail className="w-6 h-6 text-[#C9A84C]" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-base mb-1">Email</p>
-                  <p className="text-white/40 text-xs leading-relaxed">Para projetos mais detalhados ou propostas formais.</p>
+                  <p className="text-white font-bold text-lg mb-2">Email</p>
+                  <p className="text-white/45 text-sm leading-relaxed">Para projetos mais detalhados ou propostas formais.</p>
                 </div>
-                <div className="flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all">
-                  {EMAIL} <ArrowRight className="w-3 h-3" />
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#C9A84C] mt-auto group-hover:gap-3 transition-all">
+                  {EMAIL} <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </motion.a>
 
-              {/* Book a call */}
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.7 }}
                 viewport={{ once: true }}
-                className="group flex flex-col items-start gap-4 p-8 bg-[#111110] border border-white/[0.07] hover:border-[#C9A84C]/30 transition-colors duration-300"
+                className="group flex flex-col items-start gap-5 p-9 bg-[#0F0E0C] border border-white/[0.08] hover:border-[#C9A84C]/35 transition-colors duration-300 rounded-sm"
               >
-                <div className="w-11 h-11 rounded-sm bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/20 transition-colors">
-                  <Phone className="w-5 h-5 text-[#C9A84C]" />
+                <div className="w-12 h-12 rounded-md bg-[#C9A84C]/10 flex items-center justify-center group-hover:bg-[#C9A84C]/22 transition-colors">
+                  <Phone className="w-6 h-6 text-[#C9A84C]" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-base mb-1">Agendar Consulta</p>
-                  <p className="text-white/40 text-xs leading-relaxed">Preferes uma conversa estruturada? Marca uma sessão de 30 minutos.</p>
+                  <p className="text-white font-bold text-lg mb-2">Agendar Consulta</p>
+                  <p className="text-white/45 text-sm leading-relaxed">Preferes uma conversa estruturada? Marca uma sessão de 30 minutos.</p>
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C] mt-auto group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#C9A84C] mt-auto group-hover:gap-3 transition-all"
                 >
-                  Book a Consultation <ArrowRight className="w-3 h-3" />
+                  Book a Consultation <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </motion.div>
             </div>
 
-            {/* ── Trust signals ── */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex flex-wrap items-center justify-center gap-8 pt-10 border-t border-white/[0.06]"
+              className="flex flex-wrap items-center justify-center gap-10 pt-10 border-t border-white/[0.07]"
             >
-              <div className="flex items-center gap-2.5 text-white/30 text-xs">
-                <Clock className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
-                Resposta em menos de 2 horas
-              </div>
-              <div className="flex items-center gap-2.5 text-white/30 text-xs">
-                <Shield className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
-                Sem compromisso inicial
-              </div>
-              <div className="flex items-center gap-2.5 text-white/30 text-xs">
-                <Send className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
-                Proposta personalizada
-              </div>
-              <div className="flex items-center gap-2.5 text-white/30 text-xs">
-                <div className="flex -space-x-0.5">
-                  {[...Array(5)].map((_, n) => <Star key={n} className="w-3 h-3 text-[#C9A84C] fill-[#C9A84C]" />)}
+              {[
+                { icon: Clock, text: 'Resposta em menos de 2 horas' },
+                { icon: Shield, text: 'Sem compromisso inicial' },
+                { icon: Send, text: 'Proposta personalizada' },
+              ].map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-2.5 text-white/35 text-sm">
+                  <Icon className="w-4 h-4 text-[#C9A84C]/50 shrink-0" />
+                  {text}
                 </div>
+              ))}
+              <div className="flex items-center gap-2.5 text-white/35 text-sm">
+                <div className="flex">{[...Array(5)].map((_, n) => <Star key={n} className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C]" />)}</div>
                 <span>200+ clientes satisfeitos</span>
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* ── Marquee keyframes (inline style tag) ── */}
         <style>{`
           @keyframes marquee {
             from { transform: translateX(0); }
@@ -915,7 +883,6 @@ export const Home = () => {
           }
         `}</style>
       </section>
-
     </div>
   );
 };
