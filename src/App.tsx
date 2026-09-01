@@ -9,6 +9,7 @@ import { Digital } from './pages/Digital';
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
+import { Hotels } from './pages/Hotels';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/hotels" element={<Hotels />} />
           </Routes>
         </Layout>
       </BrowserRouter>
