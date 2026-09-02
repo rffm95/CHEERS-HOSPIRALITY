@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/events', label: 'Events' },
   { to: '/consulting', label: 'Consulting' },
+  { to: '/hotels', label: '🏨 Hotels' },
   { to: '/digital', label: 'Digital' },
   { to: '/portfolio', label: 'Our Work' },
   { to: '/about', label: 'About' },
@@ -55,25 +56,18 @@ export const Navbar = () => {
             : 'bg-transparent'
         }`}
       >
-        {/* Top accent line */}
         <div className="h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent opacity-60" />
-
         <div
           className="container-wide flex items-center justify-between"
           style={{ height: scrolled ? '68px' : '84px', transition: 'height 0.4s ease' }}
         >
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-3 group shrink-0"
-            aria-label="Cheers Experiences — Home"
-          >
+          <Link to="/" className="flex items-center gap-3 group shrink-0" aria-label="Cheers Experiences — Home">
             <div className="relative">
               <img
                 src={LOGO_URL}
                 alt="Cheers Experiences logo"
-                width={38}
-                height={38}
+                width={38} height={38}
                 className="rounded-full object-cover ring-1 ring-white/10 group-hover:ring-[#C9A84C]/70 transition-all duration-500"
               />
               <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-[#C9A84C] rounded-full border-2 border-[#0A0A08]" />
@@ -90,15 +84,19 @@ export const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-sm relative ${
-                  isActive(link.to)
-                    ? 'text-[#C9A84C]'
-                    : 'text-white/55 hover:text-white'
+                className={`px-3 py-2 text-[0.65rem] font-bold uppercase tracking-[0.13em] transition-all duration-300 rounded-sm relative ${
+                  link.to === '/hotels'
+                    ? isActive(link.to)
+                      ? 'text-[#C9A84C] bg-[#C9A84C]/10 border border-[#C9A84C]/30'
+                      : 'text-[#C9A84C]/80 hover:text-[#C9A84C] hover:bg-[#C9A84C]/10 border border-[#C9A84C]/20'
+                    : isActive(link.to)
+                      ? 'text-[#C9A84C]'
+                      : 'text-white/55 hover:text-white'
                 }`}
               >
                 {link.label}
-                {isActive(link.to) && (
-                  <span className="absolute bottom-0 left-4 right-4 h-px bg-[#C9A84C] rounded-full" />
+                {isActive(link.to) && link.to !== '/hotels' && (
+                  <span className="absolute bottom-0 left-3 right-3 h-px bg-[#C9A84C] rounded-full" />
                 )}
               </Link>
             ))}
@@ -106,7 +104,6 @@ export const Navbar = () => {
 
           {/* Right actions */}
           <div className="flex items-center gap-2">
-            {/* Language picker */}
             <div ref={langRef} className="relative hidden md:block">
               <button
                 onClick={() => setLangOpen(v => !v)}
@@ -142,8 +139,6 @@ export const Navbar = () => {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* Phone quick-link (desktop only) */}
             <a
               href={`tel:${PHONE}`}
               className="hidden xl:flex items-center gap-1.5 px-3 py-2 text-white/40 hover:text-[#C9A84C] transition-colors text-[0.62rem] font-bold uppercase tracking-widest"
@@ -152,8 +147,6 @@ export const Navbar = () => {
               <Phone className="w-3.5 h-3.5" />
               <span>{PHONE_DISPLAY}</span>
             </a>
-
-            {/* Primary CTA */}
             <a
               href={WA_HREF}
               target="_blank"
@@ -163,8 +156,6 @@ export const Navbar = () => {
               Let&apos;s Talk
               <ArrowRight className="w-3 h-3" />
             </a>
-
-            {/* Mobile burger */}
             <button
               onClick={() => setMenuOpen(v => !v)}
               className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
@@ -177,7 +168,7 @@ export const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile Full-screen Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -187,9 +178,7 @@ export const Navbar = () => {
             transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 bg-[#0A0A08] flex flex-col pt-24 px-8 pb-10"
           >
-            {/* decorative line */}
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent" />
-
             <nav className="flex flex-col gap-0 flex-1" aria-label="Mobile navigation">
               {NAV_LINKS.map((link, i) => (
                 <motion.div
@@ -210,9 +199,7 @@ export const Navbar = () => {
                 </motion.div>
               ))}
             </nav>
-
             <div className="mt-8 space-y-4">
-              {/* Lang switcher */}
               <div className="flex gap-2">
                 {LANGS.map(lang => (
                   <button
@@ -228,8 +215,6 @@ export const Navbar = () => {
                   </button>
                 ))}
               </div>
-
-              {/* Contact info */}
               <div className="flex flex-col gap-2 pt-2">
                 <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white/60 hover:text-[#C9A84C] transition-colors text-sm font-medium">
                   <Phone className="w-4 h-4" />
@@ -239,7 +224,6 @@ export const Navbar = () => {
                   cheersexperiences@gmail.com
                 </a>
               </div>
-
               <a
                 href={WA_HREF}
                 target="_blank"

@@ -1,14 +1,17 @@
 import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
+import '../styles/hotels.css';
 
 export function Hotels() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const h = (t as any).hotelsPage;
+
+  if (!h) return null;
 
   return (
     <main className="hotels-page">
 
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section className="hotels-hero">
         <div className="hotels-hero__bg" aria-hidden="true">
           <div className="hotels-hero__orb hotels-hero__orb--1" />
@@ -37,7 +40,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── THE PROBLEM ── */}
+      {/* THE PROBLEM */}
       <section className="hotels-problem">
         <div className="container">
           <span className="eyebrow">{h.problem.eyebrow}</span>
@@ -54,7 +57,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── RESULTS / PROOF ── */}
+      {/* RESULTS */}
       <section className="hotels-results" id="results">
         <div className="container">
           <span className="eyebrow">{h.results.eyebrow}</span>
@@ -72,7 +75,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      {/* SERVICES */}
       <section className="hotels-services">
         <div className="container">
           <span className="eyebrow">{h.services.eyebrow}</span>
@@ -94,7 +97,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── METHODOLOGY ── */}
+      {/* METHODOLOGY */}
       <section className="hotels-method">
         <div className="container">
           <span className="eyebrow">{h.method.eyebrow}</span>
@@ -113,7 +116,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── PARTNERSHIP MODELS ── */}
+      {/* PARTNERSHIP MODELS */}
       <section className="hotels-models">
         <div className="container">
           <span className="eyebrow">{h.models.eyebrow}</span>
@@ -136,7 +139,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── SOCIAL PROOF / QUOTE ── */}
+      {/* QUOTE */}
       <section className="hotels-quote">
         <div className="container">
           <blockquote>
@@ -146,7 +149,7 @@ export function Hotels() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ── */}
+      {/* FINAL CTA */}
       <section className="hotels-cta">
         <div className="container">
           <h2>{h.cta.title} <span className="accent">{h.cta.titleAccent}</span></h2>
@@ -154,7 +157,10 @@ export function Hotels() {
           <div className="hotels-cta__actions">
             <Link to="/contact" className="btn btn--primary btn--lg">{h.cta.button}</Link>
             <a href="https://wa.me/351969333305" target="_blank" rel="noopener noreferrer" className="btn btn--whatsapp btn--lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.523 5.863L0 24l6.293-1.496A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-4.996-1.368l-.358-.213-3.722.885.936-3.617-.234-.372A9.79 9.79 0 012.182 12C2.182 6.567 6.567 2.182 12 2.182c5.432 0 9.818 4.385 9.818 9.818 0 5.432-4.386 9.818-9.818 9.818z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.523 5.863L0 24l6.293-1.496A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-4.996-1.368l-.358-.213-3.722.885.936-3.617-.234-.372A9.79 9.79 0 012.182 12C2.182 6.567 6.567 2.182 12 2.182c5.432 0 9.818 4.385 9.818 9.818 0 5.432-4.386 9.818-9.818 9.818z"/>
+              </svg>
               {h.cta.whatsapp}
             </a>
           </div>
