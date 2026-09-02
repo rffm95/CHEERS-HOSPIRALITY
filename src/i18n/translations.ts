@@ -303,6 +303,138 @@ export const translations: Record<Language, Translation> = {
         button: 'AGENDAR DIAGNÓSTICO ESTRATÉGICO',
       },
     },
+    hotelPerformance: {
+      summary: {
+        title: 'Transforme o seu bar de um centro de custos num motor de lucro.',
+        description: 'A maioria dos hotéis trata o bar como um serviço acessório negligenciado. A Cheers Experiences transforma o bar do hotel num dos departamentos de maior rentabilidade por metro quadrado, recuperando milhares de euros mensais em faturação perdida e elevando a reputação de luxo da unidade.',
+      },
+      problems: {
+        title: 'Onde os hotéis perdem dinheiro todos os meses',
+        items: [
+          { title: 'Fuga de hóspedes', text: 'Hóspedes pagam diárias elevadas mas saem do hotel à noite para beber copos fora porque o bar é sem graça, lento ou antiquado.' },
+          { title: 'Inconsistência e falta de standards', text: 'O cocktail muda de sabor consoante o turno ou o funcionário; faltam Procedimentos Operacionais Padrão (SOPs).' },
+          { title: 'Cartas estáticas e margens erradas', text: 'Menus gigantescos, sem engenharia de menu (Menu Engineering), com F&B Cost descontrolado.' },
+          { title: 'Desperdício e stocks cegos', text: 'Garrafas abertas a estragar-se, doses mal calibradas e quebras não auditadas.' },
+          { title: 'Staff sem postura de venda', text: 'Empregados que apenas "tiram pedidos" em vez de recomendarem experiências premium.' },
+        ],
+      },
+      solutions: {
+        title: 'A Solução Cheers Experiences',
+        items: [
+          { title: 'Intervenção Operacional & Engenharia de Menu', text: 'Reformulação total da carta com foco em margens reais e F&B Cost rigoroso.' },
+          { title: 'Formação & Standards de Elite (SOPs)', text: 'Formação intensiva em hospitalidade de luxo, mixologia e técnicas de upselling.' },
+          { title: 'Atmosfera & Tecnologia de Venda Ativa', text: 'Transformação do espaço físico e soluções digitais integradas para induzir o consumo.' },
+          { title: 'Modelo Flexível de Parceria', text: 'Desde consultoria estratégica e auditoria até à gestão / concessão total da operação.' },
+        ],
+      },
+      pitch: {
+        title: 'O Argumento de Fecho',
+        text: 'Um bar excecional não só acrescenta dezenas de milhares de euros à faturação mensal, como melhora os reviews no TripAdvisor/Google e justifica diárias médias mais altas.',
+      },
+    },
+    hotelsPage: {
+      hero: {
+        eyebrow: 'Hotel Hospitality Performance',
+        title: 'Transforme o seu Bar num',
+        titleAccent: 'Centro de Lucro.',
+        description: 'Recuperamos milhares de euros mensais em faturação perdida através de engenharia de menu, rigor operacional e standards de luxo. A sua unidade merece uma operação de bar que eleve a marca e a margem líquida.',
+        cta: 'AGENDAR DIAGNÓSTICO',
+        ctaSecondary: 'VER RESULTADOS',
+        stats: [
+          { value: '+25%', label: 'Faturação Média' },
+          { value: '-15%', label: 'F&B Cost' },
+          { value: '100%', label: 'Standards' },
+        ],
+      },
+      problem: {
+        eyebrow: 'Onde os hotéis perdem dinheiro',
+        title: 'Os sintomas de uma',
+        titleAccent: 'Operação Negligenciada.',
+        items: [
+          { icon: '💸', title: 'Fuga de Hóspedes', text: 'Hóspedes saem do hotel para consumir fora porque o bar carece de identidade, rapidez ou qualidade.' },
+          { icon: '⚖️', title: 'Margens Erradas', text: 'Cartas sem engenharia de menu (Menu Engineering) que ignoram os produtos de alta rentabilidade.' },
+          { icon: '📉', title: 'Desperdício Cego', text: 'Falta de controlo de stock e free-pouring que destroem o lucro líquido ao final do mês.' },
+          { icon: '⚠️', title: 'Inconsistência', text: 'O serviço e o sabor mudam conforme o turno. A falta de SOPs destrói a percepção de luxo.' },
+        ],
+      },
+      results: {
+        eyebrow: 'Performance Mensurável',
+        title: 'Resultados que impactam o',
+        titleAccent: 'EBITDA.',
+        subtitle: 'Intervimos para transformar métricas operacionais em lucro real.',
+        metrics: [
+          { value: '3.5k€', label: 'Recuperação Mensal', desc: 'Média de faturação recuperada em hotéis de 4/5 estrelas.' },
+          { value: '-22%', label: 'Waste Reduction', desc: 'Redução imediata de desperdício através de rigor operacional.' },
+          { value: '+40%', label: 'Upsell Rate', desc: 'Aumento de ticket médio através de formação de equipas.' },
+        ],
+      },
+      services: {
+        eyebrow: 'Nossas Soluções',
+        title: 'Intervenção Estratégica',
+        titleAccent: '360º.',
+        items: [
+          {
+            title: 'Menu Engineering & ROI',
+            description: 'Auditamos e reconstruímos a sua carta focados no lucro por metro quadrado.',
+            features: ['Análise de F&B Cost Real', 'Design de Menus que Vendem', 'Estratégia de Pricing Dinâmico'],
+          },
+          {
+            title: 'SOPs & Luxo Operacional',
+            description: 'Implementamos processos que garantem a perfeição em cada serviço.',
+            features: ['Manuais de Standards (SOPs)', 'Formação Técnica de Staff', 'Auditorias Mistério'],
+          },
+          {
+            title: 'Digital Revenue Tech',
+            description: 'Tecnologia que comunica e vende enquanto o hóspede relaxa.',
+            features: ['Digital Signage Estratégico', 'Menus QR Inteligentes', 'Visual Content de Marca'],
+          },
+        ],
+      },
+      method: {
+        eyebrow: 'Metodologia',
+        title: 'Caminho para a',
+        titleAccent: 'Excelência.',
+        steps: [
+          { number: '01', title: 'Audit & Diagnose', description: 'Auditoria profunda de stocks, equipas e processos atuais.' },
+          { number: '02', title: 'Strategic Blueprint', description: 'Desenho da nova operação e engenharia de rentabilidade.' },
+          { number: '03', title: 'Implementation', description: 'Formação intensiva e ativação de novos standards no terreno.' },
+          { number: '04', title: 'Monitoring', description: 'Acompanhamento mensal de KPIs para garantir a sustentabilidade.' },
+        ],
+      },
+      models: {
+        eyebrow: 'Modelos de Parceria',
+        title: 'Como podemos',
+        titleAccent: 'Trabalhar.',
+        recommended: 'Recomendado',
+        items: [
+          {
+            name: 'Consultoria Estratégica',
+            description: 'Intervenção pontual para resolver problemas específicos de margem e serviço.',
+            includes: ['Auditoria Inicial', 'Novo Design de Menu', 'Formação de Equipa'],
+            cta: 'Saber Mais',
+          },
+          {
+            name: 'Gestão de Exploração',
+            description: 'Assumimos a responsabilidade total da operação de bar da unidade.',
+            featured: true,
+            includes: ['Staff Próprio Cheers', 'Gestão Total de Stock', 'Partilha de Lucros (Revenue Share)'],
+            cta: 'Ver Condições',
+          },
+        ],
+      },
+      quote: {
+        text: 'O bar de um hotel não deve ser um serviço de cortesia. Deve ser um dos maiores geradores de lucro e reputação da unidade.',
+        author: 'Direção Cheers Experiences',
+      },
+      cta: {
+        title: 'Pare de perder faturação',
+        titleAccent: 'Todas as Noites.',
+        description: 'Agende um diagnóstico operacional gratuito. Visitamos a sua unidade para identificar fugas financeiras e oportunidades de crescimento.',
+        button: 'AGENDAR DIAGNÓSTICO',
+        whatsapp: 'FALAR PELO WHATSAPP',
+        note: 'Orçamentos gratuitos e sem compromisso.',
+      },
+    },
     common: {
       language: 'Idioma',
       viewMore: 'Ver em Grande',
@@ -650,6 +782,138 @@ export const translations: Record<Language, Translation> = {
         titleAccent: 'Estándares?',
         description: 'Ya sea para un evento exclusivo o para profesionalizar su unidad hotelera, nuestro equipo está listo para intervenir con rigor y excelencia.',
         button: 'PROGRAMAR DIAGNÓSTICO ESTRATÉGICO',
+      },
+    },
+    hotelPerformance: {
+      summary: {
+        title: 'Convierta su bar de un centro de costes en un motor de beneficios.',
+        description: 'La mayoría de los hoteles tratan el bar como un servicio accesorio descuidado. Cheers Experiences transforma el bar del hotel en uno de los departamentos con mayor rentabilidad por metro cuadrado, recuperando miles de euros mensuales en facturación perdida y elevando la reputación de lujo de la unidad.',
+      },
+      problems: {
+        title: 'Dónde pierden dinero los hoteles cada mes',
+        items: [
+          { title: 'Fuga de huéspedes', text: 'Los huéspedes pagan tarifas diarias elevadas pero salen del hotel por la noche a tomar copas fuera porque el bar es aburrido, lento o anticuado.' },
+          { title: 'Inconsistência e falta de padrões', text: 'El cóctel cambia de sabor según el turno o el empleado; faltan Procedimientos Operativos Estándar (SOP).' },
+          { title: 'Cartas estáticas y márgenes erróneos', text: 'Menús gigantescos, sin ingeniería de menú (Menu Engineering), con F&B Cost descontrolado.' },
+          { title: 'Desperdicio y stock ciego', text: 'Botellas abiertas echándose a perder, dosis mal calibradas y roturas no auditadas.' },
+          { title: 'Personal sin actitud de venta', text: 'Empleados que solo "toman pedidos" en lugar de recomendar experiencias de autor o destilados premium.' },
+        ],
+      },
+      solutions: {
+        title: 'La Solución Cheers Experiences',
+        items: [
+          { title: 'Intervención Operativa e Ingeniería de Menú', text: 'Rediseño total de la carta basado en márgenes de beneficio reales y F&B Cost riguroso.' },
+          { title: 'Formación y Estándares de Élite (SOP)', text: 'Formación intensiva en hostelería de lujo, mixologia de autor y técnicas de upselling activo.' },
+          { title: 'Atmósfera y Tecnología de Venta Activa', text: 'Transformación del espacio físico y soluciones digitales integradas para inducir el consumo.' },
+          { title: 'Modelo de Asociación Flexible', text: 'Desde consultoría estratégica y auditoría hasta la gestión o concesión total de la operación.' },
+        ],
+      },
+      pitch: {
+        title: 'El Argumento de Cierre',
+        text: 'Un bar excepcional no solo añade decenas de miles de euros a la facturación mensual, sino que mejora las reseñas en TripAdvisor/Google y justifica tarifas diarias medias más altas.',
+      },
+    },
+    hotelsPage: {
+      hero: {
+        eyebrow: 'Hotel Hospitality Performance',
+        title: 'Transforme su Bar en un',
+        titleAccent: 'Centro de Ganancias.',
+        description: 'Recuperamos miles de euros mensuales en facturación perdida a través de ingeniería de menú, rigor operativo y estándares de lujo. Su unidad merece una operación de bar que eleve la marca y el margen neto.',
+        cta: 'PROGRAMAR DIAGNÓSTICO',
+        ctaSecondary: 'VER RESULTADOS',
+        stats: [
+          { value: '+25%', label: 'Facturación Media' },
+          { value: '-15%', label: 'F&B Cost' },
+          { value: '100%', label: 'Estándares' },
+        ],
+      },
+      problem: {
+        eyebrow: 'Dónde pierden dinero los hoteles',
+        title: 'Los síntomas de una',
+        titleAccent: 'Operación Descuidada.',
+        items: [
+          { icon: '💸', title: 'Fuga de Huéspedes', text: 'Los huéspedes salen del hotel para consumir fuera porque el bar carece de identidad, rapidez o calidad.' },
+          { icon: '⚖️', title: 'Márgenes Erróneos', text: 'Cartas sin ingeniería de menú que ignoran los productos de alta rentabilidad.' },
+          { icon: '📉', title: 'Desperdicio Ciego', text: 'Falta de control de stock y free-pouring que destruyen el beneficio neto al final del mes.' },
+          { icon: '⚠️', title: 'Inconsistencia', text: 'El servicio y el sabor cambian según el turno. La falta de SOPs destruye la percepción de lujo.' },
+        ],
+      },
+      results: {
+        eyebrow: 'Performance Mensurable',
+        title: 'Resultados que impactan el',
+        titleAccent: 'EBITDA.',
+        subtitle: 'Intervenimos para transformar métricas operativas en ganancias reales.',
+        metrics: [
+          { value: '3.5k€', label: 'Recuperación Mensual', desc: 'Promedio de facturación recuperada en hoteles de 4/5 estrellas.' },
+          { value: '-22%', label: 'Reducción de Waste', desc: 'Reducción inmediata de desperdicio a través de rigor operativo.' },
+          { value: '+40%', label: 'Tasa de Upsell', desc: 'Aumento del ticket promedio a través de formación de equipos.' },
+        ],
+      },
+      services: {
+        eyebrow: 'Nuestras Soluciones',
+        title: 'Intervención Estratégica',
+        titleAccent: '360º.',
+        items: [
+          {
+            title: 'Menu Engineering & ROI',
+            description: 'Auditamos y reconstruimos su carta enfocados en la ganancia por metro cuadrado.',
+            features: ['Análisis de F&B Cost Real', 'Diseño de Menús que Venden', 'Estrategia de Pricing Dinámico'],
+          },
+          {
+            title: 'SOPs & Lujo Operativo',
+            description: 'Implementamos procesos que garantizan la perfección en cada servicio.',
+            features: ['Manuales de Estándares (SOPs)', 'Formación Técnica de Staff', 'Auditorías Misterio'],
+          },
+          {
+            title: 'Digital Revenue Tech',
+            description: 'Tecnología que comunica y vende mientras el huésped se relaja.',
+            features: ['Digital Signage Estratégico', 'Menús QR Inteligentes', 'Contenido Visual de Marca'],
+          },
+        ],
+      },
+      method: {
+        eyebrow: 'Metodología',
+        title: 'Camino a la',
+        titleAccent: 'Excelencia.',
+        steps: [
+          { number: '01', title: 'Audit & Diagnose', description: 'Auditoría profunda de stocks, equipos y procesos actuales.' },
+          { number: '02', title: 'Strategic Blueprint', description: 'Diseño de la nueva operación e ingeniería de rentabilidad.' },
+          { number: '03', title: 'Implementation', description: 'Formación intensiva y activación de nuevos estándares en el terreno.' },
+          { number: '04', title: 'Monitoring', description: 'Seguimiento mensual de KPIs para garantizar la sostenibilidad.' },
+        ],
+      },
+      models: {
+        eyebrow: 'Modelos de Alianza',
+        title: 'Cómo podemos',
+        titleAccent: 'Trabajar.',
+        recommended: 'Recomendado',
+        items: [
+          {
+            name: 'Consultoría Estratégica',
+            description: 'Intervención puntual para resolver problemas específicos de margen y servicio.',
+            includes: ['Auditoría Inicial', 'Nuevo Diseño de Menú', 'Formación de Equipo'],
+            cta: 'Saber Más',
+          },
+          {
+            name: 'Gestión de Explotación',
+            description: 'Asumimos la responsabilidad total de la operación de bar de la unidad.',
+            featured: true,
+            includes: ['Staff Propio Cheers', 'Gestión Total de Stock', 'Participación de Beneficios'],
+            cta: 'Ver Condiciones',
+          },
+        ],
+      },
+      quote: {
+        text: 'El bar de un hotel no debe ser un servicio de cortesía. Debe ser uno de los mayores generadores de ganancias y reputación de la unidad.',
+        author: 'Dirección Cheers Experiences',
+      },
+      cta: {
+        title: 'Deje de perder facturación',
+        titleAccent: 'Cada Noche.',
+        description: 'Programe un diagnóstico operativo gratuito. Visitamos su unidad para identificar fugas financieras y oportunidades de crecimiento.',
+        button: 'PROGRAMAR DIAGNÓSTICO',
+        whatsapp: 'HABLAR POR WHATSAPP',
+        note: 'Presupuestos gratuitos y sin compromiso.',
       },
     },
     common: {
@@ -1000,6 +1264,138 @@ export const translations: Record<Language, Translation> = {
         button: 'SCHEDULE STRATEGIC DIAGNOSIS',
       },
     },
+    hotelPerformance: {
+      summary: {
+        title: 'Turn your bar from a cost center into a profit engine.',
+        description: 'Most hotels treat the bar as a neglected ancillary service. Cheers Experiences transforms the hotel bar into one of the departments with the highest profitability per square foot, recovering thousands of euros monthly in lost revenue and elevating the unit\'s luxury reputation.',
+      },
+      problems: {
+        title: 'Where hotels lose money every month',
+        items: [
+          { title: 'Guest leakage', text: 'Guests pay high daily rates but leave the hotel at night for drinks because the bar is dull, slow, or outdated.' },
+          { title: 'Inconsistency and lack of standards', text: 'Cocktails change taste depending on the shift or employee; lack of Standard Operating Procedures (SOPs).' },
+          { title: 'Static menus and wrong margins', text: 'Giant menus, without Menu Engineering, with uncontrolled F&B Cost.' },
+          { title: 'Waste and blind stocks', text: 'Open bottles spoiling, poorly calibrated doses, and unaudited breakages.' },
+          { title: 'Staff without a sales posture', text: 'Employees who only "take orders" instead of recommending signature experiences or premium spirits.' },
+        ],
+      },
+      solutions: {
+        title: 'The Cheers Experiences Solution',
+        items: [
+          { title: 'Operational Intervention & Menu Engineering', text: 'Total menu redesign based on real profit margins and rigorous F&B Cost.' },
+          { title: 'Elite Training & Standards (SOPs)', text: 'Intensive training in luxury hospitality, signature mixology, and active upselling techniques.' },
+          { title: 'Atmosphere & Active Sales Technology', text: 'Transformation of the physical space and integrated digital solutions to induce consumption.' },
+          { title: 'Flexible Partnership Model', text: 'From strategic consulting and auditing to full or partial concession management of the operation.' },
+        ],
+      },
+      pitch: {
+        title: 'The Closing Argument',
+        text: 'An exceptional bar not only adds tens of thousands of euros to monthly revenue but also improves TripAdvisor/Google reviews and justifies higher average daily rates.',
+      },
+    },
+    hotelsPage: {
+      hero: {
+        eyebrow: 'Hotel Hospitality Performance',
+        title: 'Transform your Bar into a',
+        titleAccent: 'Profit Center.',
+        description: 'We recover thousands of euros monthly in lost revenue through menu engineering, operational rigor, and luxury standards. Your unit deserves a bar operation that elevates both brand and net margin.',
+        cta: 'SCHEDULE DIAGNOSIS',
+        ctaSecondary: 'SEE RESULTS',
+        stats: [
+          { value: '+25%', label: 'Average Revenue' },
+          { value: '-15%', label: 'F&B Cost' },
+          { value: '100%', label: 'Standards' },
+        ],
+      },
+      problem: {
+        eyebrow: 'Where hotels lose money',
+        title: 'The symptoms of a',
+        titleAccent: 'Neglected Operation.',
+        items: [
+          { icon: '💸', title: 'Guest Leakage', text: 'Guests leave the hotel to consume elsewhere because the bar lacks identity, speed, or quality.' },
+          { icon: '⚖️', title: 'Wrong Margins', text: 'Menus without menu engineering that ignore high-profitability products.' },
+          { icon: '📉', title: 'Blind Waste', text: 'Lack of stock control and free-pouring that destroy net profit at the end of the month.' },
+          { icon: '⚠️', title: 'Inconsistency', text: 'Service and flavor change by shift. Lack of SOPs destroys the perception of luxury.' },
+        ],
+      },
+      results: {
+        eyebrow: 'Measurable Performance',
+        title: 'Results that impact',
+        titleAccent: 'EBITDA.',
+        subtitle: 'We intervene to transform operational metrics into real profit.',
+        metrics: [
+          { value: '3.5k€', label: 'Monthly Recovery', desc: 'Average revenue recovered in 4/5 star hotels.' },
+          { value: '-22%', label: 'Waste Reduction', desc: 'Immediate waste reduction through operational rigor.' },
+          { value: '+40%', label: 'Upsell Rate', desc: 'Increase in average ticket through team training.' },
+        ],
+      },
+      services: {
+        eyebrow: 'Our Solutions',
+        title: 'Strategic Intervention',
+        titleAccent: '360º.',
+        items: [
+          {
+            title: 'Menu Engineering & ROI',
+            description: 'We audit and rebuild your menu focused on profit per square meter.',
+            features: ['Real F&B Cost Analysis', 'Menus that Sell', 'Dynamic Pricing Strategy'],
+          },
+          {
+            title: 'SOPs & Operational Luxury',
+            description: 'We implement processes that ensure perfection in every service.',
+            features: ['Standards Manuals (SOPs)', 'Technical Staff Training', 'Mystery Audits'],
+          },
+          {
+            title: 'Digital Revenue Tech',
+            description: 'Technology that communicates and sells while the guest relaxes.',
+            features: ['Strategic Digital Signage', 'Smart QR Menus', 'Branded Visual Content'],
+          },
+        ],
+      },
+      method: {
+        eyebrow: 'Methodology',
+        title: 'Path to',
+        titleAccent: 'Excellence.',
+        steps: [
+          { number: '01', title: 'Audit & Diagnose', description: 'Deep audit of current stocks, teams, and processes.' },
+          { number: '02', title: 'Strategic Blueprint', description: 'Design of the new operation and profitability engineering.' },
+          { number: '03', title: 'Implementation', description: 'Intensive training and field activation of new standards.' },
+          { number: '04', title: 'Monitoring', description: 'Monthly KPI tracking to ensure sustainability.' },
+        ],
+      },
+      models: {
+        eyebrow: 'Partnership Models',
+        title: 'How we can',
+        titleAccent: 'Work.',
+        recommended: 'Recommended',
+        items: [
+          {
+            name: 'Strategic Consulting',
+            description: 'One-off intervention to solve specific margin and service issues.',
+            includes: ['Initial Audit', 'New Menu Design', 'Team Training'],
+            cta: 'Learn More',
+          },
+          {
+            name: 'Operation Management',
+            description: 'We take full responsibility for the unit\'s bar operation.',
+            featured: true,
+            includes: ['Cheers Own Staff', 'Total Stock Management', 'Revenue Share'],
+            cta: 'View Conditions',
+          },
+        ],
+      },
+      quote: {
+        text: 'A hotel bar should not be a courtesy service. It should be one of the unit\'s biggest profit and reputation generators.',
+        author: 'Cheers Experiences Direction',
+      },
+      cta: {
+        title: 'Stop losing revenue',
+        titleAccent: 'Every Night.',
+        description: 'Schedule a free operational diagnosis. We visit your unit to identify financial leaks and growth opportunities.',
+        button: 'SCHEDULE DIAGNOSIS',
+        whatsapp: 'TALK ON WHATSAPP',
+        note: 'Free quotes with no commitment.',
+      },
+    },
     common: {
       language: 'Language',
       viewMore: 'View Large',
@@ -1347,6 +1743,138 @@ export const translations: Record<Language, Translation> = {
         titleAccent: 'Opérationnelle.',
         description: 'Nous élevons les standards de l\'hospitalité grâce à des partenariats stratégiques avec des hôtels et des lieux d\'événements premium.',
         button: 'CONTACTER',
+      },
+    },
+    hotelPerformance: {
+      summary: {
+        title: 'Transformez votre bar d\'un centre de coûts en un moteur de profit.',
+        description: 'La plupart des hôtels traitent le bar comme un service accessoire négligé. Cheers Experiences transforme le bar de l\'hôtel en l\'un des départements les plus rentables par mètre carré, récupérant des milliers d\'euros mensuels en chiffre d\'affaires perdu et élevant la réputation de luxe de l\'unité.',
+      },
+      problems: {
+        title: 'Où les hôtels perdent de l\'argent chaque mois',
+        items: [
+          { title: 'Fuite des clients', text: 'Les clients paient des tarifs journaliers élevés mais sortent de l\'hôtel le soir pour prendre un verre car le bar est morne, lent ou démodé.' },
+          { title: 'Incohérence et manque de standards', text: 'Le cocktail change de goût selon l\'équipe ou l\'employé ; manque de procédures opérationnelles standard (SOP).' },
+          { title: 'Cartas estáticas et mauvaises marges', text: 'Menus gigantesques, sans ingénierie de menu (Menu Engineering), avec un F&B Cost incontrôlé.' },
+          { title: 'Gaspillage e stocks aveugles', text: 'Bouteilles ouvertes qui se gâtent, doses mal calibrées et casses non auditées.' },
+          { title: 'Personnel sans posture de vente', text: 'Des employés qui ne font que "prendre des commandes" au lieu de recommander des expériences signatures ou des alcools premium.' },
+        ],
+      },
+      solutions: {
+        title: 'La Solution Cheers Experiences',
+        items: [
+          { title: 'Intervention Opérationnelle & Ingénierie de Menu', text: 'Refonte totale de la carte basée sur des marges bénéficiaires réelles et un F&B Cost rigoureux.' },
+          { title: 'Formation & Standards d\'Élite (SOP)', text: 'Formation intensive à l\'hôtellerie de luxe, à la mixologie signature et aux techniques d\'upselling actif.' },
+          { title: 'Atmosphère & Technologie de Vente Active', text: 'Transformation de l\'espace physique et solutions digitales intégrées pour induzir la consommation.' },
+          { title: 'Modèle de Partenariat Flexible', text: 'Du conseil stratégique et de l\'audit à la gestion ou concession totale de l\'exploitation.' },
+        ],
+      },
+      pitch: {
+        title: 'L\'Argument de Clôture',
+        text: 'Un bar exceptionnel ajoute non seulement des dizaines de milliers d\'euros au chiffre d\'affaires mensuel, mais améliore également les avis sur TripAdvisor/Google et justifie des tarifs journaliers moyens plus elevados.',
+      },
+    },
+    hotelsPage: {
+      hero: {
+        eyebrow: 'Hotel Hospitality Performance',
+        title: 'Transformez votre Bar en',
+        titleAccent: 'Centre de Profit.',
+        description: 'Nous récupérons des milliers d\'euros mensuels en chiffre d\'affaires perdu grâce à l\'ingénierie de menu, la rigueur opérationnelle et les standards de luxe. Votre unité mérite une opération de bar qui élève la marque et la marge nette.',
+        cta: 'PLANIFIER DIAGNOSTIC',
+        ctaSecondary: 'VOIR RÉSULTATS',
+        stats: [
+          { value: '+25%', label: 'CA Moyen' },
+          { value: '-15%', label: 'F&B Cost' },
+          { value: '100%', label: 'Standards' },
+        ],
+      },
+      problem: {
+        eyebrow: 'Où les hôtels perdent de l\'argent',
+        title: 'Les symptômes d\'une',
+        titleAccent: 'Opération Négligée.',
+        items: [
+          { icon: '💸', title: 'Fuite de Clients', text: 'Les clients sortent de l\'hôtel pour consommer ailleurs car le bar manque d\'identité, de rapidité ou de qualité.' },
+          { icon: '⚖️', title: 'Mauvaises Marges', text: 'Cartas sans ingénierie de menu qui ignorent les produtos à haute rentabilité.' },
+          { icon: '📉', title: 'Gaspillage Aveugle', text: 'Manque de contrôle des stocks et free-pouring qui détruisent le profit net à la fin du mois.' },
+          { icon: '⚠️', title: 'Incohérence', text: 'Le service et la saveur changent selon l\'équipe. Le manque de SOPs détruit la perception de luxe.' },
+        ],
+      },
+      results: {
+        eyebrow: 'Performance Mesurable',
+        title: 'Résultats impactant',
+        titleAccent: 'l\'EBITDA.',
+        subtitle: 'Nous intervenons pour transformer les métriques opérationnelles en profit réel.',
+        metrics: [
+          { value: '3.5k€', label: 'Récupération Mensuelle', desc: 'Moyenne du chiffre d\'affaires récupéré dans les hôtels 4/5 étoiles.' },
+          { value: '-22%', label: 'Réduction Déchets', desc: 'Réduction immédiate du gaspillage grâce à la rigueur opérationnelle.' },
+          { value: '+40%', label: 'Taux d\'Upsell', desc: 'Augmentation du ticket moyen grâce à la formation des équipes.' },
+        ],
+      },
+      services: {
+        eyebrow: 'Nos Solutions',
+        title: 'Intervention Stratégique',
+        titleAccent: '360º.',
+        items: [
+          {
+            title: 'Menu Engineering & ROI',
+            description: 'Nous auditons et reconstruisons votre carte axée sur le profit par mètre carré.',
+            features: ['Analyse F&B Cost Réel', 'Menus qui Vendent', 'Stratégie de Pricing Dynamique'],
+          },
+          {
+            title: 'SOPs & Luxe Opérationnel',
+            description: 'Nous mettons en œuvre des processus qui garantissent la perfection de chaque service.',
+            features: ['Manuais de Standards (SOPs)', 'Formation Technique Staff', 'Audits Mystère'],
+          },
+          {
+            title: 'Digital Revenue Tech',
+            description: 'Technologie qui comunica et vend pendant que le client se détend.',
+            features: ['Affichage Dynamique Stratégique', 'Menus QR Intelligents', 'Contenu Visuel de Marque'],
+          },
+        ],
+      },
+      method: {
+        eyebrow: 'Méthodologie',
+        title: 'Chemin vers',
+        titleAccent: 'l\'Excellence.',
+        steps: [
+          { number: '01', title: 'Audit & Diagnose', description: 'Audit approfondi des stocks, des équipes et des processus actuels.' },
+          { number: '02', title: 'Strategic Blueprint', description: 'Conception de la nouvelle opération et ingénierie de rentabilité.' },
+          { number: '03', title: 'Implementation', description: 'Formation intensive et activation terrain des nouveaux standards.' },
+          { number: '04', title: 'Monitoring', description: 'Suivi mensuel des KPI pour garantir la durabilité.' },
+        ],
+      },
+      models: {
+        eyebrow: 'Modèles de Partenariat',
+        title: 'Comment nous pouvons',
+        titleAccent: 'Travailler.',
+        recommended: 'Recommandé',
+        items: [
+          {
+            name: 'Conseil Stratégique',
+            description: 'Intervention ponctuelle pour résoudre des problèmes spécifiques de marge et de service.',
+            includes: ['Audit Initial', 'Nouveau Design Menu', 'Formation Équipe'],
+            cta: 'En Savoir Plus',
+          },
+          {
+            name: 'Gestion d\'Exploitation',
+            description: 'Nous assumons l\'entière responsabilité de l\'exploitation du bar de l\'unité.',
+            featured: true,
+            includes: ['Propre Staff Cheers', 'Gestão Totale Stock', 'Partage Chiffre d\'Affaires'],
+            cta: 'Voir Conditions',
+          },
+        ],
+      },
+      quote: {
+        text: 'Le bar d\'un hotel ne doit pas être um service de courtoisie. Il doit être l\'un des plus grands générateurs de profit et de réputation de l\'unité.',
+        author: 'Direction Cheers Experiences',
+      },
+      cta: {
+        title: 'Arrêtez de perdre du CA',
+        titleAccent: 'Chaque Nuit.',
+        description: 'Planifiez un diagnostic opérationnel gratuit. Nous visitons votre unidade pour identifier les fuites financières et les opportunités de croissance.',
+        button: 'PLANIFIER DIAGNOSTIC',
+        whatsapp: 'PARLER SUR WHATSAPP',
+        note: 'Devis gratuits et sans engagement.',
       },
     },
     common: {

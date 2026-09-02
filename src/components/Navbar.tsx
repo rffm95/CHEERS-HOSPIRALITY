@@ -1,241 +1,180 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ArrowRight, Globe, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown, Globe, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Language } from '../types';
 
-const LOGO_URL = 'https://i.imgur.com/Ddsk56J.jpeg';
-const PHONE = '+351927653087';
-const PHONE_DISPLAY = '+351 927 653 087';
-const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de saber mais.');
-
-const NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/events', label: 'Events' },
-  { to: '/consulting', label: 'Consulting' },
-  { to: '/hotels', label: '🏨 Hotels' },
-  { to: '/digital', label: 'Digital' },
-  { to: '/portfolio', label: 'Our Work' },
-  { to: '/about', label: 'About' },
+const languages: { code: Language; name: string; flag: string }[] = [
+  { code: 'pt', name: 'Português (PT)', flag: '🇵🇹' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'en', name: 'English (US)', flag: '🇺🇸' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
 ];
 
-const LANGS = ['pt', 'en', 'es', 'fr'] as const;
-
 export const Navbar = () => {
-  const { language, setLanguage } = useLanguage();
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const langRef = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => { setMenuOpen(false); }, [location]);
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
-  }, []);
-
-  const isActive = (to: string) => to === '/' ? location.pathname === '/' : location.pathname.startsWith(to);
+  const navLinks = [
+    { name: t.nav.home, path: '/' },
+    { name: t.nav.events, path: '/events' },
+    { name: t.nav.consulting, path: '/consulting' },
+    { name: t.nav.digital, path: '/digital' },
+    { name: t.nav.portfolio, path: '/portfolio' },
+    { name: t.nav.about, path: '/about' },
+  ];
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-[#0A0A08]/96 backdrop-blur-2xl border-b border-white/[0.07] shadow-2xl'
-            : 'bg-transparent'
-        }`}
-      >
-        <div className="h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent opacity-60" />
-        <div
-          className="container-wide flex items-center justify-between"
-          style={{ height: scrolled ? '68px' : '84px', transition: 'height 0.4s ease' }}
-        >
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group shrink-0" aria-label="Cheers Experiences — Home">
-            <div className="relative">
-              <img
-                src={LOGO_URL}
-                alt="Cheers Experiences logo"
-                width={38} height={38}
-                className="rounded-full object-cover ring-1 ring-white/10 group-hover:ring-[#C9A84C]/70 transition-all duration-500"
-              />
-              <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-[#C9A84C] rounded-full border-2 border-[#0A0A08]" />
-            </div>
-            <div className="leading-none">
-              <span className="font-display text-[1.15rem] font-semibold text-white tracking-tight leading-none">Cheers</span>
-              <span className="block text-[8px] uppercase tracking-[0.22em] text-[#C9A84C] font-bold mt-[3px]">Experiences</span>
-            </div>
-          </Link>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? 'bg-white/95 backdrop-blur-md py-4 border-b border-black/5 shadow-sm' : 'bg-transparent py-8'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img 
+            src="https://i.imgur.com/Ddsk56J.jpeg" 
+            alt="Cheers Experiences" 
+            className="w-10 h-10 object-contain rounded-sm transition-transform duration-500 group-hover:scale-110"
+            referrerPolicy="no-referrer"
+          />
+          <span className="text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors text-black">
+            Cheers <span className="text-stroke-accent italic">Experiences</span><span className="text-[#c5a059]">.</span>
+          </span>
+        </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
-            {NAV_LINKS.map(link => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`px-3 py-2 text-[0.65rem] font-bold uppercase tracking-[0.13em] transition-all duration-300 rounded-sm relative ${
-                  link.to === '/hotels'
-                    ? isActive(link.to)
-                      ? 'text-[#C9A84C] bg-[#C9A84C]/10 border border-[#C9A84C]/30'
-                      : 'text-[#C9A84C]/80 hover:text-[#C9A84C] hover:bg-[#C9A84C]/10 border border-[#C9A84C]/20'
-                    : isActive(link.to)
-                      ? 'text-[#C9A84C]'
-                      : 'text-white/55 hover:text-white'
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`text-[10px] font-black uppercase tracking-[0.3em] transition-colors hover:text-black ${
+                location.pathname === link.path ? 'text-[#c5a059]' : 'text-black/40'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+
+          {/* Language Selector Desktop */}
+          <div className="flex bg-black/5 rounded-full p-1 border border-black/5">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => setLanguage(lang.code)}
+                className={`px-3 py-1.5 text-[9px] font-black uppercase tracking-wider rounded-full transition-all flex items-center gap-1.5 ${
+                  language === lang.code ? 'bg-[#c5a059] text-black shadow-lg shadow-[#c5a059]/20' : 'text-black/40 hover:text-black'
                 }`}
               >
-                {link.label}
-                {isActive(link.to) && link.to !== '/hotels' && (
-                  <span className="absolute bottom-0 left-3 right-3 h-px bg-[#C9A84C] rounded-full" />
-                )}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right actions */}
-          <div className="flex items-center gap-2">
-            <div ref={langRef} className="relative hidden md:block">
-              <button
-                onClick={() => setLangOpen(v => !v)}
-                className="flex items-center gap-1.5 px-3 py-2 text-white/40 hover:text-white/70 transition-colors text-[0.62rem] font-bold uppercase tracking-widest"
-                aria-label="Selecionar idioma"
-              >
-                <Globe className="w-3.5 h-3.5" />
-                {language.toUpperCase()}
+                <span>{lang.flag}</span>
+                {lang.code.toUpperCase()}
               </button>
-              <AnimatePresence>
-                {langOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 6, scale: 0.97 }}
-                    transition={{ duration: 0.18 }}
-                    className="absolute right-0 top-full mt-2 bg-[#111110] border border-white/10 rounded-md overflow-hidden shadow-2xl min-w-[80px]"
-                  >
-                    {LANGS.map(lang => (
-                      <button
-                        key={lang}
-                        onClick={() => { setLanguage(lang); setLangOpen(false); }}
-                        className={`w-full px-4 py-2.5 text-left text-[0.62rem] font-bold uppercase tracking-widest transition-colors ${
-                          language === lang
-                            ? 'text-[#C9A84C] bg-[#C9A84C]/10'
-                            : 'text-white/55 hover:text-white hover:bg-white/5'
-                        }`}
-                      >
-                        {lang}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            <a
-              href={`tel:${PHONE}`}
-              className="hidden xl:flex items-center gap-1.5 px-3 py-2 text-white/40 hover:text-[#C9A84C] transition-colors text-[0.62rem] font-bold uppercase tracking-widest"
-              aria-label="Ligar agora"
-            >
-              <Phone className="w-3.5 h-3.5" />
-              <span>{PHONE_DISPLAY}</span>
-            </a>
-            <a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 bg-[#C9A84C] text-[#0A0A08] px-5 py-2.5 text-[0.65rem] font-bold uppercase tracking-[0.18em] rounded-sm hover:bg-white transition-all duration-300 shadow-lg shadow-[#C9A84C]/20"
-            >
-              Let&apos;s Talk
-              <ArrowRight className="w-3 h-3" />
-            </a>
-            <button
-              onClick={() => setMenuOpen(v => !v)}
-              className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
-              aria-label="Abrir menu"
-              aria-expanded={menuOpen}
-            >
-              {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
+            ))}
           </div>
+
+          <Link
+            to="/contact"
+            className="px-8 py-3 bg-black text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-sm hover:bg-[#c5a059] transition-all shadow-lg"
+          >
+            {t.nav.contact}
+          </Link>
         </div>
-      </header>
+
+        {/* Mobile Toggle */}
+        <button className="lg:hidden text-black" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {menuOpen && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-[#0A0A08] flex flex-col pt-24 px-8 pb-10"
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="lg:hidden bg-white/95 backdrop-blur-2xl fixed top-0 left-0 w-full h-screen z-[40]"
           >
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent" />
-            <nav className="flex flex-col gap-0 flex-1" aria-label="Mobile navigation">
-              {NAV_LINKS.map((link, i) => (
+            <div className="px-10 pt-32 pb-16 flex flex-col gap-6 relative h-full">
+              {/* Ambient Glow for Mobile */}
+              <div className="absolute top-0 right-0 w-[80%] h-[40%] bg-[#c5a059]/10 blur-[100px] rounded-full pointer-events-none" />
+              
+              {navLinks.map((link, i) => (
                 <motion.div
-                  key={link.to}
-                  initial={{ opacity: 0, x: 24 }}
+                  key={link.path}
+                  initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.055, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: 0.1 + i * 0.1 }}
                 >
                   <Link
-                    to={link.to}
-                    className={`flex items-center justify-between py-5 border-b border-white/[0.06] group transition-colors ${
-                      isActive(link.to) ? 'text-[#C9A84C]' : 'text-white/75 hover:text-[#C9A84C]'
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-4xl font-black uppercase tracking-tighter transition-all duration-300 block ${
+                      location.pathname === link.path ? 'text-[#c5a059] translate-x-4' : 'text-black/20 hover:text-black'
                     }`}
                   >
-                    <span className="font-display text-3xl font-semibold italic">{link.label}</span>
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
                   </Link>
                 </motion.div>
               ))}
-            </nav>
-            <div className="mt-8 space-y-4">
-              <div className="flex gap-2">
-                {LANGS.map(lang => (
-                  <button
-                    key={lang}
-                    onClick={() => setLanguage(lang)}
-                    className={`px-3 py-2 text-[0.62rem] font-bold uppercase tracking-widest border rounded-sm transition-colors ${
-                      language === lang
-                        ? 'border-[#C9A84C] text-[#C9A84C] bg-[#C9A84C]/10'
-                        : 'border-white/20 text-white/45 hover:border-white/40 hover:text-white/70'
-                    }`}
-                  >
-                    {lang}
-                  </button>
-                ))}
-              </div>
-              <div className="flex flex-col gap-2 pt-2">
-                <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white/60 hover:text-[#C9A84C] transition-colors text-sm font-medium">
-                  <Phone className="w-4 h-4" />
-                  {PHONE_DISPLAY}
-                </a>
-                <a href="mailto:cheersexperiences@gmail.com" className="text-white/40 hover:text-[#C9A84C] transition-colors text-xs">
-                  cheersexperiences@gmail.com
-                </a>
-              </div>
-              <a
-                href={WA_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary justify-center text-center w-full"
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="pt-8 border-t border-black/5 mt-4"
               >
-                Let&apos;s Talk <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+                <p className="text-[10px] text-black/40 uppercase font-black tracking-[0.4em] mb-6">{t.common.language}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLanguage(lang.code);
+                        setIsOpen(false);
+                      }}
+                      className={`flex items-center gap-3 p-4 rounded-xl border transition-all text-[10px] font-bold uppercase tracking-widest ${
+                        language === lang.code ? 'bg-[#c5a059] text-black border-transparent shadow-lg shadow-[#c5a059]/20' : 'bg-black/5 text-black/40 border-black/5'
+                      }`}
+                    >
+                      <span className="text-base">{lang.flag}</span>
+                      <span>{lang.name.split(' ')[0]}</span>
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="mt-auto"
+              >
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full py-6 bg-black text-white font-black uppercase tracking-[0.3em] text-xs text-center rounded-sm shadow-2xl flex items-center justify-center gap-4 hover:bg-[#c5a059] transition-all"
+                >
+                  {t.nav.contact}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </nav>
   );
 };
