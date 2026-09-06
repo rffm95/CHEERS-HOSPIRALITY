@@ -39,7 +39,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-[#111111]/30 text-sm leading-relaxed mb-10 max-w-xs font-medium italic">
-              Elevamos os padrões da hospitalidade através de uma visão 360º que une eventos, consultoria estratégica e inovação tecnológica.
+              Elevamos a rentabilidade de hotéis através de uma visão 360º que une gestão operacional estratégica e padrões de luxo.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center hover:bg-[#c5a059] hover:text-white transition-all">
@@ -51,20 +51,11 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Business Units */}
-          <div>
-            <h4 className="text-[#111111] font-black uppercase text-[10px] tracking-[0.5em] mb-10 italic">Business Units</h4>
-            <ul className="space-y-4">
-              <li><Link to="/events" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.events}</Link></li>
-              <li><Link to="/consulting" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.consulting}</Link></li>
-              <li><Link to="/digital" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.digital}</Link></li>
-            </ul>
-          </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="text-[#111111] font-black uppercase text-[10px] tracking-[0.5em] mb-10 italic">Explorar</h4>
             <ul className="space-y-4">
+              <li><Link to="/" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.home}</Link></li>
               <li><Link to="/portfolio" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.portfolio}</Link></li>
               <li><Link to="/about" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.about}</Link></li>
               <li><Link to="/contact" className="text-[#111111]/40 hover:text-[#c5a059] transition-colors text-xs font-black uppercase tracking-[0.2em]">{t.nav.contact}</Link></li>

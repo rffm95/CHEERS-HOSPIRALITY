@@ -95,28 +95,15 @@ export const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
 
-            {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <span className="text-[0.6rem] font-bold uppercase tracking-[0.3em] text-[#C9A84C] block mb-8">
-                Start a Project
-              </span>
-
-              {/* Headline */}
               <h2 className="display-lg text-white mb-8 leading-tight">
-                Viste o trabalho.<br />
-                <em className="text-[#C9A84C]">Agora fala connosco.</em>
+                {t.portfolioPage.cta.title}
               </h2>
-
-              {/* Sub */}
-              <p className="text-white/40 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-14 font-light">
-                Cada projeto começa com uma conversa. Conta-nos o teu desafio
-                — em menos de 2 horas tens uma resposta com os próximos passos.
-              </p>
             </motion.div>
 
             {/* CTA Buttons */}
@@ -127,56 +114,13 @@ export const Portfolio = () => {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16"
             >
-              <a
-                href={WA_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="btn-primary shadow-lg shadow-[#C9A84C]/20"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
-                Let&apos;s Talk
+                {t.portfolioPage.cta.button}
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="btn-ghost"
-              >
-                <Mail className="w-3.5 h-3.5" />
-                Enviar Email
-              </a>
-            </motion.div>
-
-            {/* Social proof strip */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-              viewport={{ once: true }}
-              className="flex flex-wrap items-center justify-center gap-8 pt-10 border-t border-white/[0.06]"
-            >
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, n) => (
-                    <Star key={n} className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C]" />
-                  ))}
-                </div>
-                <span className="text-white/35 text-xs">5-star rated</span>
-              </div>
-              <span className="w-px h-4 bg-white/10" />
-              <span className="text-white/35 text-xs">
-                <strong className="text-white/60 font-semibold">200+</strong> projetos entregues
-              </span>
-              <span className="w-px h-4 bg-white/10" />
-              <div className="flex items-center gap-1.5 text-white/35 text-xs">
-                <TrendingUp className="w-3.5 h-3.5 text-[#C9A84C]/50" />
-                <span><strong className="text-white/60 font-semibold">+23%</strong> margem F&amp;B média</span>
-              </div>
-              <span className="w-px h-4 bg-white/10 hidden sm:block" />
-              <Link
-                to="/contact"
-                className="flex items-center gap-1.5 text-[0.65rem] font-bold uppercase tracking-widest text-[#C9A84C]/50 hover:text-[#C9A84C] transition-colors"
-              >
-                Ver página de contacto <ArrowRight className="w-3 h-3" />
               </Link>
             </motion.div>
           </div>

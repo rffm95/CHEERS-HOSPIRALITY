@@ -1,182 +1,192 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Send, Phone, Mail, Instagram, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Send, Phone, Mail, Instagram, MapPin, CheckCircle2, ArrowRight, Zap, MessageSquare } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
-const PHONE = '+351927653087';
-const PHONE_DISPLAY = '+351 927 653 087';
-const WA_HREF = 'https://wa.me/351927653087?text=' + encodeURIComponent('Olá! Vim pelo site cheers.guru.');
-
-const SERVICE_OPTIONS = [
-  'Bar Consulting',
-  'Cocktail Menu Development',
-  'Hospitality Consulting',
-  'Event Bar Service',
-  'Team Training',
-  'Digital Solutions',
-  'Brand Activation',
-  'Other',
-];
-
-const BUSINESS_TYPES = ['Hotel', 'Bar / Cocktail Bar', 'Restaurant', 'Event Space / Quinta', 'Brand / Agency', 'Private Event', 'Other'];
+const WA_HREF = 'https://wa.me/351934384000?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences.');
 
 export const Contact = () => {
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', businessType: '', service: '', message: '' });
   const [loading, setLoading] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-    setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+  const [formType, setFormType] = useState<'event' | 'business'>('business');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1200));
     setLoading(false);
     setSubmitted(true);
   };
 
-  const inputClass = 'w-full bg-[#111110] border border-white/10 rounded-sm px-4 py-3.5 text-white/90 placeholder-white/25 text-sm focus:outline-none focus:border-[#C9A84C]/60 transition-colors';
-  const labelClass = 'block text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-2';
-
   return (
-    <div className="w-full">
-
-      {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A08] to-[#0D0C0A]">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#C9A84C]/5 blur-[100px] rounded-full" />
+    <div className="w-full bg-[#FCFCFA] text-[#111111]">
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-end pb-24 overflow-hidden bg-[#111111] text-white">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-2/3 h-full bg-[radial-gradient(circle_at_top_right,#c5a059_0%,transparent_60%)] opacity-10" />
         </div>
-        <div className="container relative z-10 pt-32">
-          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}>
-            <span className="eyebrow block mb-6">Let&apos;s Talk</span>
-            <h1 className="display-xl text-white mb-4">
-              Let&apos;s create<br />
-              <em className="text-[#C9A84C]">something great.</em>
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10 w-full">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.8em] font-black mb-10 block italic">
+              {t.contactPage.hero.eyebrow}
+            </span>
+            <h1 className="text-5xl md:text-[100px] font-bold tracking-tighter leading-[0.85] mb-12">
+              {t.contactPage.hero.title} <br />
+              <span className="text-stroke-white italic font-normal opacity-50">{t.contactPage.hero.titleAccent}</span>
             </h1>
-            <p className="body-lg text-white/45 max-w-lg">
-              Tell us what you&apos;re working on. We&apos;ll respond within 24 hours.
-            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Form + Info */}
-      <section className="section-pad bg-[#0D0C0A]">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+      {/* Main Content */}
+      <section className="section-padding">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+            
+            {/* Form Column */}
+            <div className="lg:col-span-7">
+              <div className="flex gap-4 mb-12 border-b border-black/5 pb-8">
+                <button 
+                  onClick={() => setFormType('business')}
+                  className={`text-[10px] font-black uppercase tracking-widest px-8 py-4 transition-all ${formType === 'business' ? 'bg-[#c5a059] text-white shadow-xl shadow-[#c5a059]/20' : 'text-black/40 hover:text-black'}`}
+                >
+                  {t.contactPage.form.business}
+                </button>
+                <button 
+                  onClick={() => setFormType('event')}
+                  className={`text-[10px] font-black uppercase tracking-widest px-8 py-4 transition-all ${formType === 'event' ? 'bg-[#c5a059] text-white shadow-xl shadow-[#c5a059]/20' : 'text-black/40 hover:text-black'}`}
+                >
+                  {t.contactPage.form.event}
+                </button>
+              </div>
 
-            {/* Form */}
-            <div className="lg:col-span-2">
-              {submitted ? (
-                <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} className="card-dark p-16 text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-7 h-7 text-[#C9A84C]" />
-                  </div>
-                  <h3 className="font-display text-3xl italic text-white mb-4">Message received.</h3>
-                  <p className="text-white/45 mb-8 max-w-sm mx-auto text-sm leading-relaxed">Our team will review your enquiry and get back to you within 24 hours. For urgent matters, WhatsApp is faster.</p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">WhatsApp Now <ArrowRight className="w-3.5 h-3.5" /></a>
-                    <button onClick={() => setSubmitted(false)} className="btn-ghost">Send Another</button>
-                  </div>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelClass}>Name *</label>
-                      <input name="name" required value={form.name} onChange={handleChange} placeholder="Your name" className={inputClass} />
+              <AnimatePresence mode="wait">
+                {submitted ? (
+                  <motion.div 
+                    key="success"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-16 bg-white border border-black/5 text-center shadow-2xl"
+                  >
+                    <div className="w-20 h-20 rounded-full bg-[#c5a059]/10 flex items-center justify-center mx-auto mb-10">
+                      <CheckCircle2 className="w-10 h-10 text-[#c5a059]" />
                     </div>
-                    <div>
-                      <label className={labelClass}>Company</label>
-                      <input name="company" value={form.company} onChange={handleChange} placeholder="Hotel / Bar / Restaurant" className={inputClass} />
+                    <h3 className="text-4xl font-bold mb-6 italic">{t.contactPage.form.successDetail}</h3>
+                    <button 
+                      onClick={() => setSubmitted(false)}
+                      className="text-[#c5a059] text-[10px] font-black uppercase tracking-widest hover:tracking-[0.5em] transition-all"
+                    >
+                      {t.contactPage.form.sendAnother}
+                    </button>
+                  </motion.div>
+                ) : (
+                  <motion.form 
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    onSubmit={handleSubmit} 
+                    className="space-y-8"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Nome / Cargo</label>
+                        <input required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={t.contactPage.form.placeholderName} />
+                      </div>
+                      <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Email Corporativo</label>
+                        <input type="email" required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={t.contactPage.form.placeholderEmail} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelClass}>Email *</label>
-                      <input name="email" type="email" required value={form.email} onChange={handleChange} placeholder="your@email.com" className={inputClass} />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Contacto Direto</label>
+                        <input className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={t.contactPage.form.placeholderPhone} />
+                      </div>
+                      <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{formType === 'business' ? t.contactPage.form.businessType : t.contactPage.form.businessType}</label>
+                        <select className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                          {formType === 'business' ? (
+                            Object.entries(t.contactPage.form.businessCategories).map(([key, label]) => (
+                              <option key={key} value={key}>{label}</option>
+                            ))
+                          ) : (
+                            Object.entries(t.contactPage.form.categories).map(([key, label]) => (
+                              <option key={key} value={key}>{label}</option>
+                            ))
+                          )}
+                        </select>
+                      </div>
                     </div>
-                    <div>
-                      <label className={labelClass}>Phone</label>
-                      <input name="phone" value={form.phone} onChange={handleChange} placeholder="+351 9XX XXX XXX" className={inputClass} />
+
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Mensagem / Briefing</label>
+                      <textarea rows={4} className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10 resize-none" placeholder={t.contactPage.form.placeholderMessage} />
                     </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelClass}>Business Type</label>
-                      <select name="businessType" value={form.businessType} onChange={handleChange} className={inputClass}>
-                        <option value="">Select type...</option>
-                        {BUSINESS_TYPES.map(b => <option key={b} value={b}>{b}</option>)}
-                      </select>
-                    </div>
-                    <div>
-                      <label className={labelClass}>What are you looking for? *</label>
-                      <select name="service" required value={form.service} onChange={handleChange} className={inputClass}>
-                        <option value="">Select service...</option>
-                        {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <label className={labelClass}>Message</label>
-                    <textarea name="message" value={form.message} onChange={handleChange} rows={5} placeholder="Tell us about your project, challenges or goals..." className={inputClass + ' resize-none'} />
-                  </div>
-                  <button type="submit" disabled={loading} className="btn-primary w-full justify-center py-4 disabled:opacity-60 disabled:cursor-not-allowed">
-                    {loading ? 'Sending...' : <>Send Message <Send className="w-3.5 h-3.5" /></>}
-                  </button>
-                  <p className="text-white/25 text-xs text-center">We respond within 24h. No spam, ever.</p>
-                </form>
-              )}
+
+                    <button 
+                      type="submit" 
+                      disabled={loading}
+                      className="luxury-button w-full justify-center disabled:opacity-50"
+                    >
+                      {loading ? 'Processando...' : 'Enviar Solicitação'}
+                    </button>
+                  </motion.form>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Info sidebar */}
-            <div className="space-y-8">
-              <div>
-                <p className="eyebrow block mb-5">Direct Contact</p>
-                <div className="space-y-4">
-                  <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
-                    <div className="w-9 h-9 rounded-md bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366]/20 transition-colors">
-                      <Phone className="w-4 h-4 text-[#25D366]" />
+            {/* Info Column */}
+            <div className="lg:col-span-5 space-y-16">
+              <div className="space-y-10">
+                <div className="group">
+                  <span className="text-[#c5a059] text-[10px] font-black uppercase tracking-[0.4em] mb-4 block italic">{t.contactPage.info.areaTitle}</span>
+                  <p className="text-xl leading-relaxed italic text-[#111111]/60">
+                    {t.contactPage.info.areaText}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-8">
+                  <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="p-8 bg-white border border-black/5 flex items-start gap-6 hover:border-[#c5a059]/30 transition-all group">
+                    <div className="w-12 h-12 bg-[#c5a059]/5 rounded-full flex items-center justify-center group-hover:bg-[#c5a059]/10 transition-colors">
+                      <MessageSquare className="w-5 h-5 text-[#c5a059]" />
                     </div>
                     <div>
-                      <p className="text-white text-sm font-semibold mb-0.5">WhatsApp</p>
-                      <p className="text-white/40 text-xs">{PHONE_DISPLAY}</p>
-                      <p className="text-[#C9A84C] text-[0.6rem] uppercase tracking-wider font-bold mt-1">Fastest response →</p>
+                      <h4 className="text-[10px] font-black uppercase tracking-widest mb-1 italic text-black/40">{t.contactPage.info.phoneTitle}</h4>
+                      <p className="text-lg font-bold">+351 934 384 000</p>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-red-500 mt-2 block">{t.contactPage.info.phoneStatus}</span>
                     </div>
                   </a>
-                  <a href="mailto:cheersexperiences@gmail.com" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
-                    <div className="w-9 h-9 rounded-md bg-[#C9A84C]/10 flex items-center justify-center shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors">
-                      <Mail className="w-4 h-4 text-[#C9A84C]" />
+
+                  <a href="mailto:direcao@cheersexperiences.com" className="p-8 bg-white border border-black/5 flex items-start gap-6 hover:border-[#c5a059]/30 transition-all group">
+                    <div className="w-12 h-12 bg-[#c5a059]/5 rounded-full flex items-center justify-center group-hover:bg-[#c5a059]/10 transition-colors">
+                      <Mail className="w-5 h-5 text-[#c5a059]" />
                     </div>
                     <div>
-                      <p className="text-white text-sm font-semibold mb-0.5">Email</p>
-                      <p className="text-white/40 text-xs">cheersexperiences@gmail.com</p>
+                      <h4 className="text-[10px] font-black uppercase tracking-widest mb-1 italic text-black/40">{t.contactPage.info.emailTitle}</h4>
+                      <p className="text-lg font-bold">direcao@cheersexperiences.com</p>
                     </div>
                   </a>
-                  <a href="https://instagram.com/cheers.guru" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 card-dark p-5 hover:border-[#C9A84C]/30 group">
-                    <div className="w-9 h-9 rounded-md bg-pink-500/10 flex items-center justify-center shrink-0 group-hover:bg-pink-500/20 transition-colors">
-                      <Instagram className="w-4 h-4 text-pink-400" />
+
+                  <a href="https://instagram.com/cheers.guru" target="_blank" rel="noopener noreferrer" className="p-8 bg-white border border-black/5 flex items-start gap-6 hover:border-[#c5a059]/30 transition-all group">
+                    <div className="w-12 h-12 bg-[#c5a059]/5 rounded-full flex items-center justify-center group-hover:bg-[#c5a059]/10 transition-colors">
+                      <Instagram className="w-5 h-5 text-[#c5a059]" />
                     </div>
                     <div>
-                      <p className="text-white text-sm font-semibold mb-0.5">Instagram</p>
-                      <p className="text-white/40 text-xs">@cheers.guru</p>
+                      <h4 className="text-[10px] font-black uppercase tracking-widest mb-1 italic text-black/40">{t.contactPage.info.instaTitle}</h4>
+                      <p className="text-lg font-bold">@cheers.guru</p>
                     </div>
                   </a>
                 </div>
               </div>
-              <div className="card-dark p-6">
-                <p className="eyebrow block mb-3">Coverage Area</p>
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
-                  <p className="text-white/45 text-sm leading-relaxed">Based in Viseu. Events and consulting across Porto, Coimbra, Alto Douro, Aveiro and nationwide. Digital services globally.</p>
-                </div>
-              </div>
-              <div className="card-dark p-6 border-[#C9A84C]/20">
-                <p className="text-[#C9A84C] text-[0.6rem] uppercase tracking-widest font-bold mb-2">Response time</p>
-                <p className="text-white font-semibold">Under 24 hours.</p>
-                <p className="text-white/40 text-xs mt-1">WhatsApp for urgent or same-day enquiries.</p>
-              </div>
             </div>
+
           </div>
         </div>
       </section>
