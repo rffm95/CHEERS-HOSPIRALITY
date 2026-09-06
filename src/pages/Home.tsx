@@ -59,6 +59,7 @@ export const Home = () => {
               <p className="text-lg md:text-2xl text-[#111111]/60 font-medium mb-16 leading-relaxed max-w-2xl italic">
                 {t.homePage.hero.description}
               </p>
+              
               <div className="flex flex-col sm:flex-row gap-8 mb-20">
                 <Link to="/contact" className="luxury-button">
                   {t.homePage.hero.ctaAudit}
@@ -72,6 +73,36 @@ export const Home = () => {
                 </Link>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Authority Block */}
+      <section className="py-24 bg-[#111111] text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-4">
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-6 block italic">Social Proof</span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight italic">
+                {t.homePage.testimonials.title}
+              </h2>
+            </div>
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+              {t.homePage.testimonials.items.map((item, i) => (
+                <div key={i} className="p-10 bg-white/5 border border-white/10 hover:border-[#c5a059]/30 transition-all duration-500">
+                  <p className="text-white/70 italic text-lg leading-relaxed mb-8">
+                    "{item.quote}"
+                  </p>
+                  <div className="flex items-center gap-4 pt-8 border-t border-white/5">
+                    <div className="w-10 h-px bg-[#c5a059]" />
+                    <div>
+                      <div className="font-bold text-sm uppercase tracking-widest">{item.author}</div>
+                      <div className="text-[10px] text-white/40 uppercase tracking-widest mt-1">{item.role} • {item.company}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

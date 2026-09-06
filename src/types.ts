@@ -94,6 +94,15 @@ export interface Translation {
         description: string;
       }[];
     };
+    testimonials: {
+      title: string;
+      items: {
+        quote: string;
+        author: string;
+        role: string;
+        company: string;
+      }[];
+    };
     partnershipModels: {
       title: string;
       titleAccent: string;
