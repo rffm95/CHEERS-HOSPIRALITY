@@ -36,7 +36,7 @@ export const Contact = () => {
             <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.8em] font-black mb-10 block italic">
               {t.contactPage.hero.eyebrow}
             </span>
-            <h1 className="text-5xl md:text-[100px] font-bold tracking-tighter leading-[0.85] mb-12">
+            <h1 className="text-4xl sm:text-6xl md:text-[100px] font-bold tracking-tighter leading-[0.85] mb-12">
               {t.contactPage.hero.title} <br />
               <span className="text-stroke-white italic font-normal opacity-50">{t.contactPage.hero.titleAccent}</span>
             </h1>
@@ -95,7 +95,7 @@ export const Contact = () => {
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Nome / Cargo</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{formType === 'business' ? t.contactPage.form.placeholderName.split('e.g. ')[0] || 'Nome / Cargo' : 'Nome / Cargo'}</label>
                         <input required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={t.contactPage.form.placeholderName} />
                       </div>
                       <div className="space-y-3">
@@ -110,20 +110,59 @@ export const Contact = () => {
                         <input className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={t.contactPage.form.placeholderPhone} />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{formType === 'business' ? t.contactPage.form.businessType : t.contactPage.form.businessType}</label>
-                        <select className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
-                          {formType === 'business' ? (
-                            Object.entries(t.contactPage.form.businessCategories).map(([key, label]) => (
-                              <option key={key} value={key}>{label}</option>
-                            ))
-                          ) : (
-                            Object.entries(t.contactPage.form.categories).map(([key, label]) => (
-                              <option key={key} value={key}>{label}</option>
-                            ))
-                          )}
-                        </select>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{formType === 'business' ? t.contactPage.form.propertyName : 'Local do Evento'}</label>
+                        <input required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder={formType === 'business' ? 'Ex: Hotel Ritz / Group X' : 'Localização'} />
                       </div>
                     </div>
+
+                    {formType === 'business' && (
+                      <>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          <div className="space-y-3">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{t.contactPage.form.propertyScale}</label>
+                            <select required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                              {Object.entries(t.contactPage.form.scales).map(([key, label]) => (
+                                <option key={key} value={key}>{label}</option>
+                              ))}
+                            </select>
+                          </div>
+                          <div className="space-y-3">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{t.contactPage.form.intent}</label>
+                            <select required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                              {Object.entries(t.contactPage.form.intents).map(([key, label]) => (
+                                <option key={key} value={key}>{label}</option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          <div className="space-y-3">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{t.contactPage.form.revenue}</label>
+                            <input className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-black/10" placeholder="€ / mês (opcional)" />
+                          </div>
+                          <div className="space-y-3">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{t.contactPage.form.urgency}</label>
+                            <select required className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                              {Object.entries(t.contactPage.form.urgencies).map(([key, label]) => (
+                                <option key={key} value={key}>{label}</option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {formType === 'event' && (
+                      <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">{t.contactPage.form.businessType}</label>
+                        <select className="w-full bg-[#FCFCFA] border-b-2 border-black/5 px-0 py-4 text-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                          {Object.entries(t.contactPage.form.categories).map(([key, label]) => (
+                            <option key={key} value={key}>{label}</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-widest text-black/40 italic">Mensagem / Briefing</label>
@@ -135,7 +174,7 @@ export const Contact = () => {
                       disabled={loading}
                       className="luxury-button w-full justify-center disabled:opacity-50"
                     >
-                      {loading ? 'Processando...' : 'Enviar Solicitação'}
+                      {loading ? 'Processando...' : (formType === 'business' ? 'Solicitar Auditoria Estratégica' : 'Enviar Solicitação')}
                     </button>
                   </motion.form>
                 )}

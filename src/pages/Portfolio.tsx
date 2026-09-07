@@ -5,12 +5,13 @@ import { X, ArrowRight, MessageCircle, Mail, Star, TrendingUp } from 'lucide-rea
 import { portfolioItems } from '../data/portfolio';
 import { useLanguage } from '../context/LanguageContext';
 
-const WA_HREF = 'https://wa.me/351938543783?text=' + encodeURIComponent('Olá! Vim pelo site da Cheers Experiences e gostava de marcar uma conversa.');
-const EMAIL = 'hello@cheersexperiences.com';
+const WA_NUMBER = '351934384000'; // Standardized number
 
 export const Portfolio = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const whatsappHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t.common.whatsappMessage)}`;
 
   return (
     <div className="pt-20 bg-[#FCFCFA] min-h-screen text-[#111111] font-sans">
@@ -112,16 +113,23 @@ export const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16"
+              className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
             >
               <Link
                 to="/contact"
-                className="btn-primary shadow-lg shadow-[#C9A84C]/20"
+                className="luxury-button !bg-white !text-black hover:!bg-[#c5a059] hover:!text-white"
               >
-                <MessageCircle className="w-3.5 h-3.5" />
                 {t.portfolioPage.cta.button}
-                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-10 py-5 border-2 border-white/20 text-white font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all flex items-center justify-center gap-4"
+              >
+                <MessageCircle className="w-4 h-4" />
+                {t.common.whatsappCta}
+              </a>
             </motion.div>
           </div>
         </div>

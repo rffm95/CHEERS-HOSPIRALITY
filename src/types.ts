@@ -69,6 +69,36 @@ export interface Translation {
         text: string;
       }[];
     };
+    opportunity: {
+      title: string;
+      titleAccent: string;
+      description: string;
+      concept: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    caseStudy: {
+      title: string;
+      subtitle: string;
+      stat: string;
+      timeframe: string;
+      challenge: string;
+      challengeText: string;
+      intervention: string;
+      interventionText: string;
+      result: string;
+      resultText: string;
+    };
+    framework: {
+      title: string;
+      subtitle: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
     services: {
       title: string;
       titleAccent: string;
@@ -82,6 +112,15 @@ export interface Translation {
       title: string;
       subtitle: string;
       items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    process: {
+      title: string;
+      subtitle: string;
+      steps: {
+        number: string;
         title: string;
         description: string;
       }[];
@@ -159,6 +198,11 @@ export interface Translation {
       placeholderEmail: string;
       placeholderPhone: string;
       placeholderMessage: string;
+      propertyName: string;
+      propertyScale: string;
+      intent: string;
+      revenue: string;
+      urgency: string;
       categories: {
         wedding: string;
         birthday: string;
@@ -171,6 +215,22 @@ export interface Translation {
         restaurant: string;
         hotel: string;
         catering: string;
+      };
+      intents: {
+        audit: string;
+        management: string;
+        consulting: string;
+      };
+      scales: {
+        small: string;
+        medium: string;
+        large: string;
+        group: string;
+      };
+      urgencies: {
+        immediate: string;
+        planning: string;
+        future: string;
       };
       successDetail: string;
       sendAnother: string;

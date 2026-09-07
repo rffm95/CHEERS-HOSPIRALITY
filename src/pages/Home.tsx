@@ -8,15 +8,13 @@ export const Home = () => {
   const { t } = useLanguage();
 
   const iconMap: Record<string, any> = {
-    // We can use a consistent index or specific mapping if titles change
-    // For now, mapping based on the known problem titles from translations
-    'Fuga de Hóspedes': ShieldAlert,
-    'Guest Leakage': ShieldAlert,
+    'Fuga de Receita': ShieldAlert,
+    'Revenue Leakage': ShieldAlert,
     'Fuga de Huéspedes': ShieldAlert,
-    'Fuite de Clients': ShieldAlert,
+    'Fuite de Revenus': ShieldAlert,
     
     'Menus sem Engenharia': BarChart3,
-    'Menus without Engineering': BarChart3,
+    'ROI-free Menus': BarChart3,
     'Menús sin Ingeniería': BarChart3,
     'Menus sans Ingénierie': BarChart3,
     
@@ -27,13 +25,13 @@ export const Home = () => {
     
     'Custos Descontrolados': TrendingUp,
     'Uncontrolled Costs': TrendingUp,
-    'Costos Descontrolados': TrendingUp,
+    'Costes Descontrolados': TrendingUp,
     'Coûts Incontrôlés': TrendingUp,
   };
 
   return (
     <div className="w-full bg-[#FCFCFA] text-[#111111]">
-      {/* Hero Section */}
+      {/* 01. Hero Section */}
       <section className="relative min-h-[90vh] w-full flex items-center overflow-hidden bg-[#FCFCFA] pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.02] pointer-events-none overflow-hidden">
@@ -47,20 +45,20 @@ export const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="col-span-12 lg:col-span-8"
+              className="col-span-12 lg:col-span-10"
             >
               <span className="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.8em] font-black mb-10 block italic">
                 {t.homePage.hero.eyebrow}
               </span>
-              <h1 className="text-5xl md:text-[100px] font-bold tracking-tighter leading-[0.85] text-[#111111] mb-12">
+              <h1 className="text-4xl sm:text-6xl md:text-[110px] font-bold tracking-tighter leading-[0.85] text-[#111111] mb-12">
                 {t.homePage.hero.title} <br />
                 <span className="text-stroke-accent italic font-normal">{t.homePage.hero.titleAccent}</span>
               </h1>
-              <p className="text-lg md:text-2xl text-[#111111]/60 font-medium mb-16 leading-relaxed max-w-2xl italic">
+              <p className="text-base sm:text-lg md:text-2xl text-[#111111]/60 font-medium mb-16 leading-relaxed max-w-3xl italic">
                 {t.homePage.hero.description}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-8 mb-20">
+              <div className="flex flex-col sm:flex-row gap-8">
                 <Link to="/contact" className="luxury-button">
                   {t.homePage.hero.ctaAudit}
                 </Link>
@@ -77,92 +75,10 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Authority Block */}
-      <section className="py-24 bg-[#111111] text-white overflow-hidden">
+      {/* 02. Performance Proof (Stats) */}
+      <section className="py-24 bg-[#111111] text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-            <div className="lg:col-span-4">
-              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-6 block italic">Social Proof</span>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight italic">
-                {t.homePage.testimonials.title}
-              </h2>
-            </div>
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-              {t.homePage.testimonials.items.map((item, i) => (
-                <div key={i} className="p-10 bg-white/5 border border-white/10 hover:border-[#c5a059]/30 transition-all duration-500">
-                  <p className="text-white/70 italic text-lg leading-relaxed mb-8">
-                    "{item.quote}"
-                  </p>
-                  <div className="flex items-center gap-4 pt-8 border-t border-white/5">
-                    <div className="w-10 h-px bg-[#c5a059]" />
-                    <div>
-                      <div className="font-bold text-sm uppercase tracking-widest">{item.author}</div>
-                      <div className="text-[10px] text-white/40 uppercase tracking-widest mt-1">{item.role} • {item.company}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Problem Section */}
-      <section className="section-padding bg-white border-y border-black/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
-            <div className="lg:col-span-5">
-              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block italic">{t.common.marketReality}</span>
-              <h2 className="text-4xl md:text-7xl font-bold text-[#111111] tracking-tighter mb-10 leading-[0.9] italic">
-                {t.homePage.problem.title} <br />
-                <span className="text-stroke-accent italic font-normal">{t.homePage.problem.titleAccent}</span>
-              </h2>
-              <p className="text-[#111111]/50 text-xl leading-relaxed mb-10 italic">
-                {t.homePage.problem.description}
-              </p>
-            </div>
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {t.homePage.problem.items.map((item, i) => {
-                const Icon = iconMap[item.title] || ShieldAlert;
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="p-10 bg-[#FCFCFA] border border-black/5 group hover:border-[#c5a059]/30 transition-all duration-500"
-                  >
-                    <Icon className="w-8 h-8 text-[#c5a059] mb-8 group-hover:scale-110 transition-transform duration-500" />
-                    <h4 className="text-xl font-bold mb-4 italic">{item.title}</h4>
-                    <p className="text-sm text-[#111111]/40 leading-relaxed">{item.description}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Impact Section - Revenue Jump */}
-      <section className="section-padding bg-[#111111] text-white overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,#c5a059_0%,transparent_50%)]" />
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-          <div className="text-center mb-24">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-8 block italic">{t.common.revenueTransformation}</span>
-            <h2 className="text-4xl md:text-[90px] font-bold tracking-tighter leading-[0.85] mb-12 italic">
-              {t.homePage.impact.title} <br />
-              <span className="text-stroke-white italic font-normal opacity-50">{t.homePage.impact.titleAccent}</span>
-            </h2>
-            <p className="text-white/40 max-w-2xl mx-auto text-xl italic font-medium">
-              {t.homePage.impact.description}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {t.homePage.impact.scenarios.map((scenario, i) => (
               <motion.div
                 key={i}
@@ -170,16 +86,13 @@ export const Home = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className={`p-12 border ${i === 1 ? 'border-[#c5a059] bg-[#c5a059]/5' : 'border-white/10 bg-white/5'} flex flex-col justify-between`}
+                className={`p-12 border ${i === 1 ? 'border-[#c5a059] bg-[#c5a059]/5' : 'border-white/10 bg-white/5'}`}
               >
-                <div>
-                  <span className={`text-[10px] font-black uppercase tracking-widest mb-10 block ${i === 1 ? 'text-[#c5a059]' : 'text-white/40'}`}>
-                    {scenario.label}
-                  </span>
-                  <div className="text-6xl md:text-8xl font-black mb-8 tracking-tighter">
-                    {scenario.value}
-                    <span className="text-2xl font-normal opacity-30 ml-2">/dia</span>
-                  </div>
+                <span className={`text-[10px] font-black uppercase tracking-widest mb-10 block ${i === 1 ? 'text-[#c5a059]' : 'text-white/40'}`}>
+                  {scenario.label}
+                </span>
+                <div className="text-5xl sm:text-6xl md:text-8xl font-black mb-8 tracking-tighter">
+                  {scenario.value}
                 </div>
                 <p className="text-white/50 text-lg leading-relaxed italic border-t border-white/5 pt-8">
                   {scenario.text}
@@ -187,21 +100,144 @@ export const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-20 text-center">
-            <p className="text-white/30 text-xs italic uppercase tracking-[0.2em]">
-              {t.common.impactDisclaimer}
-            </p>
+      {/* 03. Hidden Opportunity Section */}
+      <section className="section-padding bg-white border-y border-black/5">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-6">
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block italic">The Uncaptured Gap</span>
+              <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-[#111111] tracking-tighter mb-10 leading-[0.9] italic">
+                {t.homePage.opportunity.title} <br />
+                <span className="text-stroke-accent italic font-normal">{t.homePage.opportunity.titleAccent}</span>
+              </h2>
+              <p className="text-[#111111]/50 text-xl leading-relaxed mb-12 italic">
+                {t.homePage.opportunity.description}
+              </p>
+              <div className="p-8 bg-[#FCFCFA] border-l-4 border-[#c5a059] italic text-[#111111] font-medium text-lg">
+                {t.homePage.opportunity.concept}
+              </div>
+            </div>
+            <div className="lg:col-span-6 space-y-8">
+              {t.homePage.opportunity.items.map((item, i) => (
+                <div key={i} className="p-10 bg-[#FCFCFA] border border-black/5 group hover:border-[#c5a059]/30 transition-all duration-500">
+                  <h4 className="text-xl font-bold mb-4 italic flex items-center gap-4">
+                    <span className="text-[#c5a059]">0{i + 1}</span>
+                    {item.title}
+                  </h4>
+                  <p className="text-[#111111]/40 leading-relaxed italic">{item.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Reorganized Services Section */}
+      {/* 04. Diagnosis (Problem) Section */}
+      <section className="section-padding bg-[#FCFCFA]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center mb-20">
+          <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block italic">{t.common.marketReality}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-[#111111] tracking-tighter mb-10 leading-[0.9] italic">
+            {t.homePage.problem.title} <br />
+            <span className="text-stroke-accent italic font-normal">{t.homePage.problem.titleAccent}</span>
+          </h2>
+        </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {t.homePage.problem.items.map((item, i) => {
+            const Icon = iconMap[item.title] || ShieldAlert;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="p-10 bg-white border border-black/5 group hover:border-[#c5a059]/30 transition-all duration-500"
+              >
+                <Icon className="w-8 h-8 text-[#c5a059] mb-8 group-hover:scale-110 transition-transform duration-500" />
+                <h4 className="text-xl font-bold mb-4 italic">{item.title}</h4>
+                <p className="text-sm text-[#111111]/40 leading-relaxed italic">{item.description}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 05. Framework (Performance System) */}
+      <section className="section-padding bg-[#111111] text-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="mb-16 md:mb-24">
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-8 block italic">Proprietary Methodology</span>
+            <h2 className="text-3xl sm:text-4xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8 italic">
+              {t.homePage.framework.title}
+            </h2>
+            <p className="text-white/40 max-w-2xl text-lg sm:text-xl italic font-medium">
+              {t.homePage.framework.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1px bg-white/10">
+            {t.homePage.framework.items.map((item, i) => (
+              <div key={i} className="p-12 bg-[#111111] border border-white/5 group hover:bg-[#c5a059]/5 transition-all duration-500">
+                <div className="text-[#c5a059] font-black text-xs uppercase tracking-widest mb-10 opacity-30 group-hover:opacity-100">
+                  Phase 0{i + 1}
+                </div>
+                <h3 className="text-2xl font-bold mb-6 italic">{item.title}</h3>
+                <p className="text-white/40 text-lg leading-relaxed italic">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 06. Case Study Section */}
+      <section className="section-padding bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-5">
+              <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-8 block italic">{t.homePage.caseStudy.subtitle}</span>
+              <div className="relative">
+                <div className="text-[120px] sm:text-[180px] md:text-[250px] font-black text-[#111111]/5 leading-none tracking-tighter">
+                  {t.homePage.caseStudy.stat}
+                </div>
+                <div className="absolute top-1/2 left-0 -translate-y-1/2">
+                  <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter italic">
+                    {t.homePage.caseStudy.title}
+                  </h2>
+                  <p className="text-[#c5a059] text-lg sm:text-xl font-bold uppercase tracking-widest mt-4">
+                    {t.homePage.caseStudy.timeframe}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-7 grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="p-10 bg-[#FCFCFA] border border-black/5">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#c5a059] mb-6">{t.homePage.caseStudy.challenge}</div>
+                  <p className="text-sm text-[#111111]/60 italic leading-relaxed">{t.homePage.caseStudy.challengeText}</p>
+                </div>
+                <div className="p-10 bg-[#FCFCFA] border border-[#c5a059]/20">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#c5a059] mb-6">{t.homePage.caseStudy.intervention}</div>
+                  <p className="text-sm text-[#111111]/60 italic leading-relaxed">{t.homePage.caseStudy.interventionText}</p>
+                </div>
+                <div className="p-10 bg-[#111111] text-white border border-black/5">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#c5a059] mb-6">{t.homePage.caseStudy.result}</div>
+                  <p className="text-sm text-white/60 italic leading-relaxed">{t.homePage.caseStudy.resultText}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 07. Services Section */}
       <section className="section-padding bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="mb-24">
+          <div className="mb-16 md:mb-24">
             <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block italic">{t.common.solutionsHospitality}</span>
-            <h2 className="text-4xl md:text-8xl font-bold text-[#111111] tracking-tighter leading-[0.85] italic">
+            <h2 className="text-3xl sm:text-4xl md:text-8xl font-bold text-[#111111] tracking-tighter leading-[0.85] italic">
               {t.homePage.services.title} <br />
               <span className="text-stroke-accent italic font-normal">{t.homePage.services.titleAccent}</span>
             </h2>
@@ -233,8 +269,52 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Why Cheers & Methodology (Simplified & Focused) */}
-      <section className="section-padding bg-white border-y border-black/5">
+      {/* 08. Process (Journey) Section */}
+      <section className="section-padding bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="mb-24 text-center">
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block italic">Transformation Roadmap</span>
+            <h2 className="text-4xl md:text-8xl font-bold text-[#111111] tracking-tighter leading-[0.85] italic">
+              {t.homePage.process.title}
+            </h2>
+            <p className="text-[#111111]/40 max-w-2xl mx-auto text-xl italic font-medium mt-8">
+              {t.homePage.process.subtitle}
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute top-0 bottom-0 left-[20px] md:left-1/2 w-px bg-black/5" />
+            <div className="space-y-24">
+              {t.homePage.process.steps.map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className={`relative flex flex-col md:flex-row items-center gap-12 ${i % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
+                >
+                  <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border border-[#c5a059] flex items-center justify-center z-10">
+                    <div className="w-2 h-2 rounded-full bg-[#c5a059]" />
+                  </div>
+                  <div className={`w-full md:w-1/2 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'} pl-16 md:pl-0`}>
+                    <div className="text-[#c5a059] font-black text-xs uppercase tracking-widest mb-4 italic">
+                      Step {step.number}
+                    </div>
+                    <h3 className="text-3xl font-bold mb-4 italic">{step.title}</h3>
+                    <p className="text-[#111111]/40 text-lg leading-relaxed italic max-w-md mx-auto md:mx-0 ${i % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'}">
+                      {step.description}
+                    </p>
+                  </div>
+                  <div className="hidden md:block w-1/2" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 09. Why Cheers (Simplified & Focused) */}
+      <section className="section-padding bg-[#FCFCFA] border-y border-black/5">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div>
@@ -242,6 +322,9 @@ export const Home = () => {
               <h2 className="text-4xl md:text-[80px] font-bold text-[#111111] tracking-tighter mb-16 leading-[0.85] italic">
                 {t.homePage.whyCheers.title}
               </h2>
+              <p className="text-[#111111]/60 text-xl italic leading-relaxed mb-16">
+                {t.homePage.whyCheers.subtitle}
+              </p>
               <div className="space-y-12">
                 {t.homePage.whyCheers.items.map((item, i) => (
                   <div key={i} className="group">
@@ -256,35 +339,39 @@ export const Home = () => {
                 ))}
               </div>
             </div>
-            
-            <div className="bg-[#FCFCFA] p-12 md:p-20 border border-black/5 relative">
-              <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-[#c5a059]/20" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-[#c5a059]/20" />
-              
-              <h3 className="text-2xl font-black uppercase tracking-widest mb-16 italic text-center">
-                {t.homePage.methodology.title}
-              </h3>
-              <div className="space-y-12">
-                {t.homePage.methodology.steps.map((step, i) => (
-                  <div key={i} className="flex gap-8">
-                    <span className="text-3xl font-black text-[#c5a059]/20">{step.number}</span>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2 italic">{step.title}</h5>
-                      <p className="text-sm text-[#111111]/40">{step.description}</p>
+            <div className="relative">
+              <div className="p-12 md:p-20 bg-white border border-black/5 relative">
+                <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-[#c5a059]/20" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-[#c5a059]/20" />
+                
+                <h3 className="text-2xl font-black uppercase tracking-widest mb-16 italic text-center">
+                  Consulting Authority
+                </h3>
+                <div className="space-y-12">
+                  {t.homePage.testimonials.items.map((item, i) => (
+                    <div key={i} className="p-10 bg-[#FCFCFA] border border-black/5 italic">
+                      <p className="text-[#111111]/60 text-lg mb-8 leading-relaxed">"{item.quote}"</p>
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-px bg-[#c5a059]" />
+                        <div>
+                          <div className="font-bold text-xs uppercase tracking-widest">{item.author}</div>
+                          <div className="text-[10px] text-black/30 uppercase tracking-widest mt-1">{item.role}</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partnership Models Section */}
-      <section className="section-padding bg-[#FCFCFA]">
+      {/* 10. Partnership Models Section */}
+      <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-24">
-            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-8 block italic">Business Models</span>
+            <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-8 block italic">Engagement Structures</span>
             <h2 className="text-4xl md:text-[90px] font-bold tracking-tighter leading-[0.85] mb-12 italic">
               {t.homePage.partnershipModels.title} <br />
               <span className="text-stroke-accent italic font-normal">{t.homePage.partnershipModels.titleAccent}</span>
@@ -305,7 +392,7 @@ export const Home = () => {
               >
                 {model.highlight && (
                   <div className="absolute top-0 right-0 bg-[#c5a059] text-black text-[8px] font-black uppercase tracking-widest px-4 py-2">
-                    Mais Rentável
+                    Recommended Performance
                   </div>
                 )}
                 <h3 className="text-3xl font-bold mb-6 italic">{model.title}</h3>
@@ -314,7 +401,7 @@ export const Home = () => {
                 </p>
                 <ul className="space-y-4 mb-12">
                   {model.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-4 text-sm font-medium text-[#111111]/60">
+                    <li key={idx} className="flex items-center gap-4 text-sm font-medium text-[#111111]/60 italic">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
                       {feature}
                     </li>
@@ -322,13 +409,14 @@ export const Home = () => {
                 </ul>
                 <Link 
                   to="/contact" 
-                  className={`w-full py-5 text-center font-black uppercase tracking-[0.3em] text-[10px] transition-all border-2 ${
+                  className={`w-full py-5 text-center font-black uppercase tracking-[0.3em] text-[10px] transition-all border-2 flex items-center justify-center gap-3 ${
                     model.highlight 
                       ? 'bg-black text-white border-black hover:bg-transparent hover:text-black' 
                       : 'border-black text-black hover:bg-black hover:text-white'
                   }`}
                 >
                   {model.cta}
+                  <ArrowRight className="w-3 h-3" />
                 </Link>
               </motion.div>
             ))}
@@ -336,7 +424,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section - Strategic Invite */}
+      {/* 11. CTA Section - Strategic Invite */}
       <section className="section-padding px-6 md:px-10 overflow-hidden bg-[#FCFCFA]">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div 
@@ -348,7 +436,7 @@ export const Home = () => {
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c5a059]/5 blur-[150px] rounded-full -mr-64 -mt-64" />
             
             <span className="text-[#c5a059] text-[10px] uppercase tracking-[0.8em] font-black mb-10 block italic">{t.common.decisionMakerInvitation}</span>
-            <h2 className="text-4xl md:text-[90px] font-bold text-[#111111] mb-12 tracking-tighter leading-[0.85] italic">
+            <h2 className="text-3xl sm:text-5xl md:text-[100px] font-bold text-[#111111] mb-12 tracking-tighter leading-[0.85] italic">
               {t.homePage.ctaSection.title} <br />
               <span className="text-stroke-accent italic font-normal">{t.homePage.ctaSection.titleAccent}</span>
             </h2>

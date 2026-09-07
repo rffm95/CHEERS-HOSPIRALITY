@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from './Navbar';
 
@@ -39,7 +39,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-[#111111]/30 text-sm leading-relaxed mb-10 max-w-xs font-medium italic">
-              Elevamos a rentabilidade de hotéis através de uma visão 360º que une gestão operacional estratégica e padrões de luxo.
+              {t.footer.tagline}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center hover:bg-[#c5a059] hover:text-white transition-all">
@@ -92,5 +92,26 @@ export const Footer = () => {
 };
 
 export const WhatsAppButton = () => {
-  return null;
+  const { t } = useLanguage();
+  const whatsappHref = `https://wa.me/351934384000?text=${encodeURIComponent(t.common.whatsappMessage)}`;
+
+  return (
+    <a
+      href={whatsappHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-10 right-10 z-[45] bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all group overflow-hidden"
+      aria-label="WhatsApp"
+    >
+      <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+      <MessageCircle className="w-6 h-6 relative z-10" />
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileHover={{ opacity: 1, x: 0 }}
+        className="absolute right-full mr-4 bg-white text-[#111111] px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-xl pointer-events-none hidden md:block"
+      >
+        {t.common.whatsappCta}
+      </motion.div>
+    </a>
+  );
 };
