@@ -3,5 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "description": "Bilingual hotel bar consultancy website for Cheers Experiences",
-  "scripts": {"build": "node scripts/build.mjs"}
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/preview.mjs"
+  }
 }
