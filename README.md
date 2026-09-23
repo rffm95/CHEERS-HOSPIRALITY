@@ -47,3 +47,6 @@ Faturação mensal = hóspedes por dia × percentagem que utiliza o bar × ticke
 - Conteúdo histórico e percurso profissional baseados exclusivamente nos dados fornecidos pelo titular. Sem clientes, testemunhos ou certificações inventados.
 
 `npm run dev` disponibiliza uma pré-visualização local e a rota de QA responsiva, que não é incluída em `dist/` nem publicada.
+
+## Languages
+Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, followed by a saved manual preference, then the primary device language (PT/ES/EN). Other device languages use English. Restricted browser storage does not prevent rendering. Language changes preserve the equivalent page and entered form values.

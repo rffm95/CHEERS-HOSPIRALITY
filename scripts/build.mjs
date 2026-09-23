@@ -1,9 +1,10 @@
 import {existsSync, readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
-for (const file of ['index.html', 'eventos.html', 'events.js', 'strategy.js', 'app.js', 'style.css', 'hero.webp']) {
+for (const file of ['index.html', 'eventos.html', 'events.js', 'strategy.js', 'english.js', 'app.js', 'style.css', 'hero.webp']) {
   if (!existsSync(`dist/${file}`)) throw new Error(`Missing site asset: ${file}`);
 }
 execFileSync(process.execPath, ['--check', 'dist/app.js']);
+execFileSync(process.execPath, ['--check', 'dist/english.js']);
 execFileSync(process.execPath, ['--check', 'dist/events.js']);
 execFileSync(process.execPath, ['--check', 'dist/strategy.js']);
 execFileSync(process.execPath, ['scripts/render-check.mjs'], {stdio:'inherit'});

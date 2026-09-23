@@ -2,14 +2,15 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 // Render the dependency-free site for initial HTML and validate contact/calculator logic.
-const source=['strategy.js','events.js','app.js'].map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
-for(const page of ['index.html','eventos.html'])for(const lang of ['es','pt']){
+const scripts=[...fs.readFileSync('dist/index.html','utf8').matchAll(/<script defer src="([^"]+)"/g)].map(m=>m[1]);assert(scripts.includes('english.js'));
+const source=scripts.map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
+for(const page of ['index.html','eventos.html'])for(const lang of ['es','pt','en']){
  const elements={},isEvent=page==='eventos.html';let clicked='';
  const values={rooms:'100',occupancy:'75',guests:isEvent?'125':'150',penetration:'30',ticket:'12',days:'30',lift:'5',ticketLift:'10',name:'Ana & João',hotel:'Hotel QA',location:'Viseu',opportunity:'5',message:'Teste & detalhe',type:'0',date:'2027-06-12',place:'Viseu',model:'3',need:'3'};
  const el=k=>elements[k]??={innerHTML:'',textContent:'',content:'',hidden:true,value:'',classList:{contains:()=>false,remove(){},toggle(){return true}},elements:{},setAttribute(){},querySelectorAll:()=>[],reportValidity:()=>true,addEventListener(n,f){this['on'+n]=f},append(){},click(){clicked=this.href},remove(){}};
  const document={documentElement:{},querySelectorAll:s=>s==='[data-inquiry]'?[Object.assign(el('audit-cta'),{dataset:{inquiry:'audit'}}),Object.assign(el('group-cta'),{dataset:{inquiry:'group'}})]:[],querySelector:el,getElementById:el,createElement:()=>el('temporary'),body:el('body')};
  const ctx=vm.createContext({document,location:{search:'?lang='+lang,pathname:'/'+page},URL,URLSearchParams,Date,Intl,encodeURIComponent,FormData:class{get(k){return values[k]}}});vm.runInContext(source,ctx);
- const html=el('app').innerHTML;assert(!html.includes('undefined'));assert.equal((html.match(/<h1>/g)||[]).length,1);
+ const html=el('app').innerHTML;assert.equal(document.documentElement.lang,lang==='pt'?'pt-PT':lang);assert(html.includes('data-lang="en"'));if(lang==='en'){assert(html.includes(isEvent?'Your big day.':'Your guests are already there.'));assert(!/¿|Não|Solicitar|Su gran día/.test(html));}assert(!html.includes('undefined'));assert.equal((html.match(/<h1>/g)||[]).length,1);
  const ids=[...html.matchAll(/id="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size);for(const a of html.matchAll(/href="#([^"]+)"/g))assert(ids.includes(a[1]),'Missing anchor '+a[1]);
  for(const a of html.matchAll(/(?:href|src)="((?:index|eventos)\.html|[^"?]+\.(?:js|css|webp))(?:\?[^"]*)?"/g))assert(fs.existsSync('dist/'+a[1]),'Missing asset '+a[1]);
  assert(html.includes('mailto:sucessomacico@gmail.com'));assert(html.includes('tel:+351927653087'));
@@ -29,3 +30,10 @@ for(const page of ['index.html','eventos.html'])for(const lang of ['es','pt']){
  }
  console.log('PASS',page,lang,'contact forms, links, metadata, render'+(!isEvent?', calculator and historical-result boundaries':''));
 }
+
+// First-visit device selection, explicit links, saved preference and blocked storage.
+const locales=fs.readFileSync('dist/english.js','utf8');
+for(const [search,device,saved,expected] of [['','pt-PT',null,'pt'],['','pt-BR',null,'pt'],['','es-ES',null,'es'],['','en-US',null,'en'],['','fr-FR',null,'en'],['?lang=en','pt-PT',null,'en'],['?lang=invalid','es-ES',null,'es'],['','es-ES','pt','pt'],['?lang=es','pt-PT','en','es']]){
+ const ctx=vm.createContext({location:{search},URLSearchParams,navigator:{languages:[device],language:device},localStorage:{getItem:()=>saved}});vm.runInContext(locales,ctx);assert.equal(vm.runInContext('initialLanguage()',ctx),expected);
+}
+const blocked=vm.createContext({location:{search:''},URLSearchParams,navigator:{language:'pt-PT'},localStorage:{getItem(){throw Error('blocked')}}});vm.runInContext(locales,blocked);assert.equal(vm.runInContext('initialLanguage()',blocked),'pt');console.log('PASS device locale, explicit URLs, manual preference, unsupported locales and restricted storage');
