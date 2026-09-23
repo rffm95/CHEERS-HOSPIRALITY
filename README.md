@@ -22,3 +22,7 @@ Email: sucessomacico@gmail.com. Telefone: +351927653087. Todos os destinos Whats
 ## Conteúdo comercial
 
 Menus digitais por QR code, adaptação a todos os idiomas necessários e animações para ecrãs/TV complementam cartas, serviço, formação, operações e compras. O cenário 3× é um exemplo matemático identificado, não um caso de estudo ou garantia de resultado.
+
+## Eventos
+
+A área `dist/eventos.html` apresenta casamentos, batizados, aniversários, eventos empresariais, parcerias com catering e exploração temporária de bares. Os textos ES/PT e o formulário de proposta estão em `dist/events.js`. O formulário permite escolher bar aberto, venda no local ou modelo misto e prepara um pedido por WhatsApp ou email.
