@@ -23,7 +23,7 @@ for(const page of ['index.html','eventos.html'])for(const lang of ['es','pt','en
  }
  const metadata=JSON.parse(el('structured-data').textContent);assert.equal(metadata.telephone,'+351927653087');assert(!metadata.review&&!metadata.aggregateRating);
  if(lang==='es'){
-  let base=fs.readFileSync('dist/'+page,'utf8');base=base.slice(0,base.indexOf('<div id="app">'))+'<div id="app">'+html+'</div>\n<noscript><style>.contact-form,.language,.menu-toggle,#calculator-form,#estimate-guests{display:none}</style></noscript>\n</body></html>\n';
+  let base=fs.readFileSync('dist/'+page,'utf8');base=base.slice(0,base.indexOf('<div id="app">'))+'<div id="app">'+html+'</div>\n<noscript><style>.contact-form,.language,.menu-toggle,#calculator-form,#estimate-guests{display:none}.nav{display:flex!important;position:static;flex-wrap:wrap;width:auto;padding:10px}.header{height:auto;position:relative}.header-inner{flex-wrap:wrap}</style></noscript>\n</body></html>\n';
   base=base.replace(/<title>.*?<\/title>/,`<title>${document.title}</title>`).replace(/(<meta name="description" content=")[^"]*/, '$1'+el('meta[name="description"]').content);
   for(const prop of ['og:title','og:description','og:url','og:locale'])base=base.replace(new RegExp(`(<meta property="${prop}" content=")[^"]*`),'$1'+el(`meta[property="${prop}"]`).content);
   base=base.replace(/(<script id="structured-data" type="application\/ld\+json">)[\s\S]*?<\/script>/,'$1'+el('structured-data').textContent+'</script>');fs.writeFileSync('dist/'+page,base);
