@@ -19,3 +19,5 @@
 @media(max-width:380px){.wedding-page .header-inner{gap:5px}.wedding-page .language{gap:1px}.wedding-page .brand small{font-size:9px;letter-spacing:2px}.wedding-page .brand b{font-size:27px}.wedding-page .menu-toggle{font-size:12px}.wedding-hero h1{font-size:48px}.wedding-wa{padding:15px;font-size:14px}}
 @media(prefers-reduced-motion:reduce){.wedding-page *{scroll-behavior:auto!important}}
 .wedding-hero h1 em{display:inline}
+
+.wedding-visual{border-radius:200px 200px 4px 4px;min-height:540px}.wedding-visual img{filter:none;object-position:52% center}.moment-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;margin-bottom:25px}.wedding-moments .wedding-three article{border-top:0;padding-top:0}.service-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;margin:28px 0}.wedding-service-intro .btn{margin-top:4px}@media(max-width:760px){.wedding-visual{min-height:0;aspect-ratio:4/3;border-radius:100px 100px 4px 4px}.wedding-visual img{object-position:center}.wedding-moments .wedding-three{gap:42px}}

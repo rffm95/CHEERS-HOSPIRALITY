@@ -11,7 +11,7 @@ O site é estático e completo em `dist/`. Não precisa de dependências nem de 
 - `dist/app.js`: textos ES/PT, navegação, formulário e contactos.
 - `dist/style.css`: apresentação e estilos responsivos.
 - `dist/index.html`: versão inicial em espanhol, disponível antes do JavaScript.
-- `dist/hero.webp`: imagem de ambiente ilustrativa.
+- `dist/images/`: fotografias fornecidas pelo titular, otimizadas em WebP.
 
 Ao alterar os textos, executar `npm run build` para atualizar o HTML inicial e verificar a coerência.
 
@@ -54,4 +54,4 @@ Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, foll
 ## Destination Weddings
 `/destination-weddings/` is the dedicated international wedding landing page. English is the first-visit default, with explicit `?lang=pt|es|en` and the existing `cheers-language` manual preference taking priority. `weddings-copy.js` holds translations; `weddings.js` renders the page; `weddings.css` extends the brand. The build emits complete English HTML for no-JavaScript readers and crawlers.
 
-WhatsApp links use +351927653087. The form requires name, guest count, location and either email or phone; date is optional. It prepares a WhatsApp or email draft for visitor review, without storing enquiries or sending automatically. Values survive language changes. The illustrative image is labelled without claiming wedding portfolio work.
+WhatsApp links use +351927653087. The form requires name, guest count, location and either email or phone; date is optional. It prepares a WhatsApp or email draft for visitor review, without storing enquiries or sending automatically. Values survive language changes. The page uses supplied cocktail photography without claiming wedding portfolio work.
