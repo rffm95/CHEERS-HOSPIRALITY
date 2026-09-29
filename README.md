@@ -50,3 +50,8 @@ Faturação mensal = hóspedes por dia × percentagem que utiliza o bar × ticke
 
 ## Languages
 Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, followed by a saved manual preference, then the primary device language (PT/ES/EN). Other device languages use English. Restricted browser storage does not prevent rendering. Language changes preserve the equivalent page and entered form values.
+
+## Destination Weddings
+`/destination-weddings/` is the dedicated international wedding landing page. English is the first-visit default, with explicit `?lang=pt|es|en` and the existing `cheers-language` manual preference taking priority. `weddings-copy.js` holds translations; `weddings.js` renders the page; `weddings.css` extends the brand. The build emits complete English HTML for no-JavaScript readers and crawlers.
+
+WhatsApp links use +351927653087. The form requires name, guest count, location and either email or phone; date is optional. It prepares a WhatsApp or email draft for visitor review, without storing enquiries or sending automatically. Values survive language changes. The illustrative image is labelled without claiming wedding portfolio work.

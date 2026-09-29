@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cheers.guru/sitemap.xml
