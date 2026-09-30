@@ -45,3 +45,27 @@ html{scroll-padding-top:168px}
  .language button{min-width:36px}
  .quick-contact .btn{padding:12px 8px}
 }
+
+/* Balanced entry routes and a focused hotel enquiry. */
+.business-entrance{background:var(--deep);color:var(--cream);padding:28px 0 38px}
+.entrance-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.entrance-path{display:block;border:1px solid #ddbd8555;padding:28px 32px;transition:background .2s,border-color .2s}
+.entrance-path:hover,.entrance-path:focus-visible{background:#ffffff08;border-color:var(--gold)}
+.entrance-path .eyebrow{color:var(--gold);font-size:12px;letter-spacing:1.8px}
+.entrance-path h2{font-size:36px;letter-spacing:-.8px;margin:12px 0}
+.entrance-path p{font-size:16px;color:#d5dcd6;margin:0 0 20px}
+.entrance-link{display:inline-block;color:var(--gold);border-bottom:1px solid #ddbd8590;padding-bottom:5px;font-size:14px}
+.hotel-hero{min-height:0;display:block;border-top:1px solid #ffffff20}
+.hotel-hero:after{display:none}
+.hotel-hero .hero-content{padding:65px 0 55px}
+.hotel-hero h1{max-width:1000px;font-size:clamp(42px,4.8vw,66px)}
+.hotel-hero .hero-copy{max-width:720px;font-size:17px}
+.hotel-hero .eyebrow,.hotel-hero .hero-actions{max-width:100%}
+.hotel-hero .hero-foot{position:static}
+#contact .contact-links .whatsapp-direct{background:none;color:var(--gold);border:0;padding-left:0}
+.form-details{border-block:1px solid #ffffff25;padding:12px 0;margin:4px 0 18px}
+.form-details summary{cursor:pointer;min-height:32px;font-size:14px;color:var(--gold)}
+.form-details label{margin-top:14px}
+#lead-form textarea{min-height:90px}
+#lead-form .fine{font-size:14px}
+@media(max-width:760px){.business-entrance{padding:18px 0 24px}.entrance-grid{grid-template-columns:1fr;gap:12px}.entrance-path{padding:20px 22px}.entrance-path h2{font-size:29px;margin:8px 0}.entrance-path p{font-size:15px;margin-bottom:12px}.hotel-hero h1{font-size:clamp(38px,9.5vw,56px)}.hotel-hero .hero-content{padding:38px 0}.hotel-hero .hero-actions{max-width:100%}.hotel-hero .hero-foot{width:100%}}
