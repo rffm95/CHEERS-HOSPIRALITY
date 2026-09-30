@@ -21,3 +21,27 @@ h1,h2,h3{font-family:var(--serif);font-weight:400}.brand b{font-family:var(--ser
 
 .wedding-hero h1 em{display:inline}
 @media(max-width:760px){.proof-grid>div{display:block}.proof-grid strong,.proof-grid span{display:block}.proof-grid span{margin-top:5px}}
+
+/* Focused usability fixes: preserve the existing design and content. */
+html{scroll-padding-top:168px}
+.nav a.btn:hover{color:var(--deep)}
+.contact-links>a:not(.btn){display:flex;align-items:center;min-height:44px;width:fit-content;max-width:100%}
+.contact-form label,.contact-form .form-hint{font-size:14px}
+.btn,.quick-contact .btn,.quick-whatsapp{font-size:14px}
+@media(max-width:900px){
+ .nav,.wedding-page .nav{max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain}
+ .nav a,.wedding-page .nav a{min-height:44px}
+}
+@media(max-width:760px){
+ html{scroll-padding-top:158px}
+ .hero:not(.event-hero) .hero-content{padding-top:40px;padding-bottom:38px}
+ .language button{min-width:40px;min-height:44px;font-size:14px}
+ .menu-toggle{font-size:14px}
+ .section-nav a{min-height:44px;font-size:13px}
+ .quick-contact .btn,.quick-whatsapp{font-size:14px}
+}
+@media(max-width:380px){
+ .header-inner{gap:4px}
+ .language button{min-width:36px}
+ .quick-contact .btn{padding:12px 8px}
+}
