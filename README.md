@@ -62,4 +62,4 @@ A página de hotéis oferece uma primeira reunião presencial sem honorários e 
 
 O formulário de hotéis envia um POST para FormSubmit e redireciona para `obrigado.html` após aceitação. Requer uma única ativação pelo titular através do email de confirmação do FormSubmit; um teste efetuado em 08/10/2026 confirmou que a ativação estava pendente. Enquanto não for ativado, os pedidos diretos podem não chegar. WhatsApp, telefone e email continuam disponíveis. O formulário informa o visitante de que FormSubmit processa o pedido. Os formulários de eventos e casamentos mantêm os respetivos caminhos de contacto.
 
-`acquisition.js` contém a oferta PT/ES/EN e a reunião inicial. A publicação da fotografia real do ecrã está pendente de autorização explícita para carregar o ficheiro no repositório público.
+`acquisition.js` contém a oferta PT/ES/EN e a reunião inicial. A fotografia real do ecrã no Cheers O Bar foi autorizada pelo titular para publicação no repositório público e no site. Não se atribui a este ecrã um aumento comprovado de vendas.

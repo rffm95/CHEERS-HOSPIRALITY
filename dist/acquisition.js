@@ -22,3 +22,8 @@ function meetingSection(lang){
  const a=acquisition[lang];
  return `<section class="section meeting-offer" id="first-meeting"><div class="wrap"><span class="eyebrow">${a.label}</span><h2>${a.title}</h2><p class="wide-lead">${a.intro}</p><div class="plan-grid">${a.steps.map((s,i)=>`<article><span class="step-number">0${i+1}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('')}</div><p class="section-note">${a.note}</p><a class="btn" href="#contact">${a.cta} ${arrow}</a></div></section>`;
 }
+
+function realWorkSection(lang){
+ const a=acquisition[lang];
+ return `<section class="section digital" id="digital"><div class="wrap split"><div><span class="eyebrow">${a.workLabel}</span><h2>${a.workTitle}</h2><p class="wide-lead">${a.workText}</p><a class="text-link" href="#contact">${a.workCTA} ${arrow}</a></div><figure class="real-work"><img src="/images/cheers-screen-real.jpg" width="1536" height="864" alt="${lang==='pt'?'Ecrã no Cheers O Bar com promoção de bebidas e informação desportiva':lang==='es'?'Pantalla en Cheers O Bar con bebidas e información deportiva':'Screen at Cheers O Bar showing drinks promotions and sports information'}" loading="lazy" decoding="async"><figcaption class="section-note">${a.workCaption}</figcaption></figure></div></section>`;
+}
