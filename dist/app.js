@@ -37,6 +37,7 @@ configureHotels(copy);
 refineCommercialCopy();
 applyPremiumCopy(copy,eventCopy);
 configureAcquisition();
+configureHotelPosition();
 const icons=[`<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6M9 16h3"/>`,`<path d="M4 12h16M6 12a6 6 0 0 1 12 0M12 4v2M3 16h18M8 20h8"/>`,`<path d="m4 3 8 10 8-10ZM12 13v8M7 21h10"/>`,`<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>`,`<path d="m3 7 9-4 9 4v11l-9 4-9-4ZM3 7l9 4 9-4M12 11v11M7 5l9 4"/>`,`<circle cx="9" cy="7" r="3"/><path d="M3 21v-5a6 6 0 0 1 12 0v5M17 4a3 3 0 0 1 0 6M21 21v-5a6 6 0 0 0-3-5"/>`];
 const arrow='<span aria-hidden="true">↗</span>';
 let language=initialLanguage();
@@ -49,7 +50,7 @@ function render(lang){
  <main id="main">${businessEntrance(lang)}<section class="hero hotel-hero" id="hotel"><div class="wrap hero-content"><div class="business-switch"><a href="index.html?lang=${lang}" aria-current="page">${eventCopy[lang].hotels}</a><a href="eventos.html?lang=${lang}">${eventCopy[lang].events}</a></div><span class="eyebrow">${t.eyebrow}</span><h1>${t.headline}</h1><p class="hero-copy">${t.hero}</p><div class="hero-actions"><a href="#contact" class="btn">${premiumLabels[lang].hotelCTA} ${arrow}</a><a class="text-link" href="#intervention">${t.heroLink} <span aria-hidden="true">↓</span></a></div></div><div class="hero-foot"><div class="wrap hero-foot-inner"><span>${t.heroFoot[0]}</span><span>${t.heroFoot[1]}</span></div></div></section>
  ${proofStrip(lang)}
  ${meetingSection(lang)}
- ${caseSection(lang)}
+ ${hotelValueSection(lang)}
  ${auditSection(lang)}
 
  <section class="section" id="opportunity"><div class="wrap split"><div><span class="eyebrow section-label">${t.opportunity}</span><h2>${t.oppTitle}</h2><p class="intro-lead">${t.oppLead}</p><p class="statement">${t.statement}</p></div><div class="symptoms">${t.symptoms.map((s,i)=>`<div class="symptom"><span class="num">${String(i+1).padStart(2,'0')}</span><div><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join('')}</div></div></section>
@@ -58,11 +59,12 @@ function render(lang){
  
  <div class="wrap craft-gallery" aria-label="Cocktails"><figure><img src="/images/bar-preparation.webp" width="555" height="371" alt="" loading="lazy" decoding="async"></figure><figure><img src="/images/citrus-cocktail.webp" width="502" height="347" alt="" loading="lazy" decoding="async"></figure><figure><img src="/images/coupe-cocktail.webp" width="577" height="377" alt="" loading="lazy" decoding="async"></figure></div>
  ${realWorkSection(lang)}
- ${calculatorSection(lang)}
+ 
  
  ${groupSection(lang)}
  <section class="section" id="method"><div class="wrap"><div class="section-head"><div><span class="eyebrow section-label">${t.method}</span><h2>${t.methodTitle}</h2></div><p>${t.methodLead}</p></div><div class="process-grid">${t.steps.map((s,i)=>`<article class="step"><span class="step-number">${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p><div class="deliverable">${s[2]}</div></article>`).join('')}</div>${hotelToolkit(lang)}</div></section>
  ${aboutSection(lang)}
+ <div class="wrap secondary-proof"><details><summary>${hotelPosition[lang].historyLabel}</summary>${caseSection(lang)}</details><details><summary>${hotelPosition[lang].simulatorLabel}</summary>${calculatorSection(lang)}</details></div>
  <section class="section"><div class="wrap faq-layout"><div><span class="eyebrow section-label">${t.faqLabel}</span><h2>${t.faqTitle}</h2></div><div class="faq">${t.faqs.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}</div></div></section>
  <section class="section contact" id="contact"><div class="wrap split"><div><span class="eyebrow">${t.contactLabel}</span><h2>${t.contactTitle}</h2><p class="contact-copy">${t.contactCopy}</p><div class="contact-links"><a class="text-link whatsapp-direct" href="https://wa.me/351927653087?text=${encodeURIComponent(t.waIntro)}" target="_blank" rel="noopener noreferrer">${d.wa} ${arrow}</a><a href="mailto:sucessomacico@gmail.com">sucessomacico@gmail.com ${arrow}</a><a href="tel:+351927653087">+351 927 653 087</a></div><p class="contact-note">${t.contactNote}</p></div><form class="contact-form" id="lead-form" action="https://formsubmit.co/sucessomacico@gmail.com" method="POST"><input type="hidden" name="_subject" value="Cheers Experiences — ${premiumLabels[lang].hotelCTA}"><input type="hidden" name="_next" value="https://cheers.guru/obrigado.html?lang=${lang}"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true"><h3>${premiumLabels[lang].hotelForm}</h3><p class="form-hint">${r.hint}</p><div class="form-row"><label>${t.name} *<input name="name" autocomplete="name" required maxlength="100"></label><label>${t.hotel} *<input name="hotel" autocomplete="organization" required maxlength="150"></label></div><label>${r.email} *<input name="email" type="email" autocomplete="email" required maxlength="180"></label><label>${t.location} *<input name="location" autocomplete="address-level2" required maxlength="150"></label><details class="form-details"><summary>${r.details}</summary><label>${t.type}<select name="opportunity">${t.types.map((v,i)=>`<option value="${i}">${v}</option>`).join('')}</select></label></details><label>${t.message}<textarea name="message" maxlength="1500" placeholder="${t.placeholder}"></textarea></label><button class="btn" type="submit">${r.submit} ${arrow}</button><p class="fine">${r.note}</p><a class="text-link" id="whatsapp-link" href="https://wa.me/351927653087" target="_blank" rel="noopener noreferrer">${r.wa} ${arrow}</a><p class="form-status" role="status" id="form-status" hidden></p></form></div></section></main>
  ${crossBusiness(lang)}
