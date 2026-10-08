@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 // Render the dependency-free site for initial HTML and validate contact/calculator logic.
-const scripts=[...fs.readFileSync('dist/index.html','utf8').matchAll(/<script defer src="([^"]+)"/g)].map(m=>m[1]);assert(scripts.includes('english.js'));
+const scripts=[...fs.readFileSync('dist/index.html','utf8').matchAll(/<script defer src="([^"]+)"/g)].map(m=>m[1].split('?')[0]);assert(scripts.includes('english.js'));
 const source=scripts.map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
 for(const page of ['index.html','eventos.html'])for(const lang of ['es','pt','en']){
  const elements={},isEvent=page==='eventos.html';let clicked='';
