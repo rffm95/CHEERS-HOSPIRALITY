@@ -55,3 +55,11 @@ Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, foll
 `/destination-weddings/` is the dedicated international wedding landing page. English is the first-visit default, with explicit `?lang=pt|es|en` and the existing `cheers-language` manual preference taking priority. `weddings-copy.js` holds translations; `weddings.js` renders the page; `weddings.css` extends the brand. The build emits complete English HTML for no-JavaScript readers and crawlers.
 
 WhatsApp links use +351927653087. The form requires name, guest count, location and either email or phone; date is optional. It prepares a WhatsApp or email draft for visitor review, without storing enquiries or sending automatically. Values survive language changes. The page uses supplied cocktail photography without claiming wedding portfolio work.
+
+
+## Reunião inicial e pedidos de contacto
+A página de hotéis oferece uma primeira reunião presencial sem honorários e sem compromisso, sujeita a disponibilidade e localização. Qualquer deslocação é acordada previamente. Auditoria detalhada, relatório e implementação são serviços pagos separados.
+
+O formulário de hotéis envia um POST para FormSubmit e redireciona para `obrigado.html` após aceitação. Requer uma única ativação pelo titular através do email de confirmação do FormSubmit; um teste efetuado em 08/10/2026 confirmou que a ativação estava pendente. Enquanto não for ativado, os pedidos diretos podem não chegar. WhatsApp, telefone e email continuam disponíveis. O formulário informa o visitante de que FormSubmit processa o pedido. Os formulários de eventos e casamentos mantêm os respetivos caminhos de contacto.
+
+`acquisition.js` contém a oferta PT/ES/EN e a reunião inicial. A publicação da fotografia real do ecrã está pendente de autorização explícita para carregar o ficheiro no repositório público.
