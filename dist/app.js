@@ -56,6 +56,7 @@ function render(lang){
  
  <section class="section services" id="intervention"><div class="wrap"><div class="section-head"><div><span class="eyebrow section-label">${t.intervention}</span><h2>${t.servicesTitle}</h2></div><p>${t.servicesLead}</p></div><div class="service-grid">${t.services.map((s,i)=>`<article class="service"><div class="service-top"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">${icons[i % icons.length]}</svg><span>${String(i+1).padStart(2,'0')}</span></div><h3>${s[0]}</h3><p>${s[1]}</p><span class="service-tag">${s[2]}</span></article>`).join('')}</div></div></section>
  
+ <div class="wrap craft-gallery" aria-label="Cocktails"><figure><img src="/images/bar-preparation.webp" width="555" height="371" alt="" loading="lazy" decoding="async"></figure><figure><img src="/images/citrus-cocktail.webp" width="502" height="347" alt="" loading="lazy" decoding="async"></figure><figure><img src="/images/coupe-cocktail.webp" width="577" height="377" alt="" loading="lazy" decoding="async"></figure></div>
  ${calculatorSection(lang)}
  
  ${groupSection(lang)}
