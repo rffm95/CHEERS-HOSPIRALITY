@@ -1,9 +1,10 @@
 import {existsSync, readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
-for (const file of ['index.html', 'eventos.html', 'events.js', 'strategy.js', 'english.js', 'conversion.js', 'app.js', 'style.css', 'premium.js', 'premium.css', 'acquisition.js', 'acquisition.css', 'obrigado.html', 'images/cheers-screen-real.jpg', 'images/finishing-touch.webp', 'images/cocktail-service.webp', 'images/coupe-cocktail.webp']) {
+for (const file of ['index.html', 'eventos.html', 'events.js', 'strategy.js', 'english.js', 'conversion.js', 'app.js', 'style.css', 'premium.js', 'premium.css', 'acquisition.js', 'acquisition.css', 'hospitality.js', 'hospitality.css', 'obrigado.html', 'images/cheers-screen-real.jpg', 'images/finishing-touch.webp', 'images/cocktail-service.webp', 'images/coupe-cocktail.webp']) {
   if (!existsSync(`dist/${file}`)) throw new Error(`Missing site asset: ${file}`);
 }
 execFileSync(process.execPath, ['--check', 'dist/app.js']);
+execFileSync(process.execPath, ['--check', 'dist/hospitality.js']);
 execFileSync(process.execPath, ['--check', 'dist/acquisition.js']);
 execFileSync(process.execPath, ['--check', 'dist/premium.js']);
 execFileSync(process.execPath, ['--check', 'dist/english.js']);

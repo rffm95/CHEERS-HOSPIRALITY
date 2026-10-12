@@ -23,7 +23,7 @@ function premiumContact(lang,kind){
  const message=hotel?t.hotelMessage:wedding?t.weddingMessage:t.eventMessage;
  return `<aside class="quick-contact" aria-label="${t.contact}"><a class="quick-whatsapp" href="https://wa.me/351927653087?text=${encodeURIComponent(message)}" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a><a class="btn" href="#${anchor}">${hotel?t.hotelCTA:t.quote} <span aria-hidden="true">↗</span></a></aside>`;
 }
-function eventIntroLinks(lang){const t=premiumLabels[lang];return `<nav class="wrap event-paths" aria-label="${t.overview}">${[[t.weddingCard,t.weddingDesc,'celebrations'],[t.corporateCard,t.corporateDesc,'corporate'],[t.formatsCard,t.formatsDesc,'experiences']].map((x,i)=>`<a href="#${x[2]}"><span class="path-number">0${i+1}</span><strong>${x[0]}</strong><span>${x[1]}</span><b aria-hidden="true">↗</b></a>`).join('')}</nav>`;}
+function eventIntroLinks(lang){const h=hospitalityCopy[lang];return `<nav class="wrap event-paths" aria-label="${h.pathsTitle}">${[[h.paths[1][0],h.paths[1][1],'/destination-weddings/?lang='+lang],[h.paths[2][0],h.paths[2][1],'#venues'],[h.paths[3][0],h.paths[3][1],'#planners'],[premiumLabels[lang].corporateCard,premiumLabels[lang].corporateDesc,'#corporate']].map((x,i)=>`<a href="${x[2]}"><span class="path-number">0${i+1}</span><strong>${x[0]}</strong><span>${x[1]}</span><b aria-hidden="true">↗</b></a>`).join('')}</nav>`;}
 let contactObserver;
 function bindPremiumContact(){
  if(typeof IntersectionObserver==='undefined')return;
