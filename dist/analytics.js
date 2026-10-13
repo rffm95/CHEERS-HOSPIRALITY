@@ -1,11 +1,2 @@
-(() => {
-  const page = location.pathname === '/eventos.html' ? '/eventos.html' : '/';
-  const key = 'cheers-view:' + page;
-  // One count per open tab and page, including a fresh reload.
-  if (sessionStorage.getItem(key) === location.href + ':' + performance.timeOrigin) return;
-  sessionStorage.setItem(key, location.href + ':' + performance.timeOrigin);
-  fetch('https://cheers-visit-counter.cccerjn.chatgpt.site/api/visit', {
-    method: 'POST', mode: 'cors', credentials: 'omit', keepalive: true,
-    headers: {'Content-Type': 'application/json'}, body: JSON.stringify({page})
-  }).catch(() => {});
-})();
+/* Existing counter integration, protected against restricted storage. No form data is sent. */
+(window.cheersTrackPage=()=>{if(window.__cheersPreview)return;const host=location.hostname;if(!['cheers.guru','www.cheers.guru'].includes(host)&&!host.endsWith('.chatgpt.site'))return;const page=location.pathname.endsWith('/eventos.html')?'/eventos.html':'/';const key='cheers-view:'+page;try{if(sessionStorage.getItem(key)===location.href+':'+performance.timeOrigin)return;sessionStorage.setItem(key,location.href+':'+performance.timeOrigin);}catch{}fetch('https://cheers-visit-counter.cccerjn.chatgpt.site/api/visit',{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({page})}).catch(()=>{});})();

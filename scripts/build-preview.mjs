@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const paths=['/index.html','/eventos.html','/es/index.html','/es/eventos.html','/en/index.html','/en/eventos.html'];
+const mime={webp:'image/webp',jpg:'image/jpeg',svg:'image/svg+xml'};
+const asset=file=>`data:${mime[file.split('.').at(-1)]};base64,${fs.readFileSync('dist'+file).toString('base64')}`;
+const cache=new Map();
+const inline=html=>html.replace(/src="(\/images\/[^" ]+)"/g,(_,path)=>{if(!cache.has(path))cache.set(path,asset(path));return `src="${cache.get(path)}"`;});
+const pages=Object.fromEntries(paths.map(path=>[path,inline(fs.readFileSync('dist'+path,'utf8').replace(/<script[^>]*src=[^>]+><\/script>/g,''))]));
+const css=fs.readFileSync('dist/atelier.css','utf8'),js=fs.readFileSync('dist/atelier.js','utf8');
+const payload=JSON.stringify(pages).replace(/</g,'\\u003c');
+let preview=pages['/index.html'].replace('<link rel="stylesheet" href="/atelier.css">',`<style>${css}</style>`).replace('<link rel="icon" href="/favicon.svg" type="image/svg+xml">','');
+preview=preview.replace('</body>',`<script>window.__cheersPreview=${payload};</script><script>${js.replace(/<\/script/gi,'<\\/script')}</script></body>`);
+fs.writeFileSync('../Cheers-Experiences-Preview.html',preview);
+console.log(`Functional standalone preview: six pages, three languages and ${cache.size} embedded images; ${Math.round(Buffer.byteLength(preview)/1024/1024*10)/10} MB. Live hotel submission disabled.`);

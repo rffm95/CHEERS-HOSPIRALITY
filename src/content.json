@@ -1,0 +1,1385 @@
+{
+  "pt": {
+    "services": [
+      [
+        "Mystery Guest Bar Audit",
+        "A experiência do hóspede observada no terreno."
+      ],
+      [
+        "Bar Performance Audit",
+        "Diagnóstico de vendas, margens, custos e operação."
+      ],
+      [
+        "Menu Engineering",
+        "Oferta, preços e apresentação orientados à contribuição."
+      ],
+      [
+        "Cocktail Development",
+        "Clássicos rigorosos e receitas com identidade."
+      ],
+      [
+        "Staff Training",
+        "Serviço, produto, recomendação e upselling."
+      ],
+      [
+        "Procurement & Supplier Strategy",
+        "Compras, fornecedores, stock e desperdício."
+      ],
+      [
+        "Operational Efficiency",
+        "Processos, preparação, turnos e produtividade."
+      ],
+      [
+        "Complete Bar Transformation",
+        "Intervenção integrada, do conceito à execução."
+      ],
+      [
+        "Ongoing Consultancy",
+        "Acompanhamento, indicadores e melhoria contínua."
+      ],
+      [
+        "Management / Operation",
+        "Gestão ou operação com âmbito e responsabilidades acordados."
+      ]
+    ],
+    "digital": {
+      "label": "Visibilidade que cria oportunidades",
+      "title": "O hóspede não pode pedir<br><em>aquilo que não conhece.</em>",
+      "lead": "Levamos a oferta do bar até ao hóspede: no telemóvel, na receção e nos ecrãs do hotel. Mais visibilidade no momento certo. Mais razões para consumir dentro.",
+      "items": [
+        [
+          "01 / Menus digitais & QR",
+          "A carta inteira. Um simples scan.",
+          "Criamos menus digitais que se consultam no telemóvel através de um simples QR code, sem instalar aplicações. Design claro, bebidas apelativas e sugestões que facilitam a escolha."
+        ],
+        [
+          "02 / Todos os idiomas necessários",
+          "A sua oferta, na língua do hóspede.",
+          "Criamos e adaptamos os menus em todos os idiomas de que o hotel precisa. Descrições claras e uma apresentação coerente com a sua marca, para que a língua não seja uma barreira à venda."
+        ],
+        [
+          "03 / Animações para ecrãs & TV",
+          "O seu hotel também pode vender no ecrã.",
+          "Criamos animações profissionais para promover bares, cocktails, propostas sazonais e, quando adequado, outros serviços do hotel: restaurante, spa ou experiências."
+        ]
+      ],
+      "outcome": "Carta, equipa e comunicação a trabalhar em conjunto: o hóspede descobre a oferta, recebe uma boa recomendação e encontra uma razão para repetir.",
+      "cta": "Quero ativar o potencial do meu hotel",
+      "wa": "Contactar por WhatsApp"
+    },
+    "audit": {
+      "title": "Antes de analisarmos o seu bar como consultores,<br><em>vivemo-lo como clientes.</em>",
+      "intro": "Durante 1 ou 2 dias, observamos discretamente a experiência real do hóspede, num serviço acordado com a direção. Depois cruzamos o que se vê do lado do cliente com a análise da operação e dos dados disponibilizados.",
+      "check": [
+        "Primeira impressão, atendimento e conhecimento da equipa",
+        "Espera, velocidade, recomendação e upselling",
+        "Cocktails: apresentação, qualidade e consistência",
+        "Carta, preços e perceção de valor",
+        "Limpeza, organização e dimensionamento aparente da equipa",
+        "Consumos perdidos e desperdício observável"
+      ],
+      "delivery": [
+        "Executive Summary",
+        "Problemas e falhas de experiência",
+        "Oportunidades de receita e redução de custos",
+        "Quick Wins e prioridades",
+        "Plano de intervenção recomendado"
+      ],
+      "note": "A observação identifica sinais; custos, produtividade e dimensionamento são validados com dados e com a equipa interna."
+    },
+    "group": {
+      "title": "Um hotel é um projeto.<br><em>Um grupo pode ser uma parceria.</em>",
+      "text": "Uma base comum de qualidade, com espaço para a identidade de cada unidade. Definimos o âmbito por hotel e um acompanhamento útil para a direção do grupo.",
+      "items": [
+        "Auditorias multiunidade",
+        "Standards e programas de formação",
+        "Programas de cocktails",
+        "Compras e fornecedores",
+        "KPIs e monitorização de performance",
+        "Mystery Guest periódico",
+        "Novas aberturas"
+      ],
+      "cta": "Falar sobre parceria de grupo"
+    },
+    "cocktails": {
+      "title": "Faça do bar<br><em>parte do destino.</em>",
+      "text": "Queremos que meses depois o hóspede ainda se lembre daquele cocktail. Executamos clássicos com rigor e desenvolvemos receitas exclusivas adaptadas ao conceito, localização, público e identidade do hotel — com atenção à velocidade de execução e à margem.",
+      "tags": [
+        "Cocktails de assinatura",
+        "Cartas sazonais",
+        "Pool & Summer Drinks",
+        "Cocktails de rooftop",
+        "Welcome drinks",
+        "Low / No Alcohol",
+        "Inspiração regional",
+        "Reinterpretações de clássicos"
+      ]
+    },
+    "contexts": [
+      [
+        "Pool Bar",
+        "Picos de procura, calor e ritmo de férias. Bebidas refrescantes, preparação antecipada e serviço ágil."
+      ],
+      [
+        "Rooftop",
+        "A vista atrai. A carta, a recomendação e a consistência ajudam a prolongar a visita."
+      ],
+      [
+        "Lobby Bar",
+        "Chegadas, pausas e encontros. Transformar circulação em motivos para consumir e regressar."
+      ],
+      [
+        "Restaurant Bar",
+        "Aperitivos, harmonizações e pós-jantar. Articular a recomendação com o ritmo da sala."
+      ]
+    ],
+    "about": {
+      "text": "Rui Monteiro reúne mais de 10 anos de experiência em bares e hospitalidade. Iniciou o percurso em 2014 no Cheers O Bar, em Viseu, e trabalhou em contexto hoteleiro no Grande Real Santa Eulália, Albufeira, em 2017.",
+      "note": "Referências ao percurso profissional; não representam clientes de consultoria nem parcerias comerciais."
+    },
+    "calculator": {
+      "title": "Pequenas melhorias.<br><em>Quanto podem representar?</em>",
+      "intro": "Explore um cenário de faturação do bar com a mesma base de hóspedes. Os valores iniciais são apenas um exemplo editável.",
+      "labels": [
+        "Quartos",
+        "Ocupação (%)",
+        "Hóspedes por dia",
+        "Hóspedes que utilizam o bar (%)",
+        "Ticket médio diário por utilizador (€)",
+        "Dias de operação por mês",
+        "Melhoria na utilização (pontos percentuais)",
+        "Melhoria no ticket (%)"
+      ],
+      "outputs": [
+        "Faturação mensal atual no cenário",
+        "Faturação mensal simulada",
+        "Incremento mensal simulado",
+        "Incremento anual simulado"
+      ],
+      "disclaimer": "Simulação ilustrativa, não é uma previsão nem garantia de resultados. Faturação não é lucro. Não desconta custos nem investimento; não modela sazonalidade, impostos ou alterações de ocupação. O valor anual corresponde a 12 meses iguais aos dias de operação introduzidos.",
+      "formula": "Hóspedes/dia × utilização do bar × ticket diário × dias de operação. A utilização melhorada é limitada a 100%.",
+      "invalid": "Preencha todos os campos com valores válidos dentro dos limites indicados."
+    },
+    "method": {
+      "title": "Melhorias que a equipa<br><em>consegue pôr em prática.</em>",
+      "intro": "Ligamos cada recomendação a uma mudança na operação. Entregas, responsáveis, calendário e acompanhamento são definidos na proposta.",
+      "steps": [
+        [
+          "Ler a operação",
+          "Observamos o serviço, ouvimos a equipa e cruzamos a experiência do hóspede com vendas, custos e procura.",
+          "Prioridades e indicadores de partida"
+        ],
+        [
+          "Preparar a mudança",
+          "Desenvolvemos a carta e as orientações de trabalho necessárias: receitas, doses, custos, preparação e serviço.",
+          "Ferramentas adaptadas ao seu bar"
+        ],
+        [
+          "Trabalhar com a equipa",
+          "Treinamos a execução, a recomendação e a organização dos turnos em contexto real de trabalho.",
+          "Processos praticados no terreno"
+        ],
+        [
+          "Verificar a evolução",
+          "Revemos os indicadores acordados, recolhemos o feedback da equipa e afinamos o que precisa de melhorar.",
+          "Acompanhamento com âmbito acordado"
+        ]
+      ],
+      "toolkit": [
+        [
+          "Carta & rentabilidade",
+          "Fichas de bebidas com receita, dose, custo e preço proposto; análise da contribuição dos produtos."
+        ],
+        [
+          "Rotinas de serviço",
+          "Orientações de preparação, organização do posto, abertura e fecho, recomendação e consistência."
+        ],
+        [
+          "Controlo & seguimento",
+          "Indicadores de vendas, desperdício, compras e produtividade, revistos com a gestão."
+        ]
+      ]
+    },
+    "meeting": {
+      "cta": "Pedir reunião presencial gratuita",
+      "note": "Reunião presencial sem honorários e sem compromisso, sujeita a disponibilidade e localização. Qualquer custo de deslocação é acordado previamente. A auditoria detalhada, o relatório e a implementação são serviços pagos, com proposta separada.",
+      "faq": [
+        "A primeira reunião é mesmo gratuita?",
+        "Sim. A reunião presencial não tem honorários nem obriga a contratar. Confirmamos disponibilidade e localização; qualquer custo de deslocação é acordado antes. A visita permite uma avaliação inicial. Uma auditoria detalhada com relatório, formação ou implementação requer uma proposta paga separada."
+      ]
+    },
+    "real": {
+      "label": "EXEMPLO REAL · CHEERS O BAR",
+      "title": "A oferta à vista.<br><em>No momento de escolher.</em>",
+      "text": "Este ecrã está no Cheers O Bar, em Viseu. Combina informação desportiva com a promoção das bebidas e dos respetivos preços. É um exemplo real de como tornamos a oferta visível no próprio espaço.",
+      "caption": "Fotografia real fornecida pela gestão do Cheers O Bar. Exemplo de comunicação no ponto de venda; não demonstra, por si só, um aumento de vendas."
+    },
+    "events": {
+      "title": "Bar para casamentos, quintas e eventos | Cheers Experiences",
+      "desc": "Cocktails para eventos, welcome drinks e open bar para casamentos. Bartenders, menus QR e coordenação com quintas e wedding planners em Portugal e Espanha.",
+      "hotels": "Consultoria para Hotéis",
+      "events": "Eventos",
+      "cta": "Pedir proposta para evento",
+      "eyebrow": "Cheers Experiences / Eventos",
+      "headline": "O seu grande dia.<br><em>Um bar à altura.</em>",
+      "intro": "Cocktails com personalidade, um gin bem servido e uma equipa que cuida dos seus convidados. Levamos a experiência Cheers até ao espaço que escolher.",
+      "heroLink": "Conhecer os formatos",
+      "weddingLabel": "Casamentos com mais sabor",
+      "weddingTitle": "Escolheu cada detalhe.<br><em>Não deixe os cocktails ao acaso.</em>",
+      "weddingText": "Vai casar e quer mais do que os cocktails habituais? Criamos uma proposta com a identidade da ocasião: receitas personalizadas, uma carta selecionada e serviço cuidado, do primeiro brinde ao último cocktail.",
+      "venue": {
+        "title": "O seu espaço.<br><em>Um bar bem coordenado.</em>",
+        "text": "Apoiamos proprietários e gestores a estruturar a oferta de bebidas por evento: carta, custos, preparação e serviço. Uma operação organizada ajuda a controlar desperdício, trabalhar a receita por evento e manter qualidade consistente.",
+        "items": [
+          "Carta e formatos de bar adaptados ao espaço",
+          "Receitas, doses e compras com controlo de custos",
+          "Equipa, preparação e horários alinhados com o evento",
+          "Coordenação com catering e wedding planners"
+        ]
+      },
+      "scale": "De um aniversário com 25 pessoas a um grande casamento.",
+      "scaleText": "Adaptamos a carta, a equipa e o serviço à dimensão da celebração. Casamentos e batizados, festas privadas, eventos empresariais e serviço de bar em parceria com empresas de catering.",
+      "servicesLabel": "O que levamos à sua celebração",
+      "services": [
+        [
+          "Bar de cocktails completo",
+          "Cocktails personalizados ou uma carta previamente definida, bebidas de qualidade e bartenders especializados. Planeamos consigo as bebidas, o gelo, os copos e a organização do serviço, com tudo o que fica incluído definido na proposta."
+        ],
+        [
+          "Bar de gin, à sua medida",
+          "Gins premium, águas tónicas selecionadas e botânicos que valorizam cada combinação. Serviço com gelo em cubos e copos de vidro ou policarbonato, consoante o espaço e o formato acordado."
+        ],
+        [
+          "Um bar para todos os convidados",
+          "Podemos incluir cocktails sem álcool e adaptar a seleção aos gostos dos convidados. Uma apresentação cuidada, sugestões fáceis de escolher e a mesma atenção em cada copo."
+        ]
+      ],
+      "formatsLabel": "Escolha como quer receber",
+      "formatsTitle": "O seu evento.<br><em>O modelo que faz sentido.</em>",
+      "formats": [
+        [
+          "Bar aberto",
+          "O organizador assegura o serviço dentro de uma carta, duração e condições acordadas. Os convidados desfrutam das bebidas incluídas sem pagar cada consumo."
+        ],
+        [
+          "Venda no local",
+          "Os convidados pagam as suas bebidas. A viabilidade, os preços e os custos de operação são negociados com a organização e o espaço."
+        ],
+        [
+          "Modelo misto",
+          "Os organizadores podem oferecer uma seleção de bebidas, um período de bar aberto ou um valor por convidado. Os restantes consumos ficam a cargo dos convidados, com regras claras desde o início."
+        ]
+      ],
+      "formatNote": "Cada proposta considera o local, o número de convidados, a duração e a carta. Definimos previamente os custos, o que está incluído e a responsabilidade de cada parte.",
+      "temporaryTitle": "O seu evento precisa de quem trate do bar?",
+      "temporaryText": "Também assumimos a exploração temporária de espaços de bar em eventos. Articulamos com a organização a operação, a equipa, a oferta e as condições comerciais, de acordo com o espaço e a dimensão do evento.",
+      "areaLabel": "Onde atuamos",
+      "areaTitle": "Perto da sua próxima celebração.",
+      "areaNote": "Deslocação e disponibilidade confirmadas na proposta, de acordo com o local e a dimensão do evento.",
+      "contactTitle": "Conte-nos o que<br><em>vai celebrar.</em>",
+      "contactText": "Diga-nos a data, o local e quantas pessoas espera receber. Preparamos uma proposta de bar adequada à ocasião e ao seu orçamento.",
+      "name": "O seu nome",
+      "type": "Tipo de evento",
+      "types": [
+        "Casamento",
+        "Batizado",
+        "Aniversário / festa privada",
+        "Evento empresarial",
+        "Parceria com catering",
+        "Exploração temporária de bar",
+        "Quinta / venue — parceria",
+        "Wedding / event planner — parceria"
+      ],
+      "date": "Data prevista (opcional)",
+      "place": "Local / espaço",
+      "guests": "Número estimado de convidados",
+      "model": "Formato pretendido",
+      "models": [
+        "Ainda a definir",
+        "Bar aberto",
+        "Venda no local",
+        "Modelo misto"
+      ],
+      "message": "O que imagina para o seu evento?",
+      "placeholder": "Horário, cocktails preferidos, contacto da quinta ou outras ideias…",
+      "submit": "Preparar pedido por WhatsApp",
+      "wa": "Falar sobre o meu evento",
+      "introMessage": "Olá! Gostaria de uma proposta da Cheers Experiences para um evento.",
+      "note": "O WhatsApp abre com o pedido preparado para rever e enviar. Os dados não são guardados neste site e a mensagem não é enviada automaticamente.",
+      "email": "Prefiro enviar por email",
+      "status": "Pedido preparado. Reveja a mensagem no WhatsApp antes de enviar.",
+      "subject": "Pedido de proposta para evento — Cheers Experiences",
+      "footer": "Consultoria para hotéis · Cocktails & eventos",
+      "legal": "Cheers Experiences é uma marca da Sucesso Maciço, Lda.",
+      "imageNote": "Imagens ilustrativas de ambiente; não são um portefólio de eventos realizados.",
+      "menu": "Menu",
+      "close": "Fechar",
+      "upgrade": {
+        "emotionalTitle": "Não levamos apenas um bar.<br><em>Criamos um ponto de encontro.</em>",
+        "emotionalText": "Um lugar onde os convidados se encontram, brindam, experimentam novos sabores, conversam e tiram fotografias. Cuidamos do serviço para que possam aproveitar a celebração e levar boas memórias.",
+        "areas": [
+          [
+            "Weddings & Celebrations",
+            "Casamentos, batizados, aniversários e festas privadas. Do primeiro brinde à pista de dança, um serviço com o ritmo da celebração."
+          ],
+          [
+            "Corporate Events",
+            "Eventos empresariais, lançamentos, congressos, festas de empresa, encontros de equipa e ativações de marca. Hospitalidade com propósito."
+          ],
+          [
+            "Temporary Bar Operations",
+            "Festivais, feiras e eventos públicos ou privados. Exploração temporária do bar, com equipa, carta e operação acordadas com a organização."
+          ]
+        ],
+        "signatureTitle": "O vosso evento.<br><em>O vosso cocktail.</em>",
+        "signatureText": "Um Cocktail da Noiva, um Cocktail do Noivo ou uma receita exclusiva do casamento. Criamos um conceito que conte um pouco da vossa história, com sabores e apresentação adequados à ocasião.",
+        "signatureNote": "Nome, ingredientes, cores, decoração, apresentação e menu podem ser adaptados. Definimos as possibilidades e os elementos incluídos na proposta.",
+        "corporateTitle": "A sua marca também<br><em>pode ser servida num copo.</em>",
+        "corporateText": "Cocktails de assinatura inspirados na marca, no produto ou na campanha. Adaptamos sabores, cores e menus ao conceito do evento, articulando o serviço com a equipa de marketing e o espaço.",
+        "corporateItems": [
+          "Lançamentos de produto",
+          "Festas e encontros de empresa",
+          "Ativações de marca",
+          "Áreas de hospitalidade",
+          "Cocktails e menus personalizados"
+        ],
+        "corporateNote": "O conceito e os elementos de personalização são acordados na proposta. Produção gráfica ou branding físico não estão implicitamente incluídos.",
+        "corporateCTA": "Planear um evento empresarial",
+        "packagesTitle": "Três pontos de partida.<br><em>Uma proposta só sua.</em>",
+        "packages": [
+          [
+            "Essential Bar",
+            "Serviço profissional de cocktails, com uma carta selecionada e adaptada ao evento."
+          ],
+          [
+            "Signature Experience",
+            "Cocktails personalizados, seleção premium e uma experiência com identidade própria."
+          ],
+          [
+            "Full Bar Experience",
+            "Um conceito de bar mais completo: equipa, carta e operação planeadas para a ocasião."
+          ]
+        ],
+        "packagesNote": "Experiências orientativas, sem preços fixos ou inclusões automáticas. Todos os serviços são personalizados e sujeitos a proposta. O formato de pagamento é escolhido à parte.",
+        "need": "O que procura?",
+        "needs": [
+          "Cocktail Bar",
+          "Full Bar",
+          "Gin Bar",
+          "Signature Cocktails",
+          "Ativação de marca",
+          "Exploração temporária de bar",
+          "Ainda não sei / Quero aconselhamento"
+        ],
+        "inclusive": "Clássicos · Cocktails de assinatura · Low alcohol · No alcohol",
+        "flex": "Adaptamos equipa, quantidades, menu, estrutura de serviço, logística e formato comercial à dimensão do evento e às condições do espaço."
+      },
+      "faq": [
+        [
+          "Já tenho quinta e catering. Posso contratar só o bar?",
+          "Sim. Podemos integrar o serviço de bar na estrutura existente, articulando com os responsáveis. Confirmamos as condições do espaço e o que cada parte assegura antes de fechar a proposta."
+        ],
+        [
+          "O que determina o orçamento?",
+          "O local, a data, o número de convidados, a duração, a carta e os meios necessários. Diga-nos também o formato pretendido — bar aberto, venda no local ou misto — para prepararmos uma proposta adequada."
+        ],
+        [
+          "E se o espaço não tiver um bar?",
+          "Estudamos consigo a zona de serviço, os acessos e os meios necessários. A solução e a sua viabilidade ficam confirmadas na proposta; não partimos do princípio de que qualquer espaço reúne as mesmas condições."
+        ],
+        [
+          "Os convidados podem pagar parte dos consumos?",
+          "Sim. No formato misto, pode oferecer determinadas bebidas, um período de bar aberto ou um valor por convidado. Os restantes consumos são pagos pelos convidados segundo regras acordadas previamente."
+        ],
+        [
+          "Podemos personalizar os cocktails e ter opções sem álcool?",
+          "Sim. Podemos desenvolver receitas e adaptar nomes, sabores e apresentação ao casamento ou ao conceito da empresa. A carta pode incluir clássicos, low alcohol e no alcohol, com os elementos de personalização definidos na proposta."
+        ],
+        [
+          "Quando devo entrar em contacto?",
+          "Assim que tiver uma data ou período em mente. Verificamos disponibilidade e deslocação para o local indicado. A reserva e as condições de confirmação são acordadas na proposta."
+        ]
+      ],
+      "scope": [
+        [
+          "Bebidas & carta",
+          "Cocktails, gin, opções sem álcool e restantes bebidas incluídas; quantidades ou condições de consumo."
+        ],
+        [
+          "Equipa & horários",
+          "Dimensão da equipa, duração do serviço, preparação e condições de eventual prolongamento."
+        ],
+        [
+          "Espaço & materiais",
+          "Balcão existente ou solução acordada, copos, gelo, equipamento, acessos e necessidades do local."
+        ],
+        [
+          "Custos & responsabilidades",
+          "Valor, deslocação, pagamento dos consumos e o que cabe à Cheers, ao espaço e à organização."
+        ]
+      ],
+      "scopeIntro": "Uma boa experiência começa com uma proposta clara. Estes pontos são definidos antes de confirmar o serviço.",
+      "packagesNote": "Experiências orientativas, sem preços fixos ou inclusões automáticas. Todos os serviços são personalizados e sujeitos a proposta. O formato de pagamento é escolhido à parte.",
+      "process": [
+        [
+          "Briefing",
+          "Data, local, convidados, horários e estilo. Começamos pelo que precisam e pelo que o espaço permite."
+        ],
+        [
+          "Proposta & prova",
+          "Definimos carta, equipa e âmbito. A prova de cocktails, quando pretendida, é acordada na proposta."
+        ],
+        [
+          "Planeamento",
+          "Alinhamos logística, preparação, fornecedores e timings com o venue e o planner."
+        ],
+        [
+          "Execução",
+          "Coordenamos a equipa e o serviço no terreno, com responsabilidades claras durante o evento."
+        ]
+      ],
+      "planner": {
+        "title": "O bar no seu plano.<br><em>A operação nas nossas mãos.</em>",
+        "text": "Pode subcontratar a carta de cocktails, o serviço de bartenders ou uma solução de bar com o âmbito acordado. Recebemos o briefing, preparamos a proposta e coordenamos bebidas, equipa e execução com o planner e o venue.",
+        "items": [
+          "Cocktails personalizados e propostas sem álcool",
+          "Welcome drinks, cocktail hour e open bar",
+          "Menus digitais / QR e apresentação da carta",
+          "Um contacto operacional para o planeamento e o dia do evento"
+        ]
+      }
+    },
+    "hotelTypes": [
+      "Aumentar consumo por hóspede",
+      "Melhorar margem e compras",
+      "Organizar e formar a equipa",
+      "Transformação integral do bar",
+      "Menus digitais, QR e comunicação em ecrãs",
+      "Mystery Guest Audit",
+      "Parceria de grupo hoteleiro",
+      "Preparar abertura / época alta"
+    ]
+  },
+  "es": {
+    "services": [
+      [
+        "Mystery Guest Bar Audit",
+        "La experiencia del huésped observada sobre el terreno."
+      ],
+      [
+        "Bar Performance Audit",
+        "Diagnóstico de ventas, márgenes, costes y operación."
+      ],
+      [
+        "Menu Engineering",
+        "Oferta, precios y presentación orientados a la contribución."
+      ],
+      [
+        "Cocktail Development",
+        "Clásicos rigurosos y recetas con identidad."
+      ],
+      [
+        "Staff Training",
+        "Servicio, producto, recomendación y upselling."
+      ],
+      [
+        "Procurement & Supplier Strategy",
+        "Compras, proveedores, stock y desperdicio."
+      ],
+      [
+        "Operational Efficiency",
+        "Procesos, preparación, turnos y productividad."
+      ],
+      [
+        "Complete Bar Transformation",
+        "Intervención integral, del concepto a la ejecución."
+      ],
+      [
+        "Ongoing Consultancy",
+        "Seguimiento, indicadores y mejora continua."
+      ],
+      [
+        "Management / Operation",
+        "Gestión u operación con alcance y responsabilidades acordados."
+      ]
+    ],
+    "digital": {
+      "label": "Visibilidad que genera oportunidades",
+      "title": "Su huésped no puede pedir<br><em>lo que no conoce.</em>",
+      "lead": "Llevamos la oferta del bar hasta el huésped: en su móvil, en la recepción y en las pantallas del hotel. Más visibilidad en el momento adecuado. Más motivos para consumir dentro.",
+      "items": [
+        [
+          "01 / Menús digitales & QR",
+          "Toda la carta. Un simple escaneo.",
+          "Creamos menús digitales que se consultan desde el móvil con un simple código QR, sin instalar aplicaciones. Diseño claro, bebidas apetecibles y recomendaciones que facilitan la elección."
+        ],
+        [
+          "02 / Todos los idiomas necesarios",
+          "Su oferta, en el idioma del huésped.",
+          "Creamos y adaptamos las cartas en todos los idiomas que necesite su hotel. Descripciones claras y una presentación coherente con su marca, para que el idioma no frene la venta."
+        ],
+        [
+          "03 / Animaciones para pantallas & TV",
+          "Su hotel también puede vender en pantalla.",
+          "Creamos animaciones profesionales para promocionar bares, cócteles, propuestas de temporada y, cuando proceda, otros servicios del hotel: restaurante, spa o experiencias."
+        ]
+      ],
+      "outcome": "Carta, equipo y comunicación trabajando juntos: el huésped descubre la oferta, recibe una buena recomendación y encuentra una razón para repetir.",
+      "cta": "Quiero activar el potencial de mi hotel",
+      "wa": "Contactar por WhatsApp"
+    },
+    "audit": {
+      "title": "Antes de analizar su bar como consultores,<br><em>lo vivimos como clientes.</em>",
+      "intro": "Durante 1 o 2 días observamos discretamente la experiencia real del huésped, en un servicio acordado con la dirección. Después contrastamos lo que se percibe como cliente con el análisis de la operación y los datos facilitados.",
+      "check": [
+        "Primera impresión, atención y conocimiento del equipo",
+        "Espera, velocidad, recomendación y upselling",
+        "Cócteles: presentación, calidad y consistencia",
+        "Carta, precios y percepción de valor",
+        "Limpieza, organización y dimensionamiento aparente del equipo",
+        "Consumos perdidos y desperdicio observable"
+      ],
+      "delivery": [
+        "Executive Summary",
+        "Problemas y fallos de experiencia",
+        "Oportunidades de ingresos y reducción de costes",
+        "Quick Wins y prioridades",
+        "Plan de intervención recomendado"
+      ],
+      "note": "La observación identifica señales; costes, productividad y dimensionamiento se validan con datos y con el equipo interno."
+    },
+    "group": {
+      "title": "Un hotel es un proyecto.<br><em>Un grupo puede ser una alianza.</em>",
+      "text": "Una base común de calidad, con espacio para la identidad de cada establecimiento. Definimos el alcance por hotel y un seguimiento útil para la dirección del grupo.",
+      "items": [
+        "Auditorías multiestablecimiento",
+        "Estándares y programas de formación",
+        "Programas de coctelería",
+        "Compras y proveedores",
+        "KPIs y seguimiento de resultados",
+        "Mystery Guest periódico",
+        "Nuevas aperturas"
+      ],
+      "cta": "Hablar de una colaboración de grupo"
+    },
+    "cocktails": {
+      "title": "Haga del bar<br><em>parte del destino.</em>",
+      "text": "Queremos que meses después el huésped todavía recuerde aquel cóctel. Ejecutamos clásicos con rigor y desarrollamos recetas exclusivas adaptadas al concepto, ubicación, público e identidad del hotel, cuidando la velocidad de preparación y el margen.",
+      "tags": [
+        "Cócteles de autor",
+        "Cartas de temporada",
+        "Pool & Summer Drinks",
+        "Cócteles de rooftop",
+        "Welcome drinks",
+        "Low / No Alcohol",
+        "Inspiración regional",
+        "Reinterpretaciones de clásicos"
+      ]
+    },
+    "contexts": [
+      [
+        "Pool Bar",
+        "Picos de demanda, calor y ritmo de vacaciones. Bebidas refrescantes, preparación anticipada y servicio ágil."
+      ],
+      [
+        "Rooftop",
+        "La vista atrae. La carta, la recomendación y la consistencia ayudan a prolongar la visita."
+      ],
+      [
+        "Lobby Bar",
+        "Llegadas, pausas y encuentros. Convertir el tránsito en motivos para consumir y volver."
+      ],
+      [
+        "Restaurant Bar",
+        "Aperitivos, maridajes y sobremesa. Coordinar la recomendación con el ritmo de la sala."
+      ]
+    ],
+    "about": {
+      "text": "Rui Monteiro reúne más de 10 años de experiencia en bares y hospitalidad. Comenzó en 2014 en Cheers O Bar, Viseu, y trabajó en el entorno hotelero del Grande Real Santa Eulália, Albufeira, en 2017.",
+      "note": "Referencias a la trayectoria profesional; no representan clientes de consultoría ni alianzas comerciales."
+    },
+    "calculator": {
+      "title": "Pequeñas mejoras.<br><em>¿Cuánto pueden representar?</em>",
+      "intro": "Explore un escenario de facturación del bar con la misma base de huéspedes. Los valores iniciales son solo un ejemplo editable.",
+      "labels": [
+        "Habitaciones",
+        "Ocupación (%)",
+        "Huéspedes por día",
+        "Huéspedes que utilizan el bar (%)",
+        "Ticket medio diario por usuario (€)",
+        "Días de operación al mes",
+        "Mejora en utilización (puntos porcentuales)",
+        "Mejora del ticket (%)"
+      ],
+      "outputs": [
+        "Facturación mensual actual del escenario",
+        "Facturación mensual simulada",
+        "Incremento mensual simulado",
+        "Incremento anual simulado"
+      ],
+      "disclaimer": "Simulación ilustrativa, no es una previsión ni garantía de resultados. Facturación no es beneficio. No descuenta costes ni inversión; no modela estacionalidad, impuestos o cambios de ocupación. El valor anual corresponde a 12 meses iguales a los días de operación introducidos.",
+      "formula": "Huéspedes/día × utilización del bar × ticket diario × días de operación. La utilización mejorada se limita al 100%.",
+      "invalid": "Complete todos los campos con valores válidos dentro de los límites indicados."
+    },
+    "method": {
+      "title": "Mejoras que el equipo<br><em>puede llevar a la práctica.</em>",
+      "intro": "Vinculamos cada recomendación con un cambio operativo. Entregables, responsables, calendario y seguimiento se definen en la propuesta.",
+      "steps": [
+        [
+          "Comprender la operación",
+          "Observamos el servicio, escuchamos al equipo y contrastamos la experiencia del huésped con ventas, costes y demanda.",
+          "Prioridades e indicadores iniciales"
+        ],
+        [
+          "Preparar el cambio",
+          "Desarrollamos la carta y las pautas de trabajo necesarias: recetas, medidas, costes, preparación y servicio.",
+          "Herramientas adaptadas a su bar"
+        ],
+        [
+          "Trabajar con el equipo",
+          "Practicamos ejecución, recomendación y organización de turnos en el contexto real de trabajo.",
+          "Procesos aplicados sobre el terreno"
+        ],
+        [
+          "Revisar la evolución",
+          "Revisamos los indicadores acordados, recogemos las observaciones del equipo y ajustamos lo que necesita mejorar.",
+          "Seguimiento con alcance acordado"
+        ]
+      ],
+      "toolkit": [
+        [
+          "Carta & rentabilidad",
+          "Fichas de bebidas con receta, medida, coste y precio propuesto; análisis de la contribución de los productos."
+        ],
+        [
+          "Rutinas de servicio",
+          "Pautas de preparación, organización del puesto, apertura y cierre, recomendación y consistencia."
+        ],
+        [
+          "Control & seguimiento",
+          "Indicadores de ventas, desperdicio, compras y productividad revisados con la dirección."
+        ]
+      ]
+    },
+    "meeting": {
+      "cta": "Pedir reunión presencial gratuita",
+      "note": "Reunión presencial sin honorarios ni compromiso, sujeta a disponibilidad y ubicación. Cualquier coste de desplazamiento se acuerda previamente. La auditoría detallada, el informe y la implementación son servicios de pago con propuesta separada.",
+      "faq": [
+        "¿La primera reunión es gratuita?",
+        "Sí. La reunión presencial no tiene honorarios ni obliga a contratar. Confirmamos disponibilidad y ubicación; cualquier coste de desplazamiento se acuerda antes. La visita permite una valoración inicial. Una auditoría detallada con informe, formación o implementación requiere una propuesta de pago separada."
+      ]
+    },
+    "real": {
+      "label": "EJEMPLO REAL · CHEERS O BAR",
+      "title": "La oferta a la vista.<br><em>Al elegir una bebida.</em>",
+      "text": "Esta pantalla está en Cheers O Bar, Viseu. Combina información deportiva con la promoción de las bebidas y sus precios. Es un ejemplo real de cómo hacemos visible la oferta en el propio local.",
+      "caption": "Fotografía real facilitada por la dirección de Cheers O Bar. Ejemplo de comunicación en el punto de venta; por sí solo no demuestra un aumento de ventas."
+    },
+    "events": {
+      "title": "Bar para bodas, fincas y eventos | Cheers Experiences",
+      "desc": "Cócteles para eventos, welcome drinks y barra libre para bodas. Bartenders, menús QR y coordinación con fincas y wedding planners en Portugal y España.",
+      "hotels": "Consultoría para Hoteles",
+      "events": "Eventos",
+      "cta": "Pedir propuesta para evento",
+      "eyebrow": "Cheers Experiences / Eventos",
+      "headline": "Su gran día.<br><em>Un bar a la altura.</em>",
+      "intro": "Cócteles con personalidad, un gin-tonic bien servido y un equipo que cuida de sus invitados. Llevamos la experiencia Cheers al espacio que elija.",
+      "heroLink": "Descubrir los formatos",
+      "weddingLabel": "Bodas con más sabor",
+      "weddingTitle": "Ha elegido cada detalle.<br><em>No deje los cócteles al azar.</em>",
+      "weddingText": "¿Se casa y busca algo más que los cócteles de siempre? Diseñamos una propuesta con la personalidad de la ocasión: recetas personalizadas, una carta seleccionada y un servicio cuidado, del primer brindis al último cóctel.",
+      "venue": {
+        "title": "Su espacio.<br><em>Un bar bien coordinado.</em>",
+        "text": "Ayudamos a propietarios y gestores a estructurar la oferta de bebidas por evento: carta, costes, preparación y servicio. Una operación organizada ayuda a controlar desperdicio, trabajar los ingresos por evento y mantener una calidad consistente.",
+        "items": [
+          "Carta y formatos de bar adaptados al espacio",
+          "Recetas, medidas y compras con control de costes",
+          "Equipo, preparación y horarios alineados con el evento",
+          "Coordinación con catering y wedding planners"
+        ]
+      },
+      "scale": "De un cumpleaños con 25 personas a una gran boda.",
+      "scaleText": "Adaptamos la carta, el equipo y el servicio al tamaño de la celebración. Bodas y bautizos, fiestas privadas, eventos de empresa y servicio de bar en colaboración con empresas de catering.",
+      "servicesLabel": "Qué aportamos a su celebración",
+      "services": [
+        [
+          "Servicio completo de coctelería",
+          "Cócteles personalizados o una carta definida de antemano, bebidas de calidad y bartenders especializados. Planificamos las bebidas, el hielo, los vasos y la organización del servicio, detallando en la propuesta todo lo que se incluye."
+        ],
+        [
+          "Bar de ginebras a medida",
+          "Ginebras premium, tónicas seleccionadas y botánicos que realzan cada combinación. Servicio con hielo en cubos y vasos de vidrio o policarbonato, según el espacio y el formato acordado."
+        ],
+        [
+          "Un bar para todos los invitados",
+          "Podemos incluir cócteles sin alcohol y adaptar la selección a los gustos de sus invitados. Presentación cuidada, sugerencias fáciles de elegir y la misma atención en cada copa."
+        ]
+      ],
+      "formatsLabel": "Elija cómo quiere recibir",
+      "formatsTitle": "Su evento.<br><em>El formato que encaja.</em>",
+      "formats": [
+        [
+          "Barra libre",
+          "El organizador cubre el servicio con una carta, duración y condiciones acordadas. Los invitados disfrutan de las bebidas incluidas sin pagar cada consumición."
+        ],
+        [
+          "Venta en el evento",
+          "Los invitados pagan sus bebidas. La viabilidad, los precios y los costes de operación se negocian con la organización y el espacio."
+        ],
+        [
+          "Formato mixto",
+          "Los organizadores pueden ofrecer una selección de bebidas, un periodo de barra libre o un importe por invitado. Los demás consumos corren a cargo de los invitados, con condiciones claras desde el principio."
+        ]
+      ],
+      "formatNote": "Cada propuesta considera el lugar, el número de invitados, la duración y la carta. Acordamos de antemano los costes, lo que se incluye y las responsabilidades de cada parte.",
+      "temporaryTitle": "¿Su evento necesita un equipo que se encargue del bar?",
+      "temporaryText": "También asumimos la explotación temporal de espacios de bar en eventos. Coordinamos con la organización la operación, el equipo, la oferta y las condiciones comerciales según el espacio y la dimensión del evento.",
+      "areaLabel": "Dónde trabajamos",
+      "areaTitle": "Cerca de su próxima celebración.",
+      "areaNote": "Desplazamiento y disponibilidad confirmados en la propuesta, según el lugar y la dimensión del evento.",
+      "contactTitle": "Cuéntenos qué<br><em>va a celebrar.</em>",
+      "contactText": "Indíquenos la fecha, el lugar y el número de invitados. Prepararemos una propuesta de bar adaptada a la ocasión y a su presupuesto.",
+      "name": "Su nombre",
+      "type": "Tipo de evento",
+      "types": [
+        "Boda",
+        "Bautizo",
+        "Cumpleaños / fiesta privada",
+        "Evento de empresa",
+        "Colaboración con catering",
+        "Explotación temporal de bar",
+        "Finca / venue — colaboración",
+        "Wedding / event planner — colaboración"
+      ],
+      "date": "Fecha prevista (opcional)",
+      "place": "Localidad / espacio",
+      "guests": "Número estimado de invitados",
+      "model": "Formato deseado",
+      "models": [
+        "Por definir",
+        "Barra libre",
+        "Venta en el evento",
+        "Formato mixto"
+      ],
+      "message": "¿Qué imagina para su evento?",
+      "placeholder": "Horario, cócteles preferidos, contacto del espacio u otras ideas…",
+      "submit": "Preparar solicitud por WhatsApp",
+      "wa": "Hablar de mi evento",
+      "introMessage": "Hola. Me gustaría recibir una propuesta de Cheers Experiences para un evento.",
+      "note": "WhatsApp se abrirá con la solicitud preparada para revisar y enviar. Este sitio no guarda los datos ni envía el mensaje automáticamente.",
+      "email": "Prefiero enviar un email",
+      "status": "Solicitud preparada. Revise el mensaje en WhatsApp antes de enviarlo.",
+      "subject": "Propuesta para evento — Cheers Experiences",
+      "footer": "Consultoría para hoteles · Cócteles & eventos",
+      "legal": "Cheers Experiences es una marca de Sucesso Maciço, Lda.",
+      "imageNote": "Imágenes de ambiente ilustrativas; no son un portafolio de eventos realizados.",
+      "menu": "Menú",
+      "close": "Cerrar",
+      "upgrade": {
+        "emotionalTitle": "No llevamos solo un bar.<br><em>Creamos un punto de encuentro.</em>",
+        "emotionalText": "Un lugar donde los invitados se encuentran, brindan, descubren sabores, conversan y hacen fotografías. Cuidamos el servicio para que disfruten de la celebración y se lleven buenos recuerdos.",
+        "areas": [
+          [
+            "Weddings & Celebrations",
+            "Bodas, bautizos, cumpleaños y fiestas privadas. Del primer brindis a la pista de baile, un servicio al ritmo de la celebración."
+          ],
+          [
+            "Corporate Events",
+            "Eventos empresariales, lanzamientos, congresos, fiestas de empresa, encuentros de equipo y activaciones de marca. Hospitalidad con propósito."
+          ],
+          [
+            "Temporary Bar Operations",
+            "Festivales, ferias y eventos públicos o privados. Explotación temporal del bar, con equipo, carta y operación acordados con la organización."
+          ]
+        ],
+        "signatureTitle": "Su evento.<br><em>Su cóctel.</em>",
+        "signatureText": "Un Cóctel de la Novia, un Cóctel del Novio o una receta exclusiva de la boda. Creamos un concepto que cuente parte de su historia, con sabores y presentación a la altura de la ocasión.",
+        "signatureNote": "Nombre, ingredientes, colores, decoración, presentación y menú pueden adaptarse. Definimos las posibilidades y los elementos incluidos en la propuesta.",
+        "corporateTitle": "Su marca también<br><em>puede servirse en una copa.</em>",
+        "corporateText": "Cócteles de autor inspirados en la marca, el producto o la campaña. Adaptamos sabores, colores y cartas al concepto del evento, coordinando el servicio con el equipo de marketing y el espacio.",
+        "corporateItems": [
+          "Lanzamientos de producto",
+          "Fiestas y encuentros de empresa",
+          "Activaciones de marca",
+          "Áreas de hospitalidad",
+          "Cócteles y cartas personalizados"
+        ],
+        "corporateNote": "El concepto y los elementos de personalización se acuerdan en la propuesta. La producción gráfica o el branding físico no están incluidos de forma implícita.",
+        "corporateCTA": "Planificar un evento de empresa",
+        "packagesTitle": "Tres puntos de partida.<br><em>Una propuesta solo suya.</em>",
+        "packages": [
+          [
+            "Essential Bar",
+            "Servicio profesional de coctelería con una carta seleccionada y adaptada al evento."
+          ],
+          [
+            "Signature Experience",
+            "Cócteles personalizados, selección premium y una experiencia con identidad propia."
+          ],
+          [
+            "Full Bar Experience",
+            "Un concepto de bar más completo: equipo, carta y operación planificados para la ocasión."
+          ]
+        ],
+        "packagesNote": "Experiencias orientativas, sin precios fijos ni inclusiones automáticas. Todos los servicios se personalizan y están sujetos a propuesta. El formato de pago se elige por separado.",
+        "need": "¿Qué necesita?",
+        "needs": [
+          "Cocktail Bar",
+          "Full Bar",
+          "Gin Bar",
+          "Signature Cocktails",
+          "Activación de marca",
+          "Explotación temporal de bar",
+          "Aún no lo sé / Quiero asesoramiento"
+        ],
+        "inclusive": "Clásicos · Cócteles de autor · Low alcohol · No alcohol",
+        "flex": "Adaptamos equipo, cantidades, carta, estructura del servicio, logística y formato comercial al tamaño del evento y a las condiciones del espacio."
+      },
+      "faq": [
+        [
+          "Ya tengo finca y catering. ¿Puedo contratar solo el bar?",
+          "Sí. Podemos integrar el servicio en la estructura existente, coordinándonos con los responsables. Confirmamos las condiciones del espacio y lo que aporta cada parte antes de cerrar la propuesta."
+        ],
+        [
+          "¿Qué determina el presupuesto?",
+          "Lugar, fecha, invitados, duración, carta y medios necesarios. Indique también si prefiere barra libre, venta en el evento o formato mixto para preparar una propuesta adecuada."
+        ],
+        [
+          "¿Y si el espacio no tiene barra?",
+          "Estudiamos la zona de servicio, los accesos y los medios necesarios. La solución y su viabilidad se confirman en la propuesta; cada espacio tiene sus propias condiciones."
+        ],
+        [
+          "¿Los invitados pueden pagar parte de las consumiciones?",
+          "Sí. Con el formato mixto puede ofrecer determinadas bebidas, un periodo de barra libre o un importe por invitado. Los demás consumos se pagan según las reglas acordadas previamente."
+        ],
+        [
+          "¿Podemos personalizar los cócteles e incluir opciones sin alcohol?",
+          "Sí. Podemos desarrollar recetas y adaptar nombres, sabores y presentación a la boda o al concepto de la empresa. La carta puede incluir clásicos, low alcohol y no alcohol, con la personalización definida en la propuesta."
+        ],
+        [
+          "¿Cuándo debo contactar?",
+          "En cuanto tenga una fecha o un periodo previsto. Comprobamos disponibilidad y desplazamiento al lugar indicado. La reserva y las condiciones de confirmación se acuerdan en la propuesta."
+        ]
+      ],
+      "scope": [
+        [
+          "Bebidas & carta",
+          "Cócteles, ginebras, opciones sin alcohol y demás bebidas incluidas; cantidades o condiciones de consumo."
+        ],
+        [
+          "Equipo & horarios",
+          "Tamaño del equipo, duración del servicio, preparación y condiciones de una posible ampliación."
+        ],
+        [
+          "Espacio & materiales",
+          "Barra existente o solución acordada, vasos, hielo, equipamiento, accesos y necesidades del lugar."
+        ],
+        [
+          "Costes & responsabilidades",
+          "Importe, desplazamiento, pago de consumiciones y qué corresponde a Cheers, al espacio y a la organización."
+        ]
+      ],
+      "scopeIntro": "Una buena experiencia empieza con una propuesta clara. Estos puntos se definen antes de confirmar el servicio.",
+      "packagesNote": "Experiencias orientativas, sin precios fijos ni inclusiones automáticas. Todos los servicios se personalizan y están sujetos a propuesta. El formato de pago se elige por separado.",
+      "process": [
+        [
+          "Briefing",
+          "Fecha, lugar, invitados, horarios y estilo. Empezamos por lo que necesitan y lo que permite el espacio."
+        ],
+        [
+          "Propuesta & prueba",
+          "Definimos carta, equipo y alcance. La prueba de cócteles, si se desea, se acuerda en la propuesta."
+        ],
+        [
+          "Planificación",
+          "Coordinamos logística, preparación, proveedores y tiempos con el venue y el planner."
+        ],
+        [
+          "Ejecución",
+          "Coordinamos el equipo y el servicio, con responsabilidades claras durante el evento."
+        ]
+      ],
+      "planner": {
+        "title": "El bar en su plan.<br><em>La operación en nuestras manos.</em>",
+        "text": "Puede subcontratar la carta de cócteles, el servicio de bartenders o una solución de bar con el alcance acordado. Recibimos el briefing, preparamos la propuesta y coordinamos bebidas, equipo y ejecución con el planner y el venue.",
+        "items": [
+          "Cócteles personalizados y propuestas sin alcohol",
+          "Welcome drinks, cocktail hour y barra libre",
+          "Menús digitales / QR y presentación de la carta",
+          "Un contacto operativo para la planificación y el día del evento"
+        ]
+      }
+    },
+    "hotelTypes": [
+      "Aumentar consumo por huésped",
+      "Mejorar margen y compras",
+      "Organizar y formar al equipo",
+      "Transformación integral del bar",
+      "Menús digitales, QR y comunicación en pantallas",
+      "Mystery Guest Audit",
+      "Colaboración con grupo hotelero",
+      "Preparar apertura / temporada alta"
+    ]
+  },
+  "en": {
+    "services": [
+      [
+        "Mystery Guest Bar Audit",
+        "The guest experience observed on the ground."
+      ],
+      [
+        "Bar Performance Audit",
+        "Review sales, margins, costs and operations."
+      ],
+      [
+        "Menu Engineering",
+        "An offer, pricing and presentation focused on contribution."
+      ],
+      [
+        "Cocktail Development",
+        "Well-executed classics and recipes with identity."
+      ],
+      [
+        "Staff Training",
+        "Service, product knowledge, recommendations and upselling."
+      ],
+      [
+        "Procurement & Supplier Strategy",
+        "Purchasing, suppliers, stock and waste."
+      ],
+      [
+        "Operational Efficiency",
+        "Processes, preparation, shifts and productivity."
+      ],
+      [
+        "Complete Bar Transformation",
+        "An integrated intervention from concept to delivery."
+      ],
+      [
+        "Ongoing Consultancy",
+        "Monitoring, indicators and continuous improvement."
+      ],
+      [
+        "Management / Operation",
+        "Management or operation with agreed scope and responsibilities."
+      ]
+    ],
+    "digital": {
+      "label": "Visibility creates opportunity",
+      "title": "Guests cannot order<br><em>what they do not discover.</em>",
+      "lead": "Bring the bar’s offer to your guests: on their phones, at reception and on hotel screens. More visibility at the right moment, with more reasons to spend on site.",
+      "items": [
+        [
+          "01 / Digital menus & QR",
+          "Your whole menu. One simple scan.",
+          "We create digital menus accessible through a QR code, without an app. Clear design, appealing drinks and recommendations make choosing easier."
+        ],
+        [
+          "02 / The languages you need",
+          "Your offer, in your guests’ language.",
+          "We create and adapt menus in the languages your hotel needs. Clear descriptions and a presentation consistent with your brand help remove language barriers."
+        ],
+        [
+          "03 / Screen & TV animations",
+          "Your screens can help sell, too.",
+          "Professional animations promote bars, cocktails, seasonal offers and, where appropriate, other hotel services such as restaurants, spas and experiences."
+        ]
+      ],
+      "outcome": "Menu, team and communication working together: guests discover the offer, receive a thoughtful recommendation and find a reason to return.",
+      "cta": "Explore my hotel’s potential",
+      "wa": "Contact us on WhatsApp"
+    },
+    "audit": {
+      "title": "Before we analyse your bar as consultants,<br><em>we experience it as guests.</em>",
+      "intro": "Over 1 or 2 days, we discreetly experience the service your guests receive, as agreed with management. We then compare those observations with an operational review and the data provided.",
+      "check": [
+        "First impressions, service and team knowledge",
+        "Waiting times, speed, recommendations and upselling",
+        "Cocktails: presentation, quality and consistency",
+        "Menu, pricing and perceived value",
+        "Cleanliness, organisation and apparent staffing levels",
+        "Missed orders and observable waste"
+      ],
+      "delivery": [
+        "Executive Summary",
+        "Problems and guest experience gaps",
+        "Revenue and cost-saving opportunities",
+        "Quick Wins and priorities",
+        "Recommended intervention plan"
+      ],
+      "note": "Observation identifies signals. Costs, productivity and staffing requirements are validated with data and your internal team."
+    },
+    "group": {
+      "title": "One hotel is a project.<br><em>A group can be a partnership.</em>",
+      "text": "A shared foundation of quality, with room for each property’s identity. We agree the scope per hotel and practical reporting for group management.",
+      "items": [
+        "Multi-property audits",
+        "Standards and training programmes",
+        "Cocktail programmes",
+        "Procurement and suppliers",
+        "KPIs and performance monitoring",
+        "Recurring Mystery Guest visits",
+        "New openings"
+      ],
+      "cta": "Discuss a group partnership"
+    },
+    "cocktails": {
+      "title": "Make the bar<br><em>part of the destination.</em>",
+      "text": "We want guests to remember that cocktail months later. We execute classics properly and develop exclusive recipes around your hotel’s concept, location, audience and identity, with preparation speed and margins in mind.",
+      "tags": [
+        "Signature Cocktails",
+        "Seasonal Menus",
+        "Pool & Summer Drinks",
+        "Rooftop Cocktails",
+        "Welcome Drinks",
+        "Low / No Alcohol",
+        "Regional Inspiration",
+        "Classic Reinterpretations"
+      ]
+    },
+    "contexts": [
+      [
+        "Pool Bar",
+        "Peak demand, warm weather and holiday rhythms. Refreshing drinks, preparation and efficient service."
+      ],
+      [
+        "Rooftop",
+        "The view draws people in. The menu, recommendations and consistency help them stay."
+      ],
+      [
+        "Lobby Bar",
+        "Arrivals, breaks and meetings. Turn passing traffic into reasons to order and return."
+      ],
+      [
+        "Restaurant Bar",
+        "Aperitifs, pairings and after-dinner drinks. Coordinate recommendations with the dining experience."
+      ]
+    ],
+    "about": {
+      "text": "Rui Monteiro brings more than 10 years of experience in bars and hospitality. He started at Cheers O Bar in Viseu in 2014 and worked in a hotel setting at Grande Real Santa Eulália, Albufeira, in 2017.",
+      "note": "Professional experience references; these do not represent consultancy clients or commercial partnerships."
+    },
+    "calculator": {
+      "title": "Small improvements.<br><em>What could they mean?</em>",
+      "intro": "Explore a bar revenue scenario using the same guest base. Starting values are an editable example only.",
+      "labels": [
+        "Rooms",
+        "Occupancy (%)",
+        "Guests per day",
+        "Guests using the bar (%)",
+        "Average daily spend per bar user (€)",
+        "Operating days per month",
+        "Increase in bar usage (percentage points)",
+        "Increase in average spend (%)"
+      ],
+      "outputs": [
+        "Current monthly revenue in this scenario",
+        "Simulated monthly revenue",
+        "Simulated monthly increase",
+        "Simulated annual increase"
+      ],
+      "disclaimer": "Illustrative simulation only, not a forecast or guarantee. Revenue is not profit. Costs and investment are not deducted; seasonality, taxes and occupancy changes are not modelled. The annual figure assumes 12 months with the same number of operating days entered here.",
+      "formula": "Guests/day × bar usage × daily spend × operating days. Improved bar usage is capped at 100%.",
+      "invalid": "Complete every field with a valid value within the stated limits."
+    },
+    "method": {
+      "title": "Improvements your team<br><em>can put into practice.</em>",
+      "intro": "Each recommendation connects to an operational change. Deliverables, responsibilities, timing and follow-up are agreed in the proposal.",
+      "steps": [
+        [
+          "Understand the operation",
+          "Observe service, listen to the team and compare the guest experience with sales, costs and demand.",
+          "Priorities and starting indicators"
+        ],
+        [
+          "Prepare the change",
+          "Develop the menu and the guidance needed: recipes, measures, costs, preparation and service.",
+          "Tools tailored to your bar"
+        ],
+        [
+          "Work with the team",
+          "Practise execution, recommendations and shift organisation in the real working environment.",
+          "Processes applied on the ground"
+        ],
+        [
+          "Review progress",
+          "Review the agreed indicators, gather team feedback and refine what needs to improve.",
+          "Follow-up within an agreed scope"
+        ]
+      ],
+      "toolkit": [
+        [
+          "Menu & profitability",
+          "Drink specifications with recipes, measures, costs and proposed prices; product contribution analysis."
+        ],
+        [
+          "Service routines",
+          "Guidance on preparation, workstation organisation, opening and closing, recommendations and consistency."
+        ],
+        [
+          "Control & monitoring",
+          "Sales, waste, purchasing and productivity indicators reviewed with management."
+        ]
+      ]
+    },
+    "meeting": {
+      "cta": "Request a free on-site meeting",
+      "note": "No meeting fee or obligation to book. On-site meetings depend on availability and location. Any travel costs are agreed beforehand. A detailed audit, report and implementation are paid services with a separate proposal.",
+      "faq": [
+        "Is the first meeting really free?",
+        "Yes. There is no meeting fee or obligation to book. We confirm availability and location; any travel costs are agreed beforehand. The visit is an initial assessment. A detailed audit with a report, training or implementation requires a separate paid proposal."
+      ]
+    },
+    "real": {
+      "label": "REAL EXAMPLE · CHEERS O BAR",
+      "title": "Put your offer in view.<br><em>When guests choose.</em>",
+      "text": "This screen is at Cheers O Bar in Viseu. It combines sports information with drinks promotions and prices. It is a real example of making the offer visible within the venue.",
+      "caption": "Real photograph supplied by Cheers O Bar management. An example of point-of-sale communication; it does not, by itself, demonstrate increased sales."
+    },
+    "events": {
+      "title": "Wedding and event cocktail bars | Cheers Experiences",
+      "desc": "Cocktails for events, welcome drinks and wedding open bars. Bartenders, QR menus and coordination with venues and wedding planners in Portugal and Spain.",
+      "hotels": "Hotel Consultancy",
+      "events": "Events",
+      "cta": "Request an event proposal",
+      "eyebrow": "Cheers Experiences / Events",
+      "headline": "Your big day.<br><em>A bar worthy of it.</em>",
+      "intro": "Cocktails with character, a beautifully served gin and a team that looks after your guests. We bring the Cheers experience to your chosen venue.",
+      "heroLink": "Explore the formats",
+      "weddingLabel": "Weddings with a little more flavour",
+      "weddingTitle": "You have chosen every detail.<br><em>Do not leave the cocktails to chance.</em>",
+      "weddingText": "Getting married and looking for more than the usual cocktails? We create a proposal that reflects your occasion: personalised recipes, a curated menu and thoughtful service, from the first toast to the final cocktail.",
+      "venue": {
+        "title": "Your venue.<br><em>A well-coordinated bar.</em>",
+        "text": "We help owners and managers structure their drinks offer per event: menus, costs, preparation and service. Organised operations help control waste, develop revenue per event and maintain consistent quality.",
+        "items": [
+          "Drinks menus and bar formats tailored to your venue",
+          "Recipes, measures and purchasing with cost control",
+          "Teams, preparation and schedules aligned with the event",
+          "Coordination with caterers and wedding planners"
+        ]
+      },
+      "scale": "From a birthday for 25 to a large wedding.",
+      "scaleText": "We adapt the menu, team and service to your celebration: weddings, christenings, private parties, corporate events and bar services in partnership with caterers.",
+      "servicesLabel": "What we bring to your celebration",
+      "services": [
+        [
+          "Complete cocktail bar service",
+          "Personalised cocktails or a pre-agreed menu, quality drinks and specialist bartenders. We plan drinks, ice, glassware and service together, with all inclusions clearly set out in the proposal."
+        ],
+        [
+          "Your bespoke gin bar",
+          "Premium gins, selected tonics and botanicals that complement every pairing. Cubed ice and glass or polycarbonate drinkware, depending on the venue and agreed format."
+        ],
+        [
+          "A bar for every guest",
+          "Alcohol-free cocktails and a selection adapted to your guests’ preferences. Thoughtful presentation, easy-to-choose recommendations and equal care in every glass."
+        ]
+      ],
+      "formatsLabel": "Choose how you want to host",
+      "formatsTitle": "Your event.<br><em>The format that fits.</em>",
+      "formats": [
+        [
+          "Open bar",
+          "The organiser covers the service within an agreed menu, duration and terms. Guests enjoy the included drinks without paying per order."
+        ],
+        [
+          "On-site sales",
+          "Guests pay for their drinks. Feasibility, prices and operating costs are agreed with the organiser and venue."
+        ],
+        [
+          "Mixed format",
+          "Organisers can offer selected drinks, an open-bar period or an allowance per guest. Other orders are paid for by guests, with clear terms from the outset."
+        ]
+      ],
+      "formatNote": "Every proposal considers the venue, guest count, duration and menu. Costs, inclusions and each party’s responsibilities are agreed beforehand.",
+      "temporaryTitle": "Need a team to run the bar at your event?",
+      "temporaryText": "We also operate temporary bar spaces at events. We coordinate the team, offer, operation and commercial terms with the organiser, according to the venue and event size.",
+      "areaLabel": "Where we work",
+      "areaTitle": "Closer to your next celebration.",
+      "areaNote": "Travel and availability are confirmed in the proposal, according to location and event size.",
+      "contactTitle": "Tell us what<br><em>you are celebrating.</em>",
+      "contactText": "Share the date, location and expected guest count. We will prepare a bar proposal suited to your occasion and budget.",
+      "name": "Your name",
+      "type": "Event type",
+      "types": [
+        "Wedding",
+        "Christening",
+        "Birthday / private party",
+        "Corporate event",
+        "Catering partnership",
+        "Temporary bar operation",
+        "Venue / estate — partnership",
+        "Wedding / event planner — partnership"
+      ],
+      "date": "Planned date (optional)",
+      "place": "Location / venue",
+      "guests": "Estimated number of guests",
+      "model": "Preferred format",
+      "models": [
+        "To be decided",
+        "Open bar",
+        "On-site sales",
+        "Mixed format"
+      ],
+      "message": "What do you have in mind?",
+      "placeholder": "Timings, favourite cocktails, venue contact or other ideas…",
+      "submit": "Prepare a WhatsApp enquiry",
+      "wa": "Let’s talk about my event",
+      "introMessage": "Hello! I would like a Cheers Experiences proposal for an event.",
+      "note": "WhatsApp opens with your enquiry ready to review and send. Your details are not stored on this site and no message is sent automatically.",
+      "email": "I prefer email",
+      "status": "Enquiry prepared. Review it in WhatsApp before sending.",
+      "subject": "Event proposal enquiry — Cheers Experiences",
+      "footer": "Hotel consultancy · Cocktails & events",
+      "legal": "Cheers Experiences is a brand of Sucesso Maciço, Lda.",
+      "imageNote": "Illustrative atmosphere images; not a portfolio of completed events.",
+      "menu": "Menu",
+      "close": "Close",
+      "upgrade": {
+        "emotionalTitle": "We bring more than a bar.<br><em>We create a meeting point.</em>",
+        "emotionalText": "A place where guests meet, raise a glass, discover flavours, talk and take photographs. Thoughtful service lets them enjoy the celebration and take home lasting memories.",
+        "areas": [
+          [
+            "Weddings & Celebrations",
+            "Weddings, christenings, birthdays and private parties. From the first toast to the dance floor, service at the pace of your celebration."
+          ],
+          [
+            "Corporate Events",
+            "Business events, launches, conferences, company parties, team events and brand activations. Hospitality with purpose."
+          ],
+          [
+            "Temporary Bar Operations",
+            "Festivals, fairs and public or private events. Temporary bar operation with a team, menu and service agreed with the organiser."
+          ]
+        ],
+        "signatureTitle": "Your event.<br><em>Your cocktail.</em>",
+        "signatureText": "A Bride’s Cocktail, a Groom’s Cocktail or an exclusive wedding recipe. We create a concept that tells part of your story, with flavours and presentation suited to the occasion.",
+        "signatureNote": "Names, ingredients, colours, garnish, presentation and menus can be adapted. Possibilities and included elements are agreed in the proposal.",
+        "corporateTitle": "Your brand can also<br><em>be served in a glass.</em>",
+        "corporateText": "Signature cocktails inspired by your brand, product or campaign. We adapt flavours, colours and menus to the event concept, coordinating service with your marketing team and venue.",
+        "corporateItems": [
+          "Product launches",
+          "Company parties and team events",
+          "Brand activations",
+          "Hospitality areas",
+          "Bespoke cocktails and menus"
+        ],
+        "corporateNote": "Concept and personalisation are agreed in the proposal. Graphic production and physical branding are not automatically included.",
+        "corporateCTA": "Plan a corporate event",
+        "packagesTitle": "Three starting points.<br><em>A proposal of your own.</em>",
+        "packages": [
+          [
+            "Essential Bar",
+            "Professional cocktail service with a selected menu adapted to your event."
+          ],
+          [
+            "Signature Experience",
+            "Personalised cocktails, a premium selection and an experience with its own identity."
+          ],
+          [
+            "Full Bar Experience",
+            "A more complete bar concept: team, menu and operation planned for the occasion."
+          ]
+        ],
+        "packagesNote": "Indicative experiences with no fixed prices or automatic inclusions. Every service is personalised and subject to proposal. The payment format is chosen separately.",
+        "need": "What are you looking for?",
+        "needs": [
+          "Cocktail Bar",
+          "Full Bar",
+          "Gin Bar",
+          "Signature Cocktails",
+          "Corporate Activation",
+          "Temporary Bar Operation",
+          "Not sure yet / I would like advice"
+        ],
+        "inclusive": "Classic cocktails · Signature cocktails · Low alcohol · No alcohol",
+        "flex": "We adapt the team, quantities, menu, service setup, logistics and commercial format to your event size and venue conditions."
+      },
+      "faq": [
+        [
+          "I already have a venue and caterer. Can I book just the bar?",
+          "Yes. We can integrate bar service into the existing setup, coordinating with the people responsible. We confirm venue requirements and what each party provides before finalising the proposal."
+        ],
+        [
+          "What determines the quote?",
+          "Location, date, guest count, duration, menu and the resources needed. Tell us whether you prefer an open bar, on-site sales or a mixed format so we can prepare an appropriate proposal."
+        ],
+        [
+          "What if the venue does not have a bar?",
+          "We assess the service area, access and required resources with you. The solution and its feasibility are confirmed in the proposal; every venue has its own requirements."
+        ],
+        [
+          "Can guests pay for some of their drinks?",
+          "Yes. A mixed format lets you cover selected drinks, an open-bar period or an allowance per guest. Guests pay for other orders under terms agreed in advance."
+        ],
+        [
+          "Can we personalise cocktails and include alcohol-free options?",
+          "Yes. We can develop recipes and adapt names, flavours and presentation to your wedding or company concept. The menu can include classics, low-alcohol and alcohol-free drinks, with personalisation agreed in the proposal."
+        ],
+        [
+          "When should I get in touch?",
+          "As soon as you have a date or period in mind. We check availability and travel to your location. Booking and confirmation terms are agreed in the proposal."
+        ]
+      ],
+      "scope": [
+        [
+          "Drinks & menu",
+          "Cocktails, gins, alcohol-free options and other included drinks; quantities or consumption terms."
+        ],
+        [
+          "Team & timings",
+          "Team size, service duration, preparation and terms for any extension."
+        ],
+        [
+          "Venue & materials",
+          "Existing bar or agreed solution, drinkware, ice, equipment, access and site requirements."
+        ],
+        [
+          "Costs & responsibilities",
+          "Price, travel, payment for drinks and what Cheers, the venue and the organiser each provide."
+        ]
+      ],
+      "scopeIntro": "A good experience starts with a clear proposal. These points are defined before the service is confirmed.",
+      "packagesNote": "Indicative experiences with no fixed prices or automatic inclusions. Every service is personalised and subject to proposal. The payment format is chosen separately.",
+      "process": [
+        [
+          "Briefing",
+          "Date, venue, guests, timing and style. We start with your needs and the venue’s practical requirements."
+        ],
+        [
+          "Proposal & tasting",
+          "We define drinks, team and scope. A cocktail tasting, if requested, is agreed in the proposal."
+        ],
+        [
+          "Planning",
+          "We align logistics, preparation, suppliers and timings with the venue and planner."
+        ],
+        [
+          "Delivery",
+          "We coordinate the team and service on site, with clear responsibilities throughout the event."
+        ]
+      ],
+      "planner": {
+        "title": "The bar in your plan.<br><em>The operation in our hands.</em>",
+        "text": "Commission a cocktail menu, bartenders or a bar solution with an agreed scope. We take your briefing, prepare the proposal and coordinate drinks, teams and delivery with the planner and venue.",
+        "items": [
+          "Personalised cocktails and alcohol-free options",
+          "Welcome drinks, cocktail hour and open bar",
+          "Digital / QR menus and drinks presentation",
+          "An operational contact for planning and event day"
+        ]
+      }
+    },
+    "hotelTypes": [
+      "Increase spend per guest",
+      "Improve margins and purchasing",
+      "Organise and train the team",
+      "Complete bar transformation",
+      "Digital menus and screen content",
+      "Mystery Guest Audit",
+      "Hotel group partnership",
+      "Prepare an opening / peak season"
+    ]
+  }
+}

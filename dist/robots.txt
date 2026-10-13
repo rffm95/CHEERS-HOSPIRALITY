@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /counter/
+Disallow: /obrigado.html
+Disallow: /es/obrigado.html
+Disallow: /en/obrigado.html
 Sitemap: https://cheers.guru/sitemap.xml

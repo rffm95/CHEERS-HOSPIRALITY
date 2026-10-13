@@ -1,73 +1,47 @@
 # Cheers Experiences
 
-Website de consultoria de bares para hotéis e grupos em Espanha e Portugal, em espanhol e português.
+Static, dependency-free website for hotel bar consultancy and integrated weddings/events in Portugal and Spain. The redesign was approved by Rui Monteiro for commit on 13 October 2026. Production publication remains subject to his separate explicit approval.
 
-## Publicação
+## Source and build
 
-O site é estático e completo em `dist/`. Não precisa de dependências nem de serviços externos para funcionar. `npm run build` valida os ficheiros e a sintaxe JavaScript. O workflow de GitHub Pages publica `dist/` após cada push para `main`. O domínio existente é `cheers.guru`; a configuração de DNS não é alterada por este projeto.
+- `src/editorial.mjs`: PT-PT, ES-ES and English positioning, interface and conversion copy.
+- `src/content.json`: preserved services, audits, events, partnerships and approved initial meeting conditions.
+- `src/template.mjs`: shared semantic page components and complete translated HTML.
+- `src/atelier.css` and `src/atelier.js`: responsive design and progressive interactions.
+- `npm run build`: generates six complete pages in `dist/`, metadata, sitemap and the legacy wedding redirect. No framework or package dependencies.
+- `npm test`: semantic link/form/content checks (Python with lxml) and Node interaction tests using DOM fixtures.
+- `npm run preview`: creates a standalone HTML file next to the checkout. All six pages, languages, styles and used imagery are embedded; real hotel submissions and analytics are disabled in that review file.
 
-## Edição
+## Routes
 
-- `dist/app.js`: textos ES/PT, navegação, formulário e contactos.
-- `dist/style.css`: apresentação e estilos responsivos.
-- `dist/index.html`: versão inicial em espanhol, disponível antes do JavaScript.
-- `dist/images/`: fotografias fornecidas pelo titular, otimizadas em WebP.
+| Language | Hotels | Weddings and events |
+| --- | --- | --- |
+| Portuguese | `/index.html` | `/eventos.html` |
+| Spanish | `/es/index.html` | `/es/eventos.html` |
+| English | `/en/index.html` | `/en/eventos.html` |
 
-Ao alterar os textos, executar `npm run build` para atualizar o HTML inicial e verificar a coerência.
+Old `?lang=pt|es|en` links select the equivalent page and preserve campaign parameters. `/destination-weddings/` redirects to the integrated events page, retaining language and campaign parameters, with no-JavaScript links available. Team links point to the existing `#team` section. Existing relevant hotel/event section anchors are retained or mapped in the interaction layer. The existing counter dashboard, hosting manifest, domain configuration and deployment workflow are unchanged.
 
-## Contactos e privacidade
+Translated pages have full HTML without JavaScript. Language switching preserves form input in memory when enhanced navigation succeeds; normal links remain a fallback. No contact input is saved in browser storage. Menus support keyboard controls and Escape. Disclosures use native `details`; motion respects the device setting.
 
-Email: sucessomacico@gmail.com. Telefone: +351927653087. Todos os destinos WhatsApp utilizam `https://wa.me/351927653087`. O formulário prepara uma mensagem para o visitante rever e enviar no WhatsApp; não envia automaticamente, não guarda dados e não necessita de credenciais. A alternativa por email prepara uma mensagem no cliente de email do visitante.
+## Truth and content provenance
 
-## Conteúdo comercial
+- Rui’s 10+ years and professional background are stated by the owner; hotel employment is identified as professional history, never a consultancy client.
+- Beatriz Almeida is presented only as Operations & Events Manager, reporting directly to Rui. This role was confirmed by Rui in his 12 October instructions. No qualifications, seniority, client history or achievements were added.
+- The first on-site meeting without a meeting fee was approved by Rui on 8 October. Availability, location and agreed travel costs still apply; detailed audits and implementation are paid separately. This approved option appears in the hotel FAQ/contact area, rather than dominating the offer.
+- The historical `+100%` sales block is omitted because financial evidence is not available in the project. No client testimonials, logos, ratings or financial performance claims were added.
+- Existing atmosphere imagery is visibly identified as illustrative, never a portfolio. The Cheers O Bar screen photo is labelled as a real own-operation example, without claiming that it proves sales uplift.
 
-Menus digitais por QR code, adaptação a todos os idiomas necessários e animações para ecrãs/TV complementam cartas, serviço, formação, operações e compras. O resultado superior a 100% é histórico do Cheers O Bar entre 2021 e 2024, fornecido pela gestão, e não é uma garantia para hotéis. A calculadora é apenas uma simulação de faturação, sem dedução de custos ou investimento.
+## Forms and integrations
 
-## Eventos
+Hotel enquiries retain the FormSubmit recipient and native POST fallback. JavaScript uses the provider’s AJAX endpoint to show loading, prevent duplicate submissions, display errors, keep form values on failure and redirect only after a successful response. A honeypot remains present. The provider’s availability, activation and actual email delivery must be verified in the deployed environment; no live enquiry was sent during this work.
 
-A área `dist/eventos.html` apresenta casamentos, batizados, aniversários, eventos empresariais, parcerias com catering e exploração temporária de bares. Os textos ES/PT e o formulário de proposta estão em `dist/events.js`. O formulário permite escolher bar aberto, venda no local ou modelo misto e prepara um pedido por WhatsApp ou email.
+Event enquiries prepare email or WhatsApp drafts for the visitor to review and send. Guest count is optional for venue/planner partnerships without a fixed event. Wedding moments, package selection, payment format and date are included where applicable. Nothing is sent by the website automatically.
 
-## Conteúdo e validação
+The existing counter endpoint remains, with restricted-storage and network-failure handling. Only page names are sent by the client; no form data is included. The standalone preview does not contact it.
 
-`dist/strategy.js` contém o posicionamento B2B, Mystery Guest Audit, caso histórico, percurso profissional e calculadora. `dist/events.js` contém a área de celebrações e corporate, os formatos e os pedidos de proposta. Mantêm-se os URLs `index.html` e `eventos.html` com `?lang=pt` ou `?lang=es`.
+## Validation and limits
 
-`npm run build` verifica a sintaxe, testa os formulários/contactos e os limites matemáticos da calculadora, e atualiza automaticamente o HTML inicial e metadata em espanhol. A renderização PT/ES usa as mesmas fontes de conteúdo. Sem base de dados, analytics ou envio automático de mensagens.
+Passed: build and JavaScript syntax, six language/page combinations, semantic structure, canonical/hreflang/OG/structured data, duplicate IDs, all internal file and fragment destinations, contact inputs and native integration, package/type selection, revenue maths and bounds, event/partnership conditional fields, message encoding, and simulated success/failure/preview submission paths.
 
-### Calculadora
-
-Faturação mensal = hóspedes por dia × percentagem que utiliza o bar × ticket diário por utilizador × dias de operação por mês. A melhoria de utilização é aditiva em pontos percentuais e limitada a 100%; a do ticket é relativa. O incremento anual assume 12 meses iguais. Quartos e ocupação apenas estimam hóspedes através do botão explicitamente identificado com 2 pessoas por quarto ocupado. O utilizador pode substituir esse valor; não se multiplicam hóspedes e quartos no cálculo de faturação.
-
-### Revisão de 23/09/2026
-
-- ES/PT em ambas as áreas, com dados de formulário preservados ao mudar idioma.
-- Renderização em larguras de 320, 390, 768 e desktop; ausência de overflow horizontal nos elementos verificados.
-- Menu móvel, calculadora, estimativa de hóspedes e validação de limites testados no navegador.
-- CTAs específicos de audit, grupos e corporate, destinos e conteúdos WhatsApp/email, âncoras e recursos locais verificados nos testes de lógica.
-- O navegador de testes bloqueou uma navegação por fragmento; não foi efetuado envio real de mensagens.
-- Conteúdo histórico e percurso profissional baseados exclusivamente nos dados fornecidos pelo titular. Sem clientes, testemunhos ou certificações inventados.
-
-`npm run dev` disponibiliza uma pré-visualização local e a rota de QA responsiva, que não é incluída em `dist/` nem publicada.
-
-## Languages
-Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, followed by a saved manual preference, then the primary device language (PT/ES/EN). Other device languages use English. Restricted browser storage does not prevent rendering. Language changes preserve the equivalent page and entered form values.
-
-## Casamentos & Eventos
-`eventos.html` é a área única para casamentos, celebrações, corporate, quintas e wedding planners. Inclui Welcome Party, dia do casamento e Day After e um único formulário, com momentos de casamento visíveis apenas para pedidos desse tipo. A rota antiga `/destination-weddings/` encaminha para `eventos.html#celebrations`, preservando idioma e parâmetros de campanha; sem JavaScript, oferece ligações nas três línguas. O sitemap aponta às páginas unificadas.
-
-## Reunião inicial e pedidos de contacto
-A página de hotéis oferece uma primeira reunião presencial sem honorários e sem compromisso, sujeita a disponibilidade e localização. Qualquer deslocação é acordada previamente. Auditoria detalhada, relatório e implementação são serviços pagos separados.
-
-O formulário de hotéis envia um POST para FormSubmit e redireciona para `obrigado.html` após aceitação. Requer uma única ativação pelo titular através do email de confirmação do FormSubmit; o titular confirmou a ativação em 08/10/2026 e o serviço aceitou um teste de envio após ativação. WhatsApp, telefone e email continuam disponíveis. O formulário informa o visitante de que FormSubmit processa o pedido. Os formulários de eventos e casamentos mantêm os respetivos caminhos de contacto.
-
-`acquisition.js` contém a oferta PT/ES/EN e a reunião inicial. A fotografia real do ecrã no Cheers O Bar foi autorizada pelo titular para publicação no repositório público e no site. Não se atribui a este ecrã um aumento comprovado de vendas.
-
-## Posicionamento do serviço de bar
-A página de hotéis destaca a qualidade de serviço, a experiência do hóspede e o valor percebido. Exemplos de falhas a avaliar são apresentados como situações possíveis, sem atribuição a hotéis específicos. As oportunidades de consumo, satisfação e reputação dependem do contexto e da implementação; não se promete valorização financeira do hotel. O histórico de faturação do Cheers e o simulador ficam em secções opcionais recolhidas, após o percurso profissional. O posicionamento está adaptado em português, espanhol e inglês.
-
-## Ofertas e parcerias — revisão de 13/10/2026
-`hospitality.js` apresenta três entradas para hotéis (melhoria, abertura e acompanhamento), três ocasiões para eventos e os modelos de parceria. Cada CTA seleciona o tipo de pedido no formulário. O formulário de hotéis inclui o período previsto e mantém o POST existente para FormSubmit. O de eventos inclui contactos opcionais e dispensa convidados para parcerias sem evento marcado, mantendo os pedidos por WhatsApp/email. Os âmbitos, custos, disponibilidade e condições são confirmados na proposta; não se apresentam preços, prazos garantidos ou resultados inventados.
-
-Os testes de renderização verificam as escolhas de projeto, a obrigatoriedade de convidados por tipo, os dados de contacto e período nas mensagens e a prioridade das ofertas na página, em PT/ES/EN. Esta revisão foi preparada sem commit, push ou publicação. A verificação visual em navegador não estava disponível no ambiente de execução.
-
-## Navegação — revisão adicional
-A navegação usa Hotéis e Casamentos & Eventos como áreas principais. Equipa é uma âncora existente nas duas páginas, sem uma rota fictícia. A pré-visualização trata os fragmentos dentro do documento e abre secções recolhidas antes de deslocar a página. Os testes verificam todos os links internos e respetivos destinos, a passagem entre parceria e corporate, as secções da equipa e a compatibilidade dos links antigos de casamentos. Sem commit, push ou publicação.
+Browser control is unavailable in this environment. Desktop/mobile render quality, cross-device interaction, WCAG compliance, live delivery and Core Web Vitals are not certified. CSS includes responsive layouts for 320px through desktop, keyboard focus, touch controls and reduced motion; these are implementation checks, not visual-browser results. Validation did not include production publication. The approved changes are committed on a review branch; production deployment remains pending separate approval.
