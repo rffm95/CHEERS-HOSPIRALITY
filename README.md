@@ -51,11 +51,8 @@ Faturação mensal = hóspedes por dia × percentagem que utiliza o bar × ticke
 ## Languages
 Both areas support PT, ES and EN. An explicit `?lang=` link takes priority, followed by a saved manual preference, then the primary device language (PT/ES/EN). Other device languages use English. Restricted browser storage does not prevent rendering. Language changes preserve the equivalent page and entered form values.
 
-## Destination Weddings
-`/destination-weddings/` is the dedicated international wedding landing page. English is the first-visit default, with explicit `?lang=pt|es|en` and the existing `cheers-language` manual preference taking priority. `weddings-copy.js` holds translations; `weddings.js` renders the page; `weddings.css` extends the brand. The build emits complete English HTML for no-JavaScript readers and crawlers.
-
-WhatsApp links use +351927653087. The form requires name, guest count, location and either email or phone; date is optional. It prepares a WhatsApp or email draft for visitor review, without storing enquiries or sending automatically. Values survive language changes. The page uses supplied cocktail photography without claiming wedding portfolio work.
-
+## Casamentos & Eventos
+`eventos.html` é a área única para casamentos, celebrações, corporate, quintas e wedding planners. Inclui Welcome Party, dia do casamento e Day After e um único formulário, com momentos de casamento visíveis apenas para pedidos desse tipo. A rota antiga `/destination-weddings/` encaminha para `eventos.html#celebrations`, preservando idioma e parâmetros de campanha; sem JavaScript, oferece ligações nas três línguas. O sitemap aponta às páginas unificadas.
 
 ## Reunião inicial e pedidos de contacto
 A página de hotéis oferece uma primeira reunião presencial sem honorários e sem compromisso, sujeita a disponibilidade e localização. Qualquer deslocação é acordada previamente. Auditoria detalhada, relatório e implementação são serviços pagos separados.
@@ -66,3 +63,11 @@ O formulário de hotéis envia um POST para FormSubmit e redireciona para `obrig
 
 ## Posicionamento do serviço de bar
 A página de hotéis destaca a qualidade de serviço, a experiência do hóspede e o valor percebido. Exemplos de falhas a avaliar são apresentados como situações possíveis, sem atribuição a hotéis específicos. As oportunidades de consumo, satisfação e reputação dependem do contexto e da implementação; não se promete valorização financeira do hotel. O histórico de faturação do Cheers e o simulador ficam em secções opcionais recolhidas, após o percurso profissional. O posicionamento está adaptado em português, espanhol e inglês.
+
+## Ofertas e parcerias — revisão de 13/10/2026
+`hospitality.js` apresenta três entradas para hotéis (melhoria, abertura e acompanhamento), três ocasiões para eventos e os modelos de parceria. Cada CTA seleciona o tipo de pedido no formulário. O formulário de hotéis inclui o período previsto e mantém o POST existente para FormSubmit. O de eventos inclui contactos opcionais e dispensa convidados para parcerias sem evento marcado, mantendo os pedidos por WhatsApp/email. Os âmbitos, custos, disponibilidade e condições são confirmados na proposta; não se apresentam preços, prazos garantidos ou resultados inventados.
+
+Os testes de renderização verificam as escolhas de projeto, a obrigatoriedade de convidados por tipo, os dados de contacto e período nas mensagens e a prioridade das ofertas na página, em PT/ES/EN. Esta revisão foi preparada sem commit, push ou publicação. A verificação visual em navegador não estava disponível no ambiente de execução.
+
+## Navegação — revisão adicional
+A navegação usa Hotéis e Casamentos & Eventos como áreas principais. Equipa é uma âncora existente nas duas páginas, sem uma rota fictícia. A pré-visualização trata os fragmentos dentro do documento e abre secções recolhidas antes de deslocar a página. Os testes verificam todos os links internos e respetivos destinos, a passagem entre parceria e corporate, as secções da equipa e a compatibilidade dos links antigos de casamentos. Sem commit, push ou publicação.

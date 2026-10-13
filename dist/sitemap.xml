@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cheers.guru/</loc></url>
-  <url><loc>https://cheers.guru/eventos.html</loc></url>
-  <url><loc>https://cheers.guru/destination-weddings/</loc></url>
-  <url><loc>https://cheers.guru/destination-weddings/?lang=pt</loc></url>
-  <url><loc>https://cheers.guru/destination-weddings/?lang=es</loc></url>
+  <url><loc>https://cheers.guru/index.html?lang=pt</loc></url>
+  <url><loc>https://cheers.guru/index.html?lang=es</loc></url>
+  <url><loc>https://cheers.guru/index.html?lang=en</loc></url>
+  <url><loc>https://cheers.guru/eventos.html?lang=pt</loc></url>
+  <url><loc>https://cheers.guru/eventos.html?lang=es</loc></url>
+  <url><loc>https://cheers.guru/eventos.html?lang=en</loc></url>
 </urlset>
