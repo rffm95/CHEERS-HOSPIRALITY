@@ -20,3 +20,11 @@ body[data-page=events] h1{font-size:clamp(48px,5.9vw,84px)}
 .wedding-benefits p,.wedding-moments p{font-size:14px;line-height:1.85}
 @media(max-width:900px){.wedding-benefits{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}body[data-page=events] h1{font-size:clamp(42px,6vw,60px)}.wedding-moments{gap:24px}.wedding-moments h3{font-size:24px}.wedding-moments p{font-size:13px}}
 @media(max-width:620px){body[data-page=events] .hero-grid{grid-template-columns:1fr}body[data-page=events] h1{font-size:clamp(43px,11vw,64px)}.wedding-poster{max-width:420px;justify-self:center}.wedding-toast{max-width:320px}body[data-page=events] #signature .split{display:flex;flex-direction:column-reverse;align-items:stretch}body[data-page=events] #signature .wedding-toast{align-self:center}.wedding-benefits,.wedding-moments{grid-template-columns:1fr;gap:26px}.wedding-benefits h3,.wedding-moments h3{font-size:28px}.wedding-benefits p,.wedding-moments p{font-size:14px}}
+
+/* Welcome reception feature; preserve the complete supplied image. */
+.wedding-moments{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wedding-moments .wedding-welcome{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center;padding-block:30px}
+.wedding-welcome h3{font-size:clamp(30px,3.5vw,46px)}
+.wedding-welcome img{height:auto;object-fit:contain}
+.wedding-welcome figcaption{padding-top:12px}
+@media(max-width:620px){.wedding-moments{grid-template-columns:1fr}.wedding-moments .wedding-welcome{grid-template-columns:1fr;gap:24px;padding-block:24px}.wedding-welcome h3{font-size:32px}}
