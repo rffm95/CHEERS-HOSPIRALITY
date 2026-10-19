@@ -149,3 +149,4 @@ footer{padding:72px 0 36px}
 @media(max-width:900px){#event-offers{grid-template-columns:1fr;gap:30px}}
 @media(max-width:620px){#event-offers article.package,#event-offers article.package+article.package{padding:34px 24px 26px}.package-price strong{font-size:38px}}
 .package-price-quote strong{font-size:34px}
+body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-page=hotels] .hero-content{max-width:880px}

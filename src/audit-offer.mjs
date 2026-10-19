@@ -45,7 +45,7 @@ export const auditOffer = {
   options:['Mystery Guest Bar Audit — 990 € + deslocação (sem IVA)','Auditoria Completa — pedir reunião','Parceria de grupo hoteleiro','Menus digitais, QR e ecrãs','Outro assunto'],
   realCaption:'Exemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imagens de ambiente ilustrativas, exceto quando identificadas como exemplo real.',
-  ogAlt:'Cocktail servido num bar de hotel',
+  ogAlt:'Ecrã com conteúdos promocionais no Cheers O Bar, em Viseu',
   meta:'Mystery Guest Bar Audit para hotéis: 990 € + deslocação, sem IVA. 1 a 2 dias no bar como hóspede e relatório com pelo menos 10 erros e melhorias em 7 dias. Com garantia.'
  },
  es: {
@@ -91,7 +91,7 @@ export const auditOffer = {
   options:['Mystery Guest Bar Audit — 990 € + desplazamiento (sin IVA)','Auditoría Completa — solicitar reunión','Colaboración con grupo hotelero','Menús digitales, QR y pantallas','Otro asunto'],
   realCaption:'Ejemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imágenes de ambiente ilustrativas, salvo cuando se identifican como ejemplo real.',
-  ogAlt:'Cóctel servido en el bar de un hotel',
+  ogAlt:'Pantalla con contenidos promocionales en Cheers O Bar, en Viseu',
   meta:'Mystery Guest Bar Audit para hoteles: 990 € + desplazamiento, sin IVA. 1 a 2 días en el bar como huésped e informe con al menos 10 errores y mejoras en 7 días. Con garantía.'
  },
  en: {
@@ -137,7 +137,7 @@ export const auditOffer = {
   options:['Mystery Guest Bar Audit — €990 + travel (excl. VAT)','Full Audit — request a meeting','Hotel group partnership','Digital menus, QR and screens','Something else'],
   realCaption:'Real example · Cheers O Bar, Viseu.',
   imagesNote:'Illustrative atmosphere images, unless identified as a real example.',
-  ogAlt:'Cocktail served in a hotel bar',
+  ogAlt:'Screen with promotional content at Cheers O Bar, Viseu',
   meta:'Mystery Guest Bar Audit for hotels: €990 + travel, excluding VAT. 1 to 2 days in the bar as a guest and a report with at least 10 errors and improvements within 7 days. Guaranteed.'
  }
 };
