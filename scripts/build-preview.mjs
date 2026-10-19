@@ -5,7 +5,7 @@ const asset=file=>`data:${mime[file.split('.').at(-1)]};base64,${fs.readFileSync
 const cache=new Map();
 const inline=html=>html.replace(/src="(\/images\/[^" ]+)"/g,(_,path)=>{if(!cache.has(path))cache.set(path,asset(path));return `src="${cache.get(path)}"`;});
 const pages=Object.fromEntries(paths.map(path=>[path,inline(fs.readFileSync('dist'+path,'utf8').replace(/<script[^>]*src=[^>]+><\/script>/g,''))]));
-const css=fs.readFileSync('dist/atelier.css','utf8'),js=fs.readFileSync('dist/atelier.js','utf8');
+const css=fs.readFileSync('dist/atelier.css','utf8').replace(/url\((\/fonts\/[^)]+\.woff)\)/g,(_,f)=>`url(data:font/woff;base64,${fs.readFileSync('dist'+f).toString('base64')})`),js=fs.readFileSync('dist/atelier.js','utf8');
 const payload=JSON.stringify(pages).replace(/</g,'\\u003c');
 let preview=pages['/index.html'].replace('<link rel="stylesheet" href="/atelier.css">',`<style>${css}</style>`).replace('<link rel="icon" href="/favicon.svg" type="image/svg+xml">','');
 preview=preview.replace('</body>',`<script>window.__cheersPreview=${payload};</script><script>${js.replace(/<\/script/gi,'<\\/script')}</script></body>`);

@@ -66,29 +66,33 @@ if(typeof document!=='undefined')(()=>{
   if(event){
    function update(){const s=eventFieldState(event.elements.type.value);event.elements.guests.required=s.guestsRequired;event.querySelector('[data-guest-required]').hidden=!s.guestsRequired;event.querySelector('[data-partner-help]').hidden=s.guestsRequired;event.querySelector('[data-wedding-moments]').hidden=!s.momentsVisible;event.elements.moment.disabled=!s.momentsVisible;}
    event.addEventListener('change',update);update();
-   event.addEventListener('submit',ev=>{ev.preventDefault();if(!event.reportValidity())return;window.open(enquiryURL('whatsapp',event.dataset.subject,prepareEnquiry(event)),'_blank','noopener,noreferrer');event.querySelector('[data-form-status]').textContent=event.querySelector('[data-form-status]').dataset.ready;});
   }
-  if(hotel){
+  function enhanceSubmit(form){
    let submitting=false;
-   hotel.addEventListener('submit',async ev=>{
-    // Keep the original POST integration; enhance with explicit delivery/error states.
-    if(!window.fetch)return;ev.preventDefault();if(submitting||!hotel.reportValidity())return;
-    if(window.__cheersPreview){hotel.querySelector('[data-form-status]').textContent={pt:'Preview: o envio real está desativado. Pode testar a preparação por email ou WhatsApp.',es:'Preview: el envío real está desactivado. Puede probar la preparación por email o WhatsApp.',en:'Preview: live submission is disabled. You can test the email or WhatsApp draft.'}[document.body.dataset.language];return;}
-    submitting=true;const button=hotel.querySelector('button[type="submit"]'),status=hotel.querySelector('[data-form-status]');button.disabled=true;button.textContent=button.dataset.loading;status.textContent='';hotel.setAttribute('aria-busy','true');
+   form.addEventListener('submit',async ev=>{
+    // Native POST stays as the no-JS fallback; enhanced path shows delivery/error states.
+    if(!window.fetch)return;ev.preventDefault();if(submitting||!form.reportValidity())return;
+    if(window.__cheersPreview){form.querySelector('[data-form-status]').textContent={pt:'Preview: o envio real está desativado. Pode testar a preparação por email ou WhatsApp.',es:'Preview: el envío real está desactivado. Puede probar la preparación por email o WhatsApp.',en:'Preview: live submission is disabled. You can test the email or WhatsApp draft.'}[document.body.dataset.language];return;}
+    submitting=true;const button=form.querySelector('button[type="submit"]'),status=form.querySelector('[data-form-status]');button.disabled=true;button.textContent=button.dataset.loading;status.textContent='';form.setAttribute('aria-busy','true');
     const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
     try{
-     const response=await fetch('https://formsubmit.co/ajax/sucessomacico@gmail.com',{method:'POST',body:new FormData(hotel),headers:{Accept:'application/json'},signal:controller.signal});
+     const body=new FormData(form);
+     // Send the visible option text (not its index) so the email is readable.
+     if(typeof body.set==='function')for(const select of form.querySelectorAll('select[name]'))if(!select.disabled)body.set(select.name,select.selectedOptions[0]?.textContent||select.value);
+     const response=await fetch('https://formsubmit.co/ajax/sucessomacico@gmail.com',{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal});
      if(!response.ok)throw Error('delivery');const data=await response.json();if(data.success!==true&&data.success!=='true')throw Error('delivery');
-     location.assign(hotel.elements._next.value);
+     location.assign(form.elements._next.value);
     }catch{status.textContent=status.dataset.error;}
-    finally{clearTimeout(timeout);submitting=false;button.disabled=false;button.textContent=button.dataset.normal+' ↗';hotel.removeAttribute('aria-busy');}
+    finally{clearTimeout(timeout);submitting=false;button.disabled=false;button.textContent=button.dataset.normal+' ↗';form.removeAttribute('aria-busy');}
    });
   }
+  for(const form of [hotel,event].filter(Boolean))enhanceSubmit(form);
   for(const form of [hotel,event].filter(Boolean))form.querySelectorAll('[data-channel]').forEach(a=>a.addEventListener('click',ev=>{
    if(!form.reportValidity()){ev.preventDefault();return;}
    a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form));form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
   }));
-  document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.value=a.dataset.project;}));
+  document.querySelectorAll('[data-carousel]').forEach(track=>{const section=track.closest('section');const controls=section?.querySelector('[data-carousel-controls]');const prev=section?.querySelector('[data-carousel-prev]'),next=section?.querySelector('[data-carousel-next]');if(!controls||!prev||!next)return;controls.hidden=false;const step=()=>{const item=track.querySelector('li');return item?item.getBoundingClientRect().width+20:300;};const sync=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;};prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));track.addEventListener('scroll',sync,{passive:true});sync();});
+ document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.value=a.dataset.project;}));
   document.querySelectorAll('[data-experience]').forEach(a=>a.addEventListener('click',()=>{if(event)event.elements.need.value=a.dataset.experience;}));
   document.querySelectorAll('[data-event-type]').forEach(a=>a.addEventListener('click',()=>{if(event){event.elements.type.value=a.dataset.eventType;event.dispatchEvent(new Event('change'));}}));
   document.querySelectorAll('[data-calculator]').forEach(form=>{

@@ -141,3 +141,59 @@ export const auditOffer = {
   meta:'Mystery Guest Bar Audit for hotels: €990 + travel, excluding VAT. 1 to 2 days in the bar as a guest and a report with at least 10 errors and improvements within 7 days. Guaranteed.'
  }
 };
+
+// "O lucro que não vê": 10 margin leaks. PT shows the designed images (Portuguese text baked in);
+// ES/EN render the same points as translated text cards.
+export const leaks = {
+ pt:{
+  images:true,label:'O LUCRO QUE NÃO VÊ',title:'10 sítios onde o seu bar<br><em>pode estar a perder dinheiro.</em>',
+  intro:'São exemplos do que o Mystery Guest Bar Audit procura. Quantos destes acontecem no seu bar?',
+  cta:'Descobrir quais acontecem no meu bar',fixLabel:'Como corrigir',prev:'Anterior',next:'Seguinte',region:'10 fugas de margem',
+  items:[
+   ['A dose a mais. A margem a menos.','Servir a olho torna o custo de cada bebida imprevisível. O excesso repete-se, copo após copo.','Padronize as doses e use um doseador.'],
+   ['Vende muito. Mas sobra pouco.','Sem ficha técnica, pode vender cocktails sem saber quanto custa realmente cada um.','Calcule o custo completo de cada receita.'],
+   ['O preço do vizinho não paga as suas contas.','Copiar preços ignora os seus custos, o seu serviço e a margem de que precisa.','Defina preços com base nos custos e no valor entregue.'],
+   ['O desperdício também vai à conta.','Fruta cortada a mais, sumos esquecidos e preparações em excesso acumulam perdas.','Prepare por previsão de procura e registe as quebras.'],
+   ['Sem inventário, as perdas escondem-se.','Sem cruzar stock e vendas, doses a mais, ofertas e quebras podem passar despercebidas.','Conte o stock e compare o consumo real com o previsto.'],
+   ['Garrafas paradas. Dinheiro preso.','Comprar referências que quase não vendem imobiliza dinheiro e ocupa espaço.','Defina compras e quantidades pela rotação de cada produto.'],
+   ['A sua carta sabe vender?','Esconder as bebidas com boa margem e procura é desperdiçar o potencial de cada pedido.','Destaque escolhas rentáveis com descrições claras.'],
+   ['A equipa serve. Mas sabe recomendar?','Limitar-se a anotar pedidos deixa por explorar escolhas que o cliente poderia valorizar.','Treine sugestões relevantes, com preço claro e sem pressão.'],
+   ['Cada minuto à espera pode custar uma venda.','Falta de preparação e um posto desorganizado atrasam o serviço nas horas de maior procura.','Prepare o posto antes da abertura e simplifique os movimentos.'],
+   ['O turno errado sai caro.','Pessoas a mais nas horas calmas e a menos nos picos aumentam custos e fazem perder vendas.','Ajuste os turnos à procura e às tarefas de cada período.']
+  ]
+ },
+ es:{
+  images:false,label:'EL BENEFICIO QUE NO VE',title:'10 puntos donde su bar<br><em>puede estar perdiendo dinero.</em>',
+  intro:'Son ejemplos de lo que busca el Mystery Guest Bar Audit. ¿Cuántos ocurren en su bar?',
+  cta:'Descubrir cuáles ocurren en mi bar',fixLabel:'Cómo corregirlo',prev:'Anterior',next:'Siguiente',region:'10 fugas de margen',
+  items:[
+   ['La dosis de más. El margen de menos.','Servir a ojo hace que el coste de cada bebida sea imprevisible. El exceso se repite, copa tras copa.','Estandarice las dosis y use un medidor.'],
+   ['Vende mucho. Pero queda poco.','Sin ficha técnica, puede vender cócteles sin saber cuánto cuesta realmente cada uno.','Calcule el coste completo de cada receta.'],
+   ['El precio del vecino no paga sus facturas.','Copiar precios ignora sus costes, su servicio y el margen que necesita.','Fije precios según los costes y el valor que ofrece.'],
+   ['El desperdicio también pasa factura.','Fruta cortada de más, zumos olvidados y preparaciones en exceso acumulan pérdidas.','Prepare según la previsión de demanda y registre las mermas.'],
+   ['Sin inventario, las pérdidas se esconden.','Sin cruzar stock y ventas, dosis de más, invitaciones y mermas pueden pasar desapercibidas.','Cuente el stock y compare el consumo real con el previsto.'],
+   ['Botellas paradas. Dinero inmovilizado.','Comprar referencias que apenas se venden inmoviliza dinero y ocupa espacio.','Defina compras y cantidades según la rotación de cada producto.'],
+   ['¿Su carta sabe vender?','Esconder las bebidas con buen margen y demanda es desaprovechar el potencial de cada pedido.','Destaque las opciones rentables con descripciones claras.'],
+   ['El equipo sirve. ¿Pero sabe recomendar?','Limitarse a tomar nota deja sin explorar opciones que el cliente podría valorar.','Entrene sugerencias relevantes, con precio claro y sin presión.'],
+   ['Cada minuto de espera puede costar una venta.','La falta de preparación y un puesto desordenado retrasan el servicio en las horas punta.','Prepare el puesto antes de abrir y simplifique los movimientos.'],
+   ['El turno equivocado sale caro.','Personal de más en horas tranquilas y de menos en los picos aumenta costes y hace perder ventas.','Ajuste los turnos a la demanda y a las tareas de cada periodo.']
+  ]
+ },
+ en:{
+  images:false,label:'THE PROFIT YOU DO NOT SEE',title:'10 places where your bar<br><em>may be losing money.</em>',
+  intro:'These are examples of what the Mystery Guest Bar Audit looks for. How many happen in your bar?',
+  cta:'Find out which happen in my bar',fixLabel:'How to fix it',prev:'Previous',next:'Next',region:'10 margin leaks',
+  items:[
+   ['One pour too many. Margin too thin.','Free pouring makes the cost of every drink unpredictable. The excess repeats, glass after glass.','Standardise measures and use a jigger.'],
+   ['High sales. Little left over.','Without drink specifications, you may sell cocktails without knowing what each one really costs.','Calculate the full cost of every recipe.'],
+   ['Your neighbour’s prices do not pay your bills.','Copying prices ignores your costs, your service and the margin you need.','Set prices based on cost and the value you deliver.'],
+   ['Waste ends up on the bill too.','Over-cut fruit, forgotten juices and excess prep add up to losses.','Prep to forecast demand and record waste.'],
+   ['Without stock counts, losses hide.','Without matching stock to sales, over-pours, comps and breakages go unnoticed.','Count stock and compare actual usage with expected usage.'],
+   ['Idle bottles. Trapped cash.','Buying products that barely sell ties up cash and takes up space.','Set purchasing and quantities by each product’s rotation.'],
+   ['Does your menu know how to sell?','Hiding high-margin, high-demand drinks wastes the potential of every order.','Highlight profitable choices with clear descriptions.'],
+   ['The team serves. But can it recommend?','Simply taking orders leaves choices unexplored that guests would value.','Train relevant suggestions, with clear prices and no pressure.'],
+   ['Every minute of waiting can cost a sale.','Poor prep and a disorganised station slow service at peak times.','Set up the station before opening and simplify movements.'],
+   ['The wrong shift costs money.','Too many staff in quiet hours and too few at peaks raise costs and lose sales.','Match shifts to demand and to the tasks of each period.']
+  ]
+ }
+};
