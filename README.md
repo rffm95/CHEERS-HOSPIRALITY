@@ -28,9 +28,10 @@ Translated pages have full HTML without JavaScript. Language switching preserves
 
 - Rui’s 10+ years and professional background are stated by the owner; hotel employment is identified as professional history, never a consultancy client.
 - Beatriz Almeida is presented only as Operations & Events Manager, reporting directly to Rui. This role was confirmed by Rui in his 12 October instructions. No qualifications, seniority, client history or achievements were added.
-- The first on-site meeting without a meeting fee was approved by Rui on 8 October. Availability, location and agreed travel costs still apply; detailed audits and implementation are paid separately. This approved option appears in the hotel FAQ/contact area, rather than dominating the offer.
+- The first on-site meeting without a meeting fee was approved by Rui on 8 October. Availability, location and agreed travel costs still apply; detailed audits and implementation are paid separately. On the hotel page it is the entry point to the Full Audit (Step 2).
 - The historical `+100%` sales block is omitted because financial evidence is not available in the project. No client testimonials, logos, ratings or financial performance claims were added.
-- Existing atmosphere imagery is visibly identified as illustrative, never a portfolio. The Cheers O Bar screen photo is labelled as a real own-operation example, without claiming that it proves sales uplift.
+- Hotel page: atmosphere imagery is identified as illustrative in a single footer note (no per-image captions). The Cheers O Bar screen photo is labelled as a real own-operation example. Event pages keep their per-image captions.
+- Hotel offer (approved structure, October 2026): Step 1 is the Mystery Guest Bar Audit only (€990 + travel, 1–2 days on site, report with at least 10 errors and improvements, refund guarantee if fewer than 10, €990 credited if the Full Audit is commissioned within 30 days, max. 4 audits per month). Step 2 is the Full Audit, quoted per project with agreed objectives and an itemised scope (QR menus, screen/TV content, staff training, team on site, etc.).
 
 ## Forms and integrations
 
