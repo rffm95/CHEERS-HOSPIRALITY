@@ -18,12 +18,12 @@ function prepareEnquiry(form){
  }
  return `${form.dataset.subject||'Cheers Experiences'}\n\n${lines.join('\n')}`;
 }
-function enquiryURL(channel,subject,message){return channel==='email'?'mailto:sucessomacico@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/351927653087?text='+encodeURIComponent(message);}
+function enquiryURL(channel,subject,message){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/351927653087?text='+encodeURIComponent(message);}
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
 if(typeof module!=='undefined'&&module.exports)module.exports={calculateRevenue,enquiryURL,eventFieldState};
 if(typeof document!=='undefined')(()=>{
  const supported=['pt','es','en'];let inNavigation=false;
- const baseURL=()=>window.__cheersPreview?'https://cheers.guru/':location.href;
+ const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
  function updateHistory(method,url){try{history[method]({},'',url);}catch{}}
  const pageRoute=(language,event)=>`${language==='pt'?'':`/${language}`}/${event?'eventos.html':'index.html'}`;
  function openTarget(hash){
@@ -79,7 +79,7 @@ if(typeof document!=='undefined')(()=>{
      const body=new FormData(form);
      // Send the visible option text (not its index) so the email is readable.
      if(typeof body.set==='function')for(const select of form.querySelectorAll('select[name]'))if(!select.disabled)body.set(select.name,select.selectedOptions[0]?.textContent||select.value);
-     const response=await fetch('https://formsubmit.co/ajax/sucessomacico@gmail.com',{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal});
+     const response=await fetch('https://formsubmit.co/ajax/info@cheersexperiences.com',{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal});
      if(!response.ok)throw Error('delivery');const data=await response.json();if(data.success!==true&&data.success!=='true')throw Error('delivery');
      location.assign(form.elements._next.value);
     }catch{status.textContent=status.dataset.error;}

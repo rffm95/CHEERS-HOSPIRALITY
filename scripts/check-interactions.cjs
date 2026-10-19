@@ -22,7 +22,7 @@ function setup(eventPage,preview=false,fetchResponse={ok:true,json:async()=>({su
  const document=new Node({body:new Node({dataset:{page:eventPage?'events':'hotels',language:'pt'}}),queries:{'.menu-toggle':null,'[data-lead-form]':eventPage?null:form,'[data-event-form]':eventPage?form:null},queryLists:{'[data-project]':eventPage?[]:[offer],'[data-event-type]':eventPage?[offer]:[],'[data-experience]':eventPage?[experience]:[]}});
  document.getElementById=()=>null;
  const window={fetch:true,addEventListener(){},open(url){opened=url;},__cheersPreview:preview?{}:null};
- const ctx=vm.createContext({document,window,location:{href:'https://cheers.guru/',search:'',hash:'',pathname:'/',assign(url){assigned=url;}},URL,URLSearchParams,FormData:class{},AbortController,setTimeout(){return 1;},clearTimeout(){},Event:class{constructor(type){this.type=type;}},fetch:async()=>{fetchCalls++;return fetchResponse;},module:{exports:{}},requestAnimationFrame:fn=>fn()});
+ const ctx=vm.createContext({document,window,location:{href:'https://cheersexperiences.com/',search:'',hash:'',pathname:'/',assign(url){assigned=url;}},URL,URLSearchParams,FormData:class{},AbortController,setTimeout(){return 1;},clearTimeout(){},Event:class{constructor(type){this.type=type;}},fetch:async()=>{fetchCalls++;return fetchResponse;},module:{exports:{}},requestAnimationFrame:fn=>fn()});
  vm.runInContext(fs.readFileSync('src/atelier.js','utf8'),ctx);
  return {form,type,guests,moment,required,help,moments,opportunity,need,offer,experience,status,button,opened:()=>opened,assigned:()=>assigned,fetchCalls:()=>fetchCalls};
 }

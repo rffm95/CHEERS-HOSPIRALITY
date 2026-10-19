@@ -1,10 +1,10 @@
-# Cheers Experiences — cheers.guru
+# Cheers Experiences — cheersexperiences.com
 
 Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para hotéis e bar para casamentos/eventos, em Portugal e Espanha. Dono: Rui Monteiro.
 
 ## Regras importantes
 
-- **Cada push para `main` publica o site automaticamente** (GitHub Actions → GitHub Pages, domínio cheers.guru). Trabalhar num ramo e só fazer merge/push para `main` depois de o Rui aprovar a preview.
+- **Cada push para `main` publica o site automaticamente** (GitHub Actions → GitHub Pages, domínio cheersexperiences.com). Trabalhar num ramo e só fazer merge/push para `main` depois de o Rui aprovar a preview.
 - Mostrar sempre uma preview (`npm run preview`) antes de qualquer commit.
 - Três idiomas: qualquer alteração de texto é feita em PT (pt-PT), ES (es-ES, "usted" nos hotéis, "vosotros" nos casamentos) e EN (britânico).
 - Não inventar testemunhos, clientes, logótipos, números de vendas ou prémios. O percurso do Rui (Cheers O Bar desde 2014, Grande Real Santa Eulália 2017) é experiência profissional, não clientes de consultoria.

@@ -4,4 +4,4 @@ Disallow: /counter/
 Disallow: /obrigado.html
 Disallow: /es/obrigado.html
 Disallow: /en/obrigado.html
-Sitemap: https://cheers.guru/sitemap.xml
+Sitemap: https://cheersexperiences.com/sitemap.xml

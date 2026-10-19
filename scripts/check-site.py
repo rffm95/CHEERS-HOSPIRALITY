@@ -13,7 +13,7 @@ for lang in ['pt','es','en']:
   assert doc.xpath('//html/@lang')[0]=={'pt':'pt-PT','es':'es-ES','en':'en'}[lang]
   ids=doc.xpath('//@id');assert len(ids)==len(set(ids)),(path,'duplicate ids')
   canonical=doc.xpath('//link[@rel="canonical"]/@href')[0]
-  assert canonical=='https://cheers.guru'+path
+  assert canonical=='https://cheersexperiences.com'+path
   assert set(doc.xpath('//link[@rel="alternate"]/@hreflang'))=={'pt','es','en','x-default'}
   assert doc.xpath('//meta[@property="og:image"]/@content')
   schema=json.loads(doc.xpath('//script[@type="application/ld+json"]/text()')[0]);assert not any(x in schema for x in ['review','aggregateRating','award'])
@@ -22,7 +22,7 @@ for lang in ['pt','es','en']:
   for image in doc.xpath('//img'):
    assert 'alt' in image.attrib and 'width' in image.attrib and 'height' in image.attrib
   for f in doc.xpath('//form[@data-lead-form]'):
-   assert f.get('action')=='https://formsubmit.co/sucessomacico@gmail.com' and f.get('method')=='POST'
+   assert f.get('action')=='https://formsubmit.co/info@cheersexperiences.com' and f.get('method')=='POST'
    assert set(f.xpath('.//input[@required]/@name'))=={'name','hotel','email','location'}
   for f in doc.xpath('//form[@data-event-form]'):
    assert len(f.xpath('.//*[@name="type"]/option'))==8
