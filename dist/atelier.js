@@ -105,7 +105,7 @@ if(typeof document!=='undefined')(()=>{
   const href=a.getAttribute('href');if(href.startsWith('#')){if(openTarget(href)){event.preventDefault();updateHistory('replaceState',location.pathname+location.search+href);}closeMenu();return;}
   const url=new URL(href,baseURL());
   if((url.origin===location.origin||window.__cheersPreview)&&/^(?:\/(?:pt|es|en))?\/(?:index|eventos)\.html$/.test(url.pathname)){
-   event.preventDefault();const targetLang=a.dataset.language;if(targetLang){url.hash=location.hash;const campaign=new URLSearchParams(location.search);campaign.delete('lang');url.search=campaign.toString();}
+   event.preventDefault();const targetLang=a.dataset.language;if(targetLang){try{localStorage.setItem('cheers-lang',targetLang);}catch{}url.hash=location.hash;const campaign=new URLSearchParams(location.search);campaign.delete('lang');url.search=campaign.toString();}
    navigate(url.pathname+url.search+url.hash,{preserve:!!targetLang});
   }
  });
