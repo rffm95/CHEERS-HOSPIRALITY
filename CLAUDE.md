@@ -12,7 +12,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 
 ## Estrutura
 
-- `src/audit-offer.mjs` — oferta da página de hotéis: Passo 1 Mystery Guest Bar Audit (990 € + deslocação, sem IVA, ≥10 erros e melhorias, garantia, crédito em 30 dias, máx. 4/mês), Passo 2 Auditoria Completa (orçamento à medida), e a secção "O lucro que não vê" (`leaks`).
+- `src/audit-offer.mjs` — oferta da página de hotéis: Passo 1 Mystery Guest Bar Audit (990 € + deslocação, sem IVA, ≥10 erros e melhorias, garantia de 990 €/mês em vendas perdidas ou desperdício (ou reembolso), crédito em 30 dias, máx. 4/mês), Passo 2 Auditoria Completa (orçamento à medida), e a secção "O lucro que não vê" (`leaks`). CTA principal da página de hotéis: WhatsApp. As páginas PT redirecionam na 1.ª visita para ES/EN conforme o fuso horário (Espanha → ES) e o idioma do browser, salvo escolha manual guardada.
 - `src/weddings.mjs` — página de casamentos e eventos: pacotes com preços sem IVA (desde 25 € + IVA/pessoa bar de cerveja; desde 35 € + IVA/pessoa cerveja + cocktails; ambos com mínimo de 50 pessoas; à medida sob orçamento).
 - `src/editorial.mjs` — textos partilhados (menu, contactos, FAQ gerais, formulários).
 - `src/content.json` — conteúdos de apoio (serviços, método, eventos, calculadora).
