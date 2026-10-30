@@ -22,7 +22,7 @@ for lang in ['pt','es','en']:
   for image in doc.xpath('//img'):
    assert 'alt' in image.attrib and 'width' in image.attrib and 'height' in image.attrib
   for f in doc.xpath('//form[@data-lead-form]'):
-   assert f.get('action')=='https://formsubmit.co/info@cheersexperiences.com' and f.get('method')=='POST'
+   assert f.get('action')=='https://wa.me/351927653087' and f.get('method')=='GET'
    assert set(f.xpath('.//input[@required]/@name'))=={'name','hotel','email','location'}
   for f in doc.xpath('//form[@data-event-form]'):
    assert len(f.xpath('.//*[@name="type"]/option'))==8
@@ -48,5 +48,5 @@ for path in pages:
 css=(root/'atelier.css').read_text();assert '@media(prefers-reduced-motion:reduce)' in css
 assert all('@media(max-width:'+str(x)+'px)' in css for x in [1180,900,620,370])
 assert css.count('{')==css.count('}')
-print('PASS six complete static pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, existing POST integration, credibility checks, responsive breakpoints and reduced motion declarations.')
+print('PASS six complete static pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
 print('NOTE no browser rendering, layout measurements, live email delivery or Core Web Vitals measured.')

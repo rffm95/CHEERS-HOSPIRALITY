@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const {calculateRevenue,enquiryURL,eventFieldState}=require('../src/atelier.js');
+const {calculateRevenue,enquiryURL,eventFieldState,prepareEnquiry}=require('../src/atelier.js');
 const input={guests:200,penetration:20,ticket:12,days:30,lift:5,ticketLift:10};
 assert.deepEqual(calculateRevenue(input),{current:14400,simulated:19800,delta:5400,annual:64800});
 assert.equal(calculateRevenue({...input,lift:0,ticketLift:0}).delta,0);
@@ -10,6 +10,15 @@ for(const type of ['0','3','5','6','7'])assert.deepEqual(eventFieldState(type),{
 const msg='Olá Rui\nLocal: Jávea & Viseu\nCocktails: 50%';
 const mail=new URL(enquiryURL('email','Pedido & evento',msg));assert.equal(mail.searchParams.get('body'),msg);assert.equal(mail.searchParams.get('subject'),'Pedido & evento');
 const wa=new URL(enquiryURL('whatsapp','Pedido',msg));assert.equal(wa.searchParams.get('text'),msg);
+// Contact text must include readable selected options and omit hidden/disabled fields.
+const field=(props)=>({closest(s){return s==='label'?{childNodes:[{textContent:props.label}]}:null;},...props});
+const enquiry=prepareEnquiry({dataset:{subject:'Hotel inquiry'},querySelectorAll(){return [
+ field({name:'name',tagName:'INPUT',value:' Rui ',label:'Nome *'}),
+ field({name:'opportunity',tagName:'SELECT',selectedOptions:[{textContent:'Mystery Guest — 990 €'}],label:'Serviço'}),
+ field({name:'message',tagName:'TEXTAREA',value:'Lima & hortelã',label:'Contexto'}),
+ field({name:'moment',disabled:true}),field({name:'_honey'}),field({name:'internal',type:'hidden'}),field({name:'period',tagName:'INPUT',value:' ',label:'Data'})
+ ];}});
+assert.equal(enquiry,'Hotel inquiry\n\nNome: Rui\nServiço: Mystery Guest — 990 €\nContexto: Lima & hortelã');
 // Execute actual interaction bindings with a small DOM fixture (no visual browser).
 class Node{constructor(props={}){Object.assign(this,{dataset:{},listeners:{},hidden:false,value:'',childNodes:[],...props});}addEventListener(event,fn){(this.listeners[event]??=[]).push(fn);}dispatchEvent(event){for(const fn of this.listeners[event.type]??[])fn(event);}setAttribute(k,v){this[k]=v;}removeAttribute(k){delete this[k];}querySelector(s){return this.queries?.[s]??null;}querySelectorAll(s){return this.queryLists?.[s]??[];}focus(){this.focused=true;}reportValidity(){return true;}}
 function setup(eventPage,preview=false,fetchResponse={ok:true,json:async()=>({success:true})}){
@@ -27,9 +36,9 @@ function setup(eventPage,preview=false,fetchResponse={ok:true,json:async()=>({su
  return {form,type,guests,moment,required,help,moments,opportunity,need,offer,experience,status,button,opened:()=>opened,assigned:()=>assigned,fetchCalls:()=>fetchCalls};
 }
 (async()=>{
- const event=setup(true);assert(event.guests.required);assert.equal(event.moments.hidden,false);event.offer.dispatchEvent({type:'click'});assert.equal(event.type.value,'7');assert.equal(event.guests.required,false);assert(event.moments.hidden);assert(event.moment.disabled);assert.equal(event.help.hidden,false);event.experience.dispatchEvent({type:'click'});assert.equal(event.need.value,'1');await event.form.listeners.submit[0]({preventDefault(){}});assert.equal(event.assigned(),'/obrigado.html');assert.equal(event.fetchCalls(),1);
- const hotel=setup(false);hotel.offer.dispatchEvent({type:'click'});assert.equal(hotel.opportunity.value,'5');await hotel.form.listeners.submit[0]({preventDefault(){}});assert.equal(hotel.assigned(),'/obrigado.html');assert.equal(hotel.fetchCalls(),1);assert.equal(hotel.button.disabled,false);
- const failure=setup(false,false,{ok:false});await failure.form.listeners.submit[0]({preventDefault(){}});assert.equal(failure.status.textContent,'Delivery failed');assert.equal(failure.assigned(),null);assert.equal(failure.button.disabled,false);
- const preview=setup(false,true);await preview.form.listeners.submit[0]({preventDefault(){}});assert.equal(preview.fetchCalls(),0);assert.equal(preview.assigned(),null);
- console.log('PASS revenue maths and limits, URL encoding, event/partnership field states, actual offer selection and draft bindings, simulated hotel success/error and preview submission guard. No external messages sent.');
+ const event=setup(true);assert(event.guests.required);assert.equal(event.moments.hidden,false);event.offer.dispatchEvent({type:'click'});assert.equal(event.type.value,'7');assert.equal(event.guests.required,false);assert(event.moments.hidden);assert(event.moment.disabled);assert.equal(event.help.hidden,false);event.experience.dispatchEvent({type:'click'});assert.equal(event.need.value,'1');await event.form.listeners.submit[0]({preventDefault(){}});assert.equal(new URL(event.assigned()).hostname,'wa.me');assert.equal(event.fetchCalls(),0);
+ const hotel=setup(false);hotel.offer.dispatchEvent({type:'click'});assert.equal(hotel.opportunity.value,'5');await hotel.form.listeners.submit[0]({preventDefault(){}});assert.equal(new URL(hotel.assigned()).searchParams.get('text'),'Enquiry\n\nName: QA Name\nContext: No messages sent');assert.equal(hotel.fetchCalls(),0);
+ const preview=setup(false,true);await preview.form.listeners.submit[0]({preventDefault(){}});assert.equal(preview.fetchCalls(),0);assert.equal(new URL(preview.assigned()).hostname,'wa.me');
+ const invalid=setup(false);invalid.form.reportValidity=()=>false;await invalid.form.listeners.submit[0]({preventDefault(){}});assert.equal(invalid.assigned(),null);
+ console.log('PASS revenue maths and limits, URL encoding, event/partnership field states, actual offer selection and draft bindings, WhatsApp hand-off with complete fields, invalid-input guard and no relay fetch. No external messages sent.');
 })();

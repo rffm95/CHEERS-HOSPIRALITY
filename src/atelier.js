@@ -20,7 +20,7 @@ function prepareEnquiry(form){
 }
 function enquiryURL(channel,subject,message){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/351927653087?text='+encodeURIComponent(message);}
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
-if(typeof module!=='undefined'&&module.exports)module.exports={calculateRevenue,enquiryURL,eventFieldState};
+if(typeof module!=='undefined'&&module.exports)module.exports={calculateRevenue,enquiryURL,eventFieldState,prepareEnquiry};
 if(typeof document!=='undefined')(()=>{
  const supported=['pt','es','en'];let inNavigation=false;
  const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
@@ -68,22 +68,13 @@ if(typeof document!=='undefined')(()=>{
    event.addEventListener('change',update);update();
   }
   function enhanceSubmit(form){
-   let submitting=false;
-   form.addEventListener('submit',async ev=>{
-    // Native POST stays as the no-JS fallback; enhanced path shows delivery/error states.
-    if(!window.fetch)return;ev.preventDefault();if(submitting||!form.reportValidity())return;
-    if(window.__cheersPreview){form.querySelector('[data-form-status]').textContent={pt:'Preview: o envio real está desativado. Pode testar a preparação por email ou WhatsApp.',es:'Preview: el envío real está desactivado. Puede probar la preparación por email o WhatsApp.',en:'Preview: live submission is disabled. You can test the email or WhatsApp draft.'}[document.body.dataset.language];return;}
-    submitting=true;const button=form.querySelector('button[type="submit"]'),status=form.querySelector('[data-form-status]');button.disabled=true;button.textContent=button.dataset.loading;status.textContent='';form.setAttribute('aria-busy','true');
-    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
-    try{
-     const body=new FormData(form);
-     // Send the visible option text (not its index) so the email is readable.
-     if(typeof body.set==='function')for(const select of form.querySelectorAll('select[name]'))if(!select.disabled)body.set(select.name,select.selectedOptions[0]?.textContent||select.value);
-     const response=await fetch('https://formsubmit.co/ajax/info@cheersexperiences.com',{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal});
-     if(!response.ok)throw Error('delivery');const data=await response.json();if(data.success!==true&&data.success!=='true')throw Error('delivery');
-     location.assign(form.elements._next.value);
-    }catch{status.textContent=status.dataset.error;}
-    finally{clearTimeout(timeout);submitting=false;button.disabled=false;button.textContent=button.dataset.normal+' ↗';form.removeAttribute('aria-busy');}
+   form.addEventListener('submit',ev=>{
+    ev.preventDefault();if(!form.reportValidity())return;
+    const status=form.querySelector('[data-form-status]');
+    status.textContent=status.dataset.ready;
+    // A direct hand-off avoids depending on an unavailable form relay.
+    // Preparing a message is not confirmation that the visitor sent it.
+    location.assign(enquiryURL('whatsapp',form.dataset.subject,prepareEnquiry(form)));
    });
   }
   for(const form of [hotel,event].filter(Boolean))enhanceSubmit(form);

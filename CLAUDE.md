@@ -26,4 +26,4 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - `npm test` — testes (Python com lxml + Node).
 - `npm run preview` — cria `../Cheers-Experiences-Preview.html`, um ficheiro único para rever o site sem o publicar.
 
-Os dois formulários (hotéis e eventos) enviam por FormSubmit para o email da Cheers.
+Os dois formulários (hotéis e eventos) preparam o pedido no WhatsApp, com alternativa por email. O visitante confirma o envio na aplicação escolhida. Não usar FormSubmit: apresentou falhas de ligação em 30/10/2026.

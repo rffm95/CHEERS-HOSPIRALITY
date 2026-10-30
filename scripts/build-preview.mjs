@@ -10,4 +10,4 @@ const payload=JSON.stringify(pages).replace(/</g,'\\u003c');
 let preview=pages['/index.html'].replace('<link rel="stylesheet" href="/atelier.css">',`<style>${css}</style>`).replace('<link rel="icon" href="/favicon.svg" type="image/svg+xml">','');
 preview=preview.replace('</body>',`<script>window.__cheersPreview=${payload};</script><script>${js.replace(/<\/script/gi,'<\\/script')}</script></body>`);
 fs.writeFileSync('../Cheers-Experiences-Preview.html',preview);
-console.log(`Functional standalone preview: six pages, three languages and ${cache.size} embedded images; ${Math.round(Buffer.byteLength(preview)/1024/1024*10)/10} MB. Live hotel submission disabled.`);
+console.log(`Functional standalone preview: six pages, three languages and ${cache.size} embedded images; ${Math.round(Buffer.byteLength(preview)/1024/1024*10)/10} MB. Contact buttons prepare WhatsApp or email messages for visitor confirmation.`);
