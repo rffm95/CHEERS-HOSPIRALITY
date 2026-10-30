@@ -22,7 +22,8 @@ for lang in ['pt','es','en']:
   for image in doc.xpath('//img'):
    assert 'alt' in image.attrib and 'width' in image.attrib and 'height' in image.attrib
   for f in doc.xpath('//form[@data-lead-form]'):
-   assert f.get('action')=='https://wa.me/351927653087' and f.get('method')=='GET'
+   assert f.get('action')=='https://formsubmit.co/info@cheersexperiences.com' and f.get('method')=='POST'
+   assert f.xpath('.//input[@name="_next"]/@value')[0].endswith('/obrigado.html')
    assert set(f.xpath('.//input[@required]/@name'))=={'name','hotel','email','location'}
   for f in doc.xpath('//form[@data-event-form]'):
    assert len(f.xpath('.//*[@name="type"]/option'))==8

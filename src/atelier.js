@@ -77,13 +77,20 @@ if(typeof document!=='undefined')(()=>{
     location.assign(enquiryURL('whatsapp',form.dataset.subject,prepareEnquiry(form)));
    });
   }
-  for(const form of [hotel,event].filter(Boolean))enhanceSubmit(form);
+  // Hotel requests post straight to info@ through FormSubmit (native POST, no fetch); events keep the WhatsApp hand-off.
+  if(hotel)hotel.addEventListener('submit',ev=>{
+   if(!hotel.reportValidity()){ev.preventDefault();return;}
+   const button=hotel.querySelector('button[type="submit"]');
+   if(window.__cheersPreview){ev.preventDefault();hotel.querySelector('[data-form-status]').textContent=button.dataset.preview;return;}
+   button.textContent=button.dataset.loading;
+  });
+  if(event)enhanceSubmit(event);
   for(const form of [hotel,event].filter(Boolean))form.querySelectorAll('[data-channel]').forEach(a=>a.addEventListener('click',ev=>{
    if(!form.reportValidity()){ev.preventDefault();return;}
    a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form));form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
   }));
   document.querySelectorAll('[data-carousel]').forEach(track=>{const section=track.closest('section');const controls=section?.querySelector('[data-carousel-controls]');const prev=section?.querySelector('[data-carousel-prev]'),next=section?.querySelector('[data-carousel-next]');if(!controls||!prev||!next)return;controls.hidden=false;const step=()=>{const item=track.querySelector('li');return item?item.getBoundingClientRect().width+20:300;};const sync=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;};prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));track.addEventListener('scroll',sync,{passive:true});sync();});
- document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.value=a.dataset.project;}));
+ document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.selectedIndex=Number(a.dataset.project);}));
   document.querySelectorAll('[data-experience]').forEach(a=>a.addEventListener('click',()=>{if(event)event.elements.need.value=a.dataset.experience;}));
   document.querySelectorAll('[data-event-type]').forEach(a=>a.addEventListener('click',()=>{if(event){event.elements.type.value=a.dataset.eventType;event.dispatchEvent(new Event('change'));}}));
   document.querySelectorAll('[data-calculator]').forEach(form=>{
