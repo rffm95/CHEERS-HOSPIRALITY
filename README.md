@@ -1,10 +1,13 @@
 # Cheers Experiences
 
-Static, dependency-free website for hotel bar consultancy and integrated weddings/events in Portugal and Spain. The redesign was approved by Rui Monteiro for commit on 13 October 2026. Production publication remains subject to his separate explicit approval.
+Static, dependency-free website for hotel bar digital services, consultancy and integrated weddings/events in Portugal and Spain. The 30 October 2026 update promotes the existing digital services directly, following the owner's instruction to revise the website and sell more digital work.
+
+The homepage leads with QR Menu and QR Menu + Screens proposals, the real Cheers O Bar screen example and a direct WhatsApp enquiry. Digital scope, price and dates are quoted per project. The Mystery Guest and Full Audit offers remain available. See `docs/digital-sales-plan.md` for the rationale, source videos and measurement plan.
 
 ## Source and build
 
 - `src/editorial.mjs`: PT-PT, ES-ES and English positioning, interface and conversion copy.
+- `src/digital.mjs`: complete PT/ES/EN digital offers, homepage, delivery steps and buyer questions.
 - `src/content.json`: preserved services, audits, events, partnerships and approved initial meeting conditions.
 - `src/template.mjs`: shared semantic page components and complete translated HTML.
 - `src/atelier.css` and `src/atelier.js`: responsive design and progressive interactions.
@@ -45,4 +48,4 @@ The existing counter endpoint remains, with restricted-storage and network-failu
 
 Passed: build and JavaScript syntax, six language/page combinations, semantic structure, canonical/hreflang/OG/structured data, duplicate IDs, all internal file and fragment destinations, contact inputs and native integration, package/type selection, revenue maths and bounds, event/partnership conditional fields, message encoding, and simulated success/failure/preview submission paths.
 
-Browser control is unavailable in this environment. Desktop/mobile render quality, cross-device interaction, WCAG compliance, live delivery and Core Web Vitals are not certified. CSS includes responsive layouts for 320px through desktop, keyboard focus, touch controls and reduced motion; these are implementation checks, not visual-browser results. Validation did not include production publication. The approved changes are committed on a review branch; production deployment remains pending separate approval.
+30 October browser checks: desktop and mobile visual inspection, no page-wide horizontal overflow at 390px and 320px viewports, primary CTA navigation, PT/ES/EN switching, translated package-specific WhatsApp destinations, digital enquiry default, mobile menu, equipment FAQ disclosure and loading of the real bar photo. The mobile screen example's initial overflow was corrected. The existing automated static and interaction checks pass. No real form submission was sent. WCAG compliance, cross-device certification, email receipt, conversion uplift and Core Web Vitals are not claimed. Production uses the existing GitHub Pages workflow on `main`; deployment status must be verified separately from local checks.

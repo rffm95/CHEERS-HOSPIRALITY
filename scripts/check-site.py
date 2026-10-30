@@ -41,7 +41,7 @@ for path,doc in pages.items():
    if destination is None:destination=html.fromstring((root/target.lstrip('/')).read_text())
    assert destination.xpath('//*[@id=$id]',id=unquote(u.fragment)),(path,'missing anchor',address)
  # Heading structure: no jump from h2 directly to h4.
- assert len(doc.xpath('//header//nav/a[not(contains(@class,"button"))]'))==2  # nav: Hotels + Weddings & Events only
+ assert len(doc.xpath('//header//nav/a[not(contains(@class,"button"))]'))==(3 if path.endswith('/index.html') else 2)  # Digital entry added on hotel pages
  assert doc.xpath('//*[@id="team"]')
 for path in pages:
  assert len((root/path[1:]).read_bytes())<70000
