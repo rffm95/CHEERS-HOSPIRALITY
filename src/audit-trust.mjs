@@ -2,6 +2,9 @@
 // and what the €990 covers versus what is agreed in writing before confirmation.
 export const auditTrust = {
  pt: {
+  posterFull:'O seu hotel está cheio. E o bar? Mais atenção ao bar, mais oportunidades por hóspede. Bar de hotel com balcão iluminado e um cocktail.',
+  posterMargin:'O método Cheers: a margem também se serve ao balcão. Carta e preços, equipa e serviço, custos e desperdício. Diagnóstico, prioridades, plano de ação. Bartender a medir uma dose com doseador.',
+  posterMG:'Mystery Guest para bares de hotel: 2 dias de diagnóstico, experiência do hóspede e operação, relatório completo em 7 dias. Cocktail e caderno sobre um balcão de mármore.',
   situationsLabel:'QUANDO FAZ SENTIDO', situationsTitle:'Reconhece alguma<br><em>destas situações?</em>',
   situationsIntro:'Não quer dizer que o seu bar esteja a perder dinheiro. São sinais de que um olhar externo pode ajudar a direção a decidir onde atuar.',
   situations:['O hotel tem hóspedes, mas o bar é pouco utilizado.','As vendas aumentam e a margem continua pouco clara.','A experiência varia entre turnos.','A carta está desatualizada ou pouco diferenciada.','A direção quer preparar uma abertura ou uma nova época.','Há dúvidas sobre desperdício, doses e compras.'],
@@ -14,6 +17,9 @@ export const auditTrust = {
   agreedNote:'Nada é faturado sem constar do orçamento aceite.'
  },
  es: {
+  posterFull:'Su hotel está lleno. ¿Y el bar? Más atención al bar, más oportunidades por huésped. Bar de hotel con barra iluminada y un cóctel.',
+  posterMargin:'El método Cheers: el margen también se sirve en la barra. Carta y precios, equipo y servicio, costes y desperdicio. Diagnóstico, prioridades, plan de acción. Bartender midiendo una dosis con un medidor.',
+  posterMG:'Mystery Guest para bares de hotel: 2 días de diagnóstico, experiencia del huésped y operativa, informe completo en 7 días. Cóctel y cuaderno sobre una barra de mármol.',
   situationsLabel:'CUÁNDO TIENE SENTIDO', situationsTitle:'¿Reconoce alguna<br><em>de estas situaciones?</em>',
   situationsIntro:'No significa que su bar esté perdiendo dinero. Son señales de que una mirada externa puede ayudar a la dirección a decidir dónde actuar.',
   situations:['El hotel tiene huéspedes, pero el bar se utiliza poco.','Las ventas suben y el margen sigue sin estar claro.','La experiencia cambia de un turno a otro.','La carta está desactualizada o es poco diferenciada.','La dirección quiere preparar una apertura o una nueva temporada.','Hay dudas sobre desperdicio, dosis y compras.'],
@@ -26,6 +32,9 @@ export const auditTrust = {
   agreedNote:'No se factura nada que no figure en el presupuesto aceptado.'
  },
  en: {
+  posterFull:'Your hotel is full. Is your bar? More focus on the bar, more opportunities per guest. Hotel bar with a lit counter and a cocktail.',
+  posterMargin:'The Cheers method: margins are also served at the bar. Menu and pricing, team and service, costs and waste. Assessment, priorities, action plan. Bartender measuring a pour with a jigger.',
+  posterMG:'Mystery Guest for hotel bars: 2-day assessment, guest experience and operations, full report in 7 days. Cocktail and notebook on a marble bar.',
   situationsLabel:'WHEN IT MAKES SENSE', situationsTitle:'Do any of these<br><em>sound familiar?</em>',
   situationsIntro:'It does not mean your bar is losing money. These are signs that an outside view could help management decide where to act.',
   situations:['The hotel has guests, but the bar is little used.','Sales are growing and the margin is still unclear.','The experience varies from shift to shift.','The menu is outdated or not very distinctive.','Management wants to prepare an opening or a new season.','There are doubts about waste, measures and purchasing.'],
