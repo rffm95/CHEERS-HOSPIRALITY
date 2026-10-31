@@ -4,7 +4,7 @@ from urllib.parse import urlsplit,unquote
 import json,re
 root=Path('dist');pages={}
 for lang in ['pt','es','en']:
- for name in ['index.html','eventos.html']:
+ for name in ['index.html','eventos.html','digital.html']:
   path=('/' if lang=='pt' else '/'+lang+'/')+name
   doc=html.fromstring((root/path[1:]).read_text())
   pages[path]=doc
@@ -29,7 +29,7 @@ for lang in ['pt','es','en']:
    assert len(f.xpath('.//*[@name="type"]/option'))==8
    assert len(f.xpath('.//*[@name="need"]/option'))==4
    assert f.xpath('.//*[@name="need"]/option[@selected]/@value')==['3']
-  text=doc.text_content();assert 'Beatriz Almeida' in text and 'Operations & Events Manager' in text;assert not re.search(r'\+100%|3×|Four Seasons|Rosewood|Mandarin Oriental',text)
+  text=doc.text_content();assert name=='digital.html' or ('Beatriz Almeida' in text and 'Operations & Events Manager' in text);assert not re.search(r'\+100%|3×|Four Seasons|Rosewood|Mandarin Oriental',text)
 for path,doc in pages.items():
  for element in doc.xpath('//*[@href or @src]'):
   address=element.get('href',element.get('src',''));u=urlsplit(address)
@@ -42,12 +42,13 @@ for path,doc in pages.items():
    if destination is None:destination=html.fromstring((root/target.lstrip('/')).read_text())
    assert destination.xpath('//*[@id=$id]',id=unquote(u.fragment)),(path,'missing anchor',address)
  # Heading structure: no jump from h2 directly to h4.
- assert len(doc.xpath('//header//nav/a[not(contains(@class,"button"))]'))==(3 if path.endswith('/index.html') else 2)  # Digital entry added on hotel pages
- assert doc.xpath('//*[@id="team"]')
+ assert len(doc.xpath('//header//nav/a[not(contains(@class,"button"))]'))==(2 if path.endswith('/eventos.html') else 3)  # Digital entry added on hotel pages
+ assert path.endswith('/digital.html') or doc.xpath('//*[@id="team"]')
 for path in pages:
+ assert not (path.endswith('/index.html') and pages[path].xpath('//*[contains(@class,"audience-rail")]|//*[@id="digital"]')),(path,'hotel page must stay focused')
  assert len((root/path[1:]).read_bytes())<70000
 css=(root/'atelier.css').read_text();assert '@media(prefers-reduced-motion:reduce)' in css
 assert all('@media(max-width:'+str(x)+'px)' in css for x in [1180,900,620,370])
 assert css.count('{')==css.count('}')
-print('PASS six complete static pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
+print('PASS nine complete static pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
 print('NOTE no browser rendering, layout measurements, live email delivery or Core Web Vitals measured.')

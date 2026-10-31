@@ -4,7 +4,7 @@
 // Everything else (QR menus, TV/screen content, staff training, team on site…) belongs to the Full Audit quote.
 export const auditOffer = {
  pt: {
-  eyebrowHotel:'CONSULTORIA DE BAR PARA HOTÉIS', heroItems:['Avaliação de um bar do hotel','Um dia como hóspede e um dia com a direção e a equipa','Relatório entregue até 7 dias após a visita'],
+  eyebrowHotel:'RENTABILIDADE DE BARES EM HOTÉIS 4 E 5 ESTRELAS DE PRAIA', heroPlace:'Costa Blanca · Algarve · Madeira', craftLabel:'CARTA DE COCKTAILS', heroItems:['Avaliação de um bar do hotel','Um dia como hóspede e um dia com a direção e a equipa','Relatório entregue até 7 dias após a visita'],
   visitTitle:'Como decorre a visita', visitHead:['Momento','O que acontece','Valor para o hotel'],
   visit:[['Primeiro dia','Experiência como hóspede, sem que a equipa avaliada saiba quem somos.','Observar atendimento, recomendação, produto e serviço em condições normais.'],['Segundo dia','Trabalho autorizado com a direção e a equipa do bar.','Compreender as causas, analisar os elementos disponíveis e validar prioridades.'],['Final da visita','Apresentação breve das primeiras conclusões.','A direção sai com uma orientação inicial.'],['Até 7 dias depois','Relatório completo e recomendações.','Um plano organizado para decidir e atuar.']],
   day2Title:'O segundo dia inclui',
@@ -37,7 +37,7 @@ export const auditOffer = {
    intro:'Do diagnóstico à mudança no terreno. Objetivos definidos consigo e tudo discriminado num orçamento à medida.',
    forItems:[['Melhorar um bar','Uma carta que vende pouco, custos sem controlo ou serviço irregular.'],['Preparar abertura ou época alta','Do lobby ao rooftop ou pool bar: o conceito pronto para funcionar no terreno.'],['Acompanhar a gestão','Apoio regular à direção e à equipa, com indicadores e responsabilidades claras.']],
    includesTitle:'O que pode incluir',
-   includes:['Análise de vendas, custos e margens','Nova carta, fichas técnicas e custo por bebida','Menu digital QR em vários idiomas','Animações e publicidade para ecrãs e TV','Formação de staff: serviço, produto, recomendação e upselling','Equipa Cheers a trabalhar no terreno','Compras, fornecedores e controlo de desperdício','Acompanhamento com indicadores'],
+   includes:['Análise de vendas, custos e margens','Nova carta, fichas técnicas e custo por bebida','Menus QR e conteúdos para ecrãs','Formação de staff: serviço, produto, recomendação e upselling','Equipa Cheers a trabalhar no terreno','Compras, fornecedores e controlo de desperdício','Acompanhamento com indicadores'],
    stepsTitle:'Como funciona',
    steps:[['Contacto por WhatsApp ou email','Sem compromisso. Conte-nos sobre o bar e o que quer alcançar. Respondemos por escrito e vemos se faz sentido avançar.'],['Objetivos','Definimos com a direção as metas e os indicadores a acompanhar.'],['Orçamento discriminado','Cada ação, prazo, responsável e valor, item a item.'],['Implementação','Executamos no terreno com a sua equipa e revemos os indicadores.']],
    cta:'Contactar por WhatsApp ou email',
@@ -61,7 +61,7 @@ export const auditOffer = {
   meta:'Encontramos pelo menos 11.880 € por ano no bar do seu hotel, ou devolvemos os 990 €. Mystery Guest Bar Audit: 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
  },
  es: {
-  eyebrowHotel:'CONSULTORÍA DE BAR PARA HOTELES', heroItems:['Evaluación de un bar del hotel','Un día como huésped y un día con la dirección y el equipo','Informe entregado en un máximo de 7 días tras la visita'],
+  eyebrowHotel:'RENTABILIDAD DE BARES EN HOTELES DE PLAYA DE 4 Y 5 ESTRELLAS', heroPlace:'Costa Blanca · Algarve · Madeira', craftLabel:'CARTA DE CÓCTELES', heroItems:['Evaluación de un bar del hotel','Un día como huésped y un día con la dirección y el equipo','Informe entregado en un máximo de 7 días tras la visita'],
   visitTitle:'Cómo se desarrolla la visita', visitHead:['Momento','Qué ocurre','Valor para el hotel'],
   visit:[['Primer día','Experiencia como huésped, sin que el equipo evaluado sepa quiénes somos.','Observar la atención, la recomendación, el producto y el servicio en condiciones normales.'],['Segundo día','Trabajo autorizado con la dirección y el equipo del bar.','Entender las causas, analizar la información disponible y validar prioridades.'],['Final de la visita','Presentación breve de las primeras conclusiones.','La dirección sale con una orientación inicial.'],['Hasta 7 días después','Informe completo y recomendaciones.','Un plan organizado para decidir y actuar.']],
   day2Title:'El segundo día incluye',
@@ -94,7 +94,7 @@ export const auditOffer = {
    intro:'Del diagnóstico al cambio sobre el terreno. Objetivos definidos con usted y todo detallado en un presupuesto a medida.',
    forItems:[['Mejorar un bar','Una carta que vende poco, costes sin control o un servicio irregular.'],['Preparar apertura o temporada alta','Del lobby al rooftop o pool bar: el concepto listo para funcionar sobre el terreno.'],['Acompañar la gestión','Apoyo regular a la dirección y al equipo, con indicadores y responsabilidades claras.']],
    includesTitle:'Qué puede incluir',
-   includes:['Análisis de ventas, costes y márgenes','Nueva carta, fichas técnicas y coste por bebida','Menú digital QR en varios idiomas','Animaciones y publicidad para pantallas y TV','Formación del equipo: servicio, producto, recomendación y upselling','Equipo Cheers trabajando sobre el terreno','Compras, proveedores y control del desperdicio','Seguimiento con indicadores'],
+   includes:['Análisis de ventas, costes y márgenes','Nueva carta, fichas técnicas y coste por bebida','Menús QR y contenidos para pantallas','Formación del equipo: servicio, producto, recomendación y upselling','Equipo Cheers trabajando sobre el terreno','Compras, proveedores y control del desperdicio','Seguimiento con indicadores'],
    stepsTitle:'Cómo funciona',
    steps:[['Contacto por WhatsApp o email','Sin compromiso. Cuéntenos cómo es el bar y qué quiere conseguir. Le respondemos por escrito y vemos si tiene sentido avanzar.'],['Objetivos','Definimos con la dirección las metas y los indicadores a seguir.'],['Presupuesto detallado','Cada acción, plazo, responsable e importe, partida por partida.'],['Implementación','Ejecutamos sobre el terreno con su equipo y revisamos los indicadores.']],
    cta:'Contactar por WhatsApp o email',
@@ -118,7 +118,7 @@ export const auditOffer = {
   meta:'Encontramos al menos 11.880 € al año en el bar de su hotel, o le devolvemos los 990 €. Mystery Guest Bar Audit: 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
  },
  en: {
-  eyebrowHotel:'BAR CONSULTANCY FOR HOTELS', heroItems:['Assessment of one hotel bar','One day as a guest and one day with management and the team','Report delivered within 7 days of the visit'],
+  eyebrowHotel:'BAR PROFITABILITY FOR 4- AND 5-STAR BEACH HOTELS', heroPlace:'Costa Blanca · Algarve · Madeira', craftLabel:'COCKTAIL MENUS', heroItems:['Assessment of one hotel bar','One day as a guest and one day with management and the team','Report delivered within 7 days of the visit'],
   visitTitle:'How the visit works', visitHead:['When','What happens','Value for the hotel'],
   visit:[['Day one','A guest experience, without the team being assessed knowing who we are.','Observe service, recommendations, product and pace under normal conditions.'],['Day two','Authorised work with management and the bar team.','Understand causes, review the information available and validate priorities.'],['End of the visit','A short presentation of the first findings.','Management leaves with initial direction.'],['Within 7 days','Full report and recommendations.','An organised plan to decide and act.']],
   day2Title:'Day two includes',
@@ -151,7 +151,7 @@ export const auditOffer = {
    intro:'From diagnosis to change on the ground. Objectives agreed with you and everything itemised in a tailored quote.',
    forItems:[['Improve an existing bar','An underperforming menu, unclear costs or inconsistent service.'],['Prepare an opening or high season','From lobby to rooftop or pool bar: a concept ready to work on the ground.'],['Support your management','Regular support for management and the team, with clear indicators and responsibilities.']],
    includesTitle:'What it can include',
-   includes:['Sales, cost and margin analysis','New menu, drink specifications and cost per drink','Multilingual QR digital menu','Animations and advertising for screens and TV','Staff training: service, product, recommendations and upselling','Cheers team working on site','Purchasing, suppliers and waste control','Follow-up with indicators'],
+   includes:['Sales, cost and margin analysis','New menu, drink specifications and cost per drink','QR menus and screen content','Staff training: service, product, recommendations and upselling','Cheers team working on site','Purchasing, suppliers and waste control','Follow-up with indicators'],
    stepsTitle:'How it works',
    steps:[['Contact by WhatsApp or email','No obligation. Tell us about the bar and what you want to achieve. We reply in writing and see whether it makes sense to go ahead.'],['Objectives','We agree targets and the indicators to track with management.'],['Itemised quote','Every action, deadline, owner and fee, line by line.'],['Implementation','We deliver on site with your team and review the indicators.']],
    cta:'Contact us by WhatsApp or email',

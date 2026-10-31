@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-const paths=['/index.html','/eventos.html','/es/index.html','/es/eventos.html','/en/index.html','/en/eventos.html'];
+const paths=['/index.html','/eventos.html','/digital.html','/es/index.html','/es/eventos.html','/es/digital.html','/en/index.html','/en/eventos.html','/en/digital.html'];
 const mime={webp:'image/webp',jpg:'image/jpeg',svg:'image/svg+xml'};
 const asset=file=>`data:${mime[file.split('.').at(-1)]};base64,${fs.readFileSync('dist'+file).toString('base64')}`;
 const cache=new Map();
