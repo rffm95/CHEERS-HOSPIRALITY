@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /counter/
 Disallow: /obrigado.html
+Disallow: /checklist.html
+Disallow: /es/checklist.html
+Disallow: /en/checklist.html
 Disallow: /es/obrigado.html
 Disallow: /en/obrigado.html
 Sitemap: https://cheersexperiences.com/sitemap.xml
