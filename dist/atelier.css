@@ -210,3 +210,8 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 .audit-price-scope{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;padding-top:36px;border-top:1px solid var(--paper-line)}.audit-price-scope h3{font-family:var(--serif);font-size:24px;margin-bottom:10px}
 @media(max-width:900px){.situation-grid{grid-template-columns:1fr 1fr}.team-work .offer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.situation-grid,.team-work .offer-grid,.audit-price-scope{grid-template-columns:1fr}.audit-price-scope{gap:20px}.situation-grid p{font-size:19px}}
+.with-poster{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:48px;align-items:start}.hotel-poster{margin:0}.hotel-poster img{display:block;width:100%;height:auto;border:1px solid var(--line)}.with-poster .situation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.with-poster .team-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.with-poster .audit-day2{margin-top:32px}.with-poster .hotel-poster{margin-top:32px}
+@media(max-width:900px){.with-poster{grid-template-columns:1fr;gap:32px}.with-poster .hotel-poster{max-width:440px;margin-top:0}}
+@media(max-width:620px){.with-poster .situation-grid,.with-poster .team-work-grid{grid-template-columns:1fr}}
+.with-poster .team-work-grid article:nth-child(odd){border-left:0;padding-left:0}.with-poster .team-work-grid article{padding-bottom:28px}
+@media(max-width:620px){.with-poster .team-work-grid article{border-left:0;padding-left:0}}
