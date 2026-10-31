@@ -11,10 +11,10 @@ export const auditOffer = {
   day2:['Conversa com a direção e com o responsável do bar.','Observação da preparação, do balcão, do armazém do bar e dos procedimentos.','Análise dos elementos que o hotel disponibilizar: carta, preços, fichas técnicas, vendas e compras recentes.','Validação das prioridades com a direção.'],
   day2Not:'Não inclui inventário completo, formação da equipa nem análise aprofundada de todos os custos. Isso faz parte da Auditoria Completa.',
   pageTitle:'Consultoria de bar para hotéis · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'Mais rentabilidade no bar do seu hotel.<br><em>Comece por descobrir onde atuar.</em>',
-  lead:'Avaliamos a experiência do hóspede, a recomendação, a carta, os preços, o desperdício e a organização do bar. A direção recebe prioridades concretas para decidir e atuar.',
+  hero:'Encontramos pelo menos 11.880&nbsp;€ por ano no bar do seu hotel.<br><em>Ou devolvemos os 990&nbsp;€.</em>',
+  lead:'O Mystery Guest Bar Audit encontra as vendas perdidas e o desperdício do seu bar e põe-lhes um valor em euros. A direção recebe as contas feitas e o que corrigir primeiro.',
   cta:'Pedir o Mystery Guest Bar Audit', explore:'Ver o que inclui',
-  heroGuarantee:'Garantia: se não encontrarmos pelo menos 990 € por mês em vendas perdidas ou desperdício, devolvemos os 990 €.',
+  heroGuarantee:'Investimento: 990&nbsp;€. Mínimo identificado: 11.880&nbsp;€/ano. Se não chegarmos lá, devolvemos os 990&nbsp;€.',
   waCTA:'Pedir disponibilidade para o meu hotel', headerWA:'Pedir disponibilidade',
   waText:'Olá Rui, gostava de saber a disponibilidade para um Mystery Guest Bar Audit no bar do meu hotel. Hotel: __. Localização: __. Datas possíveis: __.',
   contactWA:'Enviar mensagem por WhatsApp', formIntro:'Prefere email? Use o formulário.',
@@ -28,7 +28,7 @@ export const auditOffer = {
   delivery:['Oportunidades de melhoria organizadas por impacto, urgência e facilidade de implementação.','Cada recomendação explica o que observámos, a consequência, a ação proposta e quem precisa de participar.','Um plano claro para a direção decidir o que fazer primeiro.'],
   checkTitle:'O que observamos',
   guaranteeTitle:'Garantia de 990 € por mês',
-  guarantee:'Se o relatório não identificar pelo menos 990 € por mês em vendas perdidas ou desperdício no seu bar, devolvemos os 990 €. A garantia refere-se ao valor das oportunidades identificadas, não a um aumento efetivo das vendas.',
+  guarantee:'Se o relatório não identificar pelo menos 990 € por mês (11.880 € por ano) em vendas perdidas ou desperdício no seu bar, devolvemos os 990 €. A garantia refere-se ao valor das oportunidades identificadas, não a um aumento efetivo das vendas.',
   credit:'Se avançar para a Auditoria Completa nos 30 dias seguintes, os 990 € são descontados no orçamento.',
   terms:'Preço fixo para o âmbito indicado. O orçamento discrimina deslocação, alojamento, consumos, número de profissionais e serviços adicionais, acordados antes da confirmação. O prazo de 7 dias começa no final da visita.',
   dataNote:'Cada estimativa mostra o cálculo e os pressupostos. Se o hotel partilhar dados de preços, custos e vendas, a estimativa fica mais precisa.',
@@ -58,7 +58,7 @@ export const auditOffer = {
   realCaption:'Exemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imagens de ambiente ilustrativas, exceto quando identificadas como exemplo real.',
   ogAlt:'Ecrã com conteúdos promocionais no Cheers O Bar, em Viseu',
-  meta:'Mystery Guest Bar Audit para hotéis: 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
+  meta:'Encontramos pelo menos 11.880 € por ano no bar do seu hotel, ou devolvemos os 990 €. Mystery Guest Bar Audit: 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
  },
  es: {
   eyebrowHotel:'CONSULTORÍA DE BAR PARA HOTELES', heroItems:['Evaluación de un bar del hotel','Un día como huésped y un día con la dirección y el equipo','Informe entregado en un máximo de 7 días tras la visita'],
@@ -68,10 +68,10 @@ export const auditOffer = {
   day2:['Conversación con la dirección y con el responsable del bar.','Observación de la preparación, la barra, el almacén del bar y los procedimientos.','Análisis de la información que el hotel facilite: carta, precios, fichas técnicas, ventas y compras recientes.','Validación de las prioridades con la dirección.'],
   day2Not:'No incluye inventario completo, formación del equipo ni un análisis en profundidad de todos los costes. Eso forma parte de la Auditoría Completa.',
   pageTitle:'Consultoría de bar para hoteles · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'Más rentabilidad en el bar de su hotel.<br><em>Empiece por saber dónde actuar.</em>',
-  lead:'Evaluamos la experiencia del huésped, la recomendación, la carta, los precios, el desperdicio y la organización del bar. La dirección recibe prioridades concretas para decidir y actuar.',
+  hero:'Encontramos al menos 11.880&nbsp;€ al año en el bar de su hotel.<br><em>O le devolvemos los 990&nbsp;€.</em>',
+  lead:'El Mystery Guest Bar Audit localiza las ventas perdidas y el desperdicio de su bar y les pone una cifra en euros. La dirección recibe las cuentas hechas y qué corregir primero.',
   cta:'Solicitar el Mystery Guest Bar Audit', explore:'Ver qué incluye',
-  heroGuarantee:'Garantía: si no encontramos al menos 990 € al mes en ventas perdidas o desperdicio, le devolvemos los 990 €.',
+  heroGuarantee:'Inversión: 990&nbsp;€. Mínimo identificado: 11.880&nbsp;€/año. Si no llegamos, le devolvemos los 990&nbsp;€.',
   waCTA:'Consultar disponibilidad para mi hotel', headerWA:'Consultar disponibilidad',
   waText:'Hola Rui, me gustaría saber la disponibilidad para un Mystery Guest Bar Audit en el bar de mi hotel. Hotel: __. Ubicación: __. Fechas posibles: __.',
   contactWA:'Enviar mensaje por WhatsApp', formIntro:'¿Prefiere el email? Use el formulario.',
@@ -85,7 +85,7 @@ export const auditOffer = {
   delivery:['Oportunidades de mejora organizadas por impacto, urgencia y facilidad de implementación.','Cada recomendación explica qué observamos, la consecuencia, la acción propuesta y quién tiene que participar.','Un plan claro para que la dirección decida qué hacer primero.'],
   checkTitle:'Qué observamos',
   guaranteeTitle:'Garantía de 990 € al mes',
-  guarantee:'Si el informe no identifica al menos 990 € al mes en ventas perdidas o desperdicio en su bar, le devolvemos los 990 €. La garantía se refiere al valor de las oportunidades identificadas, no a un aumento efectivo de las ventas.',
+  guarantee:'Si el informe no identifica al menos 990 € al mes (11.880 € al año) en ventas perdidas o desperdicio en su bar, le devolvemos los 990 €. La garantía se refiere al valor de las oportunidades identificadas, no a un aumento efectivo de las ventas.',
   credit:'Si contrata la Auditoría Completa en los 30 días siguientes, los 990 € se descuentan del presupuesto.',
   terms:'Precio fijo para el alcance indicado. El presupuesto detalla desplazamiento, alojamiento, consumiciones, número de profesionales y servicios adicionales, acordados antes de confirmar. El plazo de 7 días comienza al finalizar la visita.',
   dataNote:'Cada estimación muestra el cálculo y los supuestos. Si el hotel comparte datos de precios, costes y ventas, la estimación es más precisa.',
@@ -115,7 +115,7 @@ export const auditOffer = {
   realCaption:'Ejemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imágenes de ambiente ilustrativas, salvo cuando se identifican como ejemplo real.',
   ogAlt:'Pantalla con contenidos promocionales en Cheers O Bar, en Viseu',
-  meta:'Mystery Guest Bar Audit para hoteles: 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
+  meta:'Encontramos al menos 11.880 € al año en el bar de su hotel, o le devolvemos los 990 €. Mystery Guest Bar Audit: 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
  },
  en: {
   eyebrowHotel:'BAR CONSULTANCY FOR HOTELS', heroItems:['Assessment of one hotel bar','One day as a guest and one day with management and the team','Report delivered within 7 days of the visit'],
@@ -125,10 +125,10 @@ export const auditOffer = {
   day2:['A conversation with management and the bar manager.','Observation of prep, the bar station, the bar store and procedures.','A review of the information the hotel provides: menu, prices, drink specifications, recent sales and purchases.','Validation of priorities with management.'],
   day2Not:'It does not include a full stock count, staff training or an in-depth analysis of every cost. Those are part of the Full Audit.',
   pageTitle:'Bar consultancy for hotels · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'A more profitable hotel bar.<br><em>Start by finding out where to act.</em>',
-  lead:'We assess the guest experience, recommendations, menu, pricing, waste and bar organisation. Management receives concrete priorities to decide and act on.',
+  hero:'We find at least €11,880 a year in your hotel bar.<br><em>Or we refund the €990.</em>',
+  lead:'The Mystery Guest Bar Audit finds the lost sales and waste in your bar and puts a euro figure on them. Management gets the numbers worked out and what to fix first.',
   cta:'Request the Mystery Guest Bar Audit', explore:'See what it includes',
-  heroGuarantee:'Guarantee: if we do not find at least €990 a month in lost sales or waste, you get your €990 back.',
+  heroGuarantee:'Investment: €990. Minimum identified: €11,880 a year. If we fall short, we refund the €990.',
   waCTA:'Check availability for my hotel', headerWA:'Check availability',
   waText:'Hello Rui, I would like to check availability for a Mystery Guest Bar Audit at my hotel bar. Hotel: __. Location: __. Possible dates: __.',
   contactWA:'Send a WhatsApp message', formIntro:'Prefer email? Use the form.',
@@ -142,7 +142,7 @@ export const auditOffer = {
   delivery:['Improvement opportunities organised by impact, urgency and ease of implementation.','Every recommendation explains what we observed, the consequence, the proposed action and who needs to be involved.','A clear plan for management to decide what to do first.'],
   checkTitle:'What we observe',
   guaranteeTitle:'€990-a-month guarantee',
-  guarantee:'If the report does not identify at least €990 a month in lost sales or waste in your bar, we refund the €990. The guarantee covers the value of opportunities identified, not a realised increase in sales.',
+  guarantee:'If the report does not identify at least €990 a month (€11,880 a year) in lost sales or waste in your bar, we refund the €990. The guarantee covers the value of opportunities identified, not a realised increase in sales.',
   credit:'If you go ahead with the Full Audit within 30 days, the €990 is deducted from the quote.',
   terms:'Fixed price for the stated scope. The quote itemises travel, accommodation, drinks, number of consultants and any additional services, agreed before confirmation. The 7-day deadline starts at the end of the visit.',
   dataNote:'Every estimate shows the calculation and assumptions. If the hotel shares pricing, cost and sales data, the estimate is more precise.',
@@ -172,7 +172,7 @@ export const auditOffer = {
   realCaption:'Real example · Cheers O Bar, Viseu.',
   imagesNote:'Illustrative atmosphere images, unless identified as a real example.',
   ogAlt:'Screen with promotional content at Cheers O Bar, Viseu',
-  meta:'Mystery Guest Bar Audit for hotels: €990 + travel, excluding VAT. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
+  meta:'We find at least €11,880 a year in your hotel bar, or we refund the €990. Mystery Guest Bar Audit for hotels: €990 + travel, excluding VAT. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
  }
 };
 

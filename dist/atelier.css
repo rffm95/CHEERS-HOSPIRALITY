@@ -215,3 +215,6 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 @media(max-width:620px){.with-poster .situation-grid,.with-poster .team-work-grid{grid-template-columns:1fr}}
 .with-poster .team-work-grid article:nth-child(odd){border-left:0;padding-left:0}.with-poster .team-work-grid article{padding-bottom:28px}
 @media(max-width:620px){.with-poster .team-work-grid article{border-left:0;padding-left:0}}
+.money-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}.money-examples{display:grid;gap:22px}.money-example{border-top:1px solid var(--line);padding-top:22px}.money-example h3{font-family:var(--serif);font-size:27px;margin:12px 0 14px}.money-lines{margin:0;padding-left:20px;font-size:13px;line-height:1.85;color:var(--muted)}.money-result{font-family:var(--serif);font-size:clamp(30px,3.4vw,44px);letter-spacing:-.03em;line-height:1.1;color:var(--dark);margin-top:16px}.money-sub{font-size:13px;margin-top:8px}.money-calc{background:#e6e5dc;padding:30px}.money-calc h3{font-family:var(--serif);font-size:27px}.money-calc .calc-results>div{background:var(--paper)}.money-cta{margin-top:40px}
+@media(max-width:900px){.money-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:620px){.money-calc{padding:22px 18px}.money-example h3,.money-calc h3{font-size:23px}.money-cta .button{width:100%}}

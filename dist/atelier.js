@@ -1,12 +1,11 @@
 /* Small, dependency-free interaction layer. Static HTML remains usable without JS. */
-function calculateRevenue(values){
- const keys=['guests','penetration','ticket','days','lift','ticketLift'];const v={};
- const max={guests:100000,penetration:100,ticket:10000,days:31,lift:100,ticketLift:1000};
+function calculateLosses(values){
+ const keys=['drinks','overPour','bottleCost','guests','share','price','days','season'];const v={};
+ const max={drinks:100000,overPour:70,bottleCost:10000,guests:100000,share:100,price:10000,days:31,season:366};
  for(const k of keys){if(values[k]===''||values[k]===null||values[k]===undefined)return null;v[k]=Number(values[k]);if(!Number.isFinite(v[k])||v[k]<0||v[k]>max[k])return null;}
- if(!Number.isInteger(v.guests)||!Number.isInteger(v.days))return null;
- const current=v.guests*v.penetration/100*v.ticket*v.days;
- const simulated=v.guests*Math.min(100,v.penetration+v.lift)/100*v.ticket*(1+v.ticketLift/100)*v.days;
- const delta=simulated-current;return {current,simulated,delta,annual:delta*12};
+ if(!Number.isInteger(v.days)||!Number.isInteger(v.season))return null;
+ const pourDay=v.drinks*v.overPour/70*v.bottleCost,salesDay=v.guests*v.share/100*v.price;
+ return {pour:pourDay*v.days,sales:salesDay*v.days,month:(pourDay+salesDay)*v.days,season:(pourDay+salesDay)*v.season};
 }
 function prepareEnquiry(form){
  const lines=[];
@@ -20,7 +19,7 @@ function prepareEnquiry(form){
 }
 function enquiryURL(channel,subject,message){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/351927653087?text='+encodeURIComponent(message);}
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
-if(typeof module!=='undefined'&&module.exports)module.exports={calculateRevenue,enquiryURL,eventFieldState,prepareEnquiry};
+if(typeof module!=='undefined'&&module.exports)module.exports={calculateLosses,enquiryURL,eventFieldState,prepareEnquiry};
 if(typeof document!=='undefined')(()=>{
  const supported=['pt','es','en'];let inNavigation=false;
  const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
@@ -94,7 +93,7 @@ if(typeof document!=='undefined')(()=>{
   document.querySelectorAll('[data-experience]').forEach(a=>a.addEventListener('click',()=>{if(event)event.elements.need.value=a.dataset.experience;}));
   document.querySelectorAll('[data-event-type]').forEach(a=>a.addEventListener('click',()=>{if(event){event.elements.type.value=a.dataset.eventType;event.dispatchEvent(new Event('change'));}}));
   document.querySelectorAll('[data-calculator]').forEach(form=>{
-   const update=()=>{const values=Object.fromEntries(new FormData(form));const result=calculateRevenue(values);const status=form.querySelector('[data-calc-status]');status.textContent=result?'':status.dataset.error;const fmt=new Intl.NumberFormat(form.dataset.locale,{style:'currency',currency:'EUR',maximumFractionDigits:0});form.querySelectorAll('[data-output]').forEach((output,i)=>output.textContent=result?fmt.format([result.current,result.simulated,result.delta,result.annual][i]):'—');};
+   const update=()=>{const values=Object.fromEntries(new FormData(form));const result=calculateLosses(values);const status=form.querySelector('[data-calc-status]');status.textContent=result?'':status.dataset.error;const fmt=new Intl.NumberFormat(form.dataset.locale,{style:'currency',currency:'EUR',maximumFractionDigits:0});form.querySelectorAll('[data-output]').forEach((output,i)=>output.textContent=result?fmt.format([result.pour,result.sales,result.month,result.season][i]):'—');};
    form.addEventListener('input',update);form.addEventListener('submit',e=>e.preventDefault());update();
   });
  }
