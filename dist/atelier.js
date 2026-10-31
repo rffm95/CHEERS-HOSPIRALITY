@@ -24,7 +24,7 @@ if(typeof document!=='undefined')(()=>{
  const supported=['pt','es','en'];let inNavigation=false;
  const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
  function updateHistory(method,url){try{history[method]({},'',url);}catch{}}
- const pageRoute=(language,event)=>`${language==='pt'?'':`/${language}`}/${event?'eventos.html':'index.html'}`;
+ const pageRoute=(language,page)=>`${language==='pt'?'':`/${language}`}/${page==='events'?'eventos.html':page==='digital'?'digital.html':'index.html'}`;
  function openTarget(hash){
   const aliases={'first-meeting':'contact','hotel':'hotel','event-planning':'method','partnership-models':'venues','opportunity':'project-offers','project-options':'project-offers','case-study':'team','contact':'contact','calculator':'calculator'};
   const id=decodeURIComponent(hash.replace(/^#/,''));const target=document.getElementById(id)||document.getElementById(aliases[id]);if(!target)return false;
@@ -101,7 +101,7 @@ if(typeof document!=='undefined')(()=>{
   const a=event.target.closest('a[href]');if(!a||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||a.target==='_blank'||a.hasAttribute('download'))return;
   const href=a.getAttribute('href');if(href.startsWith('#')){if(openTarget(href)){event.preventDefault();updateHistory('replaceState',location.pathname+location.search+href);}closeMenu();return;}
   const url=new URL(href,baseURL());
-  if((url.origin===location.origin||window.__cheersPreview)&&/^(?:\/(?:pt|es|en))?\/(?:index|eventos)\.html$/.test(url.pathname)){
+  if((url.origin===location.origin||window.__cheersPreview)&&/^(?:\/(?:pt|es|en))?\/(?:index|eventos|digital)\.html$/.test(url.pathname)){
    event.preventDefault();const targetLang=a.dataset.language;if(targetLang){try{localStorage.setItem('cheers-lang',targetLang);}catch{}url.hash=location.hash;const campaign=new URLSearchParams(location.search);campaign.delete('lang');url.search=campaign.toString();}
    navigate(url.pathname+url.search+url.hash,{preserve:!!targetLang});
   }
@@ -110,6 +110,6 @@ if(typeof document!=='undefined')(()=>{
  window.addEventListener('popstate',()=>{if(!window.__cheersPreview)navigate(location.href,{replace:true});});
  // Legacy ?lang= links remain valid. New links point to complete language-specific HTML.
  const explicit=new URLSearchParams(location.search).get('lang');
- if(supported.includes(explicit)&&explicit!==document.body.dataset.language){const campaign=new URLSearchParams(location.search);campaign.delete('lang');const q=campaign.toString();navigate(pageRoute(explicit,document.body.dataset.page==='events')+(q?'?'+q:'')+location.hash,{replace:true});}
+ if(supported.includes(explicit)&&explicit!==document.body.dataset.language){const campaign=new URLSearchParams(location.search);campaign.delete('lang');const q=campaign.toString();navigate(pageRoute(explicit,document.body.dataset.page)+(q?'?'+q:'')+location.hash,{replace:true});}
  else{bind();if(location.hash)requestAnimationFrame(()=>openTarget(location.hash));}
 })();
