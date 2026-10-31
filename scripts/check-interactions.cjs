@@ -1,11 +1,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const {calculateRevenue,enquiryURL,eventFieldState,prepareEnquiry}=require('../src/atelier.js');
-const input={guests:200,penetration:20,ticket:12,days:30,lift:5,ticketLift:10};
-assert.deepEqual(calculateRevenue(input),{current:14400,simulated:19800,delta:5400,annual:64800});
-assert.equal(calculateRevenue({...input,lift:0,ticketLift:0}).delta,0);
-assert.equal(calculateRevenue({...input,guests:0}).delta,0);
-assert.equal(calculateRevenue({...input,penetration:100,lift:50,ticketLift:0}).delta,0);
-for(const bad of [{days:32},{ticket:''},{guests:-1},{guests:2.5},{lift:NaN},{penetration:101}])assert.equal(calculateRevenue({...input,...bad}),null);
+const {calculateLosses,enquiryURL,eventFieldState,prepareEnquiry}=require('../src/atelier.js');
+const input={drinks:40,overPour:2,bottleCost:17.5,guests:200,share:20,price:10,days:30,season:180};
+assert.deepEqual(calculateLosses(input),{pour:600,sales:12000,month:12600,season:75600});
+assert.equal(calculateLosses({...input,drinks:0,share:0}).month,0);
+assert.equal(calculateLosses({...input,drinks:0,overPour:0,bottleCost:0,guests:200,share:20,price:10,days:30,season:180}).season,72000);
+for(const bad of [{days:32},{price:''},{guests:-1},{days:2.5},{share:NaN},{share:101},{season:400}])assert.equal(calculateLosses({...input,...bad}),null);
 for(const type of ['0','3','5','6','7'])assert.deepEqual(eventFieldState(type),{guestsRequired:Number(type)<6,momentsVisible:type==='0'});
 const msg='Olá Rui\nLocal: Jávea & Viseu\nCocktails: 50%';
 const mail=new URL(enquiryURL('email','Pedido & evento',msg));assert.equal(mail.searchParams.get('body'),msg);assert.equal(mail.searchParams.get('subject'),'Pedido & evento');
@@ -40,5 +39,5 @@ function setup(eventPage,preview=false,fetchResponse={ok:true,json:async()=>({su
  const hotel=setup(false);hotel.offer.dispatchEvent({type:'click'});assert.equal(hotel.opportunity.selectedIndex,5);let prevented=false;await hotel.form.listeners.submit[0]({preventDefault(){prevented=true;}});assert.equal(prevented,false);assert.equal(hotel.assigned(),null);assert.equal(hotel.button.textContent,'Sending');assert.equal(hotel.fetchCalls(),0);
  const preview=setup(false,true);let blocked=false;await preview.form.listeners.submit[0]({preventDefault(){blocked=true;}});assert(blocked);assert.equal(preview.fetchCalls(),0);assert.equal(preview.status.textContent,'Preview off');
  const invalid=setup(false);invalid.form.reportValidity=()=>false;let stopped=false;await invalid.form.listeners.submit[0]({preventDefault(){stopped=true;}});assert(stopped);assert.equal(invalid.assigned(),null);
- console.log('PASS revenue maths and limits, URL encoding, event/partnership field states, actual offer selection and draft bindings, hotel email POST left to the browser, event WhatsApp hand-off with complete fields, invalid-input guard and no relay fetch. No external messages sent.');
+ console.log('PASS loss maths and limits, URL encoding, event/partnership field states, actual offer selection and draft bindings, hotel email POST left to the browser, event WhatsApp hand-off with complete fields, invalid-input guard and no relay fetch. No external messages sent.');
 })();
