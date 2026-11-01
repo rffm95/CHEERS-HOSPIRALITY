@@ -1,0 +1,1111 @@
+{
+ "auditOffer": {
+  "eyebrowHotel": "RENTABILITÉ DES BARS D’HÔTELS DE LUXE 4 ET 5 ÉTOILES",
+  "heroPlace": "Europe du Sud · Portugal · Espagne · Côte d’Azur · Monaco · Andorre · Suisse · Italie",
+  "craftLabel": "CARTES DE COCKTAILS",
+  "heroItems": [
+   "Évaluation d’un bar de l’hôtel",
+   "Un jour en tant que client et un jour avec la direction et l’équipe",
+   "Rapport remis dans les 7 jours suivant la visite"
+  ],
+  "visitTitle": "Déroulement de la visite",
+  "visitHead": [
+   "Moment",
+   "Ce qui se passe",
+   "Valeur pour l’hôtel"
+  ],
+  "visit": [
+   [
+    "Premier jour",
+    "Une expérience client, sans que l’équipe évaluée sache qui nous sommes.",
+    "Observer l’accueil, la recommandation, le produit et le service dans des conditions normales."
+   ],
+   [
+    "Deuxième jour",
+    "Travail autorisé avec la direction et l’équipe du bar.",
+    "Comprendre les causes, analyser les éléments disponibles et valider les priorités."
+   ],
+   [
+    "Fin de la visite",
+    "Brève présentation des premières conclusions.",
+    "La direction repart avec une première orientation."
+   ],
+   [
+    "Sous 7 jours",
+    "Rapport complet et recommandations.",
+    "Un plan structuré pour décider et agir."
+   ]
+  ],
+  "day2Title": "Le deuxième jour comprend",
+  "day2": [
+   "Un échange avec la direction et le responsable du bar.",
+   "L’observation de la mise en place, du comptoir, de la réserve du bar et des procédures.",
+   "L’analyse des éléments transmis par l’hôtel : carte, prix, fiches techniques, ventes et achats récents.",
+   "La validation des priorités avec la direction."
+  ],
+  "day2Not": "Ne comprend pas d’inventaire complet, de formation de l’équipe ni d’analyse approfondie de tous les coûts. Cela fait partie de l’Audit Complet.",
+  "pageTitle": "Conseil en bar pour hôtels · Mystery Guest Bar Audit | Cheers Experiences",
+  "hero": "Nous identifions des opportunités pour que le bar de votre hôtel <em>réalise au moins 11&nbsp;880&nbsp;€ de plus par an.</em>",
+  "lead": "Le Mystery Guest Bar Audit repère les ventes perdues et le gaspillage de votre bar et leur donne une valeur en euros. La direction reçoit les calculs et sait quoi corriger en premier.",
+  "cta": "Demander le Mystery Guest Bar Audit",
+  "explore": "Voir ce qui est inclus",
+  "heroGuarantee": "Investissement : à partir de 990&nbsp;€, selon le pays. Minimum identifié : 11&nbsp;880&nbsp;€/an. Si nous n’y arrivons pas, nous remboursons le montant de l’audit.",
+  "waCTA": "Serait-ce déraisonnable de savoir combien le bar de votre hôtel laisse sur la table ?",
+  "headerWA": "Écrire sur WhatsApp",
+  "waText": "Bonjour Rui, j’aimerais savoir combien le bar de mon hôtel laisse peut-être sur la table. Hôtel : __. Lieu : __.",
+  "contactWA": "Envoyer un message WhatsApp",
+  "formIntro": "Vous préférez l’email ? Utilisez le formulaire.",
+  "craftSummary": "Cocktails signature et un concept pour chaque espace",
+  "digitalSummary": "Menus QR, langues et écrans",
+  "label": "ÉTAPE 1 · LE DIAGNOSTIC",
+  "title": "Mystery Guest<br><em>Bar Audit.</em>",
+  "intro": "Nous voyons le bar comme vos clients le voient, puis de l’intérieur, avec la direction et l’équipe. Vous recevez des priorités concrètes : quoi corriger en premier, pourquoi et avec qui.",
+  "priceFrom": "À partir de",
+  "price": "990 €",
+  "travel": "+ déplacement",
+  "priceNote": "Le prix final dépend du pays et est confirmé par écrit avant la réservation.",
+  "zones": "Portugal, Espagne, Andorre, Côte d’Azur et Monaco, Suisse et Italie (côtes et îles comprises).",
+  "tax": "Les prix indiqués s’entendent hors TVA.",
+  "scope": [
+   "1 bar de l’hôtel",
+   "Jour 1 en tant que client, jour 2 avec la direction et l’équipe",
+   "Premières conclusions à la fin de la visite",
+   "Rapport complet dans les 7 jours suivant la visite"
+  ],
+  "scarcity": "Nous réalisons au maximum 4 audits par mois.",
+  "deliveryTitle": "Ce que vous recevez",
+  "delivery": [
+   "Des opportunités d’amélioration classées par impact, urgence et facilité de mise en œuvre.",
+   "Chaque recommandation explique ce que nous avons observé, la conséquence, l’action proposée et qui doit y participer.",
+   "Un plan clair pour que la direction décide par où commencer."
+  ],
+  "checkTitle": "Ce que nous observons",
+  "guaranteeTitle": "Garantie de 990 € d’opportunités par mois",
+  "guarantee": "Si le rapport n’identifie pas au moins 990 € par mois (11 880 € par an) de ventes perdues ou de gaspillage dans votre bar, nous remboursons le montant de l’audit. La garantie porte sur la valeur des opportunités identifiées, et non sur une hausse effective des ventes.",
+  "credit": "Si vous lancez l’Audit Complet dans les 30 jours, le montant de l’audit est déduit du devis.",
+  "terms": "Prix fixe pour le périmètre indiqué. Le devis détaille déplacement, hébergement, consommations, nombre d’intervenants et services supplémentaires, convenus avant la confirmation. Le délai de 7 jours commence à la fin de la visite.",
+  "dataNote": "Chaque estimation présente le calcul et les hypothèses. Si l’hôtel partage ses données de prix, de coûts et de ventes, l’estimation est plus précise.",
+  "full": {
+   "label": "ÉTAPE 2 · LA TRANSFORMATION",
+   "title": "Audit<br><em>Complet.</em>",
+   "intro": "Du diagnostic au changement sur le terrain. Des objectifs définis avec vous et tout détaillé dans un devis sur mesure.",
+   "forItems": [
+    [
+     "Améliorer un bar",
+     "Une carte qui vend peu, des coûts mal maîtrisés ou un service irrégulier."
+    ],
+    [
+     "Préparer une ouverture ou la haute saison",
+     "Du lobby au rooftop ou au pool bar : un concept prêt à fonctionner sur le terrain."
+    ],
+    [
+     "Accompagner la gestion",
+     "Un soutien régulier à la direction et à l’équipe, avec des indicateurs et des responsabilités clairs."
+    ]
+   ],
+   "includesTitle": "Ce qu’il peut inclure",
+   "includes": [
+    "Analyse des ventes, des coûts et des marges",
+    "Nouvelle carte, fiches techniques et coût par boisson",
+    "Menus QR et contenus pour écrans",
+    "Formation du personnel : service, produit, recommandation et vente additionnelle",
+    "Équipe Cheers sur le terrain",
+    "Achats, fournisseurs et maîtrise du gaspillage",
+    "Suivi avec indicateurs"
+   ],
+   "stepsTitle": "Comment ça marche",
+   "steps": [
+    [
+     "Contact par WhatsApp ou formulaire",
+     "Sans engagement. Parlez-nous du bar et de ce que vous voulez obtenir. Nous répondons par écrit et voyons s’il est pertinent d’avancer."
+    ],
+    [
+     "Objectifs",
+     "Nous définissons avec la direction les objectifs et les indicateurs à suivre."
+    ],
+    [
+     "Devis détaillé",
+     "Chaque action, délai, responsable et montant, ligne par ligne."
+    ],
+    [
+     "Mise en œuvre",
+     "Nous intervenons sur le terrain avec votre équipe et suivons les indicateurs."
+    ]
+   ],
+   "cta": "Demander un devis",
+   "note": "Pas de prix fixe : chaque bar est différent. Le devis confirme le calendrier, les honoraires, les ressources et les responsabilités de chaque partie."
+  },
+  "faq": [
+   [
+    "Quelle est la différence entre le Mystery Guest Bar Audit et l’Audit Complet ?",
+    "Le Mystery Guest Bar Audit est un diagnostic à prix fixe : un jour en tant que client, un jour avec la direction et l’équipe, et un rapport avec les opportunités d’amélioration classées par impact, à partir de 990 € + déplacement, selon le pays. L’Audit Complet est un projet sur mesure, avec des objectifs définis, un devis détaillé et une mise en œuvre sur le terrain : carte, menu QR, écrans, formation, équipe sur place, entre autres."
+   ],
+   [
+    "Que comprend le Mystery Guest Bar Audit ?",
+    "L’évaluation d’un bar sur deux jours : le premier en tant que client, sans que l’équipe sache qui nous sommes ; le second avec la direction et l’équipe. À la fin de la visite, nous présentons les premières conclusions. Le rapport complet suit dans les 7 jours, avec les opportunités classées par impact, urgence et facilité de mise en œuvre. À partir de 990 € selon le pays ; déplacement en sus, convenu à l’avance. Prix hors TVA. La mise en œuvre fait partie de l’Audit Complet."
+   ],
+   [
+    "Comment fonctionne la garantie ?",
+    "Nous additionnons la valeur mensuelle estimée de chaque opportunité identifiée : ventes qui n’ont pas eu lieu, gaspillage et coûts évitables. Si le total n’atteint pas 990 € par mois, nous remboursons le montant de l’audit. Chaque estimation présente le calcul et les hypothèses. Les frais de déplacement convenus ne sont pas remboursables."
+   ],
+   [
+    "Dois-je faire le Mystery Guest avant l’Audit Complet ?",
+    "Ce n’est pas obligatoire, mais c’est le parcours recommandé : le diagnostic montre où sont les priorités. Si vous lancez l’Audit Complet dans les 30 jours, le montant de l’audit est déduit du devis."
+   ]
+  ],
+  "meetingCTA": "Nous contacter par WhatsApp ou email",
+  "meetingNote": "Envoyez-nous un message WhatsApp ou un email, sans engagement, sur le bar et vos objectifs. S’il est pertinent d’avancer, vous recevez un devis détaillé. Les visites sur place font partie du devis.",
+  "meetingFaq": [
+   "Comment démarre l’Audit Complet ?",
+   "Par un message WhatsApp ou via le formulaire, sans engagement. Parlez-nous du bar et de vos objectifs ; nous répondons par écrit et voyons s’il est pertinent d’avancer. Vous recevez ensuite un devis détaillé. Le parcours recommandé est de commencer par le Mystery Guest Bar Audit, déduit si vous avancez dans les 30 jours."
+  ],
+  "contactTitle": "Commencez par découvrir<br><em>où agir dans votre bar.</em>",
+  "contactText": "Envoyez un message WhatsApp avec le nom de l’hôtel et sa localisation. Nous répondons par écrit. Vous préférez ne pas utiliser WhatsApp ? Utilisez le formulaire.",
+  "options": [
+   "Mystery Guest Bar Audit — à partir de 990 € + déplacement (HT)",
+   "Audit Complet — demander un devis",
+   "Partenariat groupe hôtelier",
+   "Menus digitaux, QR et écrans",
+   "Autre sujet"
+  ],
+  "realCaption": "Exemple réel · Cheers O Bar, Viseu.",
+  "imagesNote": "Images d’ambiance illustratives, sauf lorsqu’elles sont identifiées comme exemple réel.",
+  "ogAlt": "Écran avec des contenus promotionnels au Cheers O Bar, à Viseu",
+  "meta": "Nous identifions des opportunités pour que le bar de votre hôtel réalise au moins 11 880 € de plus par an, ou nous remboursons le montant de l’audit. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement, HT. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti."
+ },
+ "leaks": {
+  "images": false,
+  "label": "LE PROFIT QUE VOUS NE VOYEZ PAS",
+  "title": "10 endroits où votre bar<br><em>perd peut-être de l’argent.</em>",
+  "intro": "Voici des exemples de ce que recherche le Mystery Guest Bar Audit. Combien se produisent dans votre bar ?",
+  "cta": "Découvrir lesquels touchent mon bar",
+  "fixLabel": "Comment corriger",
+  "prev": "Précédent",
+  "next": "Suivant",
+  "region": "10 fuites de marge",
+  "items": [
+   [
+    "Une dose de trop. Une marge trop mince.",
+    "Servir sans doseur rend le coût de chaque boisson imprévisible. L’excès se répète, verre après verre.",
+    "Standardiser les doses et utiliser un doseur."
+   ],
+   [
+    "Beaucoup de ventes. Peu de reste.",
+    "Sans fiches techniques, vous vendez peut-être des cocktails sans connaître leur coût réel.",
+    "Calculer le coût complet de chaque recette."
+   ],
+   [
+    "Les prix du voisin ne paient pas vos factures.",
+    "Copier les prix ignore vos coûts, votre service et la marge dont vous avez besoin.",
+    "Fixer les prix selon le coût et la valeur que vous offrez."
+   ],
+   [
+    "Le gaspillage finit aussi sur la facture.",
+    "Fruits coupés en trop, jus oubliés et mise en place excessive s’additionnent en pertes.",
+    "Préparer selon la demande prévue et enregistrer les pertes."
+   ],
+   [
+    "Sans inventaire, les pertes se cachent.",
+    "Sans rapprocher stock et ventes, doses excessives, offerts et casse passent inaperçus.",
+    "Faire l’inventaire et comparer consommation réelle et attendue."
+   ],
+   [
+    "Bouteilles immobiles. Trésorerie bloquée.",
+    "Acheter des produits qui se vendent peu immobilise de l’argent et de la place.",
+    "Définir achats et quantités selon la rotation de chaque produit."
+   ],
+   [
+    "Votre carte sait-elle vendre ?",
+    "Cacher les boissons à forte marge et forte demande gâche le potentiel de chaque commande.",
+    "Mettre en avant les choix rentables avec des descriptions claires."
+   ],
+   [
+    "L’équipe sert. Mais sait-elle recommander ?",
+    "Se contenter de prendre la commande laisse inexplorés des choix que le client apprécierait.",
+    "Former à des suggestions pertinentes, avec des prix clairs et sans insistance."
+   ],
+   [
+    "Chaque minute d’attente peut coûter une vente.",
+    "Une mise en place insuffisante et un poste désorganisé ralentissent le service aux heures de pointe.",
+    "Préparer le poste avant l’ouverture et simplifier les gestes."
+   ],
+   [
+    "Le mauvais planning coûte de l’argent.",
+    "Trop de personnel aux heures creuses et trop peu aux pics font monter les coûts et perdre des ventes.",
+    "Adapter les plannings à la demande et aux tâches de chaque période."
+   ]
+  ]
+ },
+ "auditTrust": {
+  "posterFull": "Votre hôtel est complet. Et le bar ? Plus d’attention au bar, plus d’opportunités par client. Bar d’hôtel avec un comptoir éclairé et un cocktail.",
+  "posterMargin": "La méthode Cheers : la marge se sert aussi au comptoir. Carte et prix, équipe et service, coûts et gaspillage. Diagnostic, priorités, plan d’action. Barman mesurant une dose avec un doseur.",
+  "posterMG": "Mystery Guest pour bars d’hôtel : 2 jours de diagnostic, expérience client et opérations, rapport complet en 7 jours. Cocktail et carnet sur un comptoir en marbre.",
+  "situationsLabel": "QUAND C’EST PERTINENT",
+  "situationsTitle": "Reconnaissez-vous<br><em>l’une de ces situations ?</em>",
+  "situationsIntro": "Si vous en reconnaissez deux ou plus, cela vaut la peine de les chiffrer.",
+  "situations": [
+   "L’hôtel a des clients, mais le bar est peu fréquenté.",
+   "Les ventes augmentent et la marge reste floue.",
+   "L’expérience varie d’une équipe à l’autre.",
+   "La carte est dépassée ou peu différenciante.",
+   "La direction veut préparer une ouverture ou une nouvelle saison.",
+   "Il y a des doutes sur le gaspillage, les doses et les achats."
+  ],
+  "situationsCTA": "Voir comment fonctionne le diagnostic",
+  "teamLabel": "COMMENT NOUS TRAVAILLONS AVEC VOTRE ÉQUIPE",
+  "teamTitle": "Un regard extérieur.<br><em>Aux côtés de ceux qui gèrent le bar.</em>",
+  "teamIntro": "Un regard extérieur, aux côtés de la direction et du F&B, pour trouver des améliorations réalisables avec les ressources dont l’hôtel dispose déjà.",
+  "team": [
+   [
+    "Avec votre responsable F&B",
+    "Le deuxième jour, nous travaillons avec le F&B et le responsable du bar. Nous écoutons le contexte, les contraintes et ce qui a déjà été tenté avant de proposer des changements."
+   ],
+   [
+    "Des processus, pas des personnes",
+    "Les observations décrivent des situations et des procédures. L’objectif est d’améliorer le service, pas de désigner des coupables."
+   ],
+   [
+    "Qui reçoit le rapport",
+    "Le rapport est remis à la direction. La direction décide si et comment le partager avec le F&B et l’équipe."
+   ],
+   [
+    "Comment nous présentons les conclusions",
+    "À la fin de la visite, un bref échange avec la direction et, si elle le souhaite, avec le F&B. Sous 7 jours, le rapport complet avec les priorités."
+   ]
+  ],
+  "includedTitle": "Inclus dans le prix de l’audit",
+  "included": [
+   "Évaluation d’un bar de l’hôtel",
+   "2 jours sur le terrain",
+   "Présentation des premières conclusions",
+   "Rapport complet dans les 7 jours suivant la visite"
+  ],
+  "agreedTitle": "Convenu par écrit avant confirmation",
+  "agreed": [
+   "Déplacement",
+   "Hébergement",
+   "Consommations nécessaires à l’évaluation",
+   "Nombre d’intervenants",
+   "Services supplémentaires, le cas échéant"
+  ],
+  "agreedNote": "Rien n’est facturé s’il ne figure pas dans le devis accepté."
+ },
+ "digital": {
+  "title": "Menus QR et contenus pour écrans d’hôtel | Cheers Experiences",
+  "meta": "Menus QR multilingues et contenus promotionnels pour écrans et TV. Découvrez un exemple réel au Cheers O Bar et demandez une proposition pour votre hôtel. Hôtels de luxe en Europe du Sud.",
+  "label": "DIGITAL POUR BARS D’HÔTEL",
+  "hero": "La prochaine commande<br>peut commencer<br><em>sur votre écran.</em>",
+  "lead": "Le cocktail que votre client n’a pas encore découvert. La carte dans sa langue. La suggestion qu’il voit en attendant. Nous créons des menus QR et des contenus TV qui mettent votre offre en valeur.",
+  "primary": "Choisir votre solution digitale",
+  "secondary": "Voir un exemple réel",
+  "micro": "Menus QR · Plusieurs langues · Contenus pour écrans et TV",
+  "proof": "Créé par des gens qui travaillent aussi derrière le comptoir. Plus de 10 ans d’expérience pratique en bar et en hôtellerie.",
+  "real": "En service au Cheers O Bar, à Viseu.",
+  "realNote": "Un exemple issu de notre propre établissement. La solution de votre hôtel est définie sur mesure.",
+  "photoAlt": "Écran au Cheers O Bar, à Viseu, avec une promotion de vin pétillant et des informations sportives.",
+  "nav": "Digital",
+  "consulting": "Conseil",
+  "wa": "Parler de mon projet",
+  "waText": "Bonjour Rui, je souhaiterais une proposition de menu QR et/ou de contenus pour écrans pour mon hôtel. Hôtel : __. Lieu : __. Ce que nous avons déjà : __.",
+  "offerLabel": "CHOISISSEZ VOTRE POINT DE DÉPART",
+  "offerTitle": "Votre carte.<br><em>Plus facile à découvrir.</em>",
+  "offerIntro": "Vous pouvez commander un projet digital sans audit. Commencez par la carte, ou affichez-la aussi sur les écrans de votre hôtel.",
+  "quote": "Sur devis pour votre projet",
+  "work": {
+   "label": "EXEMPLES RÉELS · CHEERS O BAR",
+   "title": "Conçu par nous.<br><em>En service dans notre propre bar.</em>",
+   "intro": "Avant de le proposer à un hôtel, nous l’utilisons au Cheers O Bar, à Viseu.",
+   "items": [
+    [
+     "cheers-tv-roleta.webp",
+     941,
+     830,
+     "Application TV interactive",
+     "Roue d’Halloween : les clients commandent une planche de 5 bières ou un mètre de 11 et font tourner la roue à l’écran. Une promotion qui vend et divertit à la fois.",
+     "Écran du Cheers O Bar affichant la roue interactive Halloween Night et les prix de chaque commande de bière."
+    ],
+    [
+     "cheers-menu-qr-carta.webp",
+     540,
+     1020,
+     "Menu QR : la carte",
+     "Recherche par nom ou ingrédient, catégories, suggestions de la maison et prix, en plusieurs langues et sans rien installer.",
+     "Menu QR du Cheers O Bar sur un téléphone, en espagnol, avec recherche, catégories et le Mojito mis en avant."
+    ],
+    [
+     "cheers-menu-qr-bebida.webp",
+     540,
+     1020,
+     "Menu QR : chaque boisson",
+     "Photo, ingrédients et prix. Le client garde son choix et commande auprès de l’équipe.",
+     "Fiche du Mojito dans le menu QR du Cheers O Bar, avec photo, ingrédients et prix."
+    ]
+   ],
+   "link": "Ouvrir le menu QR du Cheers O Bar"
+  },
+  "offers": [
+   {
+    "name": "Menu QR",
+    "tag": "POUR UNE CARTE CLAIRE SUR LE TÉLÉPHONE DU CLIENT",
+    "intro": "Pointer l’appareil photo. Ouvrir la carte. Choisir plus facilement.",
+    "items": [
+     "Une carte digitale adaptée au mobile, sans application à installer.",
+     "Catégories, boissons, descriptions et prix clairs.",
+     "Langues définies selon votre clientèle.",
+     "Un QR code vers la carte aux points de contact convenus."
+    ],
+    "cta": "Demander une proposition Menu QR"
+   },
+   {
+    "name": "Menu QR + Écrans",
+    "tag": "POUR METTRE EN AVANT L’OFFRE DE VOTRE BAR",
+    "intro": "De la table à la TV : une présentation cohérente de l’offre de votre bar.",
+    "items": [
+     "La base du Menu QR, avec langues et contenus convenus.",
+     "Animations et visuels promotionnels pour écrans et TV.",
+     "Mises en avant de cocktails, suggestions de saison ou services de l’hôtel.",
+     "Formats et mode de diffusion adaptés à votre équipement."
+    ],
+    "cta": "Demander une proposition QR + Écrans"
+   }
+  ],
+  "scope": "Le devis précise cartes, langues, visuels, écrans, révisions et délais de livraison. L’hébergement, les mises à jour ou la maintenance récurrente, le cas échéant, sont détaillés séparément. L’équipement et les intégrations sont confirmés avant le début du travail.",
+  "screensOnly": "Vous avez déjà une carte ? Nous pouvons travailler uniquement les contenus pour écrans.",
+  "screensCTA": "J’ai besoin de contenus pour ma TV",
+  "demoLabel": "VOIR L’IDÉE AVANT DE DEMANDER UNE PROPOSITION",
+  "demoTitle": "Montrez la boisson.<br><em>Facilitez le choix.</em>",
+  "demoText": "L’écran attire l’attention sur une suggestion. Le menu QR aide le client à explorer l’offre. Votre équipe recommande et prend la commande.",
+  "previewLabel": "EXEMPLE VISUEL · CONTENU ILLUSTRATIF",
+  "previewBrand": "VOTRE MARQUE",
+  "previewKicker": "DU BAR",
+  "previewTitle": "Votre prochain cocktail<br>vous attend.",
+  "previewBody": "Explorez la carte. Trouvez votre moment.",
+  "previewFooter": "Découvrir la carte du bar",
+  "processLabel": "DU CONTENU AU COMPTOIR",
+  "processTitle": "Clair dans le devis.<br><em>Prêt pour le service.</em>",
+  "steps": [
+   [
+    "Montrez-nous ce que vous avez",
+    "Envoyez la carte, les langues souhaitées et des photos de vos écrans. Dites-nous ce que vous voulez mettre en avant."
+   ],
+   [
+    "Recevez une proposition concrète",
+    "Nous confirmons livrables, prix, révisions, délais et éventuels coûts récurrents."
+   ],
+   [
+    "Validez avant publication",
+    "Vous vérifiez contenus et prix. Le QR code et le mode de diffusion sont testés dans le périmètre convenu."
+   ]
+  ],
+  "faqTitle": "Avant de choisir.",
+  "faqs": [
+   [
+    "Dois-je d’abord réserver une mission de conseil ?",
+    "Non. Les menus QR et les contenus pour écrans peuvent être commandés comme un projet digital indépendant. Si les coûts, la carte ou le service demandent de l’attention, l’audit reste disponible."
+   ],
+   [
+    "Combien cela coûte-t-il et en combien de temps ?",
+    "Cela dépend de la carte, des langues, des visuels et de l’équipement. Vous recevez le prix et le calendrier par écrit avant de commander. Tout coût récurrent est indiqué dans la proposition."
+   ],
+   [
+    "Cela fonctionnera-t-il sur ma TV actuelle ?",
+    "Nous confirmons l’équipement et le mode de diffusion avant de définir le périmètre. Les contenus visuels n’incluent pas automatiquement le matériel, la diffusion de chaînes, les données en direct ni l’intégration à la caisse."
+   ],
+   [
+    "Comment savoir si cela aide les ventes ?",
+    "Choisissez une période de comparaison et suivez les commandes des produits mis en avant, le ticket moyen et la marge. Le digital apporte de la visibilité ; les résultats dépendent aussi de votre offre, de la fréquentation et du service. Nous ne promettons pas de hausse du chiffre d’affaires."
+   ]
+  ],
+  "bridge": "L’EXPLOITATION A-T-ELLE AUSSI BESOIN D’ATTENTION ?",
+  "bridgeTitle": "Le digital apporte de la visibilité.<br><em>L’audit fixe les priorités.</em>",
+  "bridgeText": "Si le problème vient des coûts, du gaspillage ou du service, commencez par savoir où agir. Le Mystery Guest Bar Audit reste disponible pour votre hôtel.",
+  "bridgeCTA": "Découvrir le diagnostic (à partir de 990 €)",
+  "contactTitle": "Confiez-nous votre carte.<br><em>Mettons-la en valeur.</em>",
+  "contactText": "Envoyez le nom de l’hôtel, sa localisation et ce dont vous avez besoin : un menu QR, des contenus pour écrans ou les deux. Ajoutez votre carte et des photos de l’équipement dans la conversation. Nous vous expliquerons l’étape suivante vers une proposition.",
+  "formTitle": "Demander une proposition",
+  "formIntro": "Indiquez vos coordonnées et choisissez WhatsApp ou l’email.",
+  "footer": "Le digital pour votre bar. L’expérience du terrain."
+ },
+ "money": {
+  "label": "LES COMPTES DE VOTRE BAR",
+  "title": "Petites fuites.<br><em>Beaucoup d’argent en fin d’année.</em>",
+  "intro": "Deux exemples en chiffres ronds. Modifiez les valeurs dans le calculateur et voyez les comptes de votre bar.",
+  "examples": [
+   {
+    "name": "Une dose de trop dans chaque gin",
+    "lines": [
+     "2 cl de trop par gin × 40 gins par jour × 30 jours = 24 litres par mois",
+     "24 litres, c’est environ 34 bouteilles de 70 cl",
+     "À 12 € – 17,50 € la bouteille, rien qu’en coût produit"
+    ],
+    "result": "400&nbsp;€ à 600&nbsp;€ par mois",
+    "sub": "4&nbsp;800&nbsp;€ à 7&nbsp;200&nbsp;€ par an, sans vendre une boisson de plus."
+   },
+   {
+    "name": "1 client sur 5 prend une boisson de plus",
+    "lines": [
+     "200 clients par jour (valeur supposée) × 1 sur 5 = 40 boissons de plus par jour",
+     "40 boissons × 10 € = 400 € par jour",
+     "400 € × 30 jours"
+    ],
+    "result": "12&nbsp;000&nbsp;€ par mois",
+    "sub": "72&nbsp;000&nbsp;€ sur une saison de 180 jours, en chiffre d’affaires avant coûts. C’est l’effet d’une recommandation bien faite."
+   }
+  ],
+  "note": "Exemples illustratifs avec des valeurs supposées. Ce ne sont pas des résultats clients.",
+  "calcTitle": "Faites les comptes de votre bar",
+  "labels": [
+   "Boissons alcoolisées par jour",
+   "Dose en trop par boisson (cl)",
+   "Coût d’une bouteille de 70 cl (€)",
+   "Clients par jour",
+   "Clients qui prennent 1 boisson de plus (%)",
+   "Prix de la boisson en plus (€)",
+   "Jours d’ouverture par mois",
+   "Jours de la saison"
+  ],
+  "outputs": [
+   "Surdosage, par mois",
+   "Ventes par recommandation, par mois",
+   "Total par mois",
+   "Total de la saison"
+  ],
+  "formula": "Surdosage : boissons par jour × cl en trop ÷ 70 × coût de la bouteille × jours. Recommandation : clients par jour × % × prix × jours. Le surdosage est un coût produit ; la recommandation est du chiffre d’affaires avant coûts.",
+  "invalid": "Vérifiez les valeurs : nombres positifs, pourcentage jusqu’à 100 et jusqu’à 31 jours par mois.",
+  "cta": "Demander une disponibilité pour mon hôtel"
+ },
+ "nextStep": {
+  "objLabel": "AVANT DE DÉCIDER",
+  "objTitle": "Vous pensez probablement à ceci.<br><em>C’est légitime.</em>",
+  "objections": [
+   [
+    "Vous avez déjà reçu des consultants qui sont venus, ont laissé un PDF et ont disparu.",
+    "À la fin de la visite, nous présentons les premières conclusions à la direction. Sous 7 jours, vous recevez le rapport, avec chaque opportunité chiffrée en euros et ce qu’il faut faire en premier."
+   ],
+   [
+    "Vous craignez que l’équipe se sente surveillée.",
+    "Nous observons des processus, pas des personnes. Le rapport va uniquement à la direction, qui décide de ce qu’elle partage."
+   ],
+   [
+    "Vous ne savez pas si l’audit sera rentabilisé.",
+    "Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit."
+   ],
+   [
+    "Vous ne voulez pas d’un fournisseur de plus qui insiste.",
+    "Écrivez-nous quand vous le souhaitez. Pas d’appels commerciaux."
+   ]
+  ],
+  "clLabel": "PAS ENCORE LE BON MOMENT ?",
+  "clTitle": "Recevez la checklist<br><em>des 10 fuites de marge.</em>",
+  "clText": "Les 10 fuites sur une page, avec ce qu’il faut vérifier pour chacune. Parcourez votre bar en 20 minutes et voyez combien vous en trouvez.",
+  "clEmail": "Email",
+  "clHotel": "Hôtel",
+  "clSubmit": "Envoyez-moi la checklist",
+  "clSubject": "Checklist 10 fuites — nouveau contact",
+  "clNote": "Vous recevez le PDF immédiatement, sur la page suivante. En demandant la checklist, vous acceptez de recevoir des emails de Cheers Experiences avec des idées pour votre bar. Vous pouvez vous désinscrire à tout moment.",
+  "clContact": "Pas encore prêt ? Recevez la checklist des 10 fuites",
+  "dlTitle": "Votre checklist est prête.",
+  "dlText": "Téléchargez le PDF, parcourez le bar et comptez combien de fuites vous trouvez. Si vous en trouvez deux ou plus, cela vaut la peine de les chiffrer.",
+  "dlButton": "Télécharger la checklist (PDF)",
+  "pdf": {
+   "title": "Les 10 fuites de marge<br>du bar d’hôtel",
+   "sub": "Checklist Cheers Experiences · Parcourez le bar en 20 minutes et cochez ce que vous trouvez.",
+   "check": "Arrive dans mon bar",
+   "fix": "Comment corriger",
+   "endTitle": "Vous en avez trouvé deux ou plus ?",
+   "endText": "Le Mystery Guest Bar Audit leur donne une valeur en euros et vous dit quoi corriger en premier. À partir de 990 € + déplacement selon le pays, HT. Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit.",
+   "contact": "WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com"
+  },
+  "privacy": " Si vous demandez la checklist des 10 fuites, nous utilisons votre email pour vous envoyer des idées pour votre bar et des propositions de Cheers Experiences ; vous pouvez vous désinscrire à tout moment en répondant à n’importe quel email."
+ },
+ "teamCopy": {
+  "name": "Beatriz Almeida",
+  "role": "Operations & Events Manager",
+  "text": "Responsable de la coordination opérationnelle et des événements, rattachée directement à Rui Monteiro."
+ },
+ "editorial": {
+  "nav": [
+   "Hôtels",
+   "Mariages & Événements",
+   "Méthode",
+   "Rui Monteiro"
+  ],
+  "contact": "Parler de votre projet",
+  "skip": "Aller au contenu",
+  "menu": "Menu",
+  "close": "Fermer",
+  "territory": "Europe du Sud",
+  "eventTerritory": "Portugal · Espagne · Europe du Sud",
+  "eyebrow": "CONSEIL & EXPÉRIENCES DE BAR",
+  "hero": "Plus de valeur dans<br>chaque <em>expérience.</em>",
+  "lead": "Un bar qui sert mieux. Une exploitation qui connaît ses chiffres. Nous relions carte, équipe et gestion pour élever l’expérience client et travailler la rentabilité.",
+  "cta": "Parler de mon bar",
+  "explore": "Découvrir nos solutions",
+  "heroNote": "Plus de 10 ans d’expérience pratique en bar et en hôtellerie.",
+  "caption": "Image d’ambiance illustrative. Elle ne représente pas un projet ou un client de Cheers.",
+  "pathHotel": "Pour hôtels, resorts, rooftops et groupes",
+  "pathEvent": "Pour mariages, événements, domaines et planners",
+  "pathEventDesc": "Des cocktails avec une identité. Un service pensé pour l’occasion.",
+  "offerLabel": "01 / LE POINT DE DÉPART",
+  "offerTitle": "Votre défi.<br><em>Une intervention réfléchie.</em>",
+  "offerIntro": "Nous partons de l’exploitation existante ou du concept que vous voulez ouvrir. Le périmètre, les livrables et l’investissement sont définis avant de commencer.",
+  "offers": [
+   [
+    "Améliorer un bar",
+    "Une carte qui vend peu, des coûts mal maîtrisés ou un service irrégulier.",
+    "Diagnostic, fiches techniques, prix et formation alignés sur votre concept.",
+    "Améliorer l’exploitation",
+    0
+   ],
+   [
+    "Préparer une ouverture",
+    "Du lobby au rooftop ou au pool bar : préparer un concept qui fonctionne sur le terrain.",
+    "Carte, organisation, fournisseurs et formation pour le lancement.",
+    "Planifier l’ouverture",
+    7
+   ],
+   [
+    "Accompagner la gestion",
+    "Un soutien régulier à la direction et à l’équipe, avec des responsabilités claires.",
+    "Indicateurs, achats, routines de service et amélioration continue.",
+    "Parler d’un accompagnement",
+    3
+   ]
+  ],
+  "scopeNote": "La proposition confirme le calendrier, les honoraires, les ressources et les responsabilités de chaque partie.",
+  "servicesLabel": "02 / EXCELLENCE OPÉRATIONNELLE",
+  "servicesTitle": "Le détail dans le verre.<br><em>La rigueur dans l’exploitation.</em>",
+  "servicesLead": "Le service et la marge vont de pair : une recette régulière, un prix justifié et une équipe qui sait recommander.",
+  "auditTitle": "Avant le plan,<br><em>l’expérience réelle.</em>",
+  "auditSummary": "Mystery Guest & diagnostic opérationnel",
+  "auditCheck": "Ce que nous observons",
+  "auditDelivery": "Ce que vous recevez",
+  "serviceSummary": "Découvrir toutes nos compétences",
+  "auditCTA": "Demander une évaluation",
+  "craftLabel": "IDENTITÉ & BOISSONS",
+  "craftTitle": "Un cocktail qui mérite<br><em>qu’on s’en souvienne.</em>",
+  "craftLead": "Des classiques bien exécutés et des recettes signature adaptées à l’hôtel, à la clientèle et au rythme du service. La créativité appuyée par des fiches techniques, des doses et des coûts définis.",
+  "methodLabel": "03 / NOTRE MÉTHODE",
+  "methodTitle": "De la décision<br><em>à la pratique quotidienne.</em>",
+  "methodIntro": "Un projet ne crée de la valeur que si l’équipe peut l’appliquer. Nous fixons les priorités avec la direction, mettons en œuvre sur le terrain et suivons les indicateurs définis.",
+  "digitalLabel": "COMMUNICATION SUR LE POINT DE VENTE",
+  "digitalTitle": "Une offre visible.<br><em>Un choix plus facile.</em>",
+  "digitalText": "Menus digitaux et QR, cartes multilingues et contenus pour écrans : nous aidons le client à découvrir ce que le bar a à offrir.",
+  "digitalReal": "Exemple réel · Cheers O Bar, Viseu",
+  "groupSummary": "Hôtels indépendants & groupes hôteliers",
+  "founderLabel": "04 / UNE EXPÉRIENCE DE TERRAIN",
+  "founderTitle": "Un savoir construit<br><em>derrière le comptoir.</em>",
+  "founderRole": "Fondateur · Direction de projets",
+  "founderLead": "Rui Monteiro réunit plus de 10 ans d’expérience pratique en bar et en hôtellerie. Chez Cheers Experiences, il relie la vision business au travail quotidien de l’équipe.",
+  "timeline": [
+   [
+    "2014 — aujourd’hui",
+    "Cheers O Bar · Viseu",
+    "Expérience de gestion et d’exploitation de bar."
+   ],
+   [
+    "2017",
+    "Grande Real Santa Eulália · Albufeira",
+    "Expérience professionnelle en contexte hôtelier."
+   ],
+   [
+    "Autres formats",
+    "Cheers Pool Bar & événements",
+    "Exploitation de bar de piscine et service de bar pour différentes occasions."
+   ]
+  ],
+  "founderNote": "Références au parcours professionnel du fondateur. Il ne s’agit pas de clients ni de partenaires de conseil.",
+  "faqTitle": "Avant<br><em>d’avancer.</em>",
+  "faqLabel": "QUESTIONS PRATIQUES",
+  "faqs": [
+   [
+    "Que comprend un projet ?",
+    "Cela dépend du diagnostic et du périmètre retenu. Il peut inclure audit, carte, fiches techniques, formation, routines opérationnelles et suivi. La proposition précise livrables, calendrier, honoraires et responsabilités."
+   ],
+   [
+    "Quels résultats pouvons-nous attendre ?",
+    "Nous définissons des indicateurs à partir de votre exploitation : marge sur coût, ticket moyen, gaspillage, régularité ou temps de service. Le résultat dépend de la demande, des ressources et de l’exécution ; nous ne garantissons ni bénéfices ni hausse du chiffre d’affaires."
+   ],
+   [
+    "Où travaillez-vous ?",
+    "Dans les hôtels de luxe des grandes destinations touristiques d’Europe du Sud : Portugal (Algarve, Lisbonne, Madère et Açores), Espagne (Baléares, Canaries, Costa del Sol, Costa Blanca, Barcelone et Madrid), Andorre, Côte d’Azur et Monaco, Suisse (stations alpines et lacs) et Italie (côte amalfitaine, Capri, Sardaigne, Sicile, Toscane et lacs). Le Mystery Guest Bar Audit est proposé à partir de 990 € ; le prix final dépend du pays et est confirmé par écrit avant la réservation, tout comme le déplacement. Vous pouvez nous écrire en français, anglais, espagnol ou portugais."
+   ]
+  ],
+  "calcSummary": "Explorer un scénario de chiffre d’affaires",
+  "contactTitle": "Quelle est la prochaine étape<br><em>pour votre bar ?</em>",
+  "contactText": "Parlez-nous du contexte et de ce que vous aimeriez améliorer. Rui Monteiro étudie votre demande pour définir avec vous la suite.",
+  "hotelForm": "Parlez-nous de votre exploitation",
+  "name": "Nom",
+  "organization": "Hôtel, groupe ou établissement",
+  "email": "Email",
+  "location": "Lieu",
+  "type": "Sur quoi souhaitez-vous travailler ?",
+  "message": "Contexte du projet",
+  "optional": "facultatif",
+  "messagePlaceholder": "Votre bar, ses défis et ce que vous voulez changer…",
+  "submit": "Envoyer la demande de contact",
+  "formNote": "La demande est envoyée via FormSubmit. Vos données servent à répondre à votre demande.",
+  "sending": "Envoi de la demande…",
+  "error": "Nous n’avons pas pu confirmer l’envoi. Réessayez ou contactez-nous par email ou WhatsApp.",
+  "whatsapp": "WhatsApp",
+  "emailDraft": "Préparer la demande par email",
+  "draftReady": "Demande préparée. Vérifiez et envoyez le message dans l’application choisie.",
+  "privacy": "Confidentialité",
+  "privacyText": "Nous utilisons les données que vous nous fournissez pour répondre à votre demande et préparer une éventuelle proposition. Les formulaires hôtels et événements utilisent FormSubmit ; vous pouvez aussi nous contacter par email ou WhatsApp. Nous ne partageons pas les données des formulaires avec des tiers à des fins publicitaires. Pour toute question ou demande concernant vos données, écrivez à info@cheersexperiences.com. Le site conserve son compteur de visites existant, sans inclure les données des formulaires. L’email et WhatsApp sont soumis aux conditions de leurs services respectifs.",
+  "legal": "Cheers Experiences est une marque de Sucesso Maciço, Lda.",
+  "footerLine": "Conseil en bar. Hospitalité. Expériences.",
+  "eventHero": "Votre moment.<br><em>Un bar à la hauteur.</em>",
+  "eventLead": "Cocktails personnalisés, barmen et un service de boissons planifié avec votre lieu de réception. Du premier toast au dernier cocktail, chaque détail a sa place dans le plan.",
+  "eventCTA": "Planifier le bar de votre événement",
+  "eventLabel": "MARIAGES & ÉVÉNEMENTS",
+  "eventOfferTitle": "Le bon format.<br><em>Votre identité.</em>",
+  "eventOfferIntro": "Trois points de départ pour construire la proposition. La carte, l’équipe, le matériel et la durée sont convenus pour votre événement.",
+  "choose": "Découvrir ce format",
+  "eventDetails": "Personnalisation, service & conditions",
+  "weddingMoments": "Welcome Party · Mariage · Day After",
+  "corporateLabel": "ÉVÉNEMENTS D’ENTREPRISE",
+  "partnerLabel": "DOMAINES, LIEUX & PLANNERS",
+  "partnerTitle": "Le bar intégré<br><em>à votre événement.</em>",
+  "partnerLead": "Un brief partagé, une proposition claire et une coordination avec ceux qui connaissent le lieu. Pour des événements ponctuels ou des collaborations durables.",
+  "partnerVenue": "Un partenariat pour mon lieu",
+  "partnerPlanner": "Un partenariat pour mes événements",
+  "eventMethodTitle": "Tout est calé.<br><em>Avant le premier toast.</em>",
+  "eventContactTitle": "Donnons forme<br><em>à votre événement.</em>",
+  "eventContactText": "Indiquez le lieu, la date prévue et le nombre d’invités. Si vous cherchez un partenariat, dites-nous comment vous travaillez. Nous confirmons disponibilité et périmètre dans la proposition.",
+  "eventForm": "Votre événement ou partenariat",
+  "contactEmail": "Email de contact",
+  "date": "Date ou période prévue",
+  "guests": "Nombre d’invités estimé",
+  "need": "Expérience souhaitée",
+  "moments": "Moment de la célébration",
+  "momentOptions": [
+   "À définir",
+   "Welcome Party",
+   "Jour du mariage",
+   "Day After",
+   "Plusieurs moments"
+  ],
+  "draftNote": "La demande est envoyée via FormSubmit et nous répondons avec une proposition. Vous pouvez aussi nous contacter par WhatsApp ou email.",
+  "eventSubmit": "Demander un devis",
+  "partnerGuests": "Pour un partenariat sans événement fixé, le nombre d’invités n’est pas nécessaire.",
+  "eventMessage": "Idées, horaires ou exigences",
+  "eventFaqTitle": "Planifiez en<br><em>toute confiance.</em>",
+  "back": "Retour au site",
+  "thanks": "Merci pour votre message.",
+  "thanksText": "Si vous avez terminé l’envoi du formulaire, votre demande a été transmise à Cheers. Pour ajouter des détails ou confirmer la réception, contactez-nous par email ou WhatsApp.",
+  "emptyCalc": "Remplissez les champs pour calculer.",
+  "current": "Scénario actuel",
+  "simulated": "Scénario simulé",
+  "delta": "Différence mensuelle",
+  "perYear": "Différence annuelle",
+  "currency": "fr-FR"
+ },
+ "contactDelivery": {
+  "hotelSubmit": "Envoyer la demande",
+  "hotelFormNote": "Votre demande arrive directement sur info@cheersexperiences.com. Nous répondons par écrit. Vous préférez WhatsApp ? Utilisez l’option ci-dessous.",
+  "hotelPreview": "Aperçu : l’envoi réel par email est désactivé.",
+  "submit": "Continuer sur WhatsApp",
+  "eventSubmit": "Demander un devis par WhatsApp",
+  "formNote": "Ouvre WhatsApp avec toutes vos informations déjà remplies. Confirmez l’envoi du message dans cette application. Vous préférez l’email ? Utilisez l’option ci-dessous.",
+  "draftNote": "Ouvre WhatsApp avec les informations de votre événement. Confirmez l’envoi dans cette application. Vous pouvez aussi préparer la demande par email.",
+  "privacyText": "Nous utilisons les données que vous nous envoyez pour répondre à votre demande et préparer une éventuelle proposition. Le formulaire hôtels envoie vos données à notre email via le service FormSubmit. Le formulaire événements prépare un message que vous vérifiez et envoyez par WhatsApp ou votre application email. Nous ne partageons pas les données des formulaires avec des tiers à des fins publicitaires. Pour toute question sur vos données, écrivez à info@cheersexperiences.com. Le compteur de visites n’inclut pas les données du formulaire. L’email et WhatsApp sont soumis aux conditions de leurs services respectifs.",
+  "draftReady": "Demande préparée. Confirmez l’envoi dans WhatsApp ou votre application email.",
+  "noScript": "Pour envoyer votre demande, utilisez WhatsApp ou l’email ci-dessous et indiquez les informations de votre projet."
+ },
+ "weddings": {
+  "hero": "Votre mariage.<br><em>Des cocktails à votre image.</em>",
+  "lead": "Nous créons la carte de cocktails, organisons le bar et coordonnons les barmen avec votre lieu, votre traiteur ou votre wedding planner. Du vin d’honneur à la soirée, vos invités profitent d’un service pensé pour votre journée.",
+  "cta": "Demander notre proposition mariage",
+  "explore": "Ce que nous apportons à votre journée",
+  "label": "CE QUE CHEERS AJOUTE",
+  "title": "Chaque détail choisi par vous.<br><em>Le bar aussi.</em>",
+  "intro": "Un cocktail peut raconter votre histoire. Un service attentionné fait que chaque invité se sent bien accueilli. Nous réunissons les deux avec un plan clair pour votre bar.",
+  "benefits": [
+   [
+    "Des cocktails qui vous ressemblent",
+    "Une recette pour chacun de vous ou une boisson signature pour le couple. Nous adaptons saveurs, noms et présentation à vos goûts et à l’histoire que vous voulez partager."
+   ],
+   [
+    "Des invités choyés",
+    "Des barmen qui expliquent la carte, aident à choisir et soignent la présentation. Nous prévoyons l’équipe, la préparation et les postes de service selon le nombre d’invités et les pics."
+   ],
+   [
+    "Tout le monde trinque",
+    "Des cocktails sans alcool avec le même soin du goût et de la présentation. Nous parlons des préférences et des restrictions alimentaires pour convenir d’options adaptées avec vous et le lieu."
+   ],
+   [
+    "Un bar à l’image de votre journée",
+    "La carte, les couleurs des cocktails, la verrerie et les finitions peuvent refléter le style de votre mariage. La présentation du bar est coordonnée avec le lieu et le matériel convenu."
+   ],
+   [
+    "Moins de décisions le jour J",
+    "Nous coordonnons horaires, accès, préparation et service avec votre lieu, votre traiteur ou votre planner. Nous convenons de qui fournit boissons, glace, verrerie, équipement et installation."
+   ],
+   [
+    "Un investissement clairement défini",
+    "Nous choisissons avec vous la carte, la durée et le format du service. La proposition précise ce qui est inclus, les coûts et les conditions de prolongation pour que vous décidiez en connaissance de cause."
+   ]
+  ],
+  "momentsLabel": "DU PREMIER BONJOUR À LA DERNIÈRE DANSE",
+  "momentsTitle": "Un bar qui accompagne<br><em>votre célébration.</em>",
+  "moments": [
+   [
+    "Vin d’honneur",
+    "Un premier toast pour accueillir vos invités. Des cocktails plus légers, des options sans alcool et une sélection facile à choisir pour l’arrivée et les amuse-bouches."
+   ],
+   [
+    "Soirée et open bar",
+    "Des classiques bien faits, vos cocktails signature ou un gin bar. Carte et équipe prévues pour la soirée, avec durée et boissons incluses convenues dans la proposition."
+   ],
+   [
+    "Welcome Party et Day After",
+    "Une rencontre avant le mariage ou un toast détendu le lendemain. Réservez un moment ou combinez-en plusieurs selon vos projets."
+   ]
+  ],
+  "signatureTitle": "Vos prénoms sur la carte.<br><em>Votre histoire dans le verre.</em>",
+  "signatureText": "Imaginez accueillir vos amis avec votre cocktail préféré, servir une recette inspirée de votre voyage de fiançailles ou donner aux boissons le nom de moments qui comptent pour vous. Nous transformons ces idées en une carte que vos invités auront plaisir à découvrir.",
+  "signatureNote": "Noms, recettes, couleurs, décorations et carte personnalisée sont convenus avec vous. Une dégustation peut être prévue dans la proposition.",
+  "toastAlt": "Cocktails personnalisés avec décorations photo servis lors d’un événement en plein air.",
+  "posterAlt": "Affiche Cheers Experiences en portugais annonçant des cocktails sur mesure pour les mariages 2027.",
+  "posterNote": "Vous préparez 2027 ou une autre date ? Dites-nous quand et où. La disponibilité est confirmée pour chaque demande.",
+  "offersTitle": "Un open bar pour votre événement.<br><em>Des prix clairs dès le départ.</em>",
+  "offersIntro": "Deux formats avec un prix de départ et une option sur mesure. Le prix final dépend de votre événement et est confirmé dans votre devis.",
+  "packages": [
+   [
+    "Open bar bière",
+    "Un open bar bière pendant tout votre événement, servi par l’équipe Cheers.",
+    "à partir de 25 €",
+    "HT par personne",
+    "Minimum 50 invités",
+    false
+   ],
+   [
+    "Bière & cocktails",
+    "Un open bar bière et une sélection de cocktails classiques et signature, préparés spécialement pour votre événement.",
+    "à partir de 35 €",
+    "HT par personne",
+    "Minimum 50 invités",
+    true
+   ],
+   [
+    "Expérience sur mesure",
+    "Cocktail du couple, gin bar, options sans alcool, Welcome Party ou Day After : nous concevons le bar autour de votre événement.",
+    "Sur devis",
+    "",
+    "",
+    false
+   ]
+  ],
+  "featuredLabel": "Recommandé",
+  "quoteCTA": "Demander un devis",
+  "pricesNote": "Prix de départ, hors TVA. Le prix final dépend du nombre d’invités, de la durée, du lieu, de la date et de la carte, et est confirmé dans un devis spécifique.",
+  "heroPrice": "Open bar à partir de <strong>25 €</strong> HT par personne",
+  "contactTitle": "On prépare<br><em>votre premier toast ?</em>",
+  "contactText": "Indiquez votre date, le lieu, le nombre d’invités et vos idées pour le bar. Même si vous hésitez encore sur le format, nous pouvons vous aider à définir la suite.",
+  "metadata": "Bar à cocktails pour mariages | Cheers Experiences",
+  "description": "Open bar à partir de 25 € HT par personne (min. 50 invités). Cocktails personnalisés, barmen, boissons sans alcool et open bar pour mariages. Organisation avec votre lieu, votre traiteur et votre wedding planner au Portugal, en Espagne et dans les destinations d’Europe du Sud."
+ },
+ "content": {
+  "audit": {
+   "title": "Avant d’analyser votre bar en consultants,<br><em>nous le vivons en clients.</em>",
+   "intro": "Pendant 1 ou 2 jours, nous vivons discrètement le service que reçoivent vos clients, comme convenu avec la direction. Nous comparons ensuite ces observations avec une analyse opérationnelle et les données fournies.",
+   "check": [
+    "Première impression, accueil et connaissances de l’équipe",
+    "Temps d’attente, rapidité, recommandation et vente additionnelle",
+    "Cocktails : présentation, qualité et régularité",
+    "Carte, prix et valeur perçue",
+    "Propreté, organisation et effectif apparent",
+    "Commandes manquées et gaspillage observable"
+   ],
+   "delivery": [
+    "Synthèse pour la direction",
+    "Problèmes et écarts dans l’expérience client",
+    "Opportunités de revenus et d’économies",
+    "Gains rapides et priorités",
+    "Plan d’intervention recommandé"
+   ],
+   "note": "L’observation repère des signaux. Les coûts, la productivité et les besoins en personnel sont validés avec les données et votre équipe interne."
+  },
+  "group": {
+   "title": "Un hôtel est un projet.<br><em>Un groupe peut être un partenariat.</em>",
+   "text": "Une base de qualité commune, avec de la place pour l’identité de chaque établissement. Nous définissons le périmètre par hôtel et un reporting pratique pour la direction du groupe.",
+   "items": [
+    "Audits multi-établissements",
+    "Standards et programmes de formation",
+    "Programmes de cocktails",
+    "Achats et fournisseurs",
+    "KPI et suivi de performance",
+    "Visites Mystery Guest récurrentes",
+    "Nouvelles ouvertures"
+   ],
+   "cta": "Parler d’un partenariat de groupe"
+  },
+  "cocktails": {
+   "title": "Faites du bar<br><em>une partie de la destination.</em>",
+   "text": "Nous voulons que vos clients se souviennent de ce cocktail des mois plus tard. Nous exécutons les classiques avec rigueur et créons des recettes exclusives autour du concept, du lieu, de la clientèle et de l’identité de votre hôtel, en pensant à la rapidité de préparation et aux marges.",
+   "tags": [
+    "Cocktails signature",
+    "Cartes de saison",
+    "Pool & Summer Drinks",
+    "Cocktails rooftop",
+    "Welcome Drinks",
+    "Low / No Alcohol",
+    "Inspiration régionale",
+    "Classiques revisités"
+   ]
+  },
+  "contexts": [
+   [
+    "Pool Bar",
+    "Pics de demande, chaleur et rythme des vacances. Boissons rafraîchissantes, mise en place et service efficace."
+   ],
+   [
+    "Rooftop",
+    "La vue attire. La carte, la recommandation et la régularité donnent envie de rester."
+   ],
+   [
+    "Lobby Bar",
+    "Arrivées, pauses et rendez-vous. Transformer le passage en raisons de commander et de revenir."
+   ],
+   [
+    "Restaurant Bar",
+    "Apéritifs, accords et digestifs. Coordonner la recommandation avec l’expérience à table."
+   ]
+  ],
+  "events": {
+   "title": "Bars à cocktails pour mariages et événements | Cheers Experiences",
+   "desc": "Cocktails pour événements, welcome drinks et open bar pour mariages. Barmen, menus QR et coordination avec les lieux et les wedding planners au Portugal, en Espagne et dans les destinations d’Europe du Sud.",
+   "hotels": "Conseil hôtelier",
+   "events": "Événements",
+   "cta": "Demander une proposition d’événement",
+   "eyebrow": "Cheers Experiences / Événements",
+   "headline": "Votre grand jour.<br><em>Un bar à sa hauteur.</em>",
+   "intro": "Des cocktails avec du caractère, un gin bien servi et une équipe aux petits soins pour vos invités. Nous apportons l’expérience Cheers dans le lieu de votre choix.",
+   "heroLink": "Découvrir les formats",
+   "weddingLabel": "Des mariages avec plus de saveur",
+   "weddingTitle": "Vous avez choisi chaque détail.<br><em>Ne laissez pas les cocktails au hasard.</em>",
+   "weddingText": "Vous vous mariez et cherchez plus que les cocktails habituels ? Nous créons une proposition à l’image de votre occasion : recettes personnalisées, carte soignée et service attentionné, du premier toast au dernier cocktail.",
+   "venue": {
+    "title": "Votre lieu.<br><em>Un bar bien coordonné.</em>",
+    "text": "Nous aidons propriétaires et gérants à structurer leur offre de boissons par événement : cartes, coûts, préparation et service. Une exploitation organisée aide à maîtriser le gaspillage, à développer le chiffre d’affaires par événement et à garder une qualité régulière.",
+    "items": [
+     "Cartes de boissons et formats de bar adaptés à votre lieu",
+     "Recettes, doses et achats avec maîtrise des coûts",
+     "Équipes, préparation et horaires alignés sur l’événement",
+     "Coordination avec traiteurs et wedding planners"
+    ]
+   },
+   "scale": "D’un anniversaire de 25 personnes à un grand mariage.",
+   "scaleText": "Nous adaptons la carte, l’équipe et le service à votre célébration : mariages, baptêmes, fêtes privées, événements d’entreprise et service de bar en partenariat avec des traiteurs.",
+   "servicesLabel": "Ce que nous apportons à votre célébration",
+   "services": [
+    [
+     "Service complet de bar à cocktails",
+     "Cocktails personnalisés ou carte convenue, boissons de qualité et barmen spécialisés. Nous planifions ensemble boissons, glace, verrerie et service, avec tout ce qui est inclus clairement indiqué dans la proposition."
+    ],
+    [
+     "Votre gin bar sur mesure",
+     "Gins premium, tonics sélectionnés et botaniques qui complètent chaque accord. Glace en cubes et verrerie en verre ou en polycarbonate, selon le lieu et le format convenu."
+    ],
+    [
+     "Un bar pour chaque invité",
+     "Cocktails sans alcool et une sélection adaptée aux préférences de vos invités. Présentation soignée, recommandations faciles et le même soin dans chaque verre."
+    ]
+   ],
+   "formatsLabel": "Choisissez comment recevoir",
+   "formatsTitle": "Votre événement.<br><em>Le format qui convient.</em>",
+   "formats": [
+    [
+     "Open bar",
+     "L’organisateur prend en charge le service selon une carte, une durée et des conditions convenues. Les invités profitent des boissons incluses sans payer à chaque commande."
+    ],
+    [
+     "Vente sur place",
+     "Les invités paient leurs boissons. Faisabilité, prix et coûts d’exploitation sont convenus avec l’organisateur et le lieu."
+    ],
+    [
+     "Format mixte",
+     "L’organisateur peut offrir certaines boissons, une période d’open bar ou un montant par invité. Les autres commandes sont payées par les invités, avec des conditions claires dès le départ."
+    ]
+   ],
+   "formatNote": "Chaque proposition tient compte du lieu, du nombre d’invités, de la durée et de la carte. Coûts, inclusions et responsabilités de chaque partie sont convenus à l’avance.",
+   "temporaryTitle": "Besoin d’une équipe pour exploiter le bar de votre événement ?",
+   "temporaryText": "Nous exploitons aussi des espaces de bar temporaires lors d’événements. Nous coordonnons l’équipe, l’offre, l’exploitation et les conditions commerciales avec l’organisateur, selon le lieu et la taille de l’événement.",
+   "areaLabel": "Où nous travaillons",
+   "areaTitle": "Plus près de votre prochaine célébration.",
+   "areaNote": "Déplacement et disponibilité sont confirmés dans la proposition, selon le lieu et la taille de l’événement.",
+   "contactTitle": "Dites-nous ce que<br><em>vous célébrez.</em>",
+   "contactText": "Indiquez la date, le lieu et le nombre d’invités prévu. Nous préparerons une proposition de bar adaptée à votre occasion et à votre budget.",
+   "name": "Votre nom",
+   "type": "Type d’événement",
+   "types": [
+    "Mariage",
+    "Baptême",
+    "Anniversaire / fête privée",
+    "Événement d’entreprise",
+    "Partenariat traiteur",
+    "Exploitation de bar temporaire",
+    "Lieu / domaine — partenariat",
+    "Wedding / event planner — partenariat"
+   ],
+   "date": "Date prévue (facultatif)",
+   "place": "Lieu / domaine",
+   "guests": "Nombre d’invités estimé",
+   "model": "Format souhaité",
+   "models": [
+    "À définir",
+    "Open bar",
+    "Vente sur place",
+    "Format mixte"
+   ],
+   "message": "Qu’avez-vous en tête ?",
+   "placeholder": "Horaires, cocktails préférés, contact du lieu ou autres idées…",
+   "submit": "Préparer la demande WhatsApp",
+   "wa": "Parlons de mon événement",
+   "introMessage": "Bonjour ! J’aimerais une proposition de Cheers Experiences pour un événement.",
+   "note": "WhatsApp s’ouvre avec votre demande prête à vérifier et à envoyer. Vos données ne sont pas enregistrées sur ce site et aucun message n’est envoyé automatiquement.",
+   "email": "Je préfère l’email",
+   "status": "Demande préparée. Vérifiez-la dans WhatsApp avant de l’envoyer.",
+   "subject": "Demande de proposition d’événement — Cheers Experiences",
+   "footer": "Conseil hôtelier · Cocktails & événements",
+   "legal": "Cheers Experiences est une marque de Sucesso Maciço, Lda.",
+   "imageNote": "Images d’ambiance illustratives ; il ne s’agit pas d’un portfolio d’événements réalisés.",
+   "menu": "Menu",
+   "close": "Fermer",
+   "upgrade": {
+    "emotionalTitle": "Nous apportons plus qu’un bar.<br><em>Nous créons un lieu de rencontre.</em>",
+    "emotionalText": "Un endroit où les invités se retrouvent, trinquent, découvrent des saveurs, discutent et prennent des photos. Un service attentionné leur permet de profiter de la fête et de repartir avec des souvenirs durables.",
+    "areas": [
+     [
+      "Mariages & Célébrations",
+      "Mariages, baptêmes, anniversaires et fêtes privées. Du premier toast à la piste de danse, un service au rythme de votre célébration."
+     ],
+     [
+      "Événements d’entreprise",
+      "Événements professionnels, lancements, conférences, fêtes d’entreprise, team building et activations de marque. Une hospitalité qui a du sens."
+     ],
+     [
+      "Bars temporaires",
+      "Festivals, salons et événements publics ou privés. Exploitation de bar temporaire avec équipe, carte et service convenus avec l’organisateur."
+     ]
+    ],
+    "signatureTitle": "Votre événement.<br><em>Votre cocktail.</em>",
+    "signatureText": "Un cocktail de la mariée, un cocktail du marié ou une recette exclusive pour le mariage. Nous créons un concept qui raconte une part de votre histoire, avec des saveurs et une présentation adaptées à l’occasion.",
+    "signatureNote": "Noms, ingrédients, couleurs, décoration, présentation et cartes peuvent être adaptés. Les possibilités et éléments inclus sont convenus dans la proposition.",
+    "corporateTitle": "Votre marque peut aussi<br><em>se servir dans un verre.</em>",
+    "corporateText": "Des cocktails signature inspirés de votre marque, de votre produit ou de votre campagne. Nous adaptons saveurs, couleurs et cartes au concept de l’événement, en coordonnant le service avec votre équipe marketing et le lieu.",
+    "corporateItems": [
+     "Lancements de produits",
+     "Fêtes d’entreprise et team building",
+     "Activations de marque",
+     "Espaces d’hospitalité",
+     "Cocktails et cartes sur mesure"
+    ],
+    "corporateNote": "Le concept et la personnalisation sont convenus dans la proposition. La production graphique et le branding physique ne sont pas inclus automatiquement.",
+    "corporateCTA": "Planifier un événement d’entreprise",
+    "packagesTitle": "Trois points de départ.<br><em>Une proposition à vous.</em>",
+    "packages": [
+     [
+      "Essential Bar",
+      "Service de cocktails professionnel avec une carte sélectionnée adaptée à votre événement."
+     ],
+     [
+      "Signature Experience",
+      "Cocktails personnalisés, sélection premium et une expérience avec sa propre identité."
+     ],
+     [
+      "Full Bar Experience",
+      "Un concept de bar plus complet : équipe, carte et exploitation planifiées pour l’occasion."
+     ]
+    ],
+    "packagesNote": "Expériences indicatives, sans prix fixes ni inclusions automatiques. Chaque service est personnalisé et soumis à proposition. Le mode de paiement est choisi séparément.",
+    "need": "Que recherchez-vous ?",
+    "needs": [
+     "Bar à cocktails",
+     "Bar complet",
+     "Gin bar",
+     "Cocktails signature",
+     "Activation d’entreprise",
+     "Bar temporaire",
+     "Je ne sais pas encore / j’aimerais un conseil"
+    ],
+    "inclusive": "Cocktails classiques · Cocktails signature · Faible teneur en alcool · Sans alcool",
+    "flex": "Nous adaptons l’équipe, les quantités, la carte, l’installation, la logistique et le format commercial à la taille de votre événement et aux conditions du lieu."
+   },
+   "faq": [
+    [
+     "J’ai déjà un lieu et un traiteur. Puis-je réserver uniquement le bar ?",
+     "Oui. Nous pouvons intégrer le service de bar au dispositif existant, en coordination avec les responsables. Nous confirmons les exigences du lieu et ce que fournit chaque partie avant de finaliser la proposition."
+    ],
+    [
+     "Qu’est-ce qui détermine le devis ?",
+     "Le lieu, la date, le nombre d’invités, la durée, la carte et les ressources nécessaires. Dites-nous si vous préférez un open bar, la vente sur place ou un format mixte pour que nous préparions une proposition adaptée."
+    ],
+    [
+     "Et si le lieu n’a pas de bar ?",
+     "Nous évaluons avec vous l’espace de service, les accès et les ressources nécessaires. La solution et sa faisabilité sont confirmées dans la proposition ; chaque lieu a ses propres exigences."
+    ],
+    [
+     "Les invités peuvent-ils payer une partie de leurs boissons ?",
+     "Oui. Un format mixte vous permet d’offrir certaines boissons, une période d’open bar ou un montant par invité. Les invités paient les autres commandes selon des conditions convenues à l’avance."
+    ],
+    [
+     "Peut-on personnaliser les cocktails et inclure des options sans alcool ?",
+     "Oui. Nous pouvons créer des recettes et adapter noms, saveurs et présentation au concept de votre mariage ou de votre entreprise. La carte peut inclure des classiques, des boissons peu alcoolisées et sans alcool, avec une personnalisation convenue dans la proposition."
+    ],
+    [
+     "Quand dois-je vous contacter ?",
+     "Dès que vous avez une date ou une période en tête. Nous vérifions la disponibilité et le déplacement jusqu’à votre lieu. Les conditions de réservation et de confirmation sont convenues dans la proposition."
+    ]
+   ],
+   "scope": [
+    [
+     "Boissons & carte",
+     "Cocktails, gins, options sans alcool et autres boissons incluses ; quantités ou conditions de consommation."
+    ],
+    [
+     "Équipe & horaires",
+     "Taille de l’équipe, durée du service, préparation et conditions d’éventuelle prolongation."
+    ],
+    [
+     "Lieu & matériel",
+     "Bar existant ou solution convenue, verrerie, glace, équipement, accès et exigences du site."
+    ],
+    [
+     "Coûts & responsabilités",
+     "Prix, déplacement, paiement des boissons et ce que fournissent Cheers, le lieu et l’organisateur."
+    ]
+   ],
+   "scopeIntro": "Une bonne expérience commence par une proposition claire. Ces points sont définis avant la confirmation du service.",
+   "packagesNote": "Expériences indicatives, sans prix fixes ni inclusions automatiques. Chaque service est personnalisé et soumis à proposition. Le mode de paiement est choisi séparément.",
+   "process": [
+    [
+     "Brief",
+     "Date, lieu, invités, horaires et style. Nous partons de vos besoins et des contraintes pratiques du lieu."
+    ],
+    [
+     "Proposition & dégustation",
+     "Nous définissons boissons, équipe et périmètre. Une dégustation de cocktails, si vous la souhaitez, est convenue dans la proposition."
+    ],
+    [
+     "Planification",
+     "Nous alignons logistique, préparation, fournisseurs et horaires avec le lieu et le planner."
+    ],
+    [
+     "Réalisation",
+     "Nous coordonnons l’équipe et le service sur place, avec des responsabilités claires tout au long de l’événement."
+    ]
+   ],
+   "planner": {
+    "title": "Le bar dans votre plan.<br><em>L’exploitation entre nos mains.</em>",
+    "text": "Commandez une carte de cocktails, des barmen ou une solution de bar avec un périmètre convenu. Nous recevons votre brief, préparons la proposition et coordonnons boissons, équipes et réalisation avec le planner et le lieu.",
+    "items": [
+     "Cocktails personnalisés et options sans alcool",
+     "Welcome drinks, cocktail hour et open bar",
+     "Menus digitaux / QR et présentation des boissons",
+     "Un contact opérationnel pour la préparation et le jour J"
+    ]
+   }
+  }
+ }
+}

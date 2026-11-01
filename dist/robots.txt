@@ -7,4 +7,6 @@ Disallow: /es/checklist.html
 Disallow: /en/checklist.html
 Disallow: /es/obrigado.html
 Disallow: /en/obrigado.html
+Disallow: /fr/checklist.html
+Disallow: /fr/obrigado.html
 Sitemap: https://cheersexperiences.com/sitemap.xml

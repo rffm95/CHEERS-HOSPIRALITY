@@ -1,10 +1,10 @@
-// Generates the 10-leak checklist PDFs (PT/ES/EN) in dist/downloads. Run locally: npm run checklist (needs Playwright + Chromium).
+// Generates the 10-leak checklist PDFs (PT/ES/EN/FR) in dist/downloads. Run locally: npm run checklist (needs Playwright + Chromium).
 import fs from 'node:fs';import path from 'node:path';import {createRequire} from 'node:module';
-import {leaks} from '../src/audit-offer.mjs';import {nextStep} from '../src/next-step.mjs';
+import {leaks} from '../src/audit-offer.mjs';import {nextStep} from '../src/next-step.mjs';import '../src/fr.mjs';
 const {chromium}=createRequire(import.meta.url)('playwright');
 const font=f=>`url(data:font/woff;base64,${fs.readFileSync(path.resolve('dist/fonts',f)).toString('base64')}) format('woff')`;fs.mkdirSync('dist/downloads',{recursive:true});
 const browser=await chromium.launch();
-for(const lang of ['pt','es','en']){
+for(const lang of ['pt','es','en','fr']){
  const l=leaks[lang],p=nextStep[lang].pdf;
  const html=`<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><style>
 @font-face{font-family:Lora;font-weight:400 700;src:${font('lora-var.woff')}}@font-face{font-family:Inter;src:${font('inter-400.woff')}}@font-face{font-family:Inter;font-weight:600;src:${font('inter-600.woff')}}
@@ -21,4 +21,4 @@ ol{list-style:none;padding:0;margin:0}li{display:grid;grid-template-columns:26px
  const page=await browser.newPage();await page.setContent(html,{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  await page.pdf({path:`dist/downloads/checklist-10-fugas-${lang}.pdf`,format:'A4',printBackground:true,preferCSSPageSize:true});await page.close();
 }
-await browser.close();console.log('Built 10-leak checklist PDFs (PT/ES/EN) in dist/downloads.');
+await browser.close();console.log('Built 10-leak checklist PDFs (PT/ES/EN/FR) in dist/downloads.');

@@ -3,18 +3,18 @@ from pathlib import Path
 from urllib.parse import urlsplit,unquote
 import json,re
 root=Path('dist');pages={}
-for lang in ['pt','es','en']:
+for lang in ['pt','es','en','fr']:
  for name in ['index.html','eventos.html','digital.html']:
   path=('/' if lang=='pt' else '/'+lang+'/')+name
   doc=html.fromstring((root/path[1:]).read_text())
   pages[path]=doc
   assert len(doc.xpath('//h1'))==1,path
   assert len(doc.xpath('//main'))==1,path
-  assert doc.xpath('//html/@lang')[0]=={'pt':'pt-PT','es':'es-ES','en':'en'}[lang]
+  assert doc.xpath('//html/@lang')[0]=={'pt':'pt-PT','es':'es-ES','en':'en','fr':'fr-FR'}[lang]
   ids=doc.xpath('//@id');assert len(ids)==len(set(ids)),(path,'duplicate ids')
   canonical=doc.xpath('//link[@rel="canonical"]/@href')[0]
   assert canonical=='https://cheersexperiences.com'+path
-  assert set(doc.xpath('//link[@rel="alternate"]/@hreflang'))=={'pt','es','en','x-default'}
+  assert set(doc.xpath('//link[@rel="alternate"]/@hreflang'))=={'pt','es','en','fr','x-default'}
   assert doc.xpath('//meta[@property="og:image"]/@content')
   schema=json.loads(doc.xpath('//script[@type="application/ld+json"]/text()')[0]);assert not any(x in schema for x in ['review','aggregateRating','award'])
   for field in doc.xpath('//input[not(@type="hidden") and not(@name="_honey")]|//select|//textarea'):
@@ -57,7 +57,7 @@ for path in pages:
 css=(root/'atelier.css').read_text();assert '@media(prefers-reduced-motion:reduce)' in css
 assert all('@media(max-width:'+str(x)+'px)' in css for x in [1180,900,620,370])
 assert css.count('{')==css.count('}')
-for lang in ['pt','es','en']:
+for lang in ['pt','es','en','fr']:
  assert (root/('downloads/checklist-10-fugas-'+lang+'.pdf')).exists() and (root/((''if lang=='pt' else lang+'/')+'checklist.html')).exists()
-print('PASS nine complete static pages, checklist PDFs and download pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
+print('PASS twelve complete static pages, checklist PDFs and download pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
 print('NOTE no browser rendering, layout measurements, live email delivery or Core Web Vitals measured.')

@@ -21,7 +21,7 @@ function enquiryURL(channel,subject,message){return channel==='email'?'mailto:in
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
 if(typeof module!=='undefined'&&module.exports)module.exports={calculateLosses,enquiryURL,eventFieldState,prepareEnquiry};
 if(typeof document!=='undefined')(()=>{
- const supported=['pt','es','en'];let inNavigation=false;
+ const supported=['pt','es','en','fr'];let inNavigation=false;
  const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
  function updateHistory(method,url){try{history[method]({},'',url);}catch{}}
  const pageRoute=(language,page)=>`${language==='pt'?'':`/${language}`}/${page==='events'?'eventos.html':page==='digital'?'digital.html':'index.html'}`;

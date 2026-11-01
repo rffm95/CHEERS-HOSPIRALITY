@@ -11,7 +11,7 @@ export const auditOffer = {
   day2:['Conversa com a direção e com o responsável do bar.','Observação da preparação, do balcão, do armazém do bar e dos procedimentos.','Análise dos elementos que o hotel disponibilizar: carta, preços, fichas técnicas, vendas e compras recentes.','Validação das prioridades com a direção.'],
   day2Not:'Não inclui inventário completo, formação da equipa nem análise aprofundada de todos os custos. Isso faz parte da Auditoria Completa.',
   pageTitle:'Consultoria de bar para hotéis · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'Encontramos pelo menos 11.880&nbsp;€ por ano no bar do seu hotel.<br><em>Ou devolvemos o valor da auditoria.</em>',
+  hero:'Identificamos oportunidades para o bar do seu hotel <em>faturar pelo menos mais 11.880&nbsp;€ por ano.</em>',
   lead:'O Mystery Guest Bar Audit encontra as vendas perdidas e o desperdício do seu bar e põe-lhes um valor em euros. A direção recebe as contas feitas e o que corrigir primeiro.',
   cta:'Pedir o Mystery Guest Bar Audit', explore:'Ver o que inclui',
   heroGuarantee:'Investimento: desde 990&nbsp;€, conforme o país. Mínimo identificado: 11.880&nbsp;€/ano. Se não chegarmos lá, devolvemos o valor da auditoria.',
@@ -58,7 +58,7 @@ export const auditOffer = {
   realCaption:'Exemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imagens de ambiente ilustrativas, exceto quando identificadas como exemplo real.',
   ogAlt:'Ecrã com conteúdos promocionais no Cheers O Bar, em Viseu',
-  meta:'Encontramos pelo menos 11.880 € por ano no bar do seu hotel, ou devolvemos o valor da auditoria. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
+  meta:'Identificamos oportunidades para o bar do seu hotel faturar pelo menos mais 11.880 € por ano, ou devolvemos o valor da auditoria. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
  },
  es: {
   eyebrowHotel:'RENTABILIDAD DE BARES EN HOTELES DE LUJO DE 4 Y 5 ESTRELLAS', heroPlace:'Sur de Europa · Portugal · España · Costa Azul · Mónaco · Andorra · Suiza · Italia', craftLabel:'CARTA DE CÓCTELES', heroItems:['Evaluación de un bar del hotel','Un día como huésped y un día con la dirección y el equipo','Informe entregado en un máximo de 7 días tras la visita'],
@@ -68,7 +68,7 @@ export const auditOffer = {
   day2:['Conversación con la dirección y con el responsable del bar.','Observación de la preparación, la barra, el almacén del bar y los procedimientos.','Análisis de la información que el hotel facilite: carta, precios, fichas técnicas, ventas y compras recientes.','Validación de las prioridades con la dirección.'],
   day2Not:'No incluye inventario completo, formación del equipo ni un análisis en profundidad de todos los costes. Eso forma parte de la Auditoría Completa.',
   pageTitle:'Consultoría de bar para hoteles · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'Encontramos al menos 11.880&nbsp;€ al año en el bar de su hotel.<br><em>O le devolvemos el importe de la auditoría.</em>',
+  hero:'Identificamos oportunidades para que el bar de su hotel <em>facture al menos 11.880&nbsp;€ más al año.</em>',
   lead:'El Mystery Guest Bar Audit localiza las ventas perdidas y el desperdicio de su bar y les pone una cifra en euros. La dirección recibe las cuentas hechas y qué corregir primero.',
   cta:'Solicitar el Mystery Guest Bar Audit', explore:'Ver qué incluye',
   heroGuarantee:'Inversión: desde 990&nbsp;€, según el país. Mínimo identificado: 11.880&nbsp;€/año. Si no llegamos, le devolvemos el importe de la auditoría.',
@@ -115,7 +115,7 @@ export const auditOffer = {
   realCaption:'Ejemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imágenes de ambiente ilustrativas, salvo cuando se identifican como ejemplo real.',
   ogAlt:'Pantalla con contenidos promocionales en Cheers O Bar, en Viseu',
-  meta:'Encontramos al menos 11.880 € al año en el bar de su hotel, o le devolvemos el importe de la auditoría. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
+  meta:'Identificamos oportunidades para que el bar de su hotel facture al menos 11.880 € más al año, o le devolvemos el importe de la auditoría. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
  },
  en: {
   eyebrowHotel:'BAR PROFITABILITY FOR 4- AND 5-STAR LUXURY HOTELS', heroPlace:'Southern Europe · Portugal · Spain · Côte d\'Azur · Monaco · Andorra · Switzerland · Italy', craftLabel:'COCKTAIL MENUS', heroItems:['Assessment of one hotel bar','One day as a guest and one day with management and the team','Report delivered within 7 days of the visit'],
@@ -125,7 +125,7 @@ export const auditOffer = {
   day2:['A conversation with management and the bar manager.','Observation of prep, the bar station, the bar store and procedures.','A review of the information the hotel provides: menu, prices, drink specifications, recent sales and purchases.','Validation of priorities with management.'],
   day2Not:'It does not include a full stock count, staff training or an in-depth analysis of every cost. Those are part of the Full Audit.',
   pageTitle:'Bar consultancy for hotels · Mystery Guest Bar Audit | Cheers Experiences',
-  hero:'We find at least €11,880 a year in your hotel bar.<br><em>Or we refund the audit fee.</em>',
+  hero:'We identify opportunities for your hotel bar <em>to earn at least €11,880 more a year.</em>',
   lead:'The Mystery Guest Bar Audit finds the lost sales and waste in your bar and puts a euro figure on them. Management gets the numbers worked out and what to fix first.',
   cta:'Request the Mystery Guest Bar Audit', explore:'See what it includes',
   heroGuarantee:'Investment: from €990, depending on the country. Minimum identified: €11,880 a year. If we fall short, we refund the audit fee.',
@@ -172,7 +172,7 @@ export const auditOffer = {
   realCaption:'Real example · Cheers O Bar, Viseu.',
   imagesNote:'Illustrative atmosphere images, unless identified as a real example.',
   ogAlt:'Screen with promotional content at Cheers O Bar, Viseu',
-  meta:'We find at least €11,880 a year in your hotel bar, or we refund the audit fee. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel, excluding VAT. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
+  meta:'We identify opportunities for your hotel bar to earn at least €11,880 more a year, or we refund the audit fee. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel, excluding VAT. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
  }
 };
 

@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-const paths=['/index.html','/eventos.html','/digital.html','/es/index.html','/es/eventos.html','/es/digital.html','/en/index.html','/en/eventos.html','/en/digital.html'];
+const paths=['/index.html','/eventos.html','/digital.html','/es/index.html','/es/eventos.html','/es/digital.html','/en/index.html','/en/eventos.html','/en/digital.html','/fr/index.html','/fr/eventos.html','/fr/digital.html'];
 const mime={webp:'image/webp',jpg:'image/jpeg',svg:'image/svg+xml'};
 const asset=file=>`data:${mime[file.split('.').at(-1)]};base64,${fs.readFileSync('dist'+file).toString('base64')}`;
 const cache=new Map();
@@ -10,4 +10,4 @@ const payload=JSON.stringify(pages).replace(/</g,'\\u003c');
 let preview=pages['/index.html'].replace('<link rel="stylesheet" href="/atelier.css">',`<style>${css}</style>`).replace('<link rel="icon" href="/favicon.svg" type="image/svg+xml">','');
 preview=preview.replace('</body>',`<script>window.__cheersPreview=${payload};</script><script>${js.replace(/<\/script/gi,'<\\/script')}</script></body>`);
 fs.writeFileSync('../Cheers-Experiences-Preview.html',preview);
-console.log(`Functional standalone preview: six pages, three languages and ${cache.size} embedded images; ${Math.round(Buffer.byteLength(preview)/1024/1024*10)/10} MB. Contact buttons prepare WhatsApp or email messages for visitor confirmation.`);
+console.log(`Functional standalone preview: twelve pages, four languages and ${cache.size} embedded images; ${Math.round(Buffer.byteLength(preview)/1024/1024*10)/10} MB. Contact buttons prepare WhatsApp or email messages for visitor confirmation.`);
