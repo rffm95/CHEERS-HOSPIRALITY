@@ -1,1 +1,1 @@
-(()=>{const p=new URLSearchParams(location.search);const lang=['pt','es','en'].includes(p.get('lang'))?p.get('lang'):'en';p.delete('lang');const q=p.toString();location.replace((lang==='pt'?'':'/'+lang)+'/eventos.html'+(q?'?'+q:'')+'#celebrations');})();
+(()=>{const p=new URLSearchParams(location.search);const lang=['pt','es','en','fr'].includes(p.get('lang'))?p.get('lang'):'en';p.delete('lang');const q=p.toString();location.replace((lang==='pt'?'':'/'+lang)+'/eventos.html'+(q?'?'+q:'')+'#celebrations');})();
