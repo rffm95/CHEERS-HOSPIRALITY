@@ -7,7 +7,7 @@ export const nextStep = {
   objections:[
    ['Já recebeu consultores que vieram, deixaram um PDF e desapareceram.','No fim da visita apresentamos as primeiras conclusões à direção. Em 7 dias recebe o relatório, com cada oportunidade em euros e o que fazer primeiro.'],
    ['Receia que a equipa se sinta vigiada.','Observamos processos, não pessoas. O relatório vai só para a direção, que decide o que partilhar.'],
-   ['Não sabe se os 990 € se pagam.','Se não identificarmos pelo menos 990 € por mês em vendas perdidas ou desperdício, devolvemos os 990 €.'],
+   ['Não sabe se a auditoria se paga.','Se não identificarmos pelo menos 990 € por mês em vendas perdidas ou desperdício, devolvemos o valor da auditoria.'],
    ['Não quer mais um fornecedor a insistir.','Fale connosco quando quiser, por escrito. Sem chamadas de venda.']
   ],
   clLabel:'AINDA NÃO É O MOMENTO?', clTitle:'Leve a checklist<br><em>das 10 fugas de margem.</em>',
@@ -17,7 +17,7 @@ export const nextStep = {
   clContact:'Ainda não está pronto? Leve a checklist das 10 fugas',
   dlTitle:'A sua checklist está pronta.', dlText:'Descarregue o PDF, percorra o bar e conte quantas fugas encontra. Se encontrar duas ou mais, vale a pena pôr-lhes números.',
   dlButton:'Descarregar a checklist (PDF)',
-  pdf:{title:'As 10 fugas de margem<br>do bar de hotel',sub:'Checklist Cheers Experiences · Percorra o bar em 20 minutos e assinale o que encontra.',check:'Acontece no meu bar',fix:'Como corrigir',endTitle:'Encontrou duas ou mais?',endText:'O Mystery Guest Bar Audit põe-lhes um valor em euros e diz-lhe o que corrigir primeiro. 990 € + deslocação, sem IVA. Se não identificarmos pelo menos 990 € por mês em vendas perdidas ou desperdício, devolvemos os 990 €.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
+  pdf:{title:'As 10 fugas de margem<br>do bar de hotel',sub:'Checklist Cheers Experiences · Percorra o bar em 20 minutos e assinale o que encontra.',check:'Acontece no meu bar',fix:'Como corrigir',endTitle:'Encontrou duas ou mais?',endText:'O Mystery Guest Bar Audit põe-lhes um valor em euros e diz-lhe o que corrigir primeiro. Desde 990 € + deslocação, conforme o país, sem IVA. Se não identificarmos pelo menos 990 € por mês em vendas perdidas ou desperdício, devolvemos o valor da auditoria.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
   privacy:' Se pedir a checklist das 10 fugas, usamos o seu email para lhe enviar ideias para o bar e propostas da Cheers Experiences; pode cancelar a qualquer momento respondendo a qualquer email.'
  },
  es:{
@@ -25,7 +25,7 @@ export const nextStep = {
   objections:[
    ['Ya ha recibido consultores que vinieron, dejaron un PDF y desaparecieron.','Al final de la visita presentamos las primeras conclusiones a la dirección. En 7 días recibe el informe, con cada oportunidad en euros y qué hacer primero.'],
    ['Le preocupa que el equipo se sienta vigilado.','Observamos procesos, no personas. El informe va solo a la dirección, que decide qué compartir.'],
-   ['No sabe si los 990 € se recuperan.','Si no identificamos al menos 990 € al mes en ventas perdidas o desperdicio, le devolvemos los 990 €.'],
+   ['No sabe si la auditoría se amortiza.','Si no identificamos al menos 990 € al mes en ventas perdidas o desperdicio, le devolvemos el importe de la auditoría.'],
    ['No quiere otro proveedor insistiendo.','Escríbanos cuando quiera. Sin llamadas comerciales.']
   ],
   clLabel:'¿TODAVÍA NO ES EL MOMENTO?', clTitle:'Llévese la checklist<br><em>de las 10 fugas de margen.</em>',
@@ -35,7 +35,7 @@ export const nextStep = {
   clContact:'¿Todavía no está listo? Llévese la checklist de las 10 fugas',
   dlTitle:'Su checklist está lista.', dlText:'Descargue el PDF, recorra el bar y cuente cuántas fugas encuentra. Si encuentra dos o más, merece la pena ponerles cifras.',
   dlButton:'Descargar la checklist (PDF)',
-  pdf:{title:'Las 10 fugas de margen<br>del bar de hotel',sub:'Checklist Cheers Experiences · Recorra el bar en 20 minutos y marque lo que encuentre.',check:'Ocurre en mi bar',fix:'Cómo corregirlo',endTitle:'¿Ha encontrado dos o más?',endText:'El Mystery Guest Bar Audit les pone una cifra en euros y le dice qué corregir primero. 990 € + desplazamiento, sin IVA. Si no identificamos al menos 990 € al mes en ventas perdidas o desperdicio, le devolvemos los 990 €.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
+  pdf:{title:'Las 10 fugas de margen<br>del bar de hotel',sub:'Checklist Cheers Experiences · Recorra el bar en 20 minutos y marque lo que encuentre.',check:'Ocurre en mi bar',fix:'Cómo corregirlo',endTitle:'¿Ha encontrado dos o más?',endText:'El Mystery Guest Bar Audit les pone una cifra en euros y le dice qué corregir primero. Desde 990 € + desplazamiento, según el país, sin IVA. Si no identificamos al menos 990 € al mes en ventas perdidas o desperdicio, le devolvemos el importe de la auditoría.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
   privacy:' Si pide la checklist de las 10 fugas, usamos su email para enviarle ideas para el bar y propuestas de Cheers Experiences; puede darse de baja en cualquier momento respondiendo a cualquier email.'
  },
  en:{
@@ -43,7 +43,7 @@ export const nextStep = {
   objections:[
    ['You have had consultants who came, left a PDF and disappeared.','At the end of the visit we present the first findings to management. Within 7 days you get the report, with every opportunity in euros and what to do first.'],
    ['You worry the team will feel watched.','We observe processes, not people. The report goes only to management, who decide what to share.'],
-   ['You are not sure the €990 pays for itself.','If we do not identify at least €990 a month in lost sales or waste, we refund the €990.'],
+   ['You are not sure the audit pays for itself.','If we do not identify at least €990 a month in lost sales or waste, we refund the audit fee.'],
    ['You do not want another supplier chasing you.','Write to us when it suits you. No sales calls.']
   ],
   clLabel:'NOT THE RIGHT TIME YET?', clTitle:'Take the checklist<br><em>of 10 margin leaks.</em>',
@@ -53,7 +53,7 @@ export const nextStep = {
   clContact:'Not ready yet? Take the 10-leak checklist',
   dlTitle:'Your checklist is ready.', dlText:'Download the PDF, walk the bar and count how many leaks you find. If you find two or more, they are worth putting numbers on.',
   dlButton:'Download the checklist (PDF)',
-  pdf:{title:'The 10 margin leaks<br>of a hotel bar',sub:'Cheers Experiences checklist · Walk the bar in 20 minutes and tick what you find.',check:'Happens in my bar',fix:'How to fix it',endTitle:'Found two or more?',endText:'The Mystery Guest Bar Audit puts a euro figure on them and tells you what to fix first. €990 + travel, excluding VAT. If we do not identify at least €990 a month in lost sales or waste, we refund the €990.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
+  pdf:{title:'The 10 margin leaks<br>of a hotel bar',sub:'Cheers Experiences checklist · Walk the bar in 20 minutes and tick what you find.',check:'Happens in my bar',fix:'How to fix it',endTitle:'Found two or more?',endText:'The Mystery Guest Bar Audit puts a euro figure on them and tells you what to fix first. From €990 + travel depending on the country, excluding VAT. If we do not identify at least €990 a month in lost sales or waste, we refund the audit fee.',contact:'WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com'},
   privacy:' If you request the 10-leak checklist, we use your email to send you ideas for your bar and proposals from Cheers Experiences; you can unsubscribe at any time by replying to any email.'
  }
 };

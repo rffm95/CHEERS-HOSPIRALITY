@@ -224,3 +224,6 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 .objection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}.objection-grid article{border-top:1px solid var(--line);padding-top:20px}.objection-q{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink);margin:14px 0 12px}.objection-a{font-size:13px;line-height:1.8}.objections-cta,.money-cta{margin-top:40px}.checklist-offer .split{align-items:center}.checklist-form{max-width:520px;justify-self:end;width:100%}.checklist-form label>span{color:var(--muted);font-size:10px}.contact-checklist{margin-top:22px}.hero-actions .button,.objections-cta .button,.money-cta .button,.contact-primary .button,.audit-price-card .button{white-space:normal;text-align:left;max-width:460px}
 @media(max-width:1180px){.objection-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.objection-grid{grid-template-columns:1fr;gap:6px}.objection-q{font-size:18px}.objections-cta .button{width:100%}.checklist-form{justify-self:stretch}}
+.audit-price-card .audit-price-from{display:block;font:500 13px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#cfae72;margin-bottom:6px}
+.audit-price-card .audit-zones{margin-top:14px;font-size:14px;line-height:1.5;opacity:.85}
+.hero-offer-name .hero-price-from{font-size:16px;letter-spacing:.02em;color:#cfae72}
