@@ -21,7 +21,7 @@ export const auditOffer = {
   craftSummary:'Cocktails de assinatura e conceito por espaço', digitalSummary:'Menus QR, idiomas e ecrãs',
   label:'PASSO 1 · O DIAGNÓSTICO', title:'Mystery Guest<br><em>Bar Audit.</em>',
   intro:'Vemos o bar como o hóspede o vê e depois por dentro, com a direção e a equipa. Entregamos prioridades concretas: o que corrigir primeiro, porquê e com quem.',
-  priceFrom:'Desde', price:'990 €', travel:'+ deslocação', priceNote:'O valor final depende do país e é confirmado por escrito antes de marcar.', zones:'Portugal, Espanha, Andorra, Côte d\'Azur e Mónaco, Suíça e Itália (costa e ilhas incluídas).', tax:'Os preços apresentados não incluem IVA.',
+  priceFrom:'Desde', price:'990 €*', travel:'+ deslocação', priceNote:'O valor final depende do país e é confirmado por escrito antes de marcar.', zones:'Portugal, Espanha, Andorra, Côte d\'Azur e Mónaco, Suíça e Itália (costa e ilhas incluídas).', tax:'* Em Portugal acresce IVA à taxa legal em vigor. Nos restantes países da União Europeia, nos serviços entre empresas, o IVA não é faturado (autoliquidação pelo cliente).',
   scope:['1 bar do hotel','Dia 1 como hóspede, dia 2 com a direção e a equipa','Primeiras conclusões no final da visita','Relatório completo até 7 dias após a visita'],
   scarcity:'Aceitamos no máximo 4 auditorias por mês.',
   deliveryTitle:'O que recebe',
@@ -45,7 +45,7 @@ export const auditOffer = {
   },
   faq:[
    ['Qual a diferença entre o Mystery Guest Bar Audit e a Auditoria Completa?','O Mystery Guest Bar Audit é um diagnóstico com preço fixo: um dia como hóspede, um dia com a direção e a equipa, e um relatório com as oportunidades de melhoria organizadas por impacto, desde 990 € + deslocação, conforme o país. A Auditoria Completa é um projeto à medida, com objetivos definidos, orçamento discriminado e implementação no terreno: carta, menu QR, ecrãs, formação, equipa no terreno, entre outros.'],
-   ['O que inclui o Mystery Guest Bar Audit?','Avaliação de 1 bar em dois dias: o primeiro como hóspede, sem que a equipa saiba quem somos; o segundo com a direção e a equipa. No final da visita apresentamos as primeiras conclusões. O relatório completo chega até 7 dias depois, com as oportunidades organizadas por impacto, urgência e facilidade de implementação. Desde 990 €, conforme o país; deslocação à parte, acordada previamente. Os preços não incluem IVA. A implementação faz parte da Auditoria Completa.'],
+   ['O que inclui o Mystery Guest Bar Audit?','Avaliação de 1 bar em dois dias: o primeiro como hóspede, sem que a equipa saiba quem somos; o segundo com a direção e a equipa. No final da visita apresentamos as primeiras conclusões. O relatório completo chega até 7 dias depois, com as oportunidades organizadas por impacto, urgência e facilidade de implementação. Desde 990 €, conforme o país; deslocação à parte, acordada previamente. A implementação faz parte da Auditoria Completa.'],
    ['Como funciona a garantia?','Somamos o valor mensal estimado de cada oportunidade identificada: vendas que não aconteceram, desperdício e custos evitáveis. Se o total não chegar a 990 € por mês, devolvemos o valor pago pela auditoria. Cada estimativa mostra o cálculo e os pressupostos. Os custos de deslocação acordados não são reembolsáveis.'],
    ['Tenho de fazer o Mystery Guest antes da Auditoria Completa?','Não é obrigatório, mas é o caminho recomendado: o diagnóstico mostra onde estão as prioridades. Se avançar nos 30 dias seguintes, o valor da auditoria é descontado no orçamento.']
   ],
@@ -54,11 +54,11 @@ export const auditOffer = {
   meetingFaq:['Como começa a Auditoria Completa?','Com uma mensagem por WhatsApp ou pelo formulário, sem compromisso. Conte-nos sobre o bar e os objetivos; respondemos por escrito e vemos se faz sentido avançar. Depois recebe um orçamento discriminado. O caminho recomendado é começar pelo Mystery Guest Bar Audit, que é descontado se avançar nos 30 dias seguintes.'],
   contactTitle:'Comece por descobrir<br><em>onde atuar no seu bar.</em>',
   contactText:'Envie uma mensagem por WhatsApp com o nome do hotel e a localização. Respondemos por escrito. Prefere não usar WhatsApp? Use o formulário.',
-  options:['Mystery Guest Bar Audit — desde 990 € + deslocação (sem IVA)','Auditoria Completa — pedir orçamento','Parceria de grupo hoteleiro','Menus digitais, QR e ecrãs','Outro assunto'],
+  options:['Mystery Guest Bar Audit — desde 990 € + deslocação*','Auditoria Completa — pedir orçamento','Parceria de grupo hoteleiro','Menus digitais, QR e ecrãs','Outro assunto'],
   realCaption:'Exemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imagens de ambiente ilustrativas, exceto quando identificadas como exemplo real.',
   ogAlt:'Ecrã com conteúdos promocionais no Cheers O Bar, em Viseu',
-  meta:'Identificamos oportunidades para o bar do seu hotel faturar pelo menos mais 11.880 € por ano, ou devolvemos o valor da auditoria. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação, sem IVA. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
+  meta:'Identificamos oportunidades para o bar do seu hotel faturar pelo menos mais 11.880 € por ano, ou devolvemos o valor da auditoria. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
  },
  es: {
   eyebrowHotel:'RENTABILIDAD DE BARES EN HOTELES DE LUJO DE 4 Y 5 ESTRELLAS', heroPlace:'Sur de Europa · Portugal · España · Costa Azul · Mónaco · Andorra · Suiza · Italia', craftLabel:'CARTA DE CÓCTELES', heroItems:['Evaluación de un bar del hotel','Un día como huésped y un día con la dirección y el equipo','Informe entregado en un máximo de 7 días tras la visita'],
@@ -78,7 +78,7 @@ export const auditOffer = {
   craftSummary:'Cócteles de autor y concepto por espacio', digitalSummary:'Menús QR, idiomas y pantallas',
   label:'PASO 1 · EL DIAGNÓSTICO', title:'Mystery Guest<br><em>Bar Audit.</em>',
   intro:'Vemos el bar como lo ve el huésped y después por dentro, con la dirección y el equipo. Entregamos prioridades concretas: qué corregir primero, por qué y con quién.',
-  priceFrom:'Desde', price:'990 €', travel:'+ desplazamiento', priceNote:'El precio final depende del país y se confirma por escrito antes de reservar.', zones:'Portugal, España, Andorra, Costa Azul y Mónaco, Suiza e Italia (costa e islas incluidas).', tax:'Los precios indicados no incluyen IVA.',
+  priceFrom:'Desde', price:'990 €*', travel:'+ desplazamiento', priceNote:'El precio final depende del país y se confirma por escrito antes de reservar.', zones:'Portugal, España, Andorra, Costa Azul y Mónaco, Suiza e Italia (costa e islas incluidas).', tax:'* En Portugal se añade el IVA al tipo legal vigente. En el resto de países de la Unión Europea, en los servicios entre empresas, no se factura IVA (inversión del sujeto pasivo).',
   scope:['1 bar del hotel','Día 1 como huésped, día 2 con la dirección y el equipo','Primeras conclusiones al final de la visita','Informe completo en un máximo de 7 días tras la visita'],
   scarcity:'Aceptamos un máximo de 4 auditorías al mes.',
   deliveryTitle:'Qué recibe',
@@ -102,7 +102,7 @@ export const auditOffer = {
   },
   faq:[
    ['¿Qué diferencia hay entre el Mystery Guest Bar Audit y la Auditoría Completa?','El Mystery Guest Bar Audit es un diagnóstico a precio fijo: un día como huésped, un día con la dirección y el equipo, y un informe con las oportunidades de mejora organizadas por impacto, desde 990 € + desplazamiento, según el país. La Auditoría Completa es un proyecto a medida, con objetivos definidos, presupuesto detallado e implementación sobre el terreno: carta, menú QR, pantallas, formación, equipo sobre el terreno, entre otros.'],
-   ['¿Qué incluye el Mystery Guest Bar Audit?','Evaluación de 1 bar en dos días: el primero como huésped, sin que el equipo sepa quiénes somos; el segundo con la dirección y el equipo. Al final de la visita presentamos las primeras conclusiones. El informe completo llega en un máximo de 7 días, con las oportunidades organizadas por impacto, urgencia y facilidad de implementación. Desde 990 €, según el país; desplazamiento aparte, acordado previamente. IVA no incluido. La implementación forma parte de la Auditoría Completa.'],
+   ['¿Qué incluye el Mystery Guest Bar Audit?','Evaluación de 1 bar en dos días: el primero como huésped, sin que el equipo sepa quiénes somos; el segundo con la dirección y el equipo. Al final de la visita presentamos las primeras conclusiones. El informe completo llega en un máximo de 7 días, con las oportunidades organizadas por impacto, urgencia y facilidad de implementación. Desde 990 €, según el país; desplazamiento aparte, acordado previamente. La implementación forma parte de la Auditoría Completa.'],
    ['¿Cómo funciona la garantía?','Sumamos el valor mensual estimado de cada oportunidad identificada: ventas que no se produjeron, desperdicio y costes evitables. Si el total no llega a 990 € al mes, le devolvemos el importe pagado por la auditoría. Cada estimación muestra el cálculo y los supuestos. Los costes de desplazamiento acordados no son reembolsables.'],
    ['¿Tengo que hacer el Mystery Guest antes de la Auditoría Completa?','No es obligatorio, pero es el camino recomendado: el diagnóstico muestra dónde están las prioridades. Si avanza en los 30 días siguientes, el importe de la auditoría se descuenta del presupuesto.']
   ],
@@ -111,11 +111,11 @@ export const auditOffer = {
   meetingFaq:['¿Cómo empieza la Auditoría Completa?','Con un mensaje por WhatsApp o mediante el formulario, sin compromiso. Cuéntenos cómo es el bar y sus objetivos; le respondemos por escrito y vemos si tiene sentido avanzar. Después recibe un presupuesto detallado. El camino recomendado es empezar por el Mystery Guest Bar Audit, que se descuenta si avanza en los 30 días siguientes.'],
   contactTitle:'Empiece por saber<br><em>dónde actuar en su bar.</em>',
   contactText:'Envíenos un mensaje por WhatsApp con el nombre del hotel y la ubicación. Le respondemos por escrito. ¿Prefiere no usar WhatsApp? Utilice el formulario.',
-  options:['Mystery Guest Bar Audit — desde 990 € + desplazamiento (sin IVA)','Auditoría Completa — solicitar presupuesto','Colaboración con grupo hotelero','Menús digitales, QR y pantallas','Otro asunto'],
+  options:['Mystery Guest Bar Audit — desde 990 € + desplazamiento*','Auditoría Completa — solicitar presupuesto','Colaboración con grupo hotelero','Menús digitales, QR y pantallas','Otro asunto'],
   realCaption:'Ejemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imágenes de ambiente ilustrativas, salvo cuando se identifican como ejemplo real.',
   ogAlt:'Pantalla con contenidos promocionales en Cheers O Bar, en Viseu',
-  meta:'Identificamos oportunidades para que el bar de su hotel facture al menos 11.880 € más al año, o le devolvemos el importe de la auditoría. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento, sin IVA. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
+  meta:'Identificamos oportunidades para que el bar de su hotel facture al menos 11.880 € más al año, o le devolvemos el importe de la auditoría. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
  },
  en: {
   eyebrowHotel:'BAR PROFITABILITY FOR 4- AND 5-STAR LUXURY HOTELS', heroPlace:'Southern Europe · Portugal · Spain · Côte d\'Azur · Monaco · Andorra · Switzerland · Italy', craftLabel:'COCKTAIL MENUS', heroItems:['Assessment of one hotel bar','One day as a guest and one day with management and the team','Report delivered within 7 days of the visit'],
@@ -135,7 +135,7 @@ export const auditOffer = {
   craftSummary:'Signature cocktails and a concept for each setting', digitalSummary:'QR menus, languages and screens',
   label:'STEP 1 · THE DIAGNOSIS', title:'Mystery Guest<br><em>Bar Audit.</em>',
   intro:'We see the bar as your guests do, then from the inside with management and the team. You get concrete priorities: what to fix first, why and with whom.',
-  priceFrom:'From', price:'€990', travel:'+ travel', priceNote:'The final fee depends on the country and is confirmed in writing before booking.', zones:'Portugal, Spain, Andorra, the Côte d\'Azur and Monaco, Switzerland and Italy (coast and islands included).', tax:'Prices shown exclude VAT.',
+  priceFrom:'From', price:'€990*', travel:'+ travel', priceNote:'The final fee depends on the country and is confirmed in writing before booking.', zones:'Portugal, Spain, Andorra, the Côte d\'Azur and Monaco, Switzerland and Italy (coast and islands included).', tax:'* In Portugal, VAT is added at the applicable rate. In other European Union countries, VAT is not invoiced on business-to-business services (reverse charge).',
   scope:['1 hotel bar','Day 1 as a guest, day 2 with management and the team','First findings at the end of the visit','Full report within 7 days of the visit'],
   scarcity:'We take on a maximum of 4 audits per month.',
   deliveryTitle:'What you receive',
@@ -159,7 +159,7 @@ export const auditOffer = {
   },
   faq:[
    ['What is the difference between the Mystery Guest Bar Audit and the Full Audit?','The Mystery Guest Bar Audit is a fixed-price diagnosis: one day as a guest, one day with management and the team, and a report with improvement opportunities organised by impact, from €990 + travel, depending on the country. The Full Audit is a tailored project with agreed objectives, an itemised quote and implementation on the ground: menus, QR menu, screens, training, a team on site and more.'],
-   ['What does the Mystery Guest Bar Audit include?','An assessment of 1 bar over two days: the first as a guest, without the team knowing who we are; the second with management and the team. At the end of the visit we present the first findings. The full report follows within 7 days, with opportunities organised by impact, urgency and ease of implementation. From €990 depending on the country; travel is extra and agreed in advance. Prices exclude VAT. Implementation is part of the Full Audit.'],
+   ['What does the Mystery Guest Bar Audit include?','An assessment of 1 bar over two days: the first as a guest, without the team knowing who we are; the second with management and the team. At the end of the visit we present the first findings. The full report follows within 7 days, with opportunities organised by impact, urgency and ease of implementation. From €990 depending on the country; travel is extra and agreed in advance. Implementation is part of the Full Audit.'],
    ['How does the guarantee work?','We add up the estimated monthly value of every opportunity we identify: sales that did not happen, waste and avoidable costs. If the total does not reach €990 a month, we refund the audit fee. Every estimate shows the calculation and assumptions. Agreed travel costs are non-refundable.'],
    ['Do I need the Mystery Guest before the Full Audit?','It is not mandatory, but it is the recommended route: the diagnosis shows where the priorities are. If you go ahead within 30 days, the audit fee is deducted from the quote.']
   ],
@@ -168,11 +168,11 @@ export const auditOffer = {
   meetingFaq:['How does the Full Audit start?','With a WhatsApp message or the form, and no obligation. Tell us about the bar and your objectives; we reply in writing and see whether it makes sense to go ahead. You then receive an itemised quote. The recommended route is to start with the Mystery Guest Bar Audit, which is deducted if you go ahead within 30 days.'],
   contactTitle:'Start by finding out<br><em>where to act in your bar.</em>',
   contactText:'Send a WhatsApp message with your hotel and location. We reply in writing. Prefer not to use WhatsApp? Use the form.',
-  options:['Mystery Guest Bar Audit — from €990 + travel (excl. VAT)','Full Audit — request a quote','Hotel group partnership','Digital menus, QR and screens','Something else'],
+  options:['Mystery Guest Bar Audit — from €990 + travel*','Full Audit — request a quote','Hotel group partnership','Digital menus, QR and screens','Something else'],
   realCaption:'Real example · Cheers O Bar, Viseu.',
   imagesNote:'Illustrative atmosphere images, unless identified as a real example.',
   ogAlt:'Screen with promotional content at Cheers O Bar, Viseu',
-  meta:'We identify opportunities for your hotel bar to earn at least €11,880 more a year, or we refund the audit fee. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel, excluding VAT. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
+  meta:'We identify opportunities for your hotel bar to earn at least €11,880 more a year, or we refund the audit fee. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
  }
 };
 

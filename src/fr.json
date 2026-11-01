@@ -61,11 +61,11 @@
   "title": "Mystery Guest<br><em>Bar Audit.</em>",
   "intro": "Nous voyons le bar comme vos clients le voient, puis de l’intérieur, avec la direction et l’équipe. Vous recevez des priorités concrètes : quoi corriger en premier, pourquoi et avec qui.",
   "priceFrom": "À partir de",
-  "price": "990 €",
+  "price": "990 €*",
   "travel": "+ déplacement",
   "priceNote": "Le prix final dépend du pays et est confirmé par écrit avant la réservation.",
   "zones": "Portugal, Espagne, Andorre, Côte d’Azur et Monaco, Suisse et Italie (côtes et îles comprises).",
-  "tax": "Les prix indiqués s’entendent hors TVA.",
+  "tax": "* Au Portugal, la TVA s’ajoute au taux légal en vigueur. Dans les autres pays de l’Union européenne, la TVA n’est pas facturée entre entreprises (autoliquidation).",
   "scope": [
    "1 bar de l’hôtel",
    "Jour 1 en tant que client, jour 2 avec la direction et l’équipe",
@@ -142,7 +142,7 @@
    ],
    [
     "Que comprend le Mystery Guest Bar Audit ?",
-    "L’évaluation d’un bar sur deux jours : le premier en tant que client, sans que l’équipe sache qui nous sommes ; le second avec la direction et l’équipe. À la fin de la visite, nous présentons les premières conclusions. Le rapport complet suit dans les 7 jours, avec les opportunités classées par impact, urgence et facilité de mise en œuvre. À partir de 990 € selon le pays ; déplacement en sus, convenu à l’avance. Prix hors TVA. La mise en œuvre fait partie de l’Audit Complet."
+    "L’évaluation d’un bar sur deux jours : le premier en tant que client, sans que l’équipe sache qui nous sommes ; le second avec la direction et l’équipe. À la fin de la visite, nous présentons les premières conclusions. Le rapport complet suit dans les 7 jours, avec les opportunités classées par impact, urgence et facilité de mise en œuvre. À partir de 990 € selon le pays ; déplacement en sus, convenu à l’avance. La mise en œuvre fait partie de l’Audit Complet."
    ],
    [
     "Comment fonctionne la garantie ?",
@@ -162,7 +162,7 @@
   "contactTitle": "Commencez par découvrir<br><em>où agir dans votre bar.</em>",
   "contactText": "Envoyez un message WhatsApp avec le nom de l’hôtel et sa localisation. Nous répondons par écrit. Vous préférez ne pas utiliser WhatsApp ? Utilisez le formulaire.",
   "options": [
-   "Mystery Guest Bar Audit — à partir de 990 € + déplacement (HT)",
+   "Mystery Guest Bar Audit — à partir de 990 € + déplacement*",
    "Audit Complet — demander un devis",
    "Partenariat groupe hôtelier",
    "Menus digitaux, QR et écrans",
@@ -171,7 +171,7 @@
   "realCaption": "Exemple réel · Cheers O Bar, Viseu.",
   "imagesNote": "Images d’ambiance illustratives, sauf lorsqu’elles sont identifiées comme exemple réel.",
   "ogAlt": "Écran avec des contenus promotionnels au Cheers O Bar, à Viseu",
-  "meta": "Nous identifions des opportunités pour que le bar de votre hôtel réalise au moins 11 880 € de plus par an, ou nous remboursons le montant de l’audit. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement, HT. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti."
+  "meta": "Nous identifions des opportunités pour que le bar de votre hôtel réalise au moins 11 880 € de plus par an, ou nous remboursons le montant de l’audit. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti."
  },
  "leaks": {
   "images": false,
@@ -513,7 +513,7 @@
    "check": "Arrive dans mon bar",
    "fix": "Comment corriger",
    "endTitle": "Vous en avez trouvé deux ou plus ?",
-   "endText": "Le Mystery Guest Bar Audit leur donne une valeur en euros et vous dit quoi corriger en premier. À partir de 990 € + déplacement selon le pays, HT. Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit.",
+   "endText": "Le Mystery Guest Bar Audit leur donne une valeur en euros et vous dit quoi corriger en premier. À partir de 990 € + déplacement selon le pays (TVA en sus au Portugal). Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit.",
    "contact": "WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com"
   },
   "privacy": " Si vous demandez la checklist des 10 fuites, nous utilisons votre email pour vous envoyer des idées pour votre bar et des propositions de Cheers Experiences ; vous pouvez vous désinscrire à tout moment en répondant à n’importe quel email."
@@ -774,16 +774,16 @@
    [
     "Open bar bière",
     "Un open bar bière pendant tout votre événement, servi par l’équipe Cheers.",
-    "à partir de 25 €",
-    "HT par personne",
+    "à partir de 25 €*",
+    "par personne",
     "Minimum 50 invités",
     false
    ],
    [
     "Bière & cocktails",
     "Un open bar bière et une sélection de cocktails classiques et signature, préparés spécialement pour votre événement.",
-    "à partir de 35 €",
-    "HT par personne",
+    "à partir de 35 €*",
+    "par personne",
     "Minimum 50 invités",
     true
    ],
@@ -798,12 +798,12 @@
   ],
   "featuredLabel": "Recommandé",
   "quoteCTA": "Demander un devis",
-  "pricesNote": "Prix de départ, hors TVA. Le prix final dépend du nombre d’invités, de la durée, du lieu, de la date et de la carte, et est confirmé dans un devis spécifique.",
-  "heroPrice": "Open bar à partir de <strong>25 €</strong> HT par personne",
+  "pricesNote": "Prix de départ*. Le prix final dépend du nombre d’invités, de la durée, du lieu, de la date et de la carte, et est confirmé dans un devis spécifique.",
+  "heroPrice": "Open bar à partir de <strong>25 €*</strong> par personne",
   "contactTitle": "On prépare<br><em>le bar de votre événement ?</em>",
   "contactText": "Indiquez la date, le lieu, le nombre d’invités et le type d’événement. Même si vous hésitez encore sur le format, nous vous aidons à définir la suite.",
   "metadata": "Bar pour mariages, événements d’entreprise et fêtes privées | Cheers Experiences",
-  "description": "Service de bar et de cocktails pour mariages, événements d’entreprise et fêtes privées. Open bar à partir de 25 € HT par personne (min. 50 invités). Barmen, carte sur mesure et coordination avec le lieu et le traiteur au Portugal, en Espagne et dans les destinations d’Europe du Sud.",
+  "description": "Service de bar et de cocktails pour mariages, événements d’entreprise et fêtes privées. Open bar à partir de 25 € par personne (min. 50 invités). Barmen, carte sur mesure et coordination avec le lieu et le traiteur au Portugal, en Espagne et dans les destinations d’Europe du Sud.",
   "typesLabel": "QUEL ÉVÉNEMENT PRÉPAREZ-VOUS ?",
   "typesTitle": "Trois formats.<br><em>Le même soin dans chaque verre.</em>",
   "typesLink": "En savoir plus",
