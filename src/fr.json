@@ -713,11 +713,11 @@
   "noScript": "Pour envoyer votre demande, utilisez WhatsApp ou l’email ci-dessous et indiquez les informations de votre projet."
  },
  "weddings": {
-  "hero": "Votre mariage.<br><em>Des cocktails à votre image.</em>",
-  "lead": "Nous créons la carte de cocktails, organisons le bar et coordonnons les barmen avec votre lieu, votre traiteur ou votre wedding planner. Du vin d’honneur à la soirée, vos invités profitent d’un service pensé pour votre journée.",
-  "cta": "Demander notre proposition mariage",
-  "explore": "Ce que nous apportons à votre journée",
-  "label": "CE QUE CHEERS AJOUTE",
+  "hero": "Votre événement.<br><em>Un bar sur mesure.</em>",
+  "lead": "Service de bar et traiteur boissons pour mariages, événements d’entreprise et fêtes privées. Nous créons la carte de cocktails, planifions le service et coordonnons les barmen avec le lieu et le traiteur.",
+  "cta": "Demander une proposition pour mon événement",
+  "explore": "Choisir le type d’événement",
+  "label": "MARIAGES",
   "title": "Chaque détail choisi par vous.<br><em>Le bar aussi.</em>",
   "intro": "Un cocktail peut raconter votre histoire. Un service attentionné fait que chaque invité se sent bien accueilli. Nous réunissons les deux avec un plan clair pour votre bar.",
   "benefits": [
@@ -800,10 +800,52 @@
   "quoteCTA": "Demander un devis",
   "pricesNote": "Prix de départ, hors TVA. Le prix final dépend du nombre d’invités, de la durée, du lieu, de la date et de la carte, et est confirmé dans un devis spécifique.",
   "heroPrice": "Open bar à partir de <strong>25 €</strong> HT par personne",
-  "contactTitle": "On prépare<br><em>votre premier toast ?</em>",
-  "contactText": "Indiquez votre date, le lieu, le nombre d’invités et vos idées pour le bar. Même si vous hésitez encore sur le format, nous pouvons vous aider à définir la suite.",
-  "metadata": "Bar à cocktails pour mariages | Cheers Experiences",
-  "description": "Open bar à partir de 25 € HT par personne (min. 50 invités). Cocktails personnalisés, barmen, boissons sans alcool et open bar pour mariages. Organisation avec votre lieu, votre traiteur et votre wedding planner au Portugal, en Espagne et dans les destinations d’Europe du Sud."
+  "contactTitle": "On prépare<br><em>le bar de votre événement ?</em>",
+  "contactText": "Indiquez la date, le lieu, le nombre d’invités et le type d’événement. Même si vous hésitez encore sur le format, nous vous aidons à définir la suite.",
+  "metadata": "Bar pour mariages, événements d’entreprise et fêtes privées | Cheers Experiences",
+  "description": "Service de bar et de cocktails pour mariages, événements d’entreprise et fêtes privées. Open bar à partir de 25 € HT par personne (min. 50 invités). Barmen, carte sur mesure et coordination avec le lieu et le traiteur au Portugal, en Espagne et dans les destinations d’Europe du Sud.",
+  "typesLabel": "QUEL ÉVÉNEMENT PRÉPAREZ-VOUS ?",
+  "typesTitle": "Trois formats.<br><em>Le même soin dans chaque verre.</em>",
+  "typesLink": "En savoir plus",
+  "types": [
+   [
+    "Mariages",
+    "Vin d’honneur, open bar, Welcome Party et Day After.",
+    "Des mariés s’embrassent au coucher du soleil, avec le bar à cocktails en arrière-plan."
+   ],
+   [
+    "Événements d’entreprise",
+    "Dîners d’entreprise, fêtes de Noël, rencontres d’équipe et lancements de produit.",
+    "Un barman sert un cocktail au comptoir."
+   ],
+   [
+    "Fêtes privées",
+    "Anniversaires, baptêmes et fêtes de famille.",
+    "Des amis trinquent avec des cocktails au bord de la piscine."
+   ]
+  ],
+  "corp": {
+   "label": "ÉVÉNEMENTS D’ENTREPRISE",
+   "title": "Le bar de votre prochain<br><em>dîner d’entreprise.</em>",
+   "lead": "D’un cocktail de bienvenue à une soirée avec open bar, nous adaptons le service au programme, au lieu et au nombre de participants.",
+   "text": "Nous installons le service de bar dans les locaux de votre entreprise ou dans le lieu choisi pour l’événement, en intérieur comme en extérieur. Nous définissons avec vous la carte des boissons, l’équipe, les horaires et la logistique.",
+   "items": [
+    "Dîners et soirées d’entreprise",
+    "Fêtes de Noël",
+    "Anniversaires d’entreprise",
+    "Rencontres clients",
+    "Lancements de produit"
+   ],
+   "cta": "Demander une proposition pour un événement d’entreprise",
+   "brand": "En option : votre marque dans le verre",
+   "alt": "Barman préparant un cocktail au shaker."
+  },
+  "priv": {
+   "label": "FÊTES PRIVÉES",
+   "title": "Anniversaires, baptêmes<br><em>et fêtes de famille.</em>",
+   "text": "Un bar avec cocktails, options sans alcool et barmen pour recevoir famille et amis. Nous adaptons la carte, l’équipe et la durée au nombre d’invités et au lieu choisi.",
+   "cta": "Demander une proposition pour une fête privée"
+  }
  },
  "content": {
   "audit": {

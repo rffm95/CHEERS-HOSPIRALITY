@@ -49,7 +49,8 @@ for path,doc in pages.items():
    if destination is None:destination=html.fromstring((root/target.lstrip('/')).read_text())
    assert destination.xpath('//*[@id=$id]',id=unquote(u.fragment)),(path,'missing anchor',address)
  # Heading structure: no jump from h2 directly to h4.
- assert len(doc.xpath('//header//nav/a[not(contains(@class,"button"))]'))==(2 if path.endswith('/eventos.html') else 3)  # Digital entry added on hotel pages
+ assert len(doc.xpath('//header//nav//a[not(contains(@class,"button")) and not(ancestor::div[@class="nav-sub"])]'))==(2 if path.endswith('/eventos.html') else 3)  # Digital entry added on hotel pages
+ assert len(doc.xpath('//header//nav//div[@class="nav-sub"]/a'))==3  # direct links to weddings, corporate and private parties
  assert path.endswith('/digital.html') or doc.xpath('//*[@id="team"]')
 for path in pages:
  assert not (path.endswith('/index.html') and pages[path].xpath('//*[contains(@class,"audience-rail")]|//*[@id="digital"]')),(path,'hotel page must stay focused')
