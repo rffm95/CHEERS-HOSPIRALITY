@@ -10,12 +10,13 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Mercado: hotéis de luxo 4 e 5 estrelas do Sul da Europa (Portugal, Espanha, Andorra, Côte d'Azur e Mónaco, Suíça, Itália). O Mystery Guest é "desde 990 €", com preço final por país confirmado por escrito.
 - Não inventar testemunhos, clientes, logótipos, números de vendas ou prémios. O percurso do Rui (Cheers O Bar desde 2014, Grande Real Santa Eulália 2017) é experiência profissional, não clientes de consultoria.
 - O Rui não quer vídeos no site.
+- IVA: os preços mostram só um asterisco (ex.: 990 €*, 25 €*); a nota no rodapé (`tax` em `src/audit-offer.mjs` e `src/fr.json`) diz que em Portugal acresce IVA e que nos restantes países da UE, entre empresas, não se fatura IVA (autoliquidação). Pedido do Rui em 01/11/2026.
 
 ## Estrutura
 
 - `src/audit-offer.mjs` — oferta da página de hotéis: Passo 1 Mystery Guest Bar Audit (990 € + deslocação, sem IVA; dia 1 como hóspede anónimo, dia 2 com a direção e a equipa, primeiras conclusões no fim da visita, relatório até 7 dias com oportunidades organizadas por impacto, urgência e facilidade; não falar em "10 erros"; garantia de 990 €/mês em vendas perdidas ou desperdício (ou reembolso), crédito em 30 dias, máx. 4/mês), Passo 2 Auditoria Completa (orçamento à medida), e a secção "O lucro que não vê" (`leaks`). A página de hotéis abre com rentabilidade do bar e o Mystery Guest no primeiro ecrã; menus QR e ecrãs (`src/digital.mjs`) ficam numa secção secundária. CTA principal: WhatsApp "Pedir disponibilidade para o meu hotel". As páginas PT redirecionam na 1.ª visita para ES/EN conforme o fuso horário (Espanha e Andorra → ES; França e Mónaco → FR) e o idioma do browser, salvo escolha manual guardada.
 - `src/audit-trust.mjs` — secções de apoio da página de hotéis: "Reconhece alguma destas situações?" (sem afirmar que o hotel perde dinheiro), "Como trabalhamos com a sua equipa" (F&B, relatório para a direção) e o que está incluído nos 990 € vs. acordado por escrito antes (deslocação, alojamento, consumos, nº de profissionais, extras). A Auditoria Completa começa por contacto por WhatsApp ou email (sem reunião presencial gratuita nem chamada).
-- `src/weddings.mjs` — página de casamentos e eventos: pacotes com preços sem IVA (desde 25 € + IVA/pessoa bar de cerveja; desde 35 € + IVA/pessoa cerveja + cocktails; ambos com mínimo de 50 pessoas; à medida sob orçamento).
+- `src/weddings.mjs` — página de casamentos e eventos: pacotes com preços com asterisco (desde 25 €*/pessoa bar de cerveja; desde 35 €*/pessoa cerveja + cocktails; ambos com mínimo de 50 pessoas; à medida sob orçamento).
 - `src/editorial.mjs` — textos partilhados (menu, contactos, FAQ gerais, formulários).
 - `src/content.json` — conteúdos de apoio (serviços, método, eventos, calculadora).
 - `src/template.mjs` — HTML das páginas.
