@@ -519,16 +519,45 @@
   "privacy": " Si vous demandez la checklist des 10 fuites, nous utilisons votre email pour vous envoyer des idées pour votre bar et des propositions de Cheers Experiences ; vous pouvez vous désinscrire à tout moment en répondant à n’importe quel email."
  },
  "teamCopy": {
-  "name": "Beatriz Almeida",
-  "role": "Operations & Events Manager",
-  "text": "Responsable de la coordination opérationnelle et des événements, rattachée directement à Rui Monteiro."
+  "lead": "Les deux personnes derrière Cheers Experiences.",
+  "pathLabel": "PARCOURS DE RUI",
+  "people": [
+   {
+    "name": "Rui Monteiro",
+    "role": "Fondateur de Cheers Experiences",
+    "tagline": "Gestion et rentabilité des bars",
+    "img": "rui-monteiro.webp",
+    "alt": "Rui Monteiro agitant un shaker derrière le comptoir du Cheers O Bar, à Viseu.",
+    "text": [
+     "Je suis entrepreneur et professionnel du bar, avec plus de dix ans d’expérience entre l’hôtellerie cinq étoiles et la gestion de ma propre entreprise. À la tête du Cheers O Bar, à Viseu, je vis chaque jour les défis de ceux qui doivent concilier qualité de service, équipes, coûts et rentabilité.",
+     "Mon parcours a commencé derrière le comptoir et a évolué vers la gestion : créer des cartes, fixer les prix, négocier avec les fournisseurs, former les équipes et comprendre ce qui pousse un client à commander un verre de plus, et à vouloir revenir. Cette expérience m’a appris à regarder chaque détail du bar à travers son impact sur l’expérience client et sur les résultats.",
+     "Je suis exigeant sur la qualité, attentif aux détails et je cherche sans cesse à m’améliorer. J’aime transformer les problèmes en solutions pratiques, que l’équipe peut appliquer pendant le service et dont l’effet se mesure.",
+     "J’ai créé Cheers Experiences pour mettre cette expérience au service des hôtels et des lieux d’hospitalité. Par des audits Mystery Guest, du conseil et de la formation, j’aide à identifier les opportunités dans l’exploitation, la carte et le service, avec un objectif clair : améliorer l’expérience client et augmenter la rentabilité du bar."
+    ]
+   },
+   {
+    "name": "Beatriz Almeida",
+    "role": "Operations & Events Manager",
+    "tagline": "La personne derrière l’expérience",
+    "img": "beatriz-almeida.webp",
+    "alt": "Beatriz Almeida versant du Tanqueray 0.0 avec un doseur dans un verre ballon rempli de glace.",
+    "quote": "Je crois que les plus beaux moments sont ceux qui restent en mémoire grâce aux petits détails.",
+    "text": [
+     "Mon lien avec l’hospitalité naît de la passion du service, du contact humain et de l’art de transformer des moments simples en expériences uniques.",
+     "Je suis dynamique, créative et attentive aux détails. J’accorde une grande importance à la qualité, à l’engagement et à l’excellence dans tout ce que je fais. Je crois qu’un service vraiment différent va bien au-delà de ce qui est présenté : il réside dans la façon dont nous accueillons, prenons soin et surprenons chaque personne.",
+     "C’est avec cette vision que j’ai rejoint Cheers Experiences, un projet où je cherche à allier créativité, raffinement et professionnalisme, en accordant une attention particulière à la personnalisation de chaque expérience.",
+     "Plus que servir des cocktails, je veux créer des moments qui ont une identité, où chaque détail compte et chaque toast a une histoire à retenir."
+    ],
+    "closing": "Car la véritable excellence se trouve dans ce que les gens ressentent, et pas seulement dans ce qu’ils voient."
+   }
+  ]
  },
  "editorial": {
   "nav": [
    "Hôtels",
    "Mariages & Événements",
    "Méthode",
-   "Rui Monteiro"
+   "Qui sommes-nous"
   ],
   "contact": "Parler de votre projet",
   "skip": "Aller au contenu",
@@ -593,7 +622,7 @@
   "digitalText": "Menus digitaux et QR, cartes multilingues et contenus pour écrans : nous aidons le client à découvrir ce que le bar a à offrir.",
   "digitalReal": "Exemple réel · Cheers O Bar, Viseu",
   "groupSummary": "Hôtels indépendants & groupes hôteliers",
-  "founderLabel": "04 / UNE EXPÉRIENCE DE TERRAIN",
+  "founderLabel": "04 / QUI SOMMES-NOUS",
   "founderTitle": "Un savoir construit<br><em>derrière le comptoir.</em>",
   "founderRole": "Fondateur · Direction de projets",
   "founderLead": "Rui Monteiro réunit plus de 10 ans d’expérience pratique en bar et en hôtellerie. Chez Cheers Experiences, il relie la vision business au travail quotidien de l’équipe.",

@@ -252,3 +252,23 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 @media(max-width:900px){.event-type-grid{grid-template-columns:1fr}.wedding-head{grid-template-columns:1fr}.wedding-head .wedding-poster{justify-self:start;max-width:260px}}
 .event-type img[src*="day-after"]{object-position:center 70%}
 .private-parties .lead{margin-bottom:28px}
+/* about us: Rui & Beatriz */
+.team-people{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px;align-items:start}
+.person-photo{margin:0 0 30px;aspect-ratio:3/4;overflow:hidden;background:var(--panel)}
+.person-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.person-body .eyebrow{display:block}
+.person h3{font-size:34px;margin:12px 0 6px;letter-spacing:-.02em}
+.person-tagline{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold);margin:0 0 22px}
+.ivory .person-tagline{color:#7a5c2c}
+.person-body p{font-size:15px;line-height:1.75;margin:0 0 14px}
+.person-body .person-quote{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;border-left:2px solid var(--gold);padding-left:18px;margin:0 0 22px}
+.person-body .person-closing{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;margin-top:20px}
+.founder-path{margin-top:72px;padding-top:28px;border-top:1px solid var(--line)}
+.ivory .founder-path{border-color:var(--paper-line)}
+.founder-path>.eyebrow{display:block;margin-bottom:6px}
+.founder-path .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+.founder-path .timeline article{border-top:0;padding:18px 0 0}
+.founder-path .fine{margin-top:22px}
+.founder>.wrap>.button,.founder>.wrap>a{margin-top:40px}
+@media(max-width:900px){.team-people{grid-template-columns:1fr;gap:64px}.person{max-width:560px}.founder-path .timeline{grid-template-columns:1fr}.founder-path .timeline article{padding:16px 0}}
+@media(max-width:620px){.team-people{margin-top:36px}.person h3{font-size:29px}.person-body .person-quote{font-size:19px}}
