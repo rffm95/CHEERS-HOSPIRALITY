@@ -17,7 +17,7 @@ function prepareEnquiry(form){
  }
  return `${form.dataset.subject||'Cheers Experiences'}\n\n${lines.join('\n')}`;
 }
-function enquiryURL(channel,subject,message){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/351927653087?text='+encodeURIComponent(message);}
+function enquiryURL(channel,subject,message,phone='351927653087'){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/'+phone+'?text='+encodeURIComponent(message);}
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
 if(typeof module!=='undefined'&&module.exports)module.exports={calculateLosses,enquiryURL,eventFieldState,prepareEnquiry};
 if(typeof document!=='undefined')(()=>{
@@ -73,7 +73,7 @@ if(typeof document!=='undefined')(()=>{
     status.textContent=status.dataset.ready;
     // A direct hand-off avoids depending on an unavailable form relay.
     // Preparing a message is not confirmation that the visitor sent it.
-    location.assign(enquiryURL('whatsapp',form.dataset.subject,prepareEnquiry(form)));
+    location.assign(enquiryURL('whatsapp',form.dataset.subject,prepareEnquiry(form),form.dataset.wa));
    });
   }
   // Hotel requests post straight to info@ through FormSubmit (native POST, no fetch); events keep the WhatsApp hand-off.
@@ -86,7 +86,7 @@ if(typeof document!=='undefined')(()=>{
   if(event)enhanceSubmit(event);
   for(const form of [hotel,event].filter(Boolean))form.querySelectorAll('[data-channel]').forEach(a=>a.addEventListener('click',ev=>{
    if(!form.reportValidity()){ev.preventDefault();return;}
-   a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form));form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
+   a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form),form.dataset.wa);form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
   }));
   document.querySelectorAll('[data-carousel]').forEach(track=>{const section=track.closest('section');const controls=section?.querySelector('[data-carousel-controls]');const prev=section?.querySelector('[data-carousel-prev]'),next=section?.querySelector('[data-carousel-next]');if(!controls||!prev||!next)return;controls.hidden=false;const step=()=>{const item=track.querySelector('li');return item?item.getBoundingClientRect().width+20:300;};const sync=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;};prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));track.addEventListener('scroll',sync,{passive:true});sync();});
  document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.selectedIndex=Number(a.dataset.project);}));
