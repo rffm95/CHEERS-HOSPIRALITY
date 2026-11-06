@@ -286,3 +286,13 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 .signature-text{max-width:860px}
 @media(max-width:900px){.wedding-moments{grid-template-columns:1fr}}
 @media(max-width:620px){.event-hero-photo img{max-height:420px;width:100%;object-fit:cover;object-position:center 65%}}
+
+/* events hero without photo; "Como funciona" as a timeline */
+body[data-page=events] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-page=events] .hero-content{max-width:900px}
+.event-steps{position:relative;gap:28px}
+.event-steps:before{content:"";position:absolute;left:28px;right:calc((100% - 84px)/4 - 28px);top:28px;height:1px;background:linear-gradient(90deg,#7a5c2c,rgba(122,92,44,.25))}
+.event-steps li{position:relative}
+.event-steps .index{position:relative;z-index:1;display:flex!important;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;border:1px solid #7a5c2c;background:var(--paper);font-size:26px!important;margin-bottom:22px!important}
+.event-steps li:last-child .index{background:#0e0f0d;color:#cfae72!important;border-color:#cfae72}
+@media(max-width:900px){.event-steps{grid-template-columns:1fr!important;gap:0}.event-steps:before{left:28px;right:auto;top:28px;bottom:28px;width:1px;height:auto;background:linear-gradient(180deg,#7a5c2c,rgba(122,92,44,.25))}
+.event-steps li{display:grid;grid-template-columns:56px 1fr;column-gap:20px;padding-bottom:30px}.event-steps li:last-child{padding-bottom:0}.event-steps .index{grid-row:1/3;margin-bottom:0!important}.event-steps h4{align-self:end;margin:6px 0 6px}.event-steps p{grid-column:2}}
