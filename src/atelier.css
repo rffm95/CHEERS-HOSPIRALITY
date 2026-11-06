@@ -281,3 +281,8 @@ body[data-page=hotels] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 .event-cta-links{display:flex;flex-direction:column;gap:12px;align-items:stretch;flex-shrink:0}.event-cta-links .button{background:#cfae72;color:#0e0f0d;justify-content:space-between}.event-cta-links .text-link{color:var(--ink);justify-content:space-between}
 @media(max-width:900px){.event-steps{grid-template-columns:1fr 1fr}.event-cta-box{flex-direction:column;align-items:stretch}}
 @media(max-width:620px){.event-steps{grid-template-columns:1fr;gap:24px}.event-cta-box{padding:30px 22px}.event-cta-links .button{font-size:13px}}
+
+.wedding-head{grid-template-columns:1fr}.wedding-moments{grid-template-columns:repeat(3,minmax(0,1fr))}
+.signature-text{max-width:860px}
+@media(max-width:900px){.wedding-moments{grid-template-columns:1fr}}
+@media(max-width:620px){.event-hero-photo img{max-height:420px;width:100%;object-fit:cover;object-position:center 65%}}
