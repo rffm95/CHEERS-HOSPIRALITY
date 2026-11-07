@@ -1,13 +1,7 @@
 {
  "auditOffer": {
-  "eyebrowHotel": "RENTABILITÉ DES BARS D’HÔTELS DE LUXE 4 ET 5 ÉTOILES",
-  "heroPlace": "Europe du Sud · Portugal · Espagne · Côte d’Azur · Monaco · Andorre · Suisse · Italie",
+  "eyebrowHotel": "CONSEIL EN BARS POUR HÔTELS 4 ET 5 ÉTOILES",
   "craftLabel": "CARTES DE COCKTAILS",
-  "heroItems": [
-   "Évaluation d’un bar de l’hôtel",
-   "Un jour en tant que client et un jour avec la direction et l’équipe",
-   "Rapport remis dans les 7 jours suivant la visite"
-  ],
   "visitTitle": "Déroulement de la visite",
   "visitHead": [
    "Moment",
@@ -45,11 +39,10 @@
   ],
   "day2Not": "Ne comprend pas d’inventaire complet, de formation de l’équipe ni d’analyse approfondie de tous les coûts. Cela fait partie de l’Audit Complet.",
   "pageTitle": "Conseil en bar pour hôtels · Mystery Guest Bar Audit | Cheers Experiences",
-  "hero": "Nous identifions des opportunités pour que le bar de votre hôtel <em>réalise au moins 11&nbsp;880&nbsp;€ de plus par an.</em>",
-  "lead": "Le Mystery Guest Bar Audit repère les ventes perdues et le gaspillage de votre bar et leur donne une valeur en euros. La direction reçoit les calculs et sait quoi corriger en premier.",
+  "hero": "Le bar de votre hôtel vaut peut-être plus que vous ne l’imaginez. <em>Découvrez combien.</em>",
+  "lead": "En seulement 2 jours, nous identifions des opportunités pour augmenter le chiffre d’affaires, améliorer les marges et sublimer l’expérience client.",
   "cta": "Demander le Mystery Guest Bar Audit",
   "explore": "Voir ce qui est inclus",
-  "heroGuarantee": "Investissement : à partir de 990&nbsp;€, selon le pays. Minimum identifié : 11&nbsp;880&nbsp;€/an. Si nous n’y arrivons pas, nous remboursons le montant de l’audit.",
   "waCTA": "Serait-ce déraisonnable de savoir combien le bar de votre hôtel laisse sur la table ?",
   "headerWA": "Écrire sur WhatsApp",
   "waText": "Bonjour Rui, j’aimerais savoir combien le bar de mon hôtel laisse peut-être sur la table. Hôtel : __. Lieu : __.",
@@ -61,7 +54,7 @@
   "title": "Mystery Guest<br><em>Bar Audit.</em>",
   "intro": "Nous voyons le bar comme vos clients le voient, puis de l’intérieur, avec la direction et l’équipe. Vous recevez des priorités concrètes : quoi corriger en premier, pourquoi et avec qui.",
   "priceFrom": "À partir de",
-  "price": "990 €*",
+  "price": "990 €",
   "travel": "+ déplacement",
   "priceNote": "Le prix final dépend du pays et est confirmé par écrit avant la réservation.",
   "zones": "Portugal, Espagne, Andorre, Côte d’Azur et Monaco, Suisse et Italie (côtes et îles comprises).",
@@ -81,7 +74,7 @@
   ],
   "checkTitle": "Ce que nous observons",
   "guaranteeTitle": "Garantie de 990 € d’opportunités par mois",
-  "guarantee": "Si le rapport n’identifie pas au moins 990 € par mois (11 880 € par an) de ventes perdues ou de gaspillage dans votre bar, nous remboursons le montant de l’audit. La garantie porte sur la valeur des opportunités identifiées, et non sur une hausse effective des ventes.",
+  "guarantee": "Si le rapport n’identifie pas au moins 990 € par mois (11 880 € par an) d’opportunités de chiffre d’affaires ou d’économies dans votre bar, nous remboursons le montant de l’audit. La garantie porte sur la valeur des opportunités identifiées, et non sur une hausse effective des ventes.",
   "credit": "Si vous lancez l’Audit Complet dans les 30 jours, le montant de l’audit est déduit du devis.",
   "terms": "Prix fixe pour le périmètre indiqué. Le devis détaille déplacement, hébergement, consommations, nombre d’intervenants et services supplémentaires, convenus avant la confirmation. Le délai de 7 jours commence à la fin de la visite.",
   "dataNote": "Chaque estimation présente le calcul et les hypothèses. Si l’hôtel partage ses données de prix, de coûts et de ventes, l’estimation est plus précise.",
@@ -171,7 +164,16 @@
   "realCaption": "Exemple réel · Cheers O Bar, Viseu.",
   "imagesNote": "Images d’ambiance illustratives, sauf lorsqu’elles sont identifiées comme exemple réel.",
   "ogAlt": "Écran avec des contenus promotionnels au Cheers O Bar, à Viseu",
-  "meta": "Nous identifions des opportunités pour que le bar de votre hôtel réalise au moins 11 880 € de plus par an, ou nous remboursons le montant de l’audit. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti."
+  "meta": "Le bar de votre hôtel vaut peut-être plus que vous ne l’imaginez. En 2 jours, nous identifions des opportunités pour augmenter le chiffre d’affaires et améliorer les marges. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti.",
+  "heroMeta": [
+   "2 jours à l’hôtel",
+   "Rapport sous 7 jours",
+   "À partir de 990&nbsp;€"
+  ],
+  "heroCTA": "Découvrir le potentiel de mon bar",
+  "heroReassure": "Analyse indépendante. Recommandations concrètes. Sans engagement initial.",
+  "regionsLabel": "Où nous intervenons",
+  "regions": "Hôtels de luxe en Europe du Sud : Portugal · Espagne · Andorre · Côte d’Azur · Monaco · Suisse · Italie"
  },
  "leaks": {
   "images": false,
@@ -488,7 +490,7 @@
    ],
    [
     "Vous ne savez pas si l’audit sera rentabilisé.",
-    "Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit."
+    "Si nous n’identifions pas au moins 990 € par mois d’opportunités de chiffre d’affaires ou d’économies, nous remboursons le montant de l’audit."
    ],
    [
     "Vous ne voulez pas d’un fournisseur de plus qui insiste.",
@@ -513,7 +515,7 @@
    "check": "Arrive dans mon bar",
    "fix": "Comment corriger",
    "endTitle": "Vous en avez trouvé deux ou plus ?",
-   "endText": "Le Mystery Guest Bar Audit leur donne une valeur en euros et vous dit quoi corriger en premier. À partir de 990 € + déplacement selon le pays (TVA en sus au Portugal). Si nous n’identifions pas au moins 990 € par mois de ventes perdues ou de gaspillage, nous remboursons le montant de l’audit.",
+   "endText": "Le Mystery Guest Bar Audit leur donne une valeur en euros et vous dit quoi corriger en premier. À partir de 990 € + déplacement selon le pays. Si nous n’identifions pas au moins 990 € par mois d’opportunités de chiffre d’affaires ou d’économies, nous remboursons le montant de l’audit.",
    "contact": "WhatsApp +351 927 653 087 · info@cheersexperiences.com · cheersexperiences.com"
   },
   "privacy": " Si vous demandez la checklist des 10 fuites, nous utilisons votre email pour vous envoyer des idées pour votre bar et des propositions de Cheers Experiences ; vous pouvez vous désinscrire à tout moment en répondant à n’importe quel email."
