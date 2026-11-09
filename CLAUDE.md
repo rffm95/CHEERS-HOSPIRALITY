@@ -7,17 +7,26 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - **Cada push para `main` publica o site automaticamente** (GitHub Actions → GitHub Pages, domínio cheersexperiences.com). Trabalhar num ramo e só fazer merge/push para `main` depois de o Rui aprovar a preview.
 - Mostrar sempre uma preview (`npm run preview`) antes de qualquer commit.
 - Quatro idiomas: qualquer alteração de texto é feita em PT (pt-PT), ES (es-ES, "usted" nos hotéis, "vosotros" nos casamentos), EN (britânico) e FR (fr-FR, "vous"). O francês está em `src/fr.json` (ligado por `src/fr.mjs`); uma chave em falta cai para o inglês.
-- Mercado: hotéis de luxo 4 e 5 estrelas do Sul da Europa (Portugal, Espanha, Andorra, Côte d'Azur e Mónaco, Suíça, Itália). O Mystery Guest é "desde 990 €", com preço final por país confirmado por escrito.
+- Mercado: hotéis de luxo 4 e 5 estrelas do Sul da Europa (Portugal, Espanha, Andorra, Côte d'Azur e Mónaco, Suíça, Itália). Sem preços publicados em lado nenhum do site (decisão do Rui em 09/11/2026): o Mystery Guest, a Auditoria Completa e os eventos são todos "sob orçamento", confirmado por escrito antes de marcar. A garantia não usa números: se o relatório não identificar, por mês, oportunidades de valor superior ao investimento no diagnóstico, devolve-se o valor pago.
 - Não inventar testemunhos, clientes, logótipos, números de vendas ou prémios. O percurso do Rui (Cheers O Bar desde 2014, Grande Real Santa Eulália 2017) é experiência profissional, não clientes de consultoria.
 - O Rui não quer vídeos no site.
-- IVA: o site não fala em IVA e o 990 € não leva asterisco (pedido do Rui em 06/11/2026, substitui a regra de 01/11). A nota `tax` ficou em `src/audit-offer.mjs` e `src/fr.json` mas não é mostrada.
+- IVA: o site não fala em IVA.
 - Linguagem: falar em "oportunidades de faturação", não em "vendas perdidas" (o diretor não se deve sentir acusado). Os 11.880 € não entram na promessa principal; ficam na garantia e nas contas mais abaixo (06/11/2026).
+
+## Redesign de 09/11/2026 (aprovado pelo Rui)
+
+- `index.html` é agora uma página de entrada com duas portas: Hotéis (contacto Rui) e Casamentos & Eventos (contacto Beatriz). A página de hotéis passou para `hoteis.html`; links antigos com `#âncora` para a raiz são reencaminhados para `hoteis.html`.
+- Todas as páginas têm no topo o seletor de área "Hotéis | Casamentos & Eventos".
+- Página de hotéis nova e mais curta (`src/hotels.mjs`, 4 línguas): topo sem preço, valor (3 pilares), método (dia 1, dia 2, 7 dias), exemplo do formato do relatório (ilustrativo, sem números), serviços (Passo 1 e Passo 2, sob orçamento), equipa, checklist, perguntas, contacto. CTA principal: WhatsApp. As secções antigas (situações, objeções, cartazes, 10 fugas, contas/calculadora, tabela da visita) deixaram de aparecer; o código continua em `src/` caso se queira recuperar alguma.
+- Eventos: contacto da Beatriz (foto, WhatsApp que acaba em 11, beatriz@cheersexperiences.com no email), topo claro com fotografia. Pacotes sem preço, "sob orçamento".
+- Fonte dos títulos: Cormorant Garamond (em `dist/fonts/cormorant-*.woff`, licença OFL). Os ficheiros foram corrigidos com `scripts/fix-cormorant-circumflex.py` porque a fonte original desenha â ê î ô û com o acento torto. O PDF da checklist continua com Lora.
 
 ## Estrutura
 
-- `src/audit-offer.mjs` — oferta da página de hotéis: Passo 1 Mystery Guest Bar Audit (990 € + deslocação, sem IVA; dia 1 como hóspede anónimo, dia 2 com a direção e a equipa, primeiras conclusões no fim da visita, relatório até 7 dias com oportunidades organizadas por impacto, urgência e facilidade; não falar em "10 erros"; garantia de 990 €/mês em oportunidades de faturação ou de poupança (ou reembolso), crédito em 30 dias, máx. 4/mês), Passo 2 Auditoria Completa (orçamento à medida), e a secção "O lucro que não vê" (`leaks`). A página de hotéis abre com "O bar do seu hotel pode estar a valer mais do que imagina. Descubra quanto." e a caixa do Mystery Guest (2 dias no hotel · relatório em 7 dias · desde 990 €, botão WhatsApp "Descobrir o potencial do meu bar") visível sem scroll em mobile; os países ficam numa faixa "Onde trabalhamos" logo abaixo do topo (pedido do Rui em 06/11/2026); menus QR e ecrãs (`src/digital.mjs`) ficam numa secção secundária. CTA principal: WhatsApp "Pedir disponibilidade para o meu hotel". As páginas PT redirecionam na 1.ª visita para ES/EN conforme o fuso horário (Espanha e Andorra → ES; França e Mónaco → FR) e o idioma do browser, salvo escolha manual guardada.
-- `src/audit-trust.mjs` — secções de apoio da página de hotéis: "Reconhece alguma destas situações?" (sem afirmar que o hotel perde dinheiro), "Como trabalhamos com a sua equipa" (F&B, relatório para a direção) e o que está incluído nos 990 € vs. acordado por escrito antes (deslocação, alojamento, consumos, nº de profissionais, extras). A Auditoria Completa começa por contacto por WhatsApp ou email (sem reunião presencial gratuita nem chamada).
-- `src/weddings.mjs` — página de casamentos e eventos: pacotes com preços com asterisco (desde 25 €*/pessoa bar de cerveja; desde 35 €*/pessoa cerveja + cocktails; ambos com mínimo de 50 pessoas; à medida sob orçamento).
+- `src/hotels.mjs` — textos da página de hotéis (desde 09/11/2026), da página de entrada e do contacto da Beatriz, em PT/ES/EN/FR.
+- `src/audit-offer.mjs` — textos antigos da oferta de hotéis. Ainda se usam daqui: mensagem de WhatsApp (`waText`), faixa "Onde trabalhamos", texto do Passo 2 e a nota das imagens; o resto (com preços de 990 €) já não aparece no site. As páginas PT redirecionam na 1.ª visita para ES/EN/FR conforme o fuso horário e o idioma do browser, salvo escolha manual guardada.
+- `src/audit-trust.mjs` — secções antigas de apoio da página de hotéis (já não aparecem desde 09/11/2026).
+- `src/weddings.mjs` — página de casamentos e eventos: três pacotes (Clássicos, Premium, Experiência à Medida), todos sob orçamento, sem preços.
 - `src/editorial.mjs` — textos partilhados (menu, contactos, FAQ gerais, formulários).
 - `src/content.json` — conteúdos de apoio (serviços, método, eventos, calculadora).
 - `src/template.mjs` — HTML das páginas.
@@ -26,7 +35,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 
 ## Comandos
 
-- `npm run build` — gera as 12 páginas (4 idiomas) em `dist/`.
+- `npm run build` — gera as 16 páginas (entrada, hotéis, eventos e digital × 4 idiomas) em `dist/`.
 - `npm test` — testes (Python com lxml + Node).
 - `npm run preview` — cria `../Cheers-Experiences-Preview.html`, um ficheiro único para rever o site sem o publicar.
 

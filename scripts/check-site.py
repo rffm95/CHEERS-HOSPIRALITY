@@ -4,7 +4,7 @@ from urllib.parse import urlsplit,unquote
 import json,re
 root=Path('dist');pages={}
 for lang in ['pt','es','en','fr']:
- for name in ['index.html','eventos.html','digital.html']:
+ for name in ['index.html','hoteis.html','eventos.html','digital.html']:
   path=('/' if lang=='pt' else '/'+lang+'/')+name
   doc=html.fromstring((root/path[1:]).read_text())
   pages[path]=doc
@@ -29,14 +29,17 @@ for lang in ['pt','es','en','fr']:
    assert f.get('action')=='https://formsubmit.co/info@cheersexperiences.com' and f.get('method')=='POST'
    assert f.xpath('.//input[@name="_next"]/@value')[0].endswith('/checklist.html')
    assert f.xpath('.//input[@required]/@name')==['email']
+  if name=='hoteis.html':
+   assert doc.xpath('//form[@data-checklist-form]') and doc.xpath('//*[@id="services"]') and doc.xpath('//*[@id="faq"]'),path
+   assert not re.search(r'990|€\s?\d|\d\s?€',doc.text_content()),(path,'hotel page must not publish prices')
   if name=='index.html':
-   assert doc.xpath('//form[@data-checklist-form]') and doc.xpath('//*[@id="before-you-decide"]'),path
+   assert len(doc.xpath('//a[contains(@class,"button")]'))==2,(path,'entry page has two doors')
    assert not doc.xpath('//*[contains(@class,"contact-links")]'),(path,'hotel contact keeps two paths')
   for f in doc.xpath('//form[@data-event-form]'):
    assert len(f.xpath('.//*[@name="type"]/option'))==8
    assert len(f.xpath('.//*[@name="need"]/option'))==4
    assert f.xpath('.//*[@name="need"]/option[@selected]/@value')==['3']
-  text=doc.text_content();assert name=='digital.html' or ('Beatriz Almeida' in text and 'Operations & Events Manager' in text);assert not re.search(r'\+100%|3×|Four Seasons|Rosewood|Mandarin Oriental',text)
+  text=doc.text_content();assert name in ('digital.html','index.html') or ('Beatriz Almeida' in text and 'Operations & Events Manager' in text);assert not re.search(r'\+100%|3×|Four Seasons|Rosewood|Mandarin Oriental',text)
 for path,doc in pages.items():
  for element in doc.xpath('//*[@href or @src]'):
   address=element.get('href',element.get('src',''));u=urlsplit(address)
@@ -49,16 +52,17 @@ for path,doc in pages.items():
    if destination is None:destination=html.fromstring((root/target.lstrip('/')).read_text())
    assert destination.xpath('//*[@id=$id]',id=unquote(u.fragment)),(path,'missing anchor',address)
  # Heading structure: no jump from h2 directly to h4.
- assert len(doc.xpath('//header//nav//a[not(contains(@class,"button")) and not(ancestor::div[@class="nav-sub"])]'))==(3 if path.endswith('/eventos.html') else 4)  # Digital entry on hotel pages + 'Quem somos' everywhere
- assert len(doc.xpath('//header//nav//div[@class="nav-sub"]/a'))==3  # direct links to weddings, corporate and private parties
- assert path.endswith('/digital.html') or doc.xpath('//*[@id="team"]')
+ if not path.endswith('/index.html'):
+  assert len(doc.xpath('//header//nav[@id="navigation"]//a[not(contains(@class,"button")) and not(contains(@class,"text-link"))]'))==4,path
+  assert len(doc.xpath('//nav[contains(@class,"area-switch")]/a'))==2,(path,'area switcher hotels | events')
+ assert path.endswith('/digital.html') or path.endswith('/index.html') or doc.xpath('//*[@id="team"]')
 for path in pages:
- assert not (path.endswith('/index.html') and pages[path].xpath('//*[contains(@class,"audience-rail")]|//*[@id="digital"]')),(path,'hotel page must stay focused')
+ assert not (path.endswith('/hoteis.html') and pages[path].xpath('//*[contains(@class,"audience-rail")]|//*[@id="digital"]')),(path,'hotel page must stay focused')
  assert len((root/path[1:]).read_bytes())<70000
 css=(root/'atelier.css').read_text();assert '@media(prefers-reduced-motion:reduce)' in css
 assert all('@media(max-width:'+str(x)+'px)' in css for x in [1180,900,620,370])
 assert css.count('{')==css.count('}')
 for lang in ['pt','es','en','fr']:
  assert (root/('downloads/checklist-10-fugas-'+lang+'.pdf')).exists() and (root/((''if lang=='pt' else lang+'/')+'checklist.html')).exists()
-print('PASS twelve complete static pages, checklist PDFs and download pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
+print('PASS sixteen complete static pages, checklist PDFs and download pages; languages, canonical/hreflang/OG/schema, unique IDs, all internal links and images, labelled forms, direct contact links, credibility checks, responsive breakpoints and reduced motion declarations.')
 print('NOTE no browser rendering, layout measurements, live email delivery or Core Web Vitals measured.')

@@ -17,16 +17,16 @@ function prepareEnquiry(form){
  }
  return `${form.dataset.subject||'Cheers Experiences'}\n\n${lines.join('\n')}`;
 }
-function enquiryURL(channel,subject,message,phone='351927653087'){return channel==='email'?'mailto:info@cheersexperiences.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/'+phone+'?text='+encodeURIComponent(message);}
+function enquiryURL(channel,subject,message,phone='351927653087',email='info@cheersexperiences.com'){return channel==='email'?'mailto:'+email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message):'https://wa.me/'+phone+'?text='+encodeURIComponent(message);}
 function eventFieldState(type){return {guestsRequired:Number(type)<6,momentsVisible:String(type)==='0'};}
 if(typeof module!=='undefined'&&module.exports)module.exports={calculateLosses,enquiryURL,eventFieldState,prepareEnquiry};
 if(typeof document!=='undefined')(()=>{
  const supported=['pt','es','en','fr'];let inNavigation=false;
  const baseURL=()=>window.__cheersPreview?'https://cheersexperiences.com/':location.href;
  function updateHistory(method,url){try{history[method]({},'',url);}catch{}}
- const pageRoute=(language,page)=>`${language==='pt'?'':`/${language}`}/${page==='events'?'eventos.html':page==='digital'?'digital.html':'index.html'}`;
+ const pageRoute=(language,page)=>`${language==='pt'?'':`/${language}`}/${page==='events'?'eventos.html':page==='digital'?'digital.html':page==='entry'?'index.html':'hoteis.html'}`;
  function openTarget(hash){
-  const aliases={'first-meeting':'contact','hotel':'hotel','event-planning':'method','partnership-models':'venues','opportunity':'project-offers','project-options':'project-offers','case-study':'team','contact':'contact','calculator':'calculator'};
+  const aliases={'first-meeting':'contact','hotel':'hotel','event-planning':'method','partnership-models':'venues','opportunity':'project-offers','project-options':'project-offers','case-study':'team','contact':'contact','calculator':'calculator','bar-numbers':'services','profit-leaks':'value','when':'value','before-you-decide':'faq','working-with-fb':'method','checklist':'checklist'};
   const id=decodeURIComponent(hash.replace(/^#/,''));const target=document.getElementById(id)||document.getElementById(aliases[id]);if(!target)return false;
   if(target.tagName==='DETAILS')target.open=true;for(let p=target.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;
   target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});return true;
@@ -86,7 +86,7 @@ if(typeof document!=='undefined')(()=>{
   if(event)enhanceSubmit(event);
   for(const form of [hotel,event].filter(Boolean))form.querySelectorAll('[data-channel]').forEach(a=>a.addEventListener('click',ev=>{
    if(!form.reportValidity()){ev.preventDefault();return;}
-   a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form),form.dataset.wa);form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
+   a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form),form.dataset.wa,form.dataset.email);form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
   }));
   document.querySelectorAll('[data-carousel]').forEach(track=>{const section=track.closest('section');const controls=section?.querySelector('[data-carousel-controls]');const prev=section?.querySelector('[data-carousel-prev]'),next=section?.querySelector('[data-carousel-next]');if(!controls||!prev||!next)return;controls.hidden=false;const step=()=>{const item=track.querySelector('li');return item?item.getBoundingClientRect().width+20:300;};const sync=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;};prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));track.addEventListener('scroll',sync,{passive:true});sync();});
  document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.selectedIndex=Number(a.dataset.project);}));
@@ -101,7 +101,7 @@ if(typeof document!=='undefined')(()=>{
   const a=event.target.closest('a[href]');if(!a||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||a.target==='_blank'||a.hasAttribute('download'))return;
   const href=a.getAttribute('href');if(href.startsWith('#')){if(openTarget(href)){event.preventDefault();updateHistory('replaceState',location.pathname+location.search+href);}closeMenu();return;}
   const url=new URL(href,baseURL());
-  if((url.origin===location.origin||window.__cheersPreview)&&/^(?:\/(?:pt|es|en))?\/(?:index|eventos|digital)\.html$/.test(url.pathname)){
+  if((url.origin===location.origin||window.__cheersPreview)&&/^(?:\/(?:es|en|fr))?\/(?:index|hoteis|eventos|digital)\.html$/.test(url.pathname)){
    event.preventDefault();const targetLang=a.dataset.language;if(targetLang){try{localStorage.setItem('cheers-lang',targetLang);}catch{}url.hash=location.hash;const campaign=new URLSearchParams(location.search);campaign.delete('lang');url.search=campaign.toString();}
    navigate(url.pathname+url.search+url.hash,{preserve:!!targetLang});
   }
