@@ -480,3 +480,8 @@ body[data-page=events] .hero .event-hero-price strong{color:#7a5c25}
 .event-types-layout .event-type .text-link{align-self:flex-start}
 body[data-page=events] .hero-visual img{object-position:center 45%}
 @media(max-width:900px){.event-types-layout{grid-template-columns:1fr;gap:32px}.event-types-photo img{aspect-ratio:4/3}}
+/* Events: real photo beside the venue & planner partnerships */
+.partners-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.partners-photo img{aspect-ratio:3/4;height:auto;object-position:center 55%}
+.partners-layout .partnership-grid{grid-template-columns:1fr;gap:40px}
+@media(max-width:900px){.partners-layout{grid-template-columns:1fr;gap:32px}.partners-photo img{aspect-ratio:4/3;object-position:center 60%}}
