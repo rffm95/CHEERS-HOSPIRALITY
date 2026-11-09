@@ -206,10 +206,10 @@ export const entry={
 
 // Events contact: Beatriz (WhatsApp number ending in 11 is applied to the whole events page in template.mjs).
 export const eventsContact={
- pt:{title:'Fale com a <em>Beatriz.</em>',text:'A Beatriz Almeida coordena cada evento, do primeiro contacto ao último cocktail. Diga-nos a data, o local e o número de convidados; respondemos com disponibilidade e uma proposta à medida.',photoAlt:'Beatriz Almeida a servir uma bebida com doseador.'},
- es:{title:'Hablad con <em>Beatriz.</em>',text:'Beatriz Almeida coordina cada evento, del primer contacto al último cóctel. Indicadnos la fecha, el lugar y el número de invitados; respondemos con disponibilidad y una propuesta a medida.',photoAlt:'Beatriz Almeida sirviendo una bebida con dosificador.'},
- en:{title:'Talk to <em>Beatriz.</em>',text:'Beatriz Almeida coordinates every event, from the first message to the last cocktail. Tell us the date, the venue and the number of guests; we reply with availability and a tailored proposal.',photoAlt:'Beatriz Almeida serving a drink with a jigger.'},
- fr:{title:'Parlez avec <em>Beatriz.</em>',text:'Beatriz Almeida coordonne chaque événement, du premier contact au dernier cocktail. Indiquez-nous la date, le lieu et le nombre d’invités ; nous répondons avec nos disponibilités et une proposition sur mesure.',photoAlt:'Beatriz Almeida servant une boisson avec un doseur.'}
+ pt:{title:'Fale com a <em>Beatriz.</em>',text:'A Beatriz Almeida coordena cada evento, do primeiro contacto ao último cocktail. Diga-nos a data, o local e o número de convidados; respondemos com disponibilidade e uma proposta à medida.',photoAlt:'Beatriz Almeida a colocar uma casca de laranja num copo com gelo.'},
+ es:{title:'Hablad con <em>Beatriz.</em>',text:'Beatriz Almeida coordina cada evento, del primer contacto al último cóctel. Indicadnos la fecha, el lugar y el número de invitados; respondemos con disponibilidad y una propuesta a medida.',photoAlt:'Beatriz Almeida colocando una piel de naranja en una copa con hielo.'},
+ en:{title:'Talk to <em>Beatriz.</em>',text:'Beatriz Almeida coordinates every event, from the first message to the last cocktail. Tell us the date, the venue and the number of guests; we reply with availability and a tailored proposal.',photoAlt:'Beatriz Almeida adding an orange peel to a glass with ice.'},
+ fr:{title:'Parlez avec <em>Beatriz.</em>',text:'Beatriz Almeida coordonne chaque événement, du premier contact au dernier cocktail. Indiquez-nous la date, le lieu et le nombre d’invités ; nous répondons avec nos disponibilités et une proposition sur mesure.',photoAlt:'Beatriz Almeida déposant un zeste d’orange dans un verre avec de la glace.'}
 };
 export const EVENTS_EMAIL='beatriz@cheersexperiences.com';
 // Events page menu: formats, packages, venues & planners, about us (+ contact button).

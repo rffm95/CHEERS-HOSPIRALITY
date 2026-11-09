@@ -18,7 +18,7 @@ export const teamCopy={
     "role": "Fundador da Cheers Experiences",
     "tagline": "Gestão e rentabilidade de bares",
     "img": "rui-monteiro.webp",
-    "alt": "Rui Monteiro a agitar um shaker atrás do balcão do Cheers O Bar, em Viseu.",
+    "alt": "Rui Monteiro, de casaco escuro, a agitar um shaker ao balcão.",
     "text": [
      "Sou empresário e profissional de bar, com mais de dez anos de experiência entre hotelaria de cinco estrelas e gestão do meu próprio negócio. À frente do Cheers O Bar, em Viseu, vivo diariamente os desafios de quem precisa de conciliar qualidade de serviço, equipas, custos e rentabilidade.",
      "O meu percurso começou atrás do balcão e evoluiu para a gestão: criar cartas, definir preços, negociar com fornecedores, formar equipas e perceber o que leva um cliente a pedir mais uma bebida, e a querer voltar. Essa experiência ensinou-me a olhar para cada detalhe do bar pelo seu impacto na experiência do cliente e nos resultados do negócio.",
@@ -31,7 +31,7 @@ export const teamCopy={
     "role": "Operations & Events Manager",
     "tagline": "A pessoa por detrás da experiência",
     "img": "beatriz-almeida.webp",
-    "alt": "Beatriz Almeida a servir Tanqueray 0.0 com doseador num copo de balão com gelo.",
+    "alt": "Beatriz Almeida a colocar uma casca de laranja num copo de balão com gelo.",
     "quote": "Acredito que os melhores momentos são aqueles que ficam na memória pelos pequenos detalhes.",
     "text": [
      "A minha ligação ao mundo da hospitalidade nasce da paixão pelo serviço, pelo contacto com pessoas e pela arte de transformar momentos simples em experiências especiais.",
@@ -52,7 +52,7 @@ export const teamCopy={
     "role": "Fundador de Cheers Experiences",
     "tagline": "Gestión y rentabilidad de bares",
     "img": "rui-monteiro.webp",
-    "alt": "Rui Monteiro agitando una coctelera detrás de la barra de Cheers O Bar, en Viseu.",
+    "alt": "Rui Monteiro, con americana oscura, agitando una coctelera en la barra.",
     "text": [
      "Soy empresario y profesional de bar, con más de diez años de experiencia entre la hotelería de cinco estrellas y la gestión de mi propio negocio. Al frente de Cheers O Bar, en Viseu, vivo a diario los retos de quien tiene que conciliar calidad de servicio, equipos, costes y rentabilidad.",
      "Mi trayectoria empezó detrás de la barra y evolucionó hacia la gestión: crear cartas, fijar precios, negociar con proveedores, formar equipos y entender qué lleva a un cliente a pedir una copa más, y a querer volver. Esa experiencia me enseñó a mirar cada detalle del bar por su impacto en la experiencia del cliente y en los resultados del negocio.",
@@ -65,7 +65,7 @@ export const teamCopy={
     "role": "Operations & Events Manager",
     "tagline": "La persona detrás de la experiencia",
     "img": "beatriz-almeida.webp",
-    "alt": "Beatriz Almeida sirviendo Tanqueray 0.0 con medidor en una copa de balón con hielo.",
+    "alt": "Beatriz Almeida colocando una piel de naranja en una copa de balón con hielo.",
     "quote": "Creo que los mejores momentos son los que se quedan en la memoria por los pequeños detalles.",
     "text": [
      "Mi vínculo con el mundo de la hospitalidad nace de la pasión por el servicio, por el contacto con las personas y por el arte de convertir momentos sencillos en experiencias especiales.",
@@ -86,7 +86,7 @@ export const teamCopy={
     "role": "Founder, Cheers Experiences",
     "tagline": "Bar management and profitability",
     "img": "rui-monteiro.webp",
-    "alt": "Rui Monteiro shaking a cocktail shaker behind the bar at Cheers O Bar in Viseu.",
+    "alt": "Rui Monteiro, in a dark jacket, shaking a cocktail at the bar.",
     "text": [
      "I am a business owner and bar professional with more than ten years’ experience across five-star hotels and running my own business. At the helm of Cheers O Bar in Viseu, I face every day the challenge of balancing service quality, teams, costs and profitability.",
      "My career began behind the bar and grew into management: creating menus, setting prices, negotiating with suppliers, training teams and understanding what makes a guest order one more drink, and want to come back. That experience taught me to look at every detail of the bar in terms of its impact on the guest experience and on the bottom line.",
@@ -99,7 +99,7 @@ export const teamCopy={
     "role": "Operations & Events Manager",
     "tagline": "The person behind the experience",
     "img": "beatriz-almeida.webp",
-    "alt": "Beatriz Almeida pouring Tanqueray 0.0 with a jigger into a balloon glass filled with ice.",
+    "alt": "Beatriz Almeida adding an orange peel to a balloon glass filled with ice.",
     "quote": "I believe the best moments are the ones we remember for their small details.",
     "text": [
      "My connection to hospitality comes from a passion for service, for meeting people and for the art of turning simple moments into special experiences.",

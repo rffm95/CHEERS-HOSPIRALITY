@@ -468,3 +468,6 @@ body[data-page=events] .hero p,body[data-page=events] .hero .hero-lead{color:#4a
 body[data-page=events] .hero .event-hero-price{color:#1a1815}
 body[data-page=events] .hero .hero-country{color:#4a453e}
 body[data-page=events] .hero .event-hero-price strong{color:#7a5c25}
+/* Team photos (Nov 2026) are cut-outs with a transparent background: give them a warm backdrop per section */
+.person-photo{background:#1f1d19}.ivory .person-photo{background:#e6dfd3}
+.contact-person img{background:#e6dfd3;object-position:50% 12%}
