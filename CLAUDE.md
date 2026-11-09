@@ -19,6 +19,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Todas as páginas têm no topo o seletor de área "Hotéis | Casamentos & Eventos".
 - Página de hotéis nova e mais curta (`src/hotels.mjs`, 4 línguas): topo sem preço, valor (3 pilares), método (dia 1, dia 2, 7 dias), exemplo do formato do relatório (ilustrativo, sem números), serviços (Passo 1 e Passo 2, sob orçamento), equipa, checklist, perguntas, contacto. CTA principal: WhatsApp. As secções antigas (situações, objeções, cartazes, 10 fugas, contas/calculadora, tabela da visita) deixaram de aparecer; o código continua em `src/` caso se queira recuperar alguma.
 - Eventos: contacto da Beatriz (foto, WhatsApp que acaba em 11, beatriz@cheersexperiences.com no email), topo claro com fotografia. Pacotes sem preço, "sob orçamento".
+- Links curtos (gerados em `scripts/build.mjs`): /hotels, /hotel, /hoteles, /hotéis → página de hotéis; /events, /evenements, /weddings, /casamentos, /bodas, /mariages → página de eventos. Abrem no idioma do telemóvel (pt, es, fr; outro → en), salvo se a pessoa já escolheu um idioma no site. Mantêm utm e #âncoras.
 - Fonte dos títulos: Cormorant Garamond (em `dist/fonts/cormorant-*.woff`, licença OFL). Os ficheiros foram corrigidos com `scripts/fix-cormorant-circumflex.py` porque a fonte original desenha â ê î ô û com o acento torto. O PDF da checklist continua com Lora.
 
 ## Estrutura
