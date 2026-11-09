@@ -471,3 +471,12 @@ body[data-page=events] .hero .event-hero-price strong{color:#7a5c25}
 /* Team photos (Nov 2026) are cut-outs with a transparent background: give them a warm backdrop per section */
 .person-photo{background:#1f1d19}.ivory .person-photo{background:#e6dfd3}
 .contact-person img{background:#e6dfd3;object-position:50% 12%}
+/* Events: one real photo beside the three event formats */
+.event-types-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.event-types-photo img{aspect-ratio:3/4;height:auto;object-position:center 60%}
+.event-types-layout .event-type-grid{grid-template-columns:1fr;gap:0}
+.event-types-layout .event-type{padding:26px 0 28px}
+.event-types-layout .event-type h3{font-size:34px}
+.event-types-layout .event-type .text-link{align-self:flex-start}
+body[data-page=events] .hero-visual img{object-position:center 45%}
+@media(max-width:900px){.event-types-layout{grid-template-columns:1fr;gap:32px}.event-types-photo img{aspect-ratio:4/3}}

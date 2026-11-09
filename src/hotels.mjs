@@ -219,3 +219,10 @@ export const eventsNav={
  en:['Formats','Packages','Venues & planners','About us'],
  fr:['Formats','Formules','Domaines & planners','Qui sommes-nous']
 };
+// Real event photos (Nov 2026), replacing the AI-looking images on the events page.
+export const eventPhotos={
+ pt:{bar:'Bartender a coar um cocktail para uma taça, num balcão montado ao ar livre numa quinta.',table:'Cocktail com espuma e folha de manjericão e um mojito de maracujá numa mesa de casamento ao ar livre.'},
+ es:{bar:'Bartender colando un cóctel en una copa, en una barra montada al aire libre en una finca.',table:'Cóctel con espuma y hoja de albahaca y un mojito de maracuyá en una mesa de boda al aire libre.'},
+ en:{bar:'A bartender straining a cocktail into a coupe at an outdoor bar set up at a wedding venue.',table:'A foamy cocktail with a basil leaf and a passion-fruit mojito on an outdoor wedding table.'},
+ fr:{bar:'Un barman filtre un cocktail dans une coupe, sur un bar installé en plein air dans un domaine.',table:'Un cocktail mousseux avec une feuille de basilic et un mojito au fruit de la passion sur une table de mariage en plein air.'}
+};
