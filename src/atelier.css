@@ -485,3 +485,18 @@ body[data-page=events] .hero-visual img{object-position:center 45%}
 .partners-photo img{aspect-ratio:3/4;height:auto;object-position:center 55%}
 .partners-layout .partnership-grid{grid-template-columns:1fr;gap:40px}
 @media(max-width:900px){.partners-layout{grid-template-columns:1fr;gap:32px}.partners-photo img{aspect-ratio:4/3;object-position:center 60%}}
+/* Review fixes (09/11/2026): readable language switcher, events mobile menu, single-column form fields on phones */
+.language a{font-size:12px}
+@media(max-width:900px){
+ body[data-page=events] .header nav{background:#f3eee6;border-bottom:1px solid #d9d1c3}
+ body[data-page=events] .header nav>a:not(.button){color:#1a1815}
+ body[data-page=events] .header nav .button{background:#1a1815;color:#f3eee6;border-color:#1a1815}
+}
+@media(max-width:620px){
+ .language a{font-size:11px;min-width:30px}
+ .form-row{grid-template-columns:1fr;gap:0}
+ .contact-form label>span{font-size:12px}
+ .contact-links a[href^="tel:"]{display:inline-flex;align-items:center;min-height:44px}
+ .lead{font-size:16px}.hero-lead{font-size:16px}
+}
+.contact-form label>span{font-size:12px}
