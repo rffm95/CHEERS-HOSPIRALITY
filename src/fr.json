@@ -43,7 +43,7 @@
   "lead": "En seulement 2 jours, nous identifions des opportunités pour augmenter le chiffre d’affaires, améliorer les marges et sublimer l’expérience client.",
   "cta": "Demander le Mystery Guest Bar Audit",
   "explore": "Voir ce qui est inclus",
-  "waCTA": "Serait-ce déraisonnable de savoir combien le bar de votre hôtel laisse sur la table ?",
+  "waCTA": "Découvrir le potentiel de mon bar",
   "headerWA": "Écrire sur WhatsApp",
   "waText": "Bonjour Rui, j’aimerais savoir combien le bar de mon hôtel laisse peut-être sur la table. Hôtel : __. Lieu : __.",
   "contactWA": "Envoyer un message WhatsApp",
@@ -77,7 +77,7 @@
   "guarantee": "Si le rapport n’identifie pas au moins 990 € par mois (11 880 € par an) d’opportunités de chiffre d’affaires ou d’économies dans votre bar, nous remboursons le montant de l’audit. La garantie porte sur la valeur des opportunités identifiées, et non sur une hausse effective des ventes.",
   "credit": "Si vous lancez l’Audit Complet dans les 30 jours, le montant de l’audit est déduit du devis.",
   "terms": "Prix fixe pour le périmètre indiqué. Le devis détaille déplacement, hébergement, consommations, nombre d’intervenants et services supplémentaires, convenus avant la confirmation. Le délai de 7 jours commence à la fin de la visite.",
-  "dataNote": "Chaque estimation présente le calcul et les hypothèses. Si l’hôtel partage ses données de prix, de coûts et de ventes, l’estimation est plus précise.",
+  "dataNote": "Chaque estimation présente le calcul et les hypothèses. Si l’hôtel partage ses données de prix, de coûts et de ventes, l’estimation est plus précise. Nous revoyons les hypothèses avec vous avant de finaliser le rapport.",
   "full": {
    "label": "ÉTAPE 2 · LA TRANSFORMATION",
    "title": "Audit<br><em>Complet.</em>",
@@ -164,21 +164,21 @@
   "realCaption": "Exemple réel · Cheers O Bar, Viseu.",
   "imagesNote": "Images d’ambiance illustratives, sauf lorsqu’elles sont identifiées comme exemple réel.",
   "ogAlt": "Écran avec des contenus promotionnels au Cheers O Bar, à Viseu",
-  "meta": "Le bar de votre hôtel vaut peut-être plus que vous ne l’imaginez. En 2 jours, nous identifions des opportunités pour augmenter le chiffre d’affaires et améliorer les marges. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garanti.",
+  "meta": "Le bar de votre hôtel vaut peut-être plus que vous ne l’imaginez. En 2 jours, nous identifions des opportunités pour augmenter le chiffre d’affaires et améliorer les marges. Mystery Guest Bar Audit pour hôtels de luxe en Europe du Sud : à partir de 990 € + déplacement. Un jour en tant que client, un jour avec la direction et l’équipe, et un rapport priorisé sous 7 jours. Garantie de remboursement.",
   "heroMeta": [
    "2 jours à l’hôtel",
    "Rapport sous 7 jours",
    "À partir de 990&nbsp;€"
   ],
   "heroCTA": "Découvrir le potentiel de mon bar",
-  "heroReassure": "Analyse indépendante. Recommandations concrètes. Sans engagement initial.",
+  "heroReassure": "Analyse indépendante. Recommandations concrètes. Vous ne payez qu’après acceptation du devis écrit.",
   "regionsLabel": "Où nous intervenons",
-  "regions": "Hôtels de luxe en Europe du Sud : Portugal · Espagne · Andorre · Côte d’Azur · Monaco · Suisse · Italie"
+  "regions": "Hôtels de luxe en Europe du Sud et dans les Alpes : Portugal · Espagne · Andorre · Côte d’Azur · Monaco · Suisse · Italie"
  },
  "leaks": {
   "images": false,
   "label": "LE PROFIT QUE VOUS NE VOYEZ PAS",
-  "title": "10 endroits où votre bar<br><em>perd peut-être de l’argent.</em>",
+  "title": "10 opportunités que votre bar<br><em>laisse peut-être passer.</em>",
   "intro": "Voici des exemples de ce que recherche le Mystery Guest Bar Audit. Combien se produisent dans votre bar ?",
   "cta": "Découvrir lesquels touchent mon bar",
   "fixLabel": "Comment corriger",
@@ -430,7 +430,7 @@
  },
  "money": {
   "label": "LES COMPTES DE VOTRE BAR",
-  "title": "Petites fuites.<br><em>Beaucoup d’argent en fin d’année.</em>",
+  "title": "Petits ajustements.<br><em>Beaucoup de valeur en fin d’année.</em>",
   "intro": "Deux exemples en chiffres ronds. Modifiez les valeurs dans le calculateur et voyez les comptes de votre bar.",
   "examples": [
    {
@@ -624,7 +624,7 @@
   "digitalText": "Menus digitaux et QR, cartes multilingues et contenus pour écrans : nous aidons le client à découvrir ce que le bar a à offrir.",
   "digitalReal": "Exemple réel · Cheers O Bar, Viseu",
   "groupSummary": "Hôtels indépendants & groupes hôteliers",
-  "founderLabel": "04 / QUI SOMMES-NOUS",
+  "founderLabel": "QUI SOMMES-NOUS",
   "founderTitle": "Un savoir construit<br><em>derrière le comptoir.</em>",
   "founderRole": "Fondateur · Direction de projets",
   "founderLead": "Rui Monteiro réunit plus de 10 ans d’expérience pratique en bar et en hôtellerie. Chez Cheers Experiences, il relie la vision business au travail quotidien de l’équipe.",

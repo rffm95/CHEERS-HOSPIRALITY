@@ -327,3 +327,5 @@ body[data-page=events] .hero-grid{grid-template-columns:minmax(0,1fr)}body[data-
 }
 @media(max-width:620px) and (max-height:700px){.hero-hotel .hero-lead{font-size:14px;line-height:1.5}.hero-hotel h1{font-size:clamp(32px,9.6vw,38px)}}
 @media(max-width:620px) and (max-height:600px){.hero.hero-hotel{padding-top:14px}.hero-hotel h1{font-size:clamp(30px,8.8vw,34px);margin-bottom:10px}.hero-hotel .hero-lead{font-size:13.5px;line-height:1.45}.hero-hotel .hero-grid.hero-audit{gap:14px}.hero-hotel .hero-offer{padding:12px 14px}}
+
+.contact-form .consent-check{display:flex;gap:10px;align-items:flex-start;font-weight:400;line-height:1.6}.consent-check input{width:18px;height:18px;min-height:18px;margin:2px 0 0;padding:0;flex:0 0 18px;accent-color:#22251e}.footer-bottom a{text-decoration:underline;text-underline-offset:3px}

@@ -3,7 +3,7 @@
 // Example 2: 200 guests/day (assumed) × 1 in 5 × one extra 10 € drink = 400 €/day → 12,000 €/month, 72,000 € over 180 days.
 export const money = {
  pt:{
-  label:'AS CONTAS DO SEU BAR', title:'Pequenas fugas.<br><em>Muito dinheiro ao fim do ano.</em>',
+  label:'AS CONTAS DO SEU BAR', title:'Pequenos ajustes.<br><em>Muito valor ao fim do ano.</em>',
   intro:'Dois exemplos com números redondos. Mude os valores na calculadora e veja as contas do seu bar.',
   examples:[
    {name:'Uma dose a mais no gin',lines:['2 cl a mais por gin × 40 gins por dia × 30 dias = 24 litros por mês','24 litros são cerca de 34 garrafas de 70 cl','A 12 € a 17,50 € por garrafa, só em custo de produto'],result:'400&nbsp;€ a 600&nbsp;€ por mês',sub:'4.800&nbsp;€ a 7.200&nbsp;€ por ano, sem vender nem mais uma bebida.'},
@@ -18,7 +18,7 @@ export const money = {
   cta:'Pedir disponibilidade para o meu hotel'
  },
  es:{
-  label:'LAS CUENTAS DE SU BAR', title:'Pequeñas fugas.<br><em>Mucho dinero a final de año.</em>',
+  label:'LAS CUENTAS DE SU BAR', title:'Pequeños ajustes.<br><em>Mucho valor a final de año.</em>',
   intro:'Dos ejemplos con números redondos. Cambie los valores en la calculadora y vea las cuentas de su bar.',
   examples:[
    {name:'Una dosis de más en el gin',lines:['2 cl de más por gin × 40 gins al día × 30 días = 24 litros al mes','24 litros son unas 34 botellas de 70 cl','A 12 € – 17,50 € por botella, solo en coste de producto'],result:'De 400&nbsp;€ a 600&nbsp;€ al mes',sub:'De 4.800&nbsp;€ a 7.200&nbsp;€ al año, sin vender ni una bebida más.'},
@@ -33,7 +33,7 @@ export const money = {
   cta:'Consultar disponibilidad para mi hotel'
  },
  en:{
-  label:'YOUR BAR IN NUMBERS', title:'Small leaks.<br><em>Serious money by year end.</em>',
+  label:'YOUR BAR IN NUMBERS', title:'Small adjustments.<br><em>Real value by year end.</em>',
   intro:'Two examples with round numbers. Change the values in the calculator to see your own bar.',
   examples:[
    {name:'One extra measure in every gin',lines:['2 cl over per gin × 40 gins a day × 30 days = 24 litres a month','24 litres is about 34 bottles of 70 cl','At €12 to €17.50 a bottle, in product cost alone'],result:'€400 to €600 a month',sub:'€4,800 to €7,200 a year, without selling a single extra drink.'},

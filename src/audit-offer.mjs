@@ -11,17 +11,17 @@ export const auditOffer = {
   day2:['Conversa com a direção e com o responsável do bar.','Observação da preparação, do balcão, do armazém do bar e dos procedimentos.','Análise dos elementos que o hotel disponibilizar: carta, preços, fichas técnicas, vendas e compras recentes.','Validação das prioridades com a direção.'],
   day2Not:'Não inclui inventário completo, formação da equipa nem análise aprofundada de todos os custos. Isso faz parte da Auditoria Completa.',
   pageTitle:'Consultoria de bar para hotéis · Mystery Guest Bar Audit | Cheers Experiences',
-  heroMeta:["2 dias no hotel", "Relatório em 7 dias", "Desde 990&nbsp;€"], heroCTA:'Descobrir o potencial do meu bar', heroReassure:'Análise independente. Recomendações práticas. Sem compromisso inicial.', regionsLabel:'Onde trabalhamos', regions:'Hotéis de luxo no Sul da Europa: Portugal · Espanha · Andorra · Côte d’Azur · Mónaco · Suíça · Itália',
+  heroMeta:["2 dias no hotel", "Relatório em 7 dias", "Desde 990&nbsp;€"], heroCTA:'Descobrir o potencial do meu bar', heroReassure:'Análise independente. Recomendações práticas. Só paga depois de aceitar o orçamento por escrito.', regionsLabel:'Onde trabalhamos', regions:'Hotéis de luxo no Sul da Europa e nos Alpes: Portugal · Espanha · Andorra · Côte d’Azur · Mónaco · Suíça · Itália',
   hero:'O bar do seu hotel pode estar a valer mais do que imagina. <em>Descubra quanto.</em>',
   lead:'Em apenas 2 dias, identificamos oportunidades para aumentar a faturação, melhorar as margens e elevar a experiência dos hóspedes.',
   cta:'Pedir o Mystery Guest Bar Audit', explore:'Ver o que inclui',
-  waCTA:'Seria descabido saber quanto o bar do seu hotel está a deixar na mesa?', headerWA:'Falar por WhatsApp',
+  waCTA:'Descobrir o potencial do meu bar', headerWA:'Falar por WhatsApp',
   waText:'Olá Rui, gostava de saber quanto o bar do meu hotel pode estar a deixar na mesa. Hotel: __. Localização: __.',
   contactWA:'Enviar mensagem por WhatsApp', formIntro:'Prefere email? Use o formulário.',
   craftSummary:'Cocktails de assinatura e conceito por espaço', digitalSummary:'Menus QR, idiomas e ecrãs',
   label:'PASSO 1 · O DIAGNÓSTICO', title:'Mystery Guest<br><em>Bar Audit.</em>',
   intro:'Vemos o bar como o hóspede o vê e depois por dentro, com a direção e a equipa. Entregamos prioridades concretas: o que corrigir primeiro, porquê e com quem.',
-  priceFrom:'Desde', price:'990 €', travel:'+ deslocação', priceNote:'O valor final depende do país e é confirmado por escrito antes de marcar.', zones:'Portugal, Espanha, Andorra, Côte d\'Azur e Mónaco, Suíça e Itália (costa e ilhas incluídas).', tax:'* Em Portugal acresce IVA à taxa legal em vigor. Nos restantes países da União Europeia, nos serviços entre empresas, o IVA não é faturado (autoliquidação pelo cliente).',
+  priceFrom:'Desde', price:'990 €', travel:'+ deslocação', priceNote:'O valor final depende do país e é confirmado por escrito antes de marcar.', zones:'Portugal, Espanha, Andorra, Côte d’Azur e Mónaco, Suíça e Itália (costa e ilhas incluídas).', tax:'* Em Portugal acresce IVA à taxa legal em vigor. Nos restantes países da União Europeia, nos serviços entre empresas, o IVA não é faturado (autoliquidação pelo cliente).',
   scope:['1 bar do hotel','Dia 1 como hóspede, dia 2 com a direção e a equipa','Primeiras conclusões no final da visita','Relatório completo até 7 dias após a visita'],
   scarcity:'Aceitamos no máximo 4 auditorias por mês.',
   deliveryTitle:'O que recebe',
@@ -31,7 +31,7 @@ export const auditOffer = {
   guarantee:'Se o relatório não identificar pelo menos 990 € por mês (11.880 € por ano) em oportunidades de faturação ou de poupança no seu bar, devolvemos o valor pago pela auditoria. A garantia refere-se ao valor das oportunidades identificadas, não a um aumento efetivo das vendas.',
   credit:'Se avançar para a Auditoria Completa nos 30 dias seguintes, o valor da auditoria é descontado no orçamento.',
   terms:'Preço fixo para o âmbito indicado. O orçamento discrimina deslocação, alojamento, consumos, número de profissionais e serviços adicionais, acordados antes da confirmação. O prazo de 7 dias começa no final da visita.',
-  dataNote:'Cada estimativa mostra o cálculo e os pressupostos. Se o hotel partilhar dados de preços, custos e vendas, a estimativa fica mais precisa.',
+  dataNote:'Cada estimativa mostra o cálculo e os pressupostos. Se o hotel partilhar dados de preços, custos e vendas, a estimativa fica mais precisa. Revemos os pressupostos consigo antes de fechar o relatório.',
   full:{
    label:'PASSO 2 · A TRANSFORMAÇÃO', title:'Auditoria<br><em>Completa.</em>',
    intro:'Do diagnóstico à mudança no terreno. Objetivos definidos consigo e tudo discriminado num orçamento à medida.',
@@ -58,7 +58,7 @@ export const auditOffer = {
   realCaption:'Exemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imagens de ambiente ilustrativas, exceto quando identificadas como exemplo real.',
   ogAlt:'Ecrã com conteúdos promocionais no Cheers O Bar, em Viseu',
-  meta:'O bar do seu hotel pode estar a valer mais do que imagina. Em 2 dias identificamos oportunidades para aumentar a faturação e melhorar as margens. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia.'
+  meta:'O bar do seu hotel pode estar a valer mais do que imagina. Em 2 dias identificamos oportunidades para aumentar a faturação e melhorar as margens. Mystery Guest Bar Audit em hotéis de luxo do Sul da Europa: desde 990 € + deslocação. Um dia como hóspede, um dia com a direção e a equipa, e relatório com prioridades em 7 dias. Com garantia de reembolso.'
  },
  es: {
   eyebrowHotel:'CONSULTORÍA DE BARES PARA HOTELES DE 4 Y 5 ESTRELLAS', craftLabel:'CARTA DE CÓCTELES',
@@ -68,11 +68,11 @@ export const auditOffer = {
   day2:['Conversación con la dirección y con el responsable del bar.','Observación de la preparación, la barra, el almacén del bar y los procedimientos.','Análisis de la información que el hotel facilite: carta, precios, fichas técnicas, ventas y compras recientes.','Validación de las prioridades con la dirección.'],
   day2Not:'No incluye inventario completo, formación del equipo ni un análisis en profundidad de todos los costes. Eso forma parte de la Auditoría Completa.',
   pageTitle:'Consultoría de bar para hoteles · Mystery Guest Bar Audit | Cheers Experiences',
-  heroMeta:["2 días en el hotel", "Informe en 7 días", "Desde 990&nbsp;€"], heroCTA:'Descubrir el potencial de mi bar', heroReassure:'Análisis independiente. Recomendaciones prácticas. Sin compromiso inicial.', regionsLabel:'Dónde trabajamos', regions:'Hoteles de lujo en el Sur de Europa: Portugal · España · Andorra · Costa Azul · Mónaco · Suiza · Italia',
+  heroMeta:["2 días en el hotel", "Informe en 7 días", "Desde 990&nbsp;€"], heroCTA:'Descubrir el potencial de mi bar', heroReassure:'Análisis independiente. Recomendaciones prácticas. Solo paga tras aceptar el presupuesto por escrito.', regionsLabel:'Dónde trabajamos', regions:'Hoteles de lujo en el Sur de Europa y los Alpes: Portugal · España · Andorra · Costa Azul · Mónaco · Suiza · Italia',
   hero:'El bar de su hotel puede valer más de lo que imagina. <em>Descubra cuánto.</em>',
   lead:'En solo 2 días, identificamos oportunidades para aumentar la facturación, mejorar los márgenes y elevar la experiencia de los huéspedes.',
   cta:'Solicitar el Mystery Guest Bar Audit', explore:'Ver qué incluye',
-  waCTA:'¿Sería descabellado saber cuánto está dejando sobre la mesa el bar de su hotel?', headerWA:'Escribir por WhatsApp',
+  waCTA:'Descubrir el potencial de mi bar', headerWA:'Escribir por WhatsApp',
   waText:'Hola Rui, me gustaría saber cuánto puede estar dejando sobre la mesa el bar de mi hotel. Hotel: __. Ubicación: __.',
   contactWA:'Enviar mensaje por WhatsApp', formIntro:'¿Prefiere el email? Use el formulario.',
   craftSummary:'Cócteles de autor y concepto por espacio', digitalSummary:'Menús QR, idiomas y pantallas',
@@ -88,7 +88,7 @@ export const auditOffer = {
   guarantee:'Si el informe no identifica al menos 990 € al mes (11.880 € al año) en oportunidades de facturación o de ahorro en su bar, le devolvemos el importe pagado por la auditoría. La garantía se refiere al valor de las oportunidades identificadas, no a un aumento efectivo de las ventas.',
   credit:'Si contrata la Auditoría Completa en los 30 días siguientes, el importe de la auditoría se descuenta del presupuesto.',
   terms:'Precio fijo para el alcance indicado. El presupuesto detalla desplazamiento, alojamiento, consumiciones, número de profesionales y servicios adicionales, acordados antes de confirmar. El plazo de 7 días comienza al finalizar la visita.',
-  dataNote:'Cada estimación muestra el cálculo y los supuestos. Si el hotel comparte datos de precios, costes y ventas, la estimación es más precisa.',
+  dataNote:'Cada estimación muestra el cálculo y los supuestos. Si el hotel comparte datos de precios, costes y ventas, la estimación es más precisa. Revisamos los supuestos con usted antes de cerrar el informe.',
   full:{
    label:'PASO 2 · LA TRANSFORMACIÓN', title:'Auditoría<br><em>Completa.</em>',
    intro:'Del diagnóstico al cambio sobre el terreno. Objetivos definidos con usted y todo detallado en un presupuesto a medida.',
@@ -115,7 +115,7 @@ export const auditOffer = {
   realCaption:'Ejemplo real · Cheers O Bar, Viseu.',
   imagesNote:'Imágenes de ambiente ilustrativas, salvo cuando se identifican como ejemplo real.',
   ogAlt:'Pantalla con contenidos promocionales en Cheers O Bar, en Viseu',
-  meta:'El bar de su hotel puede valer más de lo que imagina. En 2 días identificamos oportunidades para aumentar la facturación y mejorar los márgenes. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía.'
+  meta:'El bar de su hotel puede valer más de lo que imagina. En 2 días identificamos oportunidades para aumentar la facturación y mejorar los márgenes. Mystery Guest Bar Audit en hoteles de lujo del sur de Europa: desde 990 € + desplazamiento. Un día como huésped, un día con la dirección y el equipo, e informe con prioridades en 7 días. Con garantía de reembolso.'
  },
  en: {
   eyebrowHotel:'BAR CONSULTANCY FOR 4- AND 5-STAR HOTELS', craftLabel:'COCKTAIL MENUS',
@@ -125,17 +125,17 @@ export const auditOffer = {
   day2:['A conversation with management and the bar manager.','Observation of prep, the bar station, the bar store and procedures.','A review of the information the hotel provides: menu, prices, drink specifications, recent sales and purchases.','Validation of priorities with management.'],
   day2Not:'It does not include a full stock count, staff training or an in-depth analysis of every cost. Those are part of the Full Audit.',
   pageTitle:'Bar consultancy for hotels · Mystery Guest Bar Audit | Cheers Experiences',
-  heroMeta:["2 days at your hotel", "Report within 7 days", "From €990"], heroCTA:'Discover my bar’s potential', heroReassure:'Independent analysis. Practical recommendations. No initial commitment.', regionsLabel:'Where we work', regions:'Luxury hotels in Southern Europe: Portugal · Spain · Andorra · Côte d’Azur · Monaco · Switzerland · Italy',
+  heroMeta:["2 days at your hotel", "Report within 7 days", "From €990"], heroCTA:'Discover my bar’s potential', heroReassure:'Independent analysis. Practical recommendations. You only pay once you accept a written quote.', regionsLabel:'Where we work', regions:'Luxury hotels in Southern Europe and the Alps: Portugal · Spain · Andorra · Côte d’Azur · Monaco · Switzerland · Italy',
   hero:'Your hotel bar could be worth more than you think. <em>Find out how much.</em>',
   lead:'In just 2 days, we identify opportunities to increase revenue, improve margins and elevate the guest experience.',
   cta:'Request the Mystery Guest Bar Audit', explore:'See what it includes',
-  waCTA:'Would it be unreasonable to find out how much your hotel bar is leaving on the table?', headerWA:'Message us on WhatsApp',
+  waCTA:'Discover my bar’s potential', headerWA:'Message us on WhatsApp',
   waText:'Hello Rui, I would like to know how much my hotel bar may be leaving on the table. Hotel: __. Location: __.',
   contactWA:'Send a WhatsApp message', formIntro:'Prefer email? Use the form.',
   craftSummary:'Signature cocktails and a concept for each setting', digitalSummary:'QR menus, languages and screens',
   label:'STEP 1 · THE DIAGNOSIS', title:'Mystery Guest<br><em>Bar Audit.</em>',
   intro:'We see the bar as your guests do, then from the inside with management and the team. You get concrete priorities: what to fix first, why and with whom.',
-  priceFrom:'From', price:'€990', travel:'+ travel', priceNote:'The final fee depends on the country and is confirmed in writing before booking.', zones:'Portugal, Spain, Andorra, the Côte d\'Azur and Monaco, Switzerland and Italy (coast and islands included).', tax:'* In Portugal, VAT is added at the applicable rate. In other European Union countries, VAT is not invoiced on business-to-business services (reverse charge).',
+  priceFrom:'From', price:'€990', travel:'+ travel', priceNote:'The final fee depends on the country and is confirmed in writing before booking.', zones:'Portugal, Spain, Andorra, the Côte d’Azur and Monaco, Switzerland and Italy (coast and islands included).', tax:'* In Portugal, VAT is added at the applicable rate. In other European Union countries, VAT is not invoiced on business-to-business services (reverse charge).',
   scope:['1 hotel bar','Day 1 as a guest, day 2 with management and the team','First findings at the end of the visit','Full report within 7 days of the visit'],
   scarcity:'We take on a maximum of 4 audits per month.',
   deliveryTitle:'What you receive',
@@ -145,7 +145,7 @@ export const auditOffer = {
   guarantee:'If the report does not identify at least €990 a month (€11,880 a year) in revenue opportunities or savings in your bar, we refund the audit fee. The guarantee covers the value of opportunities identified, not a realised increase in sales.',
   credit:'If you go ahead with the Full Audit within 30 days, the audit fee is deducted from the quote.',
   terms:'Fixed price for the stated scope. The quote itemises travel, accommodation, drinks, number of consultants and any additional services, agreed before confirmation. The 7-day deadline starts at the end of the visit.',
-  dataNote:'Every estimate shows the calculation and assumptions. If the hotel shares pricing, cost and sales data, the estimate is more precise.',
+  dataNote:'Every estimate shows the calculation and assumptions. If the hotel shares pricing, cost and sales data, the estimate is more precise. We review the assumptions with you before the report is finalised.',
   full:{
    label:'STEP 2 · THE TRANSFORMATION', title:'Full<br><em>Audit.</em>',
    intro:'From diagnosis to change on the ground. Objectives agreed with you and everything itemised in a tailored quote.',
@@ -172,7 +172,7 @@ export const auditOffer = {
   realCaption:'Real example · Cheers O Bar, Viseu.',
   imagesNote:'Illustrative atmosphere images, unless identified as a real example.',
   ogAlt:'Screen with promotional content at Cheers O Bar, Viseu',
-  meta:'Your hotel bar could be worth more than you think. In 2 days we identify opportunities to increase revenue and improve margins. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Guaranteed.'
+  meta:'Your hotel bar could be worth more than you think. In 2 days we identify opportunities to increase revenue and improve margins. Mystery Guest Bar Audit for luxury hotels in Southern Europe: from €990 + travel. One day as a guest, one day with management and the team, and a prioritised report within 7 days. Money-back guarantee.'
  }
 };
 
@@ -180,7 +180,7 @@ export const auditOffer = {
 // ES/EN render the same points as translated text cards.
 export const leaks = {
  pt:{
-  images:true,label:'O LUCRO QUE NÃO VÊ',title:'10 sítios onde o seu bar<br><em>pode estar a perder dinheiro.</em>',
+  images:true,label:'O LUCRO QUE NÃO VÊ',title:'10 oportunidades que o seu bar<br><em>pode estar a deixar escapar.</em>',
   intro:'São exemplos do que o Mystery Guest Bar Audit procura. Quantos destes acontecem no seu bar?',
   cta:'Descobrir quais acontecem no meu bar',fixLabel:'Como corrigir',prev:'Anterior',next:'Seguinte',region:'10 fugas de margem',
   items:[
@@ -197,7 +197,7 @@ export const leaks = {
   ]
  },
  es:{
-  images:false,label:'EL BENEFICIO QUE NO VE',title:'10 puntos donde su bar<br><em>puede estar perdiendo dinero.</em>',
+  images:false,label:'EL BENEFICIO QUE NO VE',title:'10 oportunidades que su bar<br><em>puede estar dejando escapar.</em>',
   intro:'Son ejemplos de lo que busca el Mystery Guest Bar Audit. ¿Cuántos ocurren en su bar?',
   cta:'Descubrir cuáles ocurren en mi bar',fixLabel:'Cómo corregirlo',prev:'Anterior',next:'Siguiente',region:'10 fugas de margen',
   items:[
@@ -214,7 +214,7 @@ export const leaks = {
   ]
  },
  en:{
-  images:false,label:'THE PROFIT YOU DO NOT SEE',title:'10 places where your bar<br><em>may be losing money.</em>',
+  images:false,label:'THE PROFIT YOU DO NOT SEE',title:'10 opportunities your bar<br><em>may be missing.</em>',
   intro:'These are examples of what the Mystery Guest Bar Audit looks for. How many happen in your bar?',
   cta:'Find out which happen in my bar',fixLabel:'How to fix it',prev:'Previous',next:'Next',region:'10 margin leaks',
   items:[
