@@ -82,11 +82,11 @@
   const groups=[['.section>.wrap>.eyebrow,.section>.wrap>h2,.section>.wrap>div>.eyebrow,.section>.wrap>div>h2,.section>.wrap>div>.lead,.section-head .eyebrow,.section-head h2,.section-head .lead,.value2-head>*',null],
    ['.value2-grid article',null],['.method2-steps li',null],['.method2-note',null],['.report-card',null],['.services2-grid article',null],['.services2-guarantee,.services2 .fine',null],
    ['.person-photo','left'],['.person-body',null],['.founder-path>.eyebrow,.timeline article,.founder-path .fine',null],['.contact-form',null],['.accordion details',null],
-   ['.contact .lead,.contact-primary,.contact-checklist',null],['.footer-main>*',null],['.hero .eyebrow,.hero-lead,.hero-actions',null],['.door .eyebrow,.door>p,.door-actions',null]];
+   ['.contact .lead,.contact-primary,.contact-checklist',null],['.footer-main>*',null],['.hero .eyebrow,.hero-lead,.hero-actions,.event-hero-price,.hero-proof,.digital-micro,.digital-jump',null],['.offer-grid>article',null],['.event-how>h3,.event-steps li',null],['.event-cta-box',null],['.event-types-photo,.partners-photo,.editorial-photo','left'],['.event-type',null],['.wedding-benefits article',null],['.signature-text .fine,.signature-text .accordion',null],['.corporate-brand,.corporate-list',null],['.partnership-grid>article',null],['.scope-layout>div:first-child>*',null],['.digital-package-grid>article',null],['.digital-scope,.screens-only',null],['.work-item',null],['.screen-example',null],['.digital-steps li',null],['.digital-faq>h3',null],['.tags,.context-grid article',null],['.contact-links,.contact-person',null],['.door .eyebrow,.door>p,.door-actions',null]];
   const reveal=[];
   for(const [selector,kind] of groups){
    const byParent=new Map();
-   document.querySelectorAll(selector).forEach(el=>{if(el.dataset.rv!==undefined)return;const key=el.closest('.door,.person,.section,.hero,footer')||document.body;const i=byParent.get(key)||0;byParent.set(key,i+1);el.dataset.rv=kind||'';el.style.setProperty('--i',Math.min(i,6));reveal.push(el);});
+   document.querySelectorAll(selector).forEach(el=>{if(el.dataset.rv!==undefined)return;const key=el.closest('.door,.person,.event-how,.event-type-grid,.partnership-grid,.digital-faq,.context-grid,.section,.hero,footer')||document.body;const i=byParent.get(key)||0;byParent.set(key,i+1);el.dataset.rv=kind||'';el.style.setProperty('--i',Math.min(i,6));reveal.push(el);});
   }
   // hero and door headlines start a little later so the mask reveal leads
   document.querySelectorAll('.hero .hero-lead,.hero .hero-actions,.door>p,.door-actions').forEach(el=>el.style.setProperty('--i',6));
@@ -111,7 +111,7 @@
   document.querySelectorAll('.cnt').forEach(el=>observer.observe(el));
   if(fine.matches){
    document.querySelectorAll('.button:not(.door .button)').forEach(magnetic);
-   parallax=[...document.querySelectorAll('.hero2-visual img')].map(el=>[el,-.09]);
+   parallax=[...document.querySelectorAll('.hero2-visual img,.hero-visual img')].map(el=>[el,-.09]);
    onScroll();
   }
  }

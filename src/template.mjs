@@ -89,8 +89,8 @@ export function body(lang,page,content){
 }
 export function document(lang,page,content){
  const ep=page==='entry',dp=page==='digital',event=dp||ep?false:page;
- // Skin: the 10/11/2026 "after-hours" redesign (rescue.css/js) is on the entry and hotels pages; events and digital keep atelier.css until approved.
- const rx=ep||page===false;
+ // Skin: since 10/11/2026 every page uses the "after-hours" design (rescue.css + rescue.js). atelier.css is kept only as the previous design.
+ const rx=true;
  const t=editorial[lang],d=content[lang];const title=ep?entry[lang].title:dp?digital[lang].title:event?weddings[lang].metadata:hotels[lang].pageTitle;
  const desc=ep?entry[lang].meta:dp?digital[lang].meta:event?weddings[lang].description:hotels[lang].meta;
  const path=route(lang,page);const structured={'@context':'https://schema.org','@type':'ProfessionalService',name:'Cheers Experiences',url:'https://cheersexperiences.com'+path,email:'info@cheersexperiences.com',telephone:event?'+351927593411':'+351927653087',areaServed:['Portugal','Spain','Andorra','France','Monaco','Switzerland','Italy'],description:desc,parentOrganization:{'@type':'Organization',name:'Sucesso Maciço, Lda.'}};
