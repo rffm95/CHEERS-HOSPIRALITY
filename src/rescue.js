@@ -77,8 +77,10 @@
  function film(fig){
   const v=fig.querySelector('video'),b=fig.querySelector('.video-sound');if(!v||!b||b.dataset.ready)return;b.dataset.ready='1';
   v.muted=true;b.hidden=false;
-  if(still.matches){v.removeAttribute('autoplay');v.pause();v.controls=true;b.hidden=true;return;}
-  v.play?.().catch(()=>{v.controls=true;});
+  // Rui asked for autoplay, so it also starts with "reduce motion" on (Windows "Animation effects" off); there it plays once instead of looping.
+  if(still.matches)v.loop=false;
+  const go=()=>v.play?.().catch(()=>{v.controls=true;});
+  if(v.paused)go();if(v.readyState<2)v.addEventListener('canplay',()=>{if(v.paused&&!v.ended)go();},{once:true});
   b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{});}b.setAttribute('aria-pressed',String(!v.muted));b.textContent=v.muted?b.dataset.off:b.dataset.on;});
  }
  function init(){
