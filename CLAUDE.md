@@ -26,7 +26,8 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 
 - Pedido do Rui: redesenhar só a camada visual (sem mexer em textos, estrutura ou links). Aprovou a entrada + hotéis e pediu o mesmo no resto do site.
 - Todas as páginas (entrada, hotéis, eventos, digital, checklist e obrigado) usam `src/rescue.css` + `src/rescue.js`, ligados em `src/template.mjs` por `data-skin="rescue"`. `atelier.css` continua a ser copiado para `dist/` (os testes leem-no) mas já não é ligado por nenhuma página; `atelier.js` continua a tratar da navegação, formulários e idiomas.
-- Direção: preto quente (#0E0D0C), texto off-white, âmbar/whisky (#C8893B), vermelho néon só em números e detalhes; títulos em Anton (maiúsculas), texto em Manrope (`dist/fonts/anton-400.woff2`, `manrope-var.woff2`, licença OFL); grão de filme, fotos em duotone (ganham cor ao passar o rato). Secções claras "papel" (`.ivory`) alternam com as escuras. Os exemplos reais da página digital (menu QR, ecrãs) ficam a cores.
+- Direção: preto quente (#0E0D0C), texto off-white, âmbar/whisky (#C8893B), vermelho néon só em números e detalhes; títulos em Cormorant Garamond desde 10/11/2026 (antes Anton), texto em Manrope (`dist/fonts/manrope-var.woff2`, licença OFL); grão de filme, fotos em duotone (ganham cor ao passar o rato). Secções claras "papel" (`.ivory`) alternam com as escuras. Os exemplos reais da página digital (menu QR, ecrãs) ficam a cores.
+- Letra e logotipo (10/11/2026, a Beatriz achou o Anton pouco "chique"): os títulos passaram para Cormorant Garamond (minúsculas, itálico âmbar no `em`; ficheiros `dist/fonts/cormorant-*.woff`, já corrigidos para os acentos). O Anton deixou de ser usado; o texto continua em Manrope. No topo esquerdo de todas as páginas está o logotipo (`dist/images/logo-cheers.webp`: copo dourado + CHEERS creme + EXPERIENCES dourado, recortado do logotipo original com fundo creme). O rodapé mantém "CHEERS." em texto, na mesma letra.
 - Secções numeradas automaticamente só na página de hotéis (eventos e digital já têm números nos textos).
 - Rodapé: o "CHEERS" grande é preenchido num tom escuro visível e acende ao passar o rato (a versão só com contorno ficava invisível no browser do Rui).
 - Movimento sem bibliotecas (JS próprio): título revelado linha a linha, néon a "aquecer", reveals ao scroll, contadores nos números que já existem no texto, faixa "Onde trabalhamos" em movimento, botões magnéticos. Tudo desligado com `prefers-reduced-motion` e a página funciona sem JS.
@@ -41,7 +42,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - `src/editorial.mjs` — textos partilhados (menu, contactos, FAQ gerais, formulários).
 - `src/content.json` — conteúdos de apoio (serviços, método, eventos, calculadora).
 - `src/template.mjs` — HTML das páginas.
-- `src/rescue.css` / `src/rescue.js` — design e movimento atuais (Anton + Manrope). `src/atelier.js` — navegação, formulários, idiomas. `src/atelier.css` — design anterior (já não ligado).
+- `src/rescue.css` / `src/rescue.js` — design e movimento atuais (Cormorant Garamond + Manrope). `src/atelier.js` — navegação, formulários, idiomas. `src/atelier.css` — design anterior (já não ligado).
 - `dist/` — site gerado e publicado (imagens em `dist/images`).
 
 ## Comandos
