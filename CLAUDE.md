@@ -22,7 +22,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Links curtos (gerados em `scripts/build.mjs`): /hotels, /hotel, /hoteles, /hotéis → página de hotéis; /events, /evenements, /weddings, /casamentos, /bodas, /mariages → página de eventos. Abrem no idioma do telemóvel (pt, es, fr; outro → en), salvo se a pessoa já escolheu um idioma no site. Mantêm utm e #âncoras.
 - Fonte dos títulos: Cormorant Garamond (em `dist/fonts/cormorant-*.woff`, licença OFL). Os ficheiros foram corrigidos com `scripts/fix-cormorant-circumflex.py` porque a fonte original desenha â ê î ô û com o acento torto. O PDF da checklist continua com Lora.
 
-## Novo visual "after-hours" (10/11/2026, em preview no ramo — o Rui gostou e pediu para aplicar a todo o site; falta o "faz commit" para publicar)
+## Novo visual "after-hours" (aprovado pelo Rui e publicado em 10/11/2026)
 
 - Pedido do Rui: redesenhar só a camada visual (sem mexer em textos, estrutura ou links). Aprovou a entrada + hotéis e pediu o mesmo no resto do site.
 - Todas as páginas (entrada, hotéis, eventos, digital, checklist e obrigado) usam `src/rescue.css` + `src/rescue.js`, ligados em `src/template.mjs` por `data-skin="rescue"`. `atelier.css` continua a ser copiado para `dist/` (os testes leem-no) mas já não é ligado por nenhuma página; `atelier.js` continua a tratar da navegação, formulários e idiomas.
