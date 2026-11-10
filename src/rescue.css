@@ -2,7 +2,11 @@
    Used by every page since 10/11/2026 (entry, hotels, events, digital, checklist and thank-you pages).
    Design tokens first, then base, components, sections, entry page, motion. Motion lives behind html.fx (set by JS) and
    prefers-reduced-motion, so the page is complete and readable without either. */
-@font-face{font-family:'Anton';src:url(/fonts/anton-400.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-normal.woff) format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-italic.woff) format('woff');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-normal.woff) format('woff');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-italic.woff) format('woff');font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-600-normal.woff) format('woff');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Manrope';src:url(/fonts/manrope-var.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
 
 :root{
@@ -14,9 +18,9 @@
  --rule:rgba(243,237,226,.16);--rule-strong:rgba(243,237,226,.38);
  --paper:#EFE8DC;--paper-ink:#171412;
  /* type */
- --display:'Anton','Arial Narrow','Haettenschweiler',Impact,sans-serif;
+ --display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
  --body:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
- --fs-h1:clamp(46px,min(8.1vw,11vh),136px);--fs-h2:clamp(38px,5.6vw,92px);--fs-h3:clamp(26px,2.5vw,38px);
+ --fs-h1:clamp(50px,min(8.4vw,11.6vh),144px);--fs-h2:clamp(42px,6vw,100px);--fs-h3:clamp(28px,2.7vw,42px);
  --fs-lead:clamp(17px,1.35vw,21px);--fs-body:16px;--fs-small:13px;--fs-label:12px;
  /* spacing scale */
  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:128px;--s11:176px;
@@ -582,7 +586,7 @@ body[data-page=entry]{display:flex;flex-direction:column;min-height:100svh}
  .door+.door{border-left:0;border-top:1px solid var(--rule-strong)}
 }
 @media(max-width:640px){
- :root{--fs-h1:clamp(32px,min(11.6vw,5.5vh),60px);--fs-h2:clamp(36px,11vw,52px)}
+ :root{--fs-h1:clamp(36px,min(12.4vw,6vh),64px);--fs-h2:clamp(38px,11.6vw,56px)}
  .area-home{display:none}
  .area-inner{justify-content:flex-end}
  .brand b{font-size:28px}.brand small{font-size:8px;letter-spacing:.36em}
@@ -660,3 +664,22 @@ body[data-page=entry]{display:flex;flex-direction:column;min-height:100svh}
  .event-cta-links{width:100%}
  .thankyou .button{margin-right:0}
 }
+
+/* ===== Luxury type (10/11/2026): Cormorant Garamond replaces Anton for all display type; logo image in the header ===== */
+h1,h2,h3{font-weight:500;text-transform:none;letter-spacing:-.012em}
+h1{line-height:1.02}h2{line-height:1.04}h3{line-height:1.06;letter-spacing:0}
+h1 em,h2 em,h3 em{font-style:italic;font-weight:500;letter-spacing:-.02em}
+.hero-regions p,.report-card-title,.report-card-kpis dd,:is(.event-steps,.digital-steps) h4,.work-item strong,.screen-example p.screen-headline,.context-grid h4{text-transform:none;font-weight:500;letter-spacing:0}
+.hero-regions p{font-style:italic;font-size:clamp(22px,2.3vw,34px)}
+:is(.event-steps,.digital-steps) h4,.context-grid h4,.work-item strong{font-size:clamp(24px,2.2vw,32px)}
+.method2-steps .eyebrow,.timeline .eyebrow{font-weight:500;text-transform:none;letter-spacing:0}
+.roman,.index,.door::after{font-weight:400;font-style:italic;-webkit-text-stroke:0;color:var(--neon);text-shadow:0 0 24px var(--neon-glow)}
+.roman{color:var(--neon)}
+.door::after{color:var(--rule-strong);text-shadow:none}
+.header nav>a:not(.button){font-weight:500}
+.brand-logo{display:block;width:auto;height:58px}
+.entry-header .brand-logo{height:60px}
+.footer-main .brand b{font-size:clamp(56px,9.4vw,150px);line-height:.9;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.footer-main .brand b span{color:var(--amber)}
+.footer-main .brand small{letter-spacing:.62em}
+@media (max-width:640px){.brand-logo,.entry-header .brand-logo{height:42px}}
