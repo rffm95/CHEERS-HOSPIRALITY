@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 const paths=['','/es','/en','/fr'].flatMap(l=>['index','hoteis','eventos','digital'].map(p=>l+'/'+p+'.html'));
-const mime={webp:'image/webp',jpg:'image/jpeg',svg:'image/svg+xml'};
+const mime={webp:'image/webp',jpg:'image/jpeg',svg:'image/svg+xml',mp4:'video/mp4'};
 const asset=file=>`data:${mime[file.split('.').at(-1)]};base64,${fs.readFileSync('dist'+file).toString('base64')}`;
 const cache=new Map();
-const inline=html=>html.replace(/src="(\/images\/[^" ]+)"/g,(_,path)=>{if(!cache.has(path))cache.set(path,asset(path));return `src="${cache.get(path)}"`;});
+const inline=html=>html.replace(/(src|poster)="(\/(?:images|video)\/[^" ]+)"/g,(_,attr,path)=>{if(!cache.has(path))cache.set(path,asset(path));return `${attr}="${cache.get(path)}"`;});
 const pages=Object.fromEntries(paths.map(path=>[path,inline(fs.readFileSync('dist'+path,'utf8').replace(/<script[^>]*src=[^>]+><\/script>/g,''))]));
 const embed=file=>fs.readFileSync(file,'utf8').replace(/url\((\/fonts\/[^)]+\.(woff2?))\)/g,(_,f,ext)=>`url(data:font/${ext};base64,${fs.readFileSync('dist'+f).toString('base64')})`);
 const css=embed('dist/atelier.css'),rcss=embed('dist/rescue.css'),js=fs.readFileSync('dist/atelier.js','utf8'),rjs=fs.readFileSync('dist/rescue.js','utf8');

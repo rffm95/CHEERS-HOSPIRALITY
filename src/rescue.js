@@ -73,6 +73,14 @@
   button.addEventListener('pointerleave',()=>{button.style.transform='';});
  }
 
+ // Hero film (Spanish hotels page): starts muted so browsers allow autoplay; the button turns the sound on.
+ function film(fig){
+  const v=fig.querySelector('video'),b=fig.querySelector('.video-sound');if(!v||!b||b.dataset.ready)return;b.dataset.ready='1';
+  v.muted=true;b.hidden=false;
+  if(still.matches){v.removeAttribute('autoplay');v.pause();v.controls=true;b.hidden=true;return;}
+  v.play?.().catch(()=>{v.controls=true;});
+  b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{});}b.setAttribute('aria-pressed',String(!v.muted));b.textContent=v.muted?b.dataset.off:b.dataset.on;});
+ }
  function init(){
   observer?.disconnect();parallax=[];
   if(document.body.dataset.skin!=='rescue'){root.classList.remove('fx');return;}
@@ -95,6 +103,7 @@
   const numbers=[...document.querySelectorAll('.method2-steps .eyebrow,#report h2,#checklist h2,.services2 .fine')];
   numbers.forEach(wrapNumbers);
   document.querySelectorAll('.hero-regions p').forEach(marquee);
+  document.querySelectorAll('.hero2-video').forEach(film);
   const start=()=>{lines.forEach(el=>{splitLines(el);playLines(el);});};
   if(still.matches){reveal.forEach(el=>el.classList.add('in'));lines.forEach(el=>el.classList.add('is-split','is-in','is-done'));return;}
   (document.fonts?.ready||Promise.resolve()).then(start,start);
