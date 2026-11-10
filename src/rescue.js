@@ -74,17 +74,33 @@
  }
 
  // Hero film (Spanish hotels page): starts muted so browsers allow autoplay; the button turns the sound on.
+ // Hero film (Spanish hotels page): starts muted so browsers allow autoplay; the button turns the sound on.
+ // Browsers sometimes refuse or interrupt the first play() (slow network, tab in background, battery saver),
+ // so it retries when data arrives, when the video is on screen, when the tab comes back and on the first touch, scroll or key.
+ let films=[];
+ const kick=()=>films.forEach(f=>f());
+ addEventListener('visibilitychange',()=>{if(!document.hidden)kick();});
+ for(const e of ['pointerdown','touchstart','keydown','scroll'])addEventListener(e,kick,{passive:true});
  function film(fig){
   const v=fig.querySelector('video'),b=fig.querySelector('.video-sound');if(!v||!b||b.dataset.ready)return;b.dataset.ready='1';
   v.muted=true;b.hidden=false;
   // Rui asked for autoplay, so it also starts with "reduce motion" on (Windows "Animation effects" off); there it plays once instead of looping.
   if(still.matches)v.loop=false;
-  const go=()=>v.play?.().catch(()=>{v.controls=true;});
-  if(v.paused)go();if(v.readyState<2)v.addEventListener('canplay',()=>{if(v.paused&&!v.ended)go();},{once:true});
-  b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play().catch(()=>{});}b.setAttribute('aria-pressed',String(!v.muted));b.textContent=v.muted?b.dataset.off:b.dataset.on;});
+  let done=false;
+  const tryPlay=()=>{if(done||!v.isConnected||!v.paused||v.ended)return;if(!b.matches('[aria-pressed=true]'))v.muted=true;const p=v.play();p&&p.catch(()=>{});};
+  v.addEventListener('playing',()=>{fig.classList.remove('needs-tap');v.controls=false;});
+  v.addEventListener('ended',()=>{done=true;});
+  for(const e of ['loadedmetadata','loadeddata','canplay','canplaythrough'])v.addEventListener(e,tryPlay);
+  fig.addEventListener('click',e=>{if(e.target===b)return;if(v.paused){done=false;v.play().catch(()=>{});}});
+  new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting))tryPlay();},{threshold:.2}).observe(v);
+  films.push(tryPlay);
+  tryPlay();
+  // last resort (e.g. iPhone in low power mode, which blocks every autoplay): show the native play button
+  setTimeout(()=>{if(v.paused&&!done){fig.classList.add('needs-tap');v.controls=true;}},4000);
+  b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted){done=false;v.currentTime=0;v.play().catch(()=>{});}b.setAttribute('aria-pressed',String(!v.muted));b.textContent=v.muted?b.dataset.off:b.dataset.on;});
  }
  function init(){
-  observer?.disconnect();parallax=[];
+  observer?.disconnect();parallax=[];films=[];
   if(document.body.dataset.skin!=='rescue'){root.classList.remove('fx');return;}
   root.classList.add('fx');
   const entry=document.body.dataset.page==='entry';
