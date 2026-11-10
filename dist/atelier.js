@@ -45,10 +45,13 @@ if(typeof document!=='undefined')(()=>{
    for(const selector of ['meta[name="description"]','link[rel="canonical"]','meta[property^="og:"]','link[rel="alternate"]','script[type="application/ld+json"]']){
     document.head.querySelectorAll(selector).forEach(n=>n.remove());next.head.querySelectorAll(selector).forEach(n=>document.head.append(n.cloneNode(true)));
    }
-   document.body.innerHTML=next.body.innerHTML;document.body.dataset.page=next.body.dataset.page;document.body.dataset.language=next.body.dataset.language;
+   // Pages can use different stylesheets (skins). On the live site a skin change is a normal page load; the single-file preview swaps the embedded styles.
+   const skin=next.body.dataset.skin||'atelier';
+   if(skin!==(document.body.dataset.skin||'atelier')){if(!window.__cheersPreview){location.assign(raw);return;}document.querySelectorAll('style[data-skin]').forEach(st=>st.media=st.dataset.skin===skin?'all':'not all');document.documentElement.classList.toggle('fx',skin==='rescue'&&!!window.cheersFx);}
+   document.body.innerHTML=next.body.innerHTML;document.body.dataset.page=next.body.dataset.page;document.body.dataset.language=next.body.dataset.language;document.body.dataset.skin=skin;
    if(!window.__cheersPreview)updateHistory(replace?'replaceState':'pushState',url.pathname+url.search+url.hash);
    else updateHistory('replaceState',location.pathname+location.search+url.hash);
-   bind();window.cheersTrackPage?.();for(const [name,value]of Object.entries(previous)){const field=document.querySelector(`.contact-form [name="${name}"]`);if(field)field.value=value;}
+   bind();window.cheersFx?.init();window.cheersTrackPage?.();for(const [name,value]of Object.entries(previous)){const field=document.querySelector(`.contact-form [name="${name}"]`);if(field)field.value=value;}
    const ef=document.querySelector('[data-event-form]');if(ef)ef.dispatchEvent(new Event('change'));
    if(url.hash)openTarget(url.hash);else window.scrollTo({top:0,behavior:'instant'});
    if(!preserve&&!url.hash)document.getElementById('main')?.focus({preventScroll:true});

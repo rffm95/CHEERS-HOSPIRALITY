@@ -22,6 +22,14 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Links curtos (gerados em `scripts/build.mjs`): /hotels, /hotel, /hoteles, /hotéis → página de hotéis; /events, /evenements, /weddings, /casamentos, /bodas, /mariages → página de eventos. Abrem no idioma do telemóvel (pt, es, fr; outro → en), salvo se a pessoa já escolheu um idioma no site. Mantêm utm e #âncoras.
 - Fonte dos títulos: Cormorant Garamond (em `dist/fonts/cormorant-*.woff`, licença OFL). Os ficheiros foram corrigidos com `scripts/fix-cormorant-circumflex.py` porque a fonte original desenha â ê î ô û com o acento torto. O PDF da checklist continua com Lora.
 
+## Novo visual "after-hours" (10/11/2026, em preview — ainda não aprovado nem publicado)
+
+- Pedido do Rui: redesenhar só a camada visual (sem mexer em textos, estrutura ou links), primeiro na homepage; se aprovar, aplica-se às restantes páginas.
+- Está na página de entrada (`index.html`) e na página de hotéis (`hoteis.html`): `src/rescue.css` + `src/rescue.js`, ligados em `src/template.mjs` por `data-skin="rescue"`. Eventos e digital continuam com `atelier.css` (`data-skin="atelier"`). Quando a navegação muda de skin, `atelier.js` faz um carregamento normal da página (na preview troca o `<style>`).
+- Direção: preto quente (#0E0D0C), texto off-white, âmbar/whisky (#C8893B), vermelho néon só em números e detalhes; títulos em Anton (maiúsculas), texto em Manrope (`dist/fonts/anton-400.woff2`, `manrope-var.woff2`, licença OFL); grão de filme, secções numeradas, fotos em duotone.
+- Movimento sem bibliotecas (JS próprio): título revelado linha a linha, néon a "aquecer", reveals ao scroll, contadores nos números que já existem no texto, faixa "Onde trabalhamos" em movimento, botões magnéticos. Tudo desligado com `prefers-reduced-motion` e a página funciona sem JS.
+- Não há testemunhos nem números de resultados no site (e não se inventam): a faixa em movimento usa a linha "Onde trabalhamos" e os contadores usam só números do texto (dia 1, 2, 7, 10 minutos, 10 fugas, 4 auditorias).
+
 ## Estrutura
 
 - `src/hotels.mjs` — textos da página de hotéis (desde 09/11/2026), da página de entrada e do contacto da Beatriz, em PT/ES/EN/FR.
