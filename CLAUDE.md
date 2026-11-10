@@ -9,7 +9,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Quatro idiomas: qualquer alteração de texto é feita em PT (pt-PT), ES (es-ES, "usted" nos hotéis, "vosotros" nos casamentos), EN (britânico) e FR (fr-FR, "vous"). O francês está em `src/fr.json` (ligado por `src/fr.mjs`); uma chave em falta cai para o inglês.
 - Mercado: hotéis de luxo 4 e 5 estrelas do Sul da Europa (Portugal, Espanha, Andorra, Côte d'Azur e Mónaco, Suíça, Itália). Sem preços publicados em lado nenhum do site (decisão do Rui em 09/11/2026): o Mystery Guest, a Auditoria Completa e os eventos são todos "sob orçamento", confirmado por escrito antes de marcar. A garantia não usa números: se o relatório não identificar, por mês, oportunidades de valor superior ao investimento no diagnóstico, devolve-se o valor pago.
 - Não inventar testemunhos, clientes, logótipos, números de vendas ou prémios. O percurso do Rui (Cheers O Bar desde 2014, Grande Real Santa Eulália 2017) é experiência profissional, não clientes de consultoria.
-- O Rui não quer vídeos no site.
+- Vídeos: a regra era não ter vídeos no site. Exceção pedida pelo Rui em 10/11/2026: o vídeo em espanhol no topo da página de hotéis, só na versão ES (`dist/video/hoteis-es.mp4`, em `src/template.mjs` → `hotelVideoES`). Arranca sozinho sem som (os browsers só deixam autoplay em silêncio) e tem o botão "Activar sonido". Não pôr vídeos noutras páginas ou idiomas sem ele pedir.
 - IVA: o site não fala em IVA.
 - Linguagem: falar em "oportunidades de faturação", não em "vendas perdidas" (o diretor não se deve sentir acusado). Os 11.880 € não entram na promessa principal; ficam na garantia e nas contas mais abaixo (06/11/2026).
 
@@ -22,7 +22,7 @@ Site estático (sem frameworks) da Cheers Experiences: consultoria de bar para h
 - Links curtos (gerados em `scripts/build.mjs`): /hotels, /hotel, /hoteles, /hotéis → página de hotéis; /events, /evenements, /weddings, /casamentos, /bodas, /mariages → página de eventos. Abrem no idioma do telemóvel (pt, es, fr; outro → en), salvo se a pessoa já escolheu um idioma no site. Mantêm utm e #âncoras.
 - Fonte dos títulos: Cormorant Garamond (em `dist/fonts/cormorant-*.woff`, licença OFL). Os ficheiros foram corrigidos com `scripts/fix-cormorant-circumflex.py` porque a fonte original desenha â ê î ô û com o acento torto. O PDF da checklist continua com Lora.
 
-## Novo visual "after-hours" (10/11/2026, em preview no ramo — o Rui gostou e pediu para aplicar a todo o site; falta o "faz commit" para publicar)
+## Novo visual "after-hours" (aprovado pelo Rui e publicado em 10/11/2026)
 
 - Pedido do Rui: redesenhar só a camada visual (sem mexer em textos, estrutura ou links). Aprovou a entrada + hotéis e pediu o mesmo no resto do site.
 - Todas as páginas (entrada, hotéis, eventos, digital, checklist e obrigado) usam `src/rescue.css` + `src/rescue.js`, ligados em `src/template.mjs` por `data-skin="rescue"`. `atelier.css` continua a ser copiado para `dist/` (os testes leem-no) mas já não é ligado por nenhuma página; `atelier.js` continua a tratar da navegação, formulários e idiomas.
