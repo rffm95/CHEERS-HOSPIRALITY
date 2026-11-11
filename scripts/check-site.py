@@ -31,7 +31,10 @@ for lang in ['pt','es','en','fr']:
    assert f.xpath('.//input[@required]/@name')==['email']
   if name=='hoteis.html':
    assert doc.xpath('//form[@data-checklist-form]') and doc.xpath('//*[@id="services"]') and doc.xpath('//*[@id="faq"]'),path
-   assert not re.search(r'990|€\s?\d|\d\s?€',doc.text_content()),(path,'hotel page must not publish prices')
+   # the illustrative report card shows a hypothetical cocktail calculation (Rui, 11/11/2026); Cheers' own fees stay unpublished
+   priced=''.join(t for t in doc.xpath('//text()[not(ancestor::figure[contains(@class,"report-card")])]'))
+   assert not re.search(r'990|€\s?\d|\d\s?€',priced.replace('\xa0',' ')),(path,'hotel page must not publish prices')
+   assert '480' in ''.join(doc.xpath('//figure[contains(@class,"report-card")]//text()')),(path,'report example shows the worked calculation')
   if name=='index.html':
    assert len(doc.xpath('//a[contains(@class,"button")]'))==2,(path,'entry page has two doors')
    assert not doc.xpath('//*[contains(@class,"contact-links")]'),(path,'hotel contact keeps two paths')
