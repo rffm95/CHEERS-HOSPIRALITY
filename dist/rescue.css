@@ -2,11 +2,11 @@
    Used by every page since 10/11/2026 (entry, hotels, events, digital, checklist and thank-you pages).
    Design tokens first, then base, components, sections, entry page, motion. Motion lives behind html.fx (set by JS) and
    prefers-reduced-motion, so the page is complete and readable without either. */
-@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-normal.woff) format('woff');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-italic.woff) format('woff');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-normal.woff) format('woff');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-italic.woff) format('woff');font-weight:500;font-style:italic;font-display:swap}
-@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-600-normal.woff) format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-normal.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-500-italic.woff2) format('woff2');font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/fonts/cormorant-600-normal.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Manrope';src:url(/fonts/manrope-var.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
 
 :root{
@@ -35,7 +35,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head-h) + 24px);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-body)/1.7 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
 /* film grain */
-body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.075;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.075;transform:translateZ(0);will-change:transform;contain:strict;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{display:block;max-width:100%;height:auto}
 figure{margin:0}
 a{color:inherit;text-decoration:none}
@@ -528,8 +528,7 @@ body[data-page=entry]{display:flex;flex-direction:column;min-height:100svh}
  html.fx [data-lines].is-done .w{overflow:visible}
  /* neon warming up, then a slow ambient glow */
  html.fx .hero h1:not(.is-done) em,html.fx .contact h2:not(.in) em{text-shadow:none}
- html.fx .hero h1.is-done em,html.fx .contact h2.in em{animation:warm 2.6s linear both,glow 7s 2.6s ease-in-out infinite alternate}
- html.fx .hero::before{animation:ambient 11s ease-in-out infinite alternate}
+ html.fx .hero h1.is-done em,html.fx .contact h2.in em{animation:warm 2.6s linear both}
  html.fx .hero2-visual,html.fx .hero-visual,html.fx .digital-real{animation:fadein 2.2s .2s var(--ease) both}
  .services2 .fine::before{animation:pulse 2.8s ease-in-out infinite}
 }
@@ -683,3 +682,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;letter-spacing:-.02em}
 .footer-main .brand b span{color:var(--amber)}
 .footer-main .brand small{letter-spacing:.62em}
 @media (max-width:640px){.brand-logo,.entry-header .brand-logo{height:42px}}
+
+/* ===== Performance (10/11/2026): same look, less repainting while scrolling ===== */
+@media (max-width:960px){.header{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(14,13,12,.96)}}
+.hero2-video{cursor:pointer}
