@@ -215,6 +215,10 @@ body[data-page=hotels] .section>.wrap::before{content:counter(sec,decimal-leadin
 :is(.offer-grid,.digital-package-grid,.partnership-grid)>article h3{font-size:clamp(28px,2.8vw,44px);margin-bottom:var(--s4)}
 :is(.services2-grid,.offer-grid,.digital-package-grid,.partnership-grid)>article>p{color:var(--ink-2);max-width:52ch}
 :is(.services2-grid,.offer-grid,.digital-package-grid,.partnership-grid) .clean-list{align-self:stretch;margin:var(--s5) 0;border-bottom:1px solid var(--rule)}
+.services2-bonus-title{margin:var(--s2) 0 0!important;font:700 var(--fs-label)/1.5 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--accent)!important}
+:is(.services2-grid) .clean-list.services2-bonus{margin-top:var(--s3)}
+.services2-bonus li{color:var(--ink)}
+.services2-bonus li::before{content:'+';top:var(--s3);width:auto;height:auto;background:none;color:var(--accent);font-weight:700;line-height:inherit}
 .services2-price{margin-bottom:var(--s6)!important;font-size:14px;font-weight:600;letter-spacing:.02em;color:var(--ink)!important}
 .services2-guarantee{max-width:820px;margin:var(--s9) 0 var(--s5);padding-left:var(--s6);border-left:2px solid var(--accent);font-size:clamp(17px,1.4vw,21px);line-height:1.6;color:var(--ink-2)}
 .services2-guarantee strong{display:block;margin-bottom:var(--s2);font:700 var(--fs-label)/1.5 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
