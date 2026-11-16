@@ -116,3 +116,28 @@ if(typeof document!=='undefined')(()=>{
  if(supported.includes(explicit)&&explicit!==document.body.dataset.language){const campaign=new URLSearchParams(location.search);campaign.delete('lang');const q=campaign.toString();navigate(pageRoute(explicit,document.body.dataset.page)+(q?'?'+q:'')+location.hash,{replace:true});}
  else{bind();if(location.hash)requestAnimationFrame(()=>openTarget(location.hash));}
 })();
+
+// Email chooser (16/11/2026): a mailto link does nothing on computers without an email app (Gmail/Outlook on the web).
+// Every email link outside the forms opens a small window: the address, "copy", Gmail, Outlook and the email app.
+(()=>{if(typeof window==='undefined'||typeof document==='undefined'||!document.addEventListener||window.__cheersMail)return;window.__cheersMail=true;
+ const L={pt:['Escreva-nos por email','Copiar email','Email copiado','Abrir no Gmail','Abrir no Outlook','Abrir o programa de email','Fechar','Copie o endereço ou escolha onde escrever. A mensagem já vai preenchida.'],
+  es:['Escríbanos por email','Copiar email','Email copiado','Abrir en Gmail','Abrir en Outlook','Abrir el programa de correo','Cerrar','Copie la dirección o elija dónde escribir. El mensaje ya va redactado.'],
+  en:['Email us','Copy email','Email copied','Open in Gmail','Open in Outlook','Open your email app','Close','Copy the address or choose where to write. The message is already filled in.'],
+  fr:['Écrivez-nous par email','Copier l’email','Email copié','Ouvrir dans Gmail','Ouvrir dans Outlook','Ouvrir votre messagerie','Fermer','Copiez l’adresse ou choisissez où écrire. Le message est déjà rédigé.']};
+ let box;
+ const t=()=>L[(document.documentElement.lang||'pt').slice(0,2)]||L.en;
+ const copy=async(text,btn)=>{const done=()=>{btn.textContent=t()[2];btn.classList.add('is-done');};
+  try{await navigator.clipboard.writeText(text);done();}catch{const i=document.createElement('textarea');i.value=text;i.setAttribute('readonly','');i.style.position='fixed';i.style.opacity='0';document.body.append(i);i.select();try{document.execCommand('copy');done();}catch{}i.remove();}};
+ const open=href=>{const u=new URL(href);const to=decodeURIComponent(u.pathname),su=u.searchParams.get('subject')||'',body=u.searchParams.get('body')||'';const x=t();
+  box?.remove();box=document.createElement('dialog');box.className='mail-dialog';box.setAttribute('aria-label',x[0]);
+  const q=new URLSearchParams({view:'cm',fs:'1',to,su,body}),o=new URLSearchParams({to,subject:su,body});
+  box.innerHTML=`<button type="button" class="mail-dialog-close" aria-label="${x[6]}">×</button><p class="eyebrow">${x[0]}</p><p class="mail-dialog-address"></p><p class="mail-dialog-note">${x[7]}</p><div class="mail-dialog-actions"><button type="button" class="button" data-copy>${x[1]}</button><a class="button button-outline" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?${q.toString().replace(/\+/g,'%20')}">${x[3]}</a><a class="button button-outline" target="_blank" rel="noopener noreferrer" href="https://outlook.office.com/mail/deeplink/compose?${o.toString().replace(/\+/g,'%20')}">${x[4]}</a><a class="text-link" data-mail-app>${x[5]}</a></div>`;
+  box.querySelector('.mail-dialog-address').textContent=to;box.querySelector('[data-mail-app]').href=href;
+  box.querySelector('[data-copy]').addEventListener('click',e=>copy(to,e.currentTarget));
+  box.querySelector('.mail-dialog-close').addEventListener('click',()=>box.close());
+  box.addEventListener('click',e=>{if(e.target===box)box.close();});
+  box.addEventListener('close',()=>{box.remove();box=null;});
+  document.body.append(box);if(box.showModal)box.showModal();else box.setAttribute('open','');
+  box.querySelector('[data-copy]').focus();};
+ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="mailto:"]');if(!a||a.closest('form,.mail-dialog')||e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();e.stopImmediatePropagation();open(a.href);},true);
+})();
