@@ -41,8 +41,8 @@ export const hotels={
    ['A equipa vai sentir-se avaliada?','Observamos processos, não pessoas. No primeiro dia a equipa não sabe quem somos; no segundo trabalhamos com a direção e com o responsável do bar. O relatório vai só para a direção.'],
    ['Como funciona a garantia?','Somamos o valor mensal estimado de cada oportunidade identificada, com o cálculo e os pressupostos à vista. Se o total não ultrapassar o investimento no diagnóstico, devolvemos o valor pago, e o relatório fica consigo na mesma. A garantia refere-se às oportunidades identificadas, não a um aumento efetivo das vendas.'],
    ['Onde trabalham?','Em hotéis de 4 e 5 estrelas em Portugal, Espanha, Andorra, Côte d’Azur e Mónaco, Suíça e Itália, incluindo costa e ilhas.']],
-  contactTitle:'Fale connosco <em>por WhatsApp.</em>',
-  contactText:'Diga-nos o nome do hotel e a localização. Respondemos por escrito com disponibilidade e uma proposta. Prefere email? Use o formulário.',
+  contactTitle:'Fale connosco <em>por WhatsApp ou email.</em>',
+  contactText:'Diga-nos o nome do hotel e a localização. Respondemos por escrito com disponibilidade e uma proposta, por WhatsApp ou por email, como preferir.',
   options:['Mystery Guest Bar Audit','Auditoria Completa','Parceria de grupo hoteleiro','Menus digitais, QR e ecrãs','Outro assunto'],
   nav:['Método','Serviços','Quem somos','Perguntas'],
   areas:['Hotéis','Casamentos & Eventos'],
@@ -87,8 +87,8 @@ export const hotels={
    ['¿El equipo se sentirá evaluado?','Observamos procesos, no personas. El primer día el equipo no sabe quiénes somos; el segundo trabajamos con la dirección y con el responsable del bar. El informe es solo para la dirección.'],
    ['¿Cómo funciona la garantía?','Sumamos el valor mensual estimado de cada oportunidad identificada, con el cálculo y las hipótesis a la vista. Si el total no supera la inversión en el diagnóstico, le devolvemos el importe pagado, y el informe se queda con usted igualmente. La garantía se refiere a las oportunidades identificadas, no a un aumento efectivo de las ventas.'],
    ['¿Dónde trabajan?','En hoteles de 4 y 5 estrellas de Portugal, España, Andorra, la Costa Azul y Mónaco, Suiza e Italia, incluidas costa e islas.']],
-  contactTitle:'Hable con nosotros <em>por WhatsApp.</em>',
-  contactText:'Indíquenos el nombre del hotel y la ubicación. Respondemos por escrito con disponibilidad y una propuesta. ¿Prefiere el email? Use el formulario.',
+  contactTitle:'Hable con nosotros <em>por WhatsApp o email.</em>',
+  contactText:'Indíquenos el nombre del hotel y la ubicación. Respondemos por escrito con disponibilidad y una propuesta, por WhatsApp o por email, como prefiera.',
   options:['Mystery Guest Bar Audit','Auditoría Completa','Colaboración con grupo hotelero','Menús digitales, QR y pantallas','Otro asunto'],
   nav:['Método','Servicios','Quiénes somos','Preguntas'],
   areas:['Hoteles','Bodas y Eventos'],
@@ -133,8 +133,8 @@ export const hotels={
    ['Will the team feel assessed?','We observe processes, not people. On day one the team does not know who we are; on day two we work with management and the bar lead. The report goes to management only.'],
    ['How does the guarantee work?','We add up the estimated monthly value of every opportunity identified, with the calculation and assumptions shown. If the total does not exceed your investment in the diagnosis, we refund the fee, and you still keep the report. The guarantee covers the opportunities identified, not an actual increase in sales.'],
    ['Where do you work?','In 4 and 5-star hotels in Portugal, Spain, Andorra, the Côte d’Azur and Monaco, Switzerland and Italy, coast and islands included.']],
-  contactTitle:'Talk to us <em>on WhatsApp.</em>',
-  contactText:'Tell us the hotel’s name and location. We reply in writing with availability and a proposal. Prefer email? Use the form.',
+  contactTitle:'Talk to us <em>on WhatsApp or by email.</em>',
+  contactText:'Tell us the hotel’s name and location. We reply in writing with availability and a proposal, on WhatsApp or by email, whichever you prefer.',
   options:['Mystery Guest Bar Audit','Full Audit','Hotel group partnership','Digital menus, QR and screens','Something else'],
   nav:['Approach','Services','About us','Questions'],
   areas:['Hotels','Weddings & Events'],
@@ -179,8 +179,8 @@ export const hotels={
    ['L’équipe va-t-elle se sentir évaluée ?','Nous observons des processus, pas des personnes. Le premier jour, l’équipe ne sait pas qui nous sommes ; le second, nous travaillons avec la direction et le responsable du bar. Le rapport est réservé à la direction.'],
    ['Comment fonctionne la garantie ?','Nous additionnons la valeur mensuelle estimée de chaque opportunité identifiée, calcul et hypothèses à l’appui. Si le total ne dépasse pas votre investissement dans le diagnostic, nous vous remboursons, et vous gardez quand même le rapport. La garantie porte sur les opportunités identifiées, pas sur une hausse effective des ventes.'],
    ['Où travaillez-vous ?','Dans des hôtels 4 et 5 étoiles au Portugal, en Espagne, en Andorre, sur la Côte d’Azur et à Monaco, en Suisse et en Italie, littoral et îles compris.']],
-  contactTitle:'Parlons-en <em>sur WhatsApp.</em>',
-  contactText:'Indiquez-nous le nom de l’hôtel et sa localisation. Nous répondons par écrit avec nos disponibilités et une proposition. Vous préférez l’email ? Utilisez le formulaire.',
+  contactTitle:'Parlons-en <em>sur WhatsApp ou par email.</em>',
+  contactText:'Indiquez-nous le nom de l’hôtel et sa localisation. Nous répondons par écrit avec nos disponibilités et une proposition, sur WhatsApp ou par email, comme vous préférez.',
   options:['Mystery Guest Bar Audit','Audit Complet','Partenariat avec un groupe hôtelier','Menus digitaux, QR et écrans','Autre sujet'],
   nav:['Méthode','Services','Qui sommes-nous','Questions'],
   areas:['Hôtels','Mariages & Événements'],
@@ -212,6 +212,14 @@ export const eventsContact={
  fr:{title:'Parlez avec <em>Beatriz.</em>',text:'Beatriz Almeida coordonne chaque événement, du premier contact au dernier cocktail. Indiquez-nous la date, le lieu et le nombre d’invités ; nous répondons avec nos disponibilités et une proposition sur mesure.',photoAlt:'Beatriz Almeida déposant un zeste d’orange dans un verre avec de la glace.'}
 };
 export const EVENTS_EMAIL='beatriz@cheersexperiences.com';
+// Email as easy as WhatsApp (Rui, 16/11/2026: hotels prefer email). rui@ is the hotel contact, info@ the general one.
+export const HOTEL_EMAIL='rui@cheersexperiences.com',INFO_EMAIL='info@cheersexperiences.com';
+export const emailCopy={
+ pt:{cta:'Enviar email',nav:'Email',direct:'Email direto',general:'Geral',hotels:'Hotéis',events:'Casamentos & Eventos',subject:'Bar do hotel · pedido de disponibilidade',digitalSubject:'Menu QR e ecrãs · pedido de proposta',sign:'Nome e cargo:'},
+ es:{cta:'Enviar un email',nav:'Email',direct:'Email directo',general:'General',hotels:'Hoteles',events:'Bodas & Eventos',subject:'Bar del hotel · solicitud de disponibilidad',digitalSubject:'Menú QR y pantallas · solicitud de propuesta',sign:'Nombre y cargo:'},
+ en:{cta:'Send an email',nav:'Email',direct:'Direct email',general:'General',hotels:'Hotels',events:'Weddings & Events',subject:'Hotel bar · availability request',digitalSubject:'QR menu and screens · proposal request',sign:'Name and role:'},
+ fr:{cta:'Envoyer un email',nav:'Email',direct:'Email direct',general:'Général',hotels:'Hôtels',events:'Mariages & Événements',subject:'Bar de l’hôtel · demande de disponibilité',digitalSubject:'Menu QR et écrans · demande de proposition',sign:'Nom et fonction :'},
+};
 // Events page menu: formats, packages, venues & planners, about us (+ contact button).
 export const eventsNav={
  pt:['Formatos','Propostas','Quintas & planners','Quem somos'],
