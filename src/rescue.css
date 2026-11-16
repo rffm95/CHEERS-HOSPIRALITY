@@ -690,3 +690,24 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:500;letter-spacing:-.02em}
 /* ===== Performance (10/11/2026): same look, less repainting while scrolling ===== */
 @media (max-width:960px){.header{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(14,13,12,.96)}}
 .hero2-video{cursor:pointer}
+
+/* email next to WhatsApp (16/11/2026): outline button, visible addresses */
+.button.button-outline{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--accent)}
+.button.button-outline:hover,.button.button-outline:focus-visible{background:var(--amber);color:#0E0D0C;box-shadow:inset 0 0 0 1px var(--amber),0 18px 60px -18px rgba(200,137,59,.75)}
+.mail-address{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}
+.mail-address:hover,.mail-address:focus-visible{color:var(--amber-hi)}
+.mail-direct{margin:var(--s5) 0 0;font-size:var(--fs-small);color:var(--ink-3)}
+.mail-direct span,.contact-mails span,.footer-mails span>span,.footer-mails p>span{display:inline-block;margin-right:var(--s3);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.contact-primary{display:flex;flex-wrap:wrap;gap:var(--s4)}
+.contact-mails{display:grid;gap:var(--s3);flex-basis:100%;margin-top:var(--s5);font-size:var(--fs-lead)}
+.contact-mails p{margin:0}
+.contact-mails span{min-width:9ch}
+.contact-mails a[href^="tel"]{font-weight:600}
+.services2-grid article .button-outline{margin-top:var(--s3)}
+.digital-package .button-outline,.digital-demonstration .button-outline{margin-top:var(--s3);margin-left:0}
+.footer-mails{display:grid;gap:var(--s2);margin-top:var(--s4)}
+.footer-mails p{margin:0}
+.entry-footer .footer-mails{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s6);width:100%;margin:0 0 var(--s3)}
+.entry-footer .footer-mails a{text-decoration:underline}
+@media (max-width:960px){.header nav .button.nav-email{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--amber)}.header nav .button.nav-email+.button{margin-top:var(--s3)}}
+.footer-links .footer-mails p>span{min-width:8ch}
