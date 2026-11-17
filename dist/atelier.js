@@ -90,6 +90,8 @@ if(typeof document!=='undefined')(()=>{
   for(const form of [hotel,event].filter(Boolean))form.querySelectorAll('[data-channel]').forEach(a=>a.addEventListener('click',ev=>{
    if(!form.reportValidity()){ev.preventDefault();return;}
    a.href=enquiryURL(a.dataset.channel,form.dataset.subject,prepareEnquiry(form),form.dataset.wa,form.dataset.email);form.querySelector('[data-form-status]').textContent=form.querySelector('[data-form-status]').dataset.ready;
+   // Email from the events form: mailto does nothing without an email app, so open the chooser (copy / Gmail / Outlook) instead (17/11/2026).
+   if(a.dataset.channel==='email'&&window.__cheersMailOpen){ev.preventDefault();window.__cheersMailOpen(a.href);}
   }));
   document.querySelectorAll('[data-carousel]').forEach(track=>{const section=track.closest('section');const controls=section?.querySelector('[data-carousel-controls]');const prev=section?.querySelector('[data-carousel-prev]'),next=section?.querySelector('[data-carousel-next]');if(!controls||!prev||!next)return;controls.hidden=false;const step=()=>{const item=track.querySelector('li');return item?item.getBoundingClientRect().width+20:300;};const sync=()=>{prev.disabled=track.scrollLeft<=4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;};prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));track.addEventListener('scroll',sync,{passive:true});sync();});
  document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',()=>{if(hotel)hotel.elements.opportunity.selectedIndex=Number(a.dataset.project);}));
@@ -139,5 +141,6 @@ if(typeof document!=='undefined')(()=>{
   box.addEventListener('close',()=>{box.remove();box=null;});
   document.body.append(box);if(box.showModal)box.showModal();else box.setAttribute('open','');
   box.querySelector('[data-copy]').focus();};
+ window.__cheersMailOpen=open;
  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="mailto:"]');if(!a||a.closest('form,.mail-dialog')||e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();e.stopImmediatePropagation();open(a.href);},true);
 })();
